@@ -134,6 +134,8 @@ body{
     background-color: rgb(164, 178, 192, 0.3);
     border-radius: 30px;
     width: 50vw;
+    min-width: 300px;
+    max-width: 700px;
 }
 /*문의 사항 라벨화 */
 
@@ -144,6 +146,12 @@ body{
 }
 .askedQuestion label:hover{
     color:rgba(17, 53, 199, 0.737);
+}
+/*q,a 박스 사이즈 조절*/
+.question_all{
+    display: inline-block;
+    min-width: 300px;
+    max-width: 700px;
 }
 
 /*q1,2,3의 div 스타일*/
@@ -158,6 +166,8 @@ body{
     font-size: 110%;
     text-align: center;
     width: 50vw;
+    min-width: 300px;
+    max-width: 700px;
 }
 .question_all label::before{
     content: "\51 . ";
