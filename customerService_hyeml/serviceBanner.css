@@ -3,6 +3,10 @@
     margin: 0px;
     padding: 0px;
 }
+body{
+    text-align: center;
+    /* align-items: center; */
+}
 /*3가지 블럭에 대한 정렬 방식*/
 .side_bar_all{
     display: flex;
@@ -12,13 +16,14 @@
 /*왼쪽 사이드 바에 위치 지정 */
 .left_side_bar{
     display: flex;
-    /* float: left; */
-    /* justify-content: right; */
-    width: 180px;
+    width: 150px;
     height: 100vh;
     text-align: center;
     margin-left: 20px;
     margin-top: 10vh;
+    position:sticky;
+    top: 30vh;
+    
 }
 /*왼쪽 a태그 , li 태그의 text정렬과 사이즈 조절*/
 .left_side_bar a ,
@@ -27,7 +32,7 @@
     text-decoration: none;
     background-color: rgba(164, 178, 192, 0.142);
     height: 40px;
-    width: 180px;
+    width: 150px;
     line-height: 40px;
     color: black;
     opacity: 0.7;
@@ -50,6 +55,7 @@
     height: 100vh;
     margin-right: 20px;
     margin-top: 10vh;
+    /* position: fixed; */
 }
 /*오른쪽 사이드바 너비와 높이 지정.*/
 .right_side_bar div{
@@ -79,6 +85,8 @@
 /*==========================*/
 .customer_box{
     text-align: center;
+    align-items: center;
+    margin: 10px;
 }
 .customer_bar h2 , .customer_bar p {
     text-align: initial;
