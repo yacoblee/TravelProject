@@ -97,7 +97,7 @@ body{
 .customer_bar div{
     background-color: rgba(164, 178, 192, 0.142);
     height: 10vh;
-    display: flex;
+    display: inline-block;
     justify-content: space-evenly;
     line-height: 10vh;
     vertical-align: middle;
