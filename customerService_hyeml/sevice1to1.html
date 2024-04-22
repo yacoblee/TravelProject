@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1:1문의하기</title>
+    <link rel="stylesheet" href="./serviceBanner.css">
+    
+</head>
+<body>
+    <div class="side_bar_all">
+        <nav class="left_side_bar">
+            <ul>
+                <li><a href="#">1:1문의</a></li>
+                <li><a href="#">Q&A</a></li>
+                <li><a href="#">공지사항</a></li>
+            </ul>
+        </nav>
+        <div class="onetoone">
+            <h1>고객 불편 신고</h1>
+            <p>고객님의 의견을 적극 반영하여 
+                고객님의 불편을 해결해드리고자 노력하겠습니다.</p>
+            <form action="#" >
+                <h3>답변 받으실 분</h3>
+                <ul>
+                    <li><label for="named" >성명</label></li>
+                    <li><input type="text" id="named" minlength="2" placeholder="이름" required></li>
+                    <li><label for="e-mail">이메일</label></li>
+                    <li><input type="email" id="e-mail" placeholder="here@hey.com" required></li>
+                    <li><label for="phonenum">연락처</label></li>
+                    <li><input type="text" id="phone_first" minlength="2" maxlength="3" size="4" placeholder="010" required>-
+                    <input type="text" id="phone_second" minlength="3" maxlength="4" size="4" required>-
+                    <input type="text" id="phone_third" minlength="3" maxlength="4" size="4" required></li>
+                </ul>
+                <h3>고객 불편 신고하기</h3>
+                <table>
+                    <tr>
+                        <th><label for="one_named">제목</label></th>
+                        <td><input type="text" id="one_named" style="width: 40vw;"></td>
+                    </tr>
+                    <tr>
+                        <th><label for="one_type">유형</label></th>
+                        <td><select name="one_type" id="one_type"> 
+                            <option value="상담유형을 선택해주세요">상담유형을 선택해주세요.</option>
+                            <option value="숙소관련문의">숙소 관련 문의</option>
+                            <option value="결제관련문의">결제 관련 문의</option>
+                            <option value="기타문의">기타 문의</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <th><label for="one_how">상담방법</label></th>
+                        <td><input type="radio" id="one_how" name="e-mail">이메일
+                        <input type="radio" id="one_how" name="phonenum">전화</td>
+                    </tr>
+                    <tr>
+                        <th><label for="one_content">내용</label></th>
+                        <td><input type="text" id="one_content" placeholder="내용 입력" style="width: 40vw; height: 20vh;"></td>
+                    </tr>
+                </table>
+                <input type="radio">개인 정보 및 이용에 동의 합니다.
+                <button>전송</button>
+            </form>
+        </div>
+
+        <aside class="right_side_bar">
+            <div>상담센터
+            </div>
+            <div>00-0000-0000
+            </div>
+            <div>출장상담
+            </div>
+            <div>00-0000-0000
+            </div>
+            <div>상담시간안내
+            </div>
+            <div>숙박상담
+                평일 9:00~18:00
+                시스템 결제요청 문의
+                평일 9:00~17:00
+                (토/일 및 공휴일 휴무)
+            </div>
+        </aside>
+    </div>
+</body>
+</html>

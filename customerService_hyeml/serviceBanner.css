@@ -97,7 +97,7 @@ body{
 .customer_bar div{
     background-color: rgba(164, 178, 192, 0.142);
     height: 10vh;
-    display: flex;
+    display: inline-block;
     justify-content: space-evenly;
     line-height: 10vh;
     vertical-align: middle;
@@ -110,7 +110,7 @@ body{
 }
 /*회색 div 의 글씨 크기와 모양.*/
 .customer_bar span::before{
-    content: "\f095";
+    content: "\f095 ";
     font:var(--fa-font-solid);
 }
 .customer_bar span{
@@ -134,6 +134,8 @@ body{
     background-color: rgb(164, 178, 192, 0.3);
     border-radius: 30px;
     width: 50vw;
+    min-width: 300px;
+    max-width: 700px;
 }
 /*문의 사항 라벨화 */
 
@@ -145,6 +147,12 @@ body{
 .askedQuestion label:hover{
     color:rgba(17, 53, 199, 0.737);
 }
+/*q,a 박스 사이즈 조절*/
+.question_all{
+    display: inline-block;
+    min-width: 300px;
+    max-width: 700px;
+}
 
 /*q1,2,3의 div 스타일*/
 .question_all div>div, .question_all label {
@@ -154,10 +162,13 @@ body{
 }
 /*q의 질문 박스 스타일*/
 .question_all label{
-    display: block;
+    display: inline-block;
     font-size: 110%;
-    text-align: center;
+    text-align: left;
+    text-indent: 5vw;
     width: 50vw;
+    min-width: 300px;
+    max-width: 700px;
 }
 .question_all label::before{
     content: "\51 . ";
@@ -165,6 +176,7 @@ body{
 }
 /*q의 답변 스타일*/
 .question_all div>div{
+    text-align: left;
     background-color: rgba(164, 178, 192, 0.142);
     display: none;
 }
@@ -175,12 +187,56 @@ body{
 .question_all input{
     display: none;
 }
-.question_all input:checked+label+div{
+.question_1 input:checked+label+div,
+.question_2 input:checked+label+div,
+.question_3 input:checked+label+div{
     display: inline-block;
-    width: 50vw;
+    width: auto;
 }
-
 
 
 /*=============================*/
 
+.onetoone{
+    text-align: left;
+    margin: 2vh;
+    margin-top: 20px;
+}
+.onetoone p {
+    font-size: 80%;
+    white-space: pre-line;
+    opacity: 0.8;
+}
+.onetoone form{
+    width: 60vw;
+    font-size: 120%;
+    font-weight: 400;
+}
+.onetoone table{
+    height: 25vh;
+    font-weight: initial;
+}
+.onetoone ul{
+    height: 25vh;
+    text-indent: 5vw;
+}
+.onetoone h3, .onetoone h1{
+    margin: 2vw 2vh;
+}
+.onetoone input:nth-last-child(1){
+    margin-bottom: 2vh;
+}
+.onetoone input[id="one_content"]{
+    overflow: auto;
+    /* text-align: initial; */
+    white-space: pre;
+    opacity: 0.7;
+}
+.onetoone th{
+    width: 15vw;
+    font-weight: 400;
+    text-align: center;
+}
+.onetoone label{
+    opacity: 0.8;
+}
