@@ -110,7 +110,7 @@ body{
 }
 /*회색 div 의 글씨 크기와 모양.*/
 .customer_bar span::before{
-    content: "\f095";
+    content: "\f095 ";
     font:var(--fa-font-solid);
 }
 .customer_bar span{
@@ -162,9 +162,10 @@ body{
 }
 /*q의 질문 박스 스타일*/
 .question_all label{
-    display: block;
+    display: inline-block;
     font-size: 110%;
-    text-align: center;
+    text-align: left;
+    text-indent: 5vw;
     width: 50vw;
     min-width: 300px;
     max-width: 700px;
@@ -175,6 +176,7 @@ body{
 }
 /*q의 답변 스타일*/
 .question_all div>div{
+    text-align: left;
     background-color: rgba(164, 178, 192, 0.142);
     display: none;
 }
@@ -185,9 +187,11 @@ body{
 .question_all input{
     display: none;
 }
-.question_all input:checked+label+div{
+.question_1 input:checked+label+div,
+.question_2 input:checked+label+div,
+.question_3 input:checked+label+div{
     display: inline-block;
-    width: 50vw;
+    width: auto;
 }
 
 
