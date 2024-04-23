@@ -16,7 +16,7 @@ body{
 /*왼쪽 사이드 바에 위치 지정 */
 .left_side_bar{
     display: flex;
-    width: 150px;
+    width: 20vw;
     height: 100vh;
     text-align: center;
     margin-left: 20px;
@@ -32,7 +32,7 @@ body{
     text-decoration: none;
     background-color: rgba(164, 178, 192, 0.142);
     height: 40px;
-    width: 150px;
+    width: 15vw;
     line-height: 40px;
     color: black;
     opacity: 0.7;
@@ -51,31 +51,31 @@ body{
     flex-direction: column;
     /* float: right; */
     white-space: pre-line;
-    width: 150px;
+    width: 20vw;
     height: 100vh;
-    margin-right: 20px;
+    margin-left: 3vw;
     margin-top: 10vh;
     /* position: fixed; */
 }
 /*오른쪽 사이드바 너비와 높이 지정.*/
 .right_side_bar div{
-    height: 40px;
+    height: 5vh;
     text-align: center;
-    line-height: 40px;
-    width: 150px;   
+    line-height: 5vh;
+    width: 10vw;   
     background-color: rgba(164, 178, 192, 0.142);
     margin-bottom: 1px;
     opacity: 0.7;
+    min-width: 250px;
 }
 
 /*오른쪽 사이드바 상담문의 설명글에 대한 요소*/
 .right_side_bar div:nth-last-child(1){
-    font-size: 80%;
+    font-size: 90%;
     height: 100%;
     height:max-content;
     font-style: normal;
     line-height: 130%;
-    text-align: right;
 }
 /*오른쪽 사이드바의 정렬*/
 .right_side_bar div:nth-of-type(odd){
@@ -105,26 +105,29 @@ body{
     border-radius: 10px;
     width: 30vw;
     min-width: 300px;
-    max-width: 700px;
+    max-width: 1200px;
     margin: 10px;
 }
 /*회색 div 의 글씨 크기와 모양.*/
 .customer_bar span::before{
+    display: inline-block;
     content: "\f095 ";
     font:var(--fa-font-solid);
 }
 .customer_bar span{
-    font-size: 120%;
+    font-size: 140%;
     letter-spacing: 3px;
 }
 /*1:1문의 링크에 대한 설정*/
 .customer_bar a{
+    display: inline-block;
     text-decoration: none;
     color: black;
     height: auto;
     width: 30%;
     text-align: center;
-    
+    text-indent: 2vw;
+    font-size: 140%;
 }
 /*문의 사항 나열 사항*/
 .askedQuestion{
@@ -135,7 +138,7 @@ body{
     border-radius: 30px;
     width: 50vw;
     min-width: 300px;
-    max-width: 700px;
+    max-width: 1200px;
 }
 /*문의 사항 라벨화 */
 
@@ -204,40 +207,64 @@ body{
     margin-top: 20px;
 }
 .onetoone p {
-    font-size: 80%;
-    white-space: pre-line;
+    /* font-size: 90%; */
+    white-space: pre;
     opacity: 0.8;
+    text-indent: 2vw;
 }
 .onetoone form{
     width: 60vw;
-    font-size: 120%;
+    font-size: 140%;
     font-weight: 400;
 }
 .onetoone table{
-    height: 25vh;
+    height: 20vh;
     font-weight: initial;
 }
-.onetoone ul{
-    height: 25vh;
+.onetoone li{
+    height: 5vh;
     text-indent: 5vw;
 }
 .onetoone h3, .onetoone h1{
     margin: 2vw 2vh;
-}
-.onetoone input:nth-last-child(1){
-    margin-bottom: 2vh;
-}
-.onetoone input[id="one_content"]{
-    overflow: auto;
-    /* text-align: initial; */
-    white-space: pre;
-    opacity: 0.7;
+    background-color: rgba(164, 178, 192, 0.1);
+    border-radius: 10px;
+    text-indent: 2vw;
 }
 .onetoone th{
     width: 15vw;
     font-weight: 400;
     text-align: center;
 }
+.onetoone td,th{
+    vertical-align: middle;
+    padding-bottom: 2vh;
+}
+
 .onetoone label{
     opacity: 0.8;
+    font-size: 120%;
+}
+
+
+.onetoone input[id="one_content"]{
+    overflow: auto;
+    /* text-align: initial; */
+    white-space: pre;
+    opacity: 0.7;
+}
+.onetoone input ,
+.onetoone select{
+    width: 30vw;
+    height: 3vh;
+    font-size: 100%;
+}
+.onetoone input[id*="phone"]{
+    width: 8vw;
+}
+
+.onetoone input[type="radio"]{
+    width: 2vw;
+    height: 2vh;
+    vertical-align: middle;
 }
