@@ -26,8 +26,7 @@ body{
     
 }
 /*왼쪽 a태그 , li 태그의 text정렬과 사이즈 조절*/
-.left_side_bar a ,
-.left_side_bar li {
+.left_side_bar a {
     display: inline-block;
     text-decoration: none;
     background-color: rgba(164, 178, 192, 0.142);
@@ -38,6 +37,7 @@ body{
     opacity: 0.7;
     border-radius: 5px;
     margin-bottom: 1px;
+    margin-left: 2vw;
 }
 /*hover 값.*/
 .left_side_bar a:hover{
@@ -88,25 +88,32 @@ body{
     align-items: center;
     margin: 10px;
 }
-.customer_bar h2 , .customer_bar p {
+.customer_bar h1 , .customer_bar p {
     text-align: initial;
+    margin-left: 5vw;
+    padding: 1vw 1vh ;
 }
 
 
 /*고객센터 회색 div의 설정 값.*/
+.customer_bar{
+    height: 20vh;
+    width: 50vw;
+    margin: auto;
+}
+
 .customer_bar div{
     background-color: rgba(164, 178, 192, 0.142);
     height: 10vh;
     display: inline-block;
-    justify-content: space-evenly;
     line-height: 10vh;
     vertical-align: middle;
     /* border-style: dashed; */
     border-radius: 10px;
     width: 30vw;
-    min-width: 300px;
+    min-width: 500px;
     max-width: 1200px;
-    margin: 10px;
+    margin: auto
 }
 /*회색 div 의 글씨 크기와 모양.*/
 .customer_bar span::before{
@@ -131,21 +138,21 @@ body{
 }
 /*문의 사항 나열 사항*/
 .askedQuestion{
-    display: flex;
-    justify-content: space-evenly;
+    display: inline-block;
     margin-top: 10px;
     background-color: rgb(164, 178, 192, 0.3);
     border-radius: 30px;
     width: 50vw;
-    min-width: 300px;
+    min-width: 500px;
     max-width: 1200px;
 }
 /*문의 사항 라벨화 */
 
 .askedQuestion label{
-    display: flex;
-    justify-content: space-between;
+    margin: 0 5vw ;
+    display: inline-block;
     text-align: center;
+    font-size: 140%;
 }
 .askedQuestion label:hover{
     color:rgba(17, 53, 199, 0.737);
@@ -153,8 +160,8 @@ body{
 /*q,a 박스 사이즈 조절*/
 .question_all{
     display: inline-block;
-    min-width: 300px;
-    max-width: 700px;
+    min-width: 500px;
+    max-width: 1200px;
 }
 
 /*q1,2,3의 div 스타일*/
@@ -166,12 +173,12 @@ body{
 /*q의 질문 박스 스타일*/
 .question_all label{
     display: inline-block;
-    font-size: 110%;
+    font-size: 120%;
     text-align: left;
     text-indent: 5vw;
     width: 50vw;
-    min-width: 300px;
-    max-width: 700px;
+    min-width: 500px;
+    max-width: 1200px;
 }
 .question_all label::before{
     content: "\51 . ";
@@ -182,10 +189,12 @@ body{
     text-align: left;
     background-color: rgba(164, 178, 192, 0.142);
     display: none;
+    padding: 3vh 0;
 }
 /*q.a의 클릭효과*/
 .question_all label{
     cursor: pointer;
+    padding: 1vh 0;
 }
 .question_all input{
     display: none;
