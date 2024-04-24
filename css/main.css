@@ -3,6 +3,28 @@
     text-decoration-line: none;
 }
 
+@font-face {
+
+    /* font-face 지시자 내 font-family 에 지정하는 폰트명은 사용자 임의로 지정 가능. */
+    font-family: Nanum_Gothic_bold;
+    src: url(./font/Nanum_Gothic/NanumGothic-Bold.ttf);
+
+    font-family: Nanum_Gothic_ExtraBold;
+    src: url(./font/Nanum_Gothic/NanumGothic-ExtraBold.ttf);
+
+    font-family: Nanum_Gothic;
+    src: url(./font/Nanum_Gothic/NanumGothic-Regular.ttf);
+
+
+    font-family: Jua-Regular;
+    src: url(./font/Jua/Jua-Regular.ttf);
+
+}
+
+.shizuru {
+    font-family: Jua-Regular;
+}
+
 .inline_section {
     display: inline-block;
 }
@@ -13,6 +35,7 @@ main {
 }
 
 header {
+    
     height: 7vh;
     width: 100%;
     background-color: rgba(164, 178, 192, 0.142);
@@ -29,12 +52,12 @@ section {
 
 
 .searchdiv {
-    background-color: beige;
+    background-color: rgba(75, 122, 168, 0.305);
     border-radius: 5px 5px 5px 5px;
     display: inline-block;
     text-align: center;
-    width: 50vw;
-    position: absolute;
+    width: 55vw;
+    position: relative;
     /* 수정: 절대 위치로 변경 */
     top: 50%;
     /* 수정: 상단에서 50% */
@@ -42,38 +65,53 @@ section {
     /* 수정: 좌측에서 50% */
     transform: translate(-50%, -50%);
     /* 수정: 중앙 정렬 */
+
+
     line-height: 4em;
     margin-bottom: 50px;
 }
 
 .searchdiv>form input {
-    width: 15vw;
-    height: 3vh;
+    border-radius: 8px;
+    width: 10vw;
+    height: 5vh;
+    margin: 5px;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: center;
+
+    width: 1200px;
+    height: 30vh;
 }
 
 .slider {
     overflow: hidden;
-    width: 100%;
-    height: 30vh;
+    width: 900px;
+    height: 40vh;
 }
 
 .slide {
-    max-width: 2400px;
-    position: absolute;
+    /* display: block; */
+    /* position: absolute; */
     width: 100%;
     height: 100%;
-    background-size: 100% 100%;
-    background-position: center;
-    animation: slider 9s infinite linear;
+    margin: auto;
+    /* background-size: 100% 100%; */
+
+    /* animation: slider 9s infinite linear; */
 }
 
 .slide:nth-child(1) {
-    background-image: url(../image/001.JPG);
+    background-color: beige;
+    background: url(../image/background.png);
     background-position: center;
-    animation-delay: 0s;
+    background-size: cover;
+
 }
 
-.slide:nth-child(2) {
+/* .slide:nth-child(2) {
     background-image: url(../image/002.JPG);
     animation-delay: -3s;
 }
@@ -81,9 +119,9 @@ section {
 .slide:nth-child(3) {
     background-image: url(../image/003.JPG);
     animation-delay: -6s;
-}
+} */
 
-@keyframes slider {
+/* @keyframes slider {
     0% {
         transform: translateX(0);
     }
@@ -104,18 +142,18 @@ section {
     100% {
         transform: translateX(0);
     }
-}
+} */
 
 
 .region-section {
     display: inline-block;
+    justify-content: center;
     width: 100vw;
     height: 20vh;
     margin-top: 1vw;
 }
 
 .region-section>div {
-    /* background-color: beige; */
     width: 80vw;
     height: 100%;
     margin: auto;
@@ -124,7 +162,6 @@ section {
 .region {
     text-align: center;
     margin-right: 10px;
-    /* background-color: black; */
     display: inline-block;
     width: calc(19.666% - 20px) !important;
     height: 100%;
@@ -133,13 +170,21 @@ section {
 }
 
 .region>a>div img {
+    border-radius: 10px;
     width: 100%;
     height: 80%;
 }
 
 .region>a>div span {
-    font-size: 0.9em;
+
+    /* font-size: 0.9em; */
     line-height: 20px;
+}
+
+.region>a>div:hover {
+    transition: font-size 2000ms;
+    font-weight: bolder;
+    color: rgba(84, 85, 43, 0.658);
 }
 
 
@@ -154,12 +199,6 @@ section {
     align-items: center;
     justify-content: space-between;
 }
-
-/* img {
-    width: 100%;
-    height: 200px;
-    background: fixed;
-} */
 
 footer {
     display: inline-block;
