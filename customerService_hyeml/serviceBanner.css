@@ -3,6 +3,7 @@
     margin: 0ch;
     list-style: none;
     font-family: Nanum_Gothic_bold;
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -40,6 +41,7 @@
     width: 60vw;
     min-width: 700px;
     text-align: center;
+    margin-top: 20vh;
 }
 .right_side_bar{
     display: flex;
@@ -81,6 +83,8 @@
     line-height: 50px;
     color: black;
     background-color: rgb(164, 178, 192, 0.142);
+    border: 0.5px solid silver;
+    border-radius: 5px;
 }
 
 .left_side_bar a:not(a:hover){
@@ -113,18 +117,16 @@
 /*================================================= */
 /* 1.customer_bar 고객센터 상단 설명 , 박스 */
 
-.customer_bar{
-    margin-top: 10vh;
-    /* margin: 3vw; */
-    text-align: center;
-    
-}
 
 .customer_bar div{
-    font-size: 95%;
-    text-align: left;
-    margin: 2vw 0;
     
+    text-align: left;
+    /* margin: 4vw 0; */
+    margin-bottom: 4vw;
+    
+}
+.customer_bar p, .customer_bar h1{
+    margin: 2vh;
 }
 
 .customer_bar div:nth-of-type(1){
@@ -140,6 +142,7 @@
     border-radius: 10px;
     background-color: rgb(164, 178, 192, 0.142);
     text-align: center;
+    
 }
 
 .customer_bar span , .customer_bar a{
@@ -233,7 +236,6 @@ input[type="checkbox"]:checked+label+div {
 }
 
 
-
 /*=============================*/
 
 /*1:1 문의의 사이즈 조절, 폰트 배열 조절*/
@@ -244,16 +246,16 @@ input[type="checkbox"]:checked+label+div {
     text-align: center
 }
 .onetoone p {
-    font-size: 12px;
     white-space: pre;
     opacity: 0.8;
     text-indent: 30px;
     text-align: initial;
+    margin: 2vh;
 }
 .onetoone form{
     display: inline-block;
     width: 40vw;
-    min-width: 600px;
+    min-width: 700px;
     font-size: 18px;  
     text-align: initial;
 }
@@ -264,14 +266,15 @@ input[type="checkbox"]:checked+label+div {
 .onetoone li{
     height: 40px;
     
-    text-indent: 5vw;
+    text-indent: 2vw;
 }
 .onetoone h3, .onetoone h1{
-    margin: 20px;
+    /* margin: 20px; */
     background-color: rgba(164, 178, 192, 0.06);
     border-radius: 10px;
     text-indent: 2vw;
     text-align: initial;
+    margin: 4vw;
 }
 .onetoone h1{
     background-color: rgb(164, 178, 192, 0.142)
@@ -288,7 +291,7 @@ input[type="checkbox"]:checked+label+div {
 
 .onetoone label{
     opacity: 0.8;
-    font-size: 120%;
+    font-size: 18px;
 }
 
 
@@ -300,9 +303,13 @@ input[type="checkbox"]:checked+label+div {
 }
 .onetoone input ,
 .onetoone select{
-    width: 180px;
+    width: 300px;
     height: 20px;
 }
+input[id="one_named"]{
+    width: 300px;
+}
+
 .onetoone input[id*="phone"]{
     width: 60px;
 }
@@ -311,4 +318,15 @@ input[type="checkbox"]:checked+label+div {
     width: 15px;
     height: 15px;
     vertical-align: middle;
+}
+
+.onetoone button{
+    display: flex;
+    position: relative;
+    left: 500px;;
+    width: 80px;
+    height: 30px;
+    margin: 20px;
+    line-height: 30px;
+    justify-content: center;
 }
