@@ -5,9 +5,13 @@ body {
     align-items: center;        /* 수직 중앙 정렬 */
     height: 100vh;              /* 화면 전체 높이 */
 
-    margin: 0;
+    margin: auto;
     text-align: center;
     background-color: beige;
+}
+
+div {
+
 }
 
 button {
@@ -27,33 +31,30 @@ button {
     width: 50%;
     padding: 10px;
     border: none;
-    border-radius: 10px;
+    border-radius: 5px;
     color: black;
     background-color: lightgray;
 }
 
-.login_form a {
+.login_form button {
     display: inline-block;
     width: 50%;
     margin: 10px;
     padding: 10px;
-    border-radius: 10px;
+    border: none;
+    border-radius: 5px;
+    border-radius: 5px;
     text-decoration: none;
     background-color: darkgrey;
 }
 
-.login_form a:hover {
+.login_form button:hover {
     background-color: blue;
     color: white;
 }
 
-/* .login_form button:hover {
-    background-color: blue;
-    color: white;
-} */
-
-.title {
+/* .title {
     width: 100%;
     font-size: 40px;
-}
+} */
 
