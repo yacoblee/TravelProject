@@ -129,6 +129,7 @@ section {
         height: 500px;
 
     }
+
 }
 
 @media screen and (1100px > width >=900px) {
@@ -136,6 +137,16 @@ section {
         width: 800px;
         height: 500px;
 
+    }
+
+
+    .form input[type="email"],
+    .form input[type="password"] {
+        display: none;
+    }
+
+    .form input[type="text"] {
+        width: 50vw;
     }
 }
 
@@ -145,6 +156,15 @@ section {
         height: 450px;
 
     }
+
+    .form input[type="email"],
+    .form input[type="password"] {
+        display: none;
+    }
+
+    .form input[type="text"] {
+        width: 50vw;
+    }
 }
 
 @media screen and (700px > width >=500px) {
@@ -153,6 +173,19 @@ section {
         height: 400px;
 
     }
+
+    .form input[type="email"],
+    .form input[type="password"] {
+        display: none;
+    }
+
+    .form input[type="text"] {
+        width: 50vw;
+    }
+}
+
+.mainimg {
+    position: relative;
 }
 
 .form-section {
@@ -161,8 +194,10 @@ section {
     align-items: center;
     margin-top: 50px;
 
+    width: auto;
+
     position: absolute;
-    top: 50%;
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
@@ -185,7 +220,7 @@ section {
 .form input[type="text"],
 .form input[type="email"],
 .form input[type="password"] {
-    width: 250px;
+    width: 16vw;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -202,8 +237,42 @@ section {
     background-color: #007bff;
     color: white;
     cursor: pointer;
+
+    margin-bottom: 10px;
 }
 
 .form input[type="submit"]:hover {
     background-color: #0056b3;
 }
+
+
+
+.region-section {
+    width: calc(50vw);
+    max-width: 60vw;
+    margin-top: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.region {
+    flex-basis: 25%;   
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.region img {
+    width:auto;
+    height: 150px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.region span {
+    display: block;
+    margin-top: 5px;
+}
+
+
