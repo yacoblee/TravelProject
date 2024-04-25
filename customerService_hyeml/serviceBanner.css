@@ -276,7 +276,8 @@ input[type="checkbox"]:checked+label+div {
     border-radius: 10px;
     text-indent: 2vw;
     text-align: initial;
-    margin: 4vw;
+    /* margin: 4vw; */
+    margin: 2vw;
 }
 .onetoone h1{
     background-color: rgb(164, 178, 192, 0.142)
