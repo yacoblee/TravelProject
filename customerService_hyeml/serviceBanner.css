@@ -36,6 +36,7 @@
     width: 15vw;
     justify-content: center;
 }
+
 .customer_box, .onetoone {
     display: inline-block;
     width: 50vw;
@@ -187,7 +188,6 @@
     color: white;
     cursor: pointer;
 }
-
 /*QNA 완성*/
 .question_all{
     display: inline-block;
@@ -257,13 +257,16 @@ input[type="checkbox"]:checked+label+div {
 .onetoone form{
     display: inline-block;
     width: 40vw;
-    min-width: 700px;
+    min-width: 650px;
     font-size: 18px;  
     text-align: initial;
 }
 .onetoone table{
     height: 300px;
     min-height: 300px;
+}
+.onetoone ul{
+ width: 40vw;
 }
 .onetoone li{
     height: 40px;
@@ -277,7 +280,7 @@ input[type="checkbox"]:checked+label+div {
     text-indent: 2vw;
     text-align: initial;
     /* margin: 4vw; */
-    margin: 2vw;
+    margin: 2vh;
 }
 .onetoone h1{
     background-color: rgb(164, 178, 192, 0.142)
@@ -289,12 +292,13 @@ input[type="checkbox"]:checked+label+div {
 }
 .onetoone td,th{
     vertical-align: middle;
-    padding-bottom: 2vh;
+    padding-bottom: 1.5vh;
 }
 
 .onetoone label{
     opacity: 0.8;
     font-size: 18px;
+    /* padding-left: 15px; */
 }
 
 
@@ -306,8 +310,9 @@ input[type="checkbox"]:checked+label+div {
 }
 .onetoone input ,
 .onetoone select{
+    font-size: 17px;
     width: 300px;
-    height: 20px;
+    height: 30px;
 }
 input[id="one_named"]{
     width: 300px;
