@@ -23,6 +23,39 @@
     src: url(../css/font/Jua/Jua-Regular.ttf);
 
 }
+header {
+
+    height: 7vh;
+    width: 100%;
+    background-color: rgba(164, 178, 192, 0.142);
+}
+
+.headlogo {
+    display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+footer {
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    background-color: rgba(164, 178, 192, 0.142);
+}
+
+.footer,
+.Copyright {
+    margin-bottom: 32px;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    letter-spacing: 0px;
+    font-weight: 400;
+    --tw-text-opacity: 1;
+    color: rgb(153 153 153 / var(--tw-text-opacity));
+}
+
 
 /* ======================================== */
 /* 전체적인 페이지 구성. */
@@ -36,14 +69,23 @@
     width: 15vw;
     justify-content: center;
 }
-
-.customer_box, .onetoone {
+/* 가운데 메인 화면 */
+.customer_box, .onetoone, .notice {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50vw;
+    min-width: 600px;
+    text-align: center;
+    margin-top: 10vh;
+}
+/* .customer_box, .onetoone, .notice {
     display: inline-block;
     width: 50vw;
-    min-width: 700px;
+    min-width: 600px;
     text-align: center;
-    margin-top: 20vh;
-}
+    margin-top: 10vh;
+} */
 .right_side_bar{
     display: flex;
     width: 15vw;
@@ -78,7 +120,7 @@
 .left_side_bar a {
     display: inline-block;
     text-decoration: none;
-    width: 20vw;
+    width: 15vw;
     max-width: 300px;
     height: 50px;
     line-height: 50px;
@@ -113,6 +155,33 @@
 
 /* ================================================ */
 
+/* 화면 제목 , 설명글 통합 */
+
+.customer_bar p, .onetoone p, .notice p{
+    /* align-self: start; */
+    white-space: pre;
+    /* padding: 0 2vw; */
+    opacity: 0.8;
+    text-indent: 30px;
+    text-align: initial;
+    margin: 2vh;
+}
+
+.onetoone h3, .onetoone h1, .customer_bar h1, .notice h1{
+    /* margin: 20px; */
+    /* align-self: start; */
+    /* width: 45vw; */
+    border-radius: 10px;
+    padding:0 2vw;
+    /* text-align: initial; */
+    /* margin: 4vw; */
+    margin: 2vh;
+}
+.onetoone h3{
+    background-color: rgba(250, 235, 215, 0.278);
+    width: 20vw;
+}
+
 /* main customer_box */
 /* 1. customer_bar 2. asked Question 3. Question_all */
 
@@ -121,42 +190,42 @@
 
 
 .customer_bar div{
-    
-    text-align: left;
-    /* margin: 4vw 0; */
     margin-bottom: 4vw;
     
 }
-.customer_bar p, .customer_bar h1{
-    margin: 2vh;
-}
 
-.customer_bar div:nth-of-type(1){
-    text-indent: 5vw;
-}
 
 .customer_bar div:nth-of-type(2){
-    display: inline-block;
+    display: inline-flex;
     min-width:450px;
     width: 30vw;
     height: 10vh;
+    line-height: 10vh;
     border: 1px solid silver;
     border-radius: 10px;
     background-color: rgb(164, 178, 192, 0.142);
     text-align: center;
-    
+    justify-content: space-evenly;
+    align-items: center;
+}
+.customer_bar a{
+    background-color: rgb(164, 178, 192, 0.2);
+    border: 1px solid rgba(192, 192, 192, 0.629);
+    border-radius: 5px;
+    color: rgb(12, 12, 11);
 }
 
 .customer_bar span , .customer_bar a{
     display: inline-block;
-    width: 200px;
-    height: 10vh;
-    line-height: 10vh;
+    width: 120px;
+    height: 5vh;
+    line-height: 5vh;
     text-indent: initial;
     font-size: 110%;
     text-decoration: none;
-    color: black;
+    /* color: black; */
 }
+
 .customer_bar span::before{
     display: inline-block;
     content: "\f095";
@@ -183,8 +252,9 @@
     border: 0.5px solid rgba(216, 216, 216, 0.484);
     
 }
-.askedQuestion label:hover{
-    background-color: rgba(169, 198, 227, 0.934) ;
+.askedQuestion label:hover,
+.customer_bar a:hover{
+    background-color: rgba(169, 198, 227, 0.834) ;
     color: white;
     cursor: pointer;
 }
@@ -244,20 +314,13 @@ input[type="checkbox"]:checked+label+div {
 .onetoone{
     /* margin: 2vh;
     margin-top: 20px; */
-    margin-top: 20vh;
+    margin-top: 10vh;
     text-align: center
-}
-.onetoone p {
-    white-space: pre;
-    opacity: 0.8;
-    text-indent: 30px;
-    text-align: initial;
-    margin: 2vh;
 }
 .onetoone form{
     display: inline-block;
     width: 40vw;
-    min-width: 650px;
+    min-width: 500px;
     font-size: 18px;  
     text-align: initial;
 }
@@ -272,18 +335,6 @@ input[type="checkbox"]:checked+label+div {
     height: 40px;
     
     text-indent: 2vw;
-}
-.onetoone h3, .onetoone h1{
-    /* margin: 20px; */
-    background-color: rgba(164, 178, 192, 0.06);
-    border-radius: 10px;
-    text-indent: 2vw;
-    text-align: initial;
-    /* margin: 4vw; */
-    margin: 2vh;
-}
-.onetoone h1{
-    background-color: rgb(164, 178, 192, 0.142)
 }
 .onetoone th{
     width: 100px;
