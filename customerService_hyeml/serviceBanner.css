@@ -45,6 +45,7 @@ footer {
     background-color: rgba(164, 178, 192, 0.142);
 }
 
+
 .footer,
 .Copyright {
     margin-bottom: 32px;
@@ -60,7 +61,7 @@ footer {
 /* ======================================== */
 /* 전체적인 페이지 구성. */
 .side_bar_all{
-    height: 100vh;
+    height: 80vh; /*주의*/
     display: flex;
     justify-content: center;
 }
@@ -71,13 +72,15 @@ footer {
 }
 /* 가운데 메인 화면 */
 .customer_box, .onetoone, .notice {
-    display: inline-flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     width: 50vw;
     min-width: 600px;
     text-align: center;
     margin-top: 10vh;
+    overflow: auto;
+    /* flex-wrap: wrap; */
 }
 /* .customer_box, .onetoone, .notice {
     display: inline-block;
@@ -98,7 +101,7 @@ footer {
     /* width: 20vw;
     max-width: 300px; */
     height: 150px;
-    position: sticky;
+    position: fixed;
     top:30vh;
     text-align: center;
     
@@ -109,7 +112,7 @@ footer {
     max-width: 300px;
     height: 400px;
     /* background-color: antiquewhite; */
-    position: sticky;
+    position: fixed;
     top:30vh;
     text-align: center;
     
