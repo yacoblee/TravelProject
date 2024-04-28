@@ -61,11 +61,10 @@ footer {
 /* ======================================== */
 /* 전체적인 페이지 구성. */
 .side_bar_all{
-    height: 80vh; /*주의*/
     display: flex;
     justify-content: center;
 }
-.left_side_bar{
+.left_side_bar, .right_side_bar{
     display: flex;
     width: 15vw;
     justify-content: center;
@@ -79,7 +78,7 @@ footer {
     min-width: 600px;
     text-align: center;
     margin-top: 10vh;
-    overflow: auto;
+    /* overflow: auto; */
     /* flex-wrap: wrap; */
 }
 /* .customer_box, .onetoone, .notice {
@@ -89,17 +88,11 @@ footer {
     text-align: center;
     margin-top: 10vh;
 } */
-.right_side_bar{
-    display: flex;
-    width: 15vw;
-    justify-content: center;
-}
 
 /* ================================== */
 /* 양쪽 사이드 바에 대한 포지션과 , 사이즈 조절. */
 .left_side_bar ul{
-    /* width: 20vw;
-    max-width: 300px; */
+    /*max-width: 300px; */
     height: 150px;
     position: fixed;
     top:30vh;
@@ -107,25 +100,23 @@ footer {
     
 }
 
-.right_side_bar .right_side_bar_box{
+.right_side_bar_box{
+    /* width: ; */
     width: 15vw;
-    max-width: 300px;
-    height: 400px;
-    /* background-color: antiquewhite; */
     position: fixed;
     top:30vh;
+    height: auto;
     text-align: center;
-    
 }
 
 /* 왼쪽 사이드 바에 대한 설정 */
 
 .left_side_bar a {
-    display: inline-block;
+    display: block;
     text-decoration: none;
     width: 15vw;
-    max-width: 300px;
-    height: 50px;
+    /* max-width: 300px; */
+    /* height: 50px; */
     line-height: 50px;
     color: black;
     background-color: rgb(164, 178, 192, 0.142);
@@ -143,17 +134,17 @@ footer {
     border: 0.5px solid rgba(216, 216, 216, 0.484);
     border-radius: 5px;
     background-color: rgb(164, 178, 192, 0.142);
-    line-height: 40px;
+    padding: 1vh;
 
 }
 .right_side_bar_box div:nth-last-child(1){
     white-space: pre-line;
-    line-height: 30px;
 }
 .right_side_bar_box div:nth-of-type(even){
     opacity: 0.8;
     color: rgb(97, 97, 97);
-    font-size: 95%;
+    font-size: 14px;
+    line-height: 25px;
 }
 
 /* ================================================ */
@@ -171,19 +162,11 @@ footer {
 }
 
 .onetoone h3, .onetoone h1, .customer_bar h1, .notice h1{
-    /* margin: 20px; */
-    /* align-self: start; */
-    /* width: 45vw; */
-    border-radius: 10px;
     padding:0 2vw;
-    /* text-align: initial; */
-    /* margin: 4vw; */
     margin: 2vh;
+    text-align: left;
 }
-.onetoone h3{
-    background-color: rgba(250, 235, 215, 0.278);
-    width: 20vw;
-}
+
 
 /* main customer_box */
 /* 1. customer_bar 2. asked Question 3. Question_all */
@@ -193,7 +176,7 @@ footer {
 
 
 .customer_bar div{
-    margin-bottom: 4vw;
+    margin-bottom: 4vh;
     
 }
 
@@ -207,7 +190,7 @@ footer {
     border: 1px solid silver;
     border-radius: 10px;
     background-color: rgb(164, 178, 192, 0.142);
-    text-align: center;
+    /* text-align: center; */
     justify-content: space-evenly;
     align-items: center;
 }
@@ -223,7 +206,6 @@ footer {
     width: 120px;
     height: 5vh;
     line-height: 5vh;
-    text-indent: initial;
     font-size: 110%;
     text-decoration: none;
     /* color: black; */
@@ -271,10 +253,10 @@ footer {
 }
 .question_1 div , .question_2 div , .question_3 div{
     display: inline-block;
-    width: 40vw;
-    min-width: 450px;
+    /* width: 40vw; */
+    /* min-width: 450px; */
     height: auto;
-    margin: 5px;
+    margin: 2vh;
     /* background-color: aquamarine; */
     white-space: pre-line;
     background-color:  rgba(164, 178, 192, 0.089);
@@ -294,15 +276,12 @@ input[type="checkbox"]:checked+label+div {
     display: none;
 }
 .question_all label {
-    display: inline-block;
-    width: 40vw;
-    min-width: 450px;
+    display: block;
     height: 5vh;
     line-height: 5vh;
-    margin: 10px 0;
+    margin: 2vh 0;
     border-bottom: solid 1px silver;
     cursor: pointer;
-    /* background-color: antiquewhite; */
 }
 
 .question_all label::before{
@@ -314,53 +293,43 @@ input[type="checkbox"]:checked+label+div {
 /*=============================*/
 
 /*1:1 문의의 사이즈 조절, 폰트 배열 조절*/
-.onetoone{
-    /* margin: 2vh;
-    margin-top: 20px; */
-    margin-top: 10vh;
-    text-align: center
-}
+
 .onetoone form{
     display: inline-block;
     width: 40vw;
     min-width: 500px;
     font-size: 18px;  
     text-align: initial;
+    margin-bottom: 20px;
 }
 .onetoone table{
     height: 300px;
     min-height: 300px;
 }
-.onetoone ul{
- width: 40vw;
-}
+
 .onetoone li{
     height: 40px;
-    
-    text-indent: 2vw;
+    padding: 0 2vw ;
+    line-height: 40px;
 }
 .onetoone th{
     width: 100px;
     font-weight: 400;
     text-align: center;
 }
-.onetoone td,th{
-    vertical-align: middle;
-    padding-bottom: 1.5vh;
+.onetoone td{
+    padding: 2vh 0;
 }
 
 .onetoone label{
     opacity: 0.8;
     font-size: 18px;
-    /* padding-left: 15px; */
 }
 
 
 .onetoone input[id="one_content"]{
     overflow: auto;
-    /* text-align: initial; */
     white-space: pre;
-    opacity: 0.7;
 }
 .onetoone input ,
 .onetoone select{
@@ -383,12 +352,87 @@ input[id="one_named"]{
 }
 
 .onetoone button{
-    display: flex;
+    display: inline-block;
     position: relative;
-    left: 500px;;
+    left: 10vw;
     width: 80px;
     height: 30px;
-    margin: 20px;
+    /* margin: 20px; */
     line-height: 30px;
-    justify-content: center;
 }
+
+/* ======================================= */
+.notice_search{
+    display: flex;
+    justify-content: end;
+    background-color: rgb(164, 178, 192, 0.142);
+    border-radius: 5px;
+    width: 40vw;
+    min-width: 450px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 2vh;
+    margin: 2vh 0;
+}
+.notice_search select{
+    text-align: center;
+    width: 60px;
+    height: 25px;
+}
+.notice_search input{
+    width: 200px;
+    height: 25px;   
+}
+
+.notice button{
+    height: 25px;
+    width: 50px;
+    background-color: rgba(76, 75, 75, 0.623);
+    color: white;
+}
+
+
+.notice_list{
+    width: 40vw;
+    min-width: 500px;
+}
+.notice_list ul ul{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.5px solid silver;
+    height: 5vh;
+    line-height: 5vh;
+    margin: 2vh 0;
+}
+
+.notice_list ul ul>li:nth-of-type(1){
+    width: 40px;
+    text-align: center;
+}
+.notice_list ul ul>li:nth-last-of-type(1){
+    width: 100px;
+    text-align: center;
+}
+.notice_list li a {
+    display: block;
+    height: 5vh;
+    width: calc(40vw - 40px - 100px);
+    min-width: 250px;
+    text-decoration: none;
+    color: black;
+}
+
+.notice_list>ul>li:hover{
+    background-color:  rgb(164, 178, 192, 0.142);
+}
+
+.notice_page{
+    padding: 2vh;
+}
+.notice_page a {
+    display: inline-block;
+    margin: 1vh;
+    text-decoration: none;
+    color: brown;
+}
+
