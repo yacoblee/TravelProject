@@ -166,8 +166,16 @@ footer {
     margin: 2vh;
     text-align: left;
 }
+.onetoone h3:nth-of-type(1){
+    margin-top: 0;
+}
 
-
+.onetoone_bar, .customer_bar, .notice_bar{
+    min-width:450px;
+    width: 40vw;
+    margin-bottom: 4vh;
+    /* white-space: pre-line; */
+}
 /* main customer_box */
 /* 1. customer_bar 2. asked Question 3. Question_all */
 
@@ -175,16 +183,12 @@ footer {
 /* 1.customer_bar 고객센터 상단 설명 , 박스 */
 
 
-.customer_bar div{
-    margin-bottom: 4vh;
-    
-}
 
 
 .customer_bar div:nth-of-type(2){
     display: inline-flex;
     min-width:450px;
-    width: 30vw;
+    width: 40vw;
     height: 10vh;
     line-height: 10vh;
     border: 1px solid silver;
@@ -193,6 +197,7 @@ footer {
     /* text-align: center; */
     justify-content: space-evenly;
     align-items: center;
+    margin: 4vh 0;
 }
 .customer_bar a{
     background-color: rgb(164, 178, 192, 0.2);
@@ -243,6 +248,7 @@ footer {
     color: white;
     cursor: pointer;
 }
+
 /*QNA 완성*/
 .question_all{
     display: inline-block;
@@ -289,6 +295,11 @@ input[type="checkbox"]:checked+label+div {
     font:var(--fa-font-solid);
 }
 
+
+/* 여백의 빈박스 */
+.empty_box{
+    height: 30vh;
+}
 
 /*=============================*/
 
@@ -372,7 +383,7 @@ input[id="one_named"]{
     height: 50px;
     line-height: 50px;
     padding: 0 2vh;
-    margin: 2vh 0;
+    margin-bottom: 2vh;
 }
 .notice_search select{
     text-align: center;
@@ -434,6 +445,15 @@ input[id="one_named"]{
     margin: 1vh;
     text-decoration: none;
     color: brown;
+    line-height: 20px;
+    vertical-align: baseline;
+}
+.notice_page img{
+    height: 15px;
+}
+
+.notice_page a:nth-last-of-type(1) img{
+    transform: rotate(180deg);
 }
 
 /* ==================================== */
@@ -449,6 +469,10 @@ input[id="one_named"]{
     /* display: inline-block; */
     width: 40px;
     text-align: center;
+}
+.notice_page a:not(:first-child):not(:last-child)[href="#"]{
+    text-decoration: underline;
+    font-weight: 700;
 }
 
 .sevice_content_box{
