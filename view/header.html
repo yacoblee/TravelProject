@@ -5,21 +5,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/main.css">
+    <!-- <link rel="stylesheet" href="../css/main.css"> -->
+    <style>
+
+
+        header li,
+        a,
+        button {
+            font-weight: 500;
+            font-size: 16px;
+            color: rgba(32, 50, 56, 0.774);
+            text-decoration: none;
+        }
+
+        header {box-sizing: border-box;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            height: 7vh;
+            padding: 30px 10%;
+            background-color: rgba(164, 178, 192, 0.142);
+        }
+
+        .logo {
+            cursor: pointer;
+            margin-right: auto;
+        }
+
+        .nav_link {
+            list-style: none;
+        }
+
+        .nav_link li {
+            display: inline-block;
+            padding: 0px 20px;
+
+        }
+
+        .nav_link li a {
+            transition: all 0.3s ease 0s;
+        }
+
+        .nav_link li a:hover {
+            border-radius: 10px;
+            background-color: rgba(0, 135, 169, 0.39);
+        }
+
+        button {
+            margin-left: 20px;
+            padding: 9px 25px;
+            background-color: rgba(0, 135, 169, 0.732);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease 0s;
+        }
+
+        button:hover {
+            background-color: rgba(0, 135, 169, 0.39);
+        }
+    </style>
 </head>
 
 <body>
     <header>
-        <div class="headlogo">
-            <div>
-                <a class="logo" style="font-size: 20px;">logo</a>
-            </div>
+        <img src="../image/hotsix_logo1.png" class="logo" src="" alt="logo">
 
-            <div>
-                <a href="#">이벤트</a>
-                <a href="#">고객센터</a>
-            </div>
-        </div>
+        <nav>
+            <ul class="nav_link">
+                <li><a href="#">Service</a></li>
+                <li><a href="#">Event</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="cta"><button>contact</button></a>
     </header>
 </body>
 
