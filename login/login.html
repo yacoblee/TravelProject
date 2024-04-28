@@ -15,16 +15,17 @@
 
 <body>
     <div class="login_form">
-        <!-- <form action="../view/main.html"> -->
-        <form>
-            <h1>Hot6-Login</h1>
+        <form action="../view/main.html">
+            <h1 class="login_title">Hot6-Login</h1>
 
             <input type="text" id="login_id" name="login_id" placeholder="아이디를 입력하세요." minlength="4" required>
             <input type="password" id="login_pw" name="login_pw" placeholder="비밀번호를 입력하세요." minlength="8" required>
             <div>
-                <button type="submit" id="sign_in" onclick="location.href='../view/main.html'">sign in</button>
-                <!-- <button type="submit" id="sign_in">sign in</button> -->
+                <button type="submit" id="sign_in">sign in</button>
                 <button type="button" id="sign_up" onclick="location.href='./sign_up.html'">sign up</button>
+            </div>
+            <div>
+                <a href="./id_find.html">ID 찾기</a> &#124; <a href="./pw_find.html">PW 찾기</a>
             </div>
         </form>
     </div>
