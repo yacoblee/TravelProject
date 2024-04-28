@@ -70,7 +70,7 @@ footer {
     justify-content: center;
 }
 /* 가운데 메인 화면 */
-.customer_box, .onetoone, .notice {
+.customer_box, .onetoone, .notice , .notice_content{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -434,5 +434,42 @@ input[id="one_named"]{
     margin: 1vh;
     text-decoration: none;
     color: brown;
+}
+
+/* ==================================== */
+/*  공지사항 상세페이지 */
+
+.sevice_content_bar{
+    display: inline-block;
+    text-align: left;
+    width: 40vw;
+    height: 40px;
+}
+.sevice_content_bar img{
+    /* display: inline-block; */
+    width: 40px;
+    text-align: center;
+}
+
+.sevice_content_box{
+    display: inline-block;
+    width: 40vw;
+    min-width: 300px;
+    text-align: start;
+    margin: 4vh;
+}
+.sevice_content_box li:nth-of-type(1) {
+    border-bottom: 0.5px solid silver;
+}
+.sevice_content_box p {
+    white-space: pre-line;
+    margin: 1vh;
+}
+.content_title h2{
+    margin: 2vh 0;
+}
+.content_title p{
+    opacity: 0.7;
+    size: 12px;
 }
 
