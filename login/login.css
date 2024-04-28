@@ -1,51 +1,76 @@
+@font-face {
+
+    /* font-face 지시자 내 font-family 에 지정하는 폰트명은 사용자 임의로 지정 가능. */
+    font-family: Nanum_Gothic_bold;
+    src: url(../css/font/Nanum_Gothic/NanumGothic-Bold.ttf);
+
+    font-family: Nanum_Gothic_ExtraBold;
+    src: url(../css/font/Nanum_Gothic/NanumGothic-ExtraBold.ttf);
+
+    font-family: Nanum_Gothic;
+    src: url(../css/font/Nanum_Gothic/NanumGothic-Regular.ttf);
+
+    font-family: Jua-Regular;
+    src: url(../css/font/Jua/Jua-Regular.ttf);
+
+}
 
 body {
     display: flex;
     justify-content: center;    /* 수평 중앙 정렬 */
     align-items: center;        /* 수직 중앙 정렬 */
     height: 100vh;              /* 화면 전체 높이 */
-
     margin: auto;
     text-align: center;
-    background-color: beige;
 }
 
-div {
-
+body::before {
+    content: "";
+    background: url(../image/남산1.jpg) no-repeat 0/cover;
+    opacity: 0.5;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
 }
 
-button {
-    text-decoration: none;
+.login_form ,
+.login_form>form>div {
+    /* border: none; */
+    border-radius: 5px;
+    display: inline-block;
 }
 
 .login_form {
     padding: 20px;
-    border: 1px solid black;
+    border: none;
     background-color: white;
     width: 400px;               /* 로그인 기본 크기 */
-    opacity: .5;
+    opacity: .8;
 }
 
 .login_form input{
     margin: 10px;
-    width: 50%;
+    width: 260px;
     padding: 10px;
     border: none;
     border-radius: 5px;
     color: black;
     background-color: lightgray;
+    font-family: Nanum_Gothic;
 }
 
 .login_form button {
     display: inline-block;
-    width: 50%;
+    width: 120px;
     margin: 10px;
     padding: 10px;
     border: none;
     border-radius: 5px;
-    border-radius: 5px;
-    text-decoration: none;
     background-color: darkgrey;
+    font-size: large;
+    font-family: Jua-Regular;
 }
 
 .login_form button:hover {
@@ -53,8 +78,22 @@ button {
     color: white;
 }
 
-/* .title {
-    width: 100%;
-    font-size: 40px;
-} */
+.login_title {
+    font-family: Nanum_Gothic_ExtraBold;
+    font-size: 30px;
+}
 
+.login_form>form>div>a {
+    font-size: medium;
+}
+.login_form>form>div>a:hover {
+    font-weight: 800;
+    color: black;
+}
+
+.login_form button_fix {
+    flex: auto;
+}
+.button_fix .find {
+    width: 265px;
+}
