@@ -213,6 +213,7 @@ section {
     height: 200px;
     margin: auto;
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: nowrap;
 }
 
