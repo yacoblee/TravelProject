@@ -152,9 +152,7 @@ footer {
 /* 화면 제목 , 설명글 통합 */
 
 .customer_bar p, .onetoone p, .notice p{
-    /* align-self: start; */
     white-space: pre;
-    /* padding: 0 2vw; */
     opacity: 0.8;
     text-indent: 30px;
     text-align: initial;
@@ -176,6 +174,8 @@ footer {
     margin-bottom: 4vh;
     /* white-space: pre-line; */
 }
+
+
 /* main customer_box */
 /* 1. customer_bar 2. asked Question 3. Question_all */
 
@@ -204,19 +204,30 @@ footer {
     border: 1px solid rgba(192, 192, 192, 0.629);
     border-radius: 5px;
     color: rgb(12, 12, 11);
+    vertical-align: middle;
 }
+.customer_bar a span::after{
+    display: inline;
+    content: "\f4ad";
+    font:var(--fa-font-solid);
+}
+.customer_bar a span{
+    font-size: 90%;
+/*  체크 필요  */
+
 
 .customer_bar span , .customer_bar a{
-    display: inline-block;
+
     width: 120px;
     height: 5vh;
     line-height: 5vh;
     font-size: 110%;
     text-decoration: none;
+    vertical-align: middle;
     /* color: black; */
 }
 
-.customer_bar span::before{
+.customer_bar .callme::before{
     display: inline-block;
     content: "\f095";
     font:var(--fa-font-solid);
