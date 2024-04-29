@@ -20,9 +20,9 @@ header {
     align-items: stretch;
     position: sticky;
     /* padding-top: 10px; */
-    top: 7vh;
+    top: 10px;
     /* margin: 3vh 0; */
-    background-color: rgb(217, 236, 248);
+    background-color: rgb(246, 251, 255);
     height: 8vh;
     line-height: 8vh;
 }
@@ -95,7 +95,7 @@ header {
     width: 800px;
     height: 40px;
     text-align: center;
-    background-color: beige;
+    background-color: rgb(247, 247, 235);
 }
 
 .nav_5 {
@@ -127,12 +127,14 @@ header {
 /* 위치 */
 .map {
     flex-direction: column;
+    /* justify-content: center; */
 }
 
 .map_image {
     background: url(../image/location_shilla.png) 0/100% 100%;
     width: 350px;
     height: 200px;
+
     /* position: relative; */
     /* display: flex; */
 }
@@ -178,6 +180,7 @@ header {
 
 .room_information {
     display: flex;
+    justify-content: space-evenly;
 }
 
 .room_information_image {
@@ -188,15 +191,56 @@ header {
 
 
 .room_information_details {
+    display: flex;
+    flex-direction: column;
     /* flex-direction: row; */
-    position: relative;
-    font-size: 20px;
+    /* font-size: 20px; */
+}
+
+.room_information_content {
+    display: flex;
+    flex-direction: column;
+    /* align-content: space-around; */
+
+    background-color: aliceblue;
+    /* width: 500px; */
+    height: 150px;
+}
+
+.room_information_content div {
+    /* align-content: space-between; */
+    /* justify-content: space-evenly; */
 }
 
 .room_information_price {
-    position: relative;
-    right: 0;
-    bottom: 0;
+    width: 200px;
+    height: 150px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    /* flex-flow: column wrap; */
+    /* justify-content: space-evenly; */
+    margin-top: 50px;
+    margin-left: 300px;
+    /* padding: 15px; */
+}
+
+.room_information_price div {
+    padding-bottom: 10px;
+}
+
+.price_event {
+    font-size: small;
+}
+
+.list_price {
+    text-decoration-line: line-through;
+}
+
+.purchase_price {
+    text-align: end;
+    font-weight: bold;
 }
 
 /* footer */
