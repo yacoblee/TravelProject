@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+body>header {
+  height: 7vh;
+  width: 100%;
+  background-color: rgba(164, 178, 192, 0.142);
+}
+
+.headlogo {
+  display: flex;
+  padding-left: 40px;
+  padding-right: 40px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===================================================================== */
+.pd_main {
+  display: flex;
+  width: 1200px;
+  margin: auto;
+  gap: 20px;
+}
+
+.left_main_check {
+  /* background-color: red; */
+  flex: 1;
+}
+
+.right_main_product {
+  /* background-color: blue; */
+  flex: 3;
+}
+
+.right_main_product header h2 {
+  margin-block: 20px;
+}
+
+/* ===================================================================== */
+
+.left_check_price {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid gray;
+}
+
+.price_range {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.price_range input {
+  width: 100%;
+}
+
+.empty_price {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ===================================================================== */
+
+.left_check_header {
+  /* text-align: center; */
+  font-size: 18px;
+  margin-block: 20px;
+}
+
+.check_box_align {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* padding-left: 30px; */
+  padding-bottom: 20px;
+  border-bottom: 1px solid gray;
+}
+
+[type="radio"] {
+  appearance: none;
+  border: max(2px, 0.1em) solid gray;
+  border-radius: 50%;
+  width: 1.25em;
+  height: 1.25em;
+  transition: 0.5s;
+  vertical-align: text-bottom;
+}
+
+[type="radio"]:checked {
+  border: 0.4em solid blue;
+}
+
+[type="radio"]:hover {
+  box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+  cursor: pointer;
+}
+
+.checked_all_box {
+  width: 18px;
+  height: 18px;
+}
+
+/* ================================================================== */
+
+.main_facility h3 {
+  margin-block: 10px;
+}
+
+.facility_flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.public_facilities {
+  font-weight: bold;
+  color: rgb(154 169 184);
+  margin-block: 15px;
+}
+
+.facility_button {
+  max-width: 100%;
+  padding-bottom: 8px;
+  padding-right: 6px;
+}
+
+.facility_design {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border-width: 1.5px;
+  border-color: lightgray;
+  height: 32px;
+  flex-wrap: wrap;
+  padding: 0 16px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  --tw-border-opacity: 1;
+  border-color: rgb(183 213 246 / var(--tw-border-opacity));
+  background-color: white;
+}
+
+.facility_design:hover {
+  background-color: rgb(211, 211, 211, .5);
+}
+
+
+
+/* ======================================================================== */
+/* 메인 리스트 */
+
+.main_product_list {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.main_product_list .product_img img {
+  width: 30vw;
+  height: 40vh;
+  border-radius: 5px;
+}
+
+.product_img {
+  flex-basis: 85%;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.product_a {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.product_infor {
+  font-weight: bold;
+  vertical-align: top;
+  font-size: large;
+}
+
+.btn_like {
+  position: absolute;
+  right: 10%;
+  width: 10%;
+}
+
+.like_aaa {
+  align-items: center;
+  border-radius: 100px;
+  border-width: 1.5px;
+  border-color: lightgray;
+  height: 32px;
+  flex-wrap: wrap;
+  padding: 0 16px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  --tw-border-opacity: 1;
+  border-color: rgb(183 213 246 / var(--tw-border-opacity));
+  background-color: white;
+}
+
+.product_infor span+div {
+  font-size: 10px;
+}
+
+.product_img {
+  position: relative;
+  margin-right: 20px;
+}
+
+.infor_aa {
+  display: flex;
+  gap: 110px;
+}
+
+.infor_sl {
+  font-size: 14px;
+  border-left: 1px solid gray;
+  padding-left: 10px;
+}
+
+
+.infor_price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* ================================================================= */
+/* 호버 효과 */
+
+.product_infor_hover,
+.product_infor_hover0 {
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc; 
+  white-space: nowrap; 
+  z-index: -1;  
+}
+
+.product_infor_hover {
+  top: 50%;
+  transition: right 0.6s ease, opacity 0.6s ease;
+  transition: left 0.6s ease, opacity 0.6s ease;
+}
+
+.product_infor_hover0 {
+  width: 10vw;
+  top: 30%;
+  transition: right 0.7s ease, opacity 0.7s ease;
+  transition: left 0.7s ease, opacity 0.7s ease;
+}
+
+.product_img:hover .product_infor_hover,
+.product_img:hover .product_infor_hover0 {
+  left: 35vw;
+  opacity: 1;
+}
+
+
+/* =================================================================== */
+
