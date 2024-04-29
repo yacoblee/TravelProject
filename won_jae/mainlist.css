@@ -25,11 +25,14 @@ body>header {
   width: 1200px;
   margin: auto;
   gap: 20px;
+  justify-content: space-between;
+  /* justify-content: space-around; */
 }
 
 .left_main_check {
   /* background-color: red; */
   flex: 1;
+  margin-left: 10px;
 }
 
 .right_main_product {
@@ -149,6 +152,9 @@ body>header {
   background-color: rgb(211, 211, 211, .5);
 }
 
+.facility_design:checked {
+  background-color: blue;
+}
 
 
 /* ======================================================================== */
@@ -161,8 +167,8 @@ body>header {
 }
 
 .main_product_list .product_img img {
-  width: 30vw;
-  height: 40vh;
+  width: 20vw;
+  height: 22vh;
   border-radius: 5px;
 }
 
@@ -241,9 +247,9 @@ body>header {
   opacity: 0;
   background-color: #fff;
   padding: 10px;
-  border: 1px solid #ccc; 
-  white-space: nowrap; 
-  z-index: -1;  
+  border: 1px solid #ccc;
+  white-space: nowrap;
+  z-index: -1;
 }
 
 .product_infor_hover {
@@ -254,17 +260,61 @@ body>header {
 
 .product_infor_hover0 {
   width: 10vw;
-  top: 30%;
+  top: 25%;
   transition: right 0.7s ease, opacity 0.7s ease;
   transition: left 0.7s ease, opacity 0.7s ease;
 }
 
 .product_img:hover .product_infor_hover,
 .product_img:hover .product_infor_hover0 {
-  left: 35vw;
+  left: 25vw;
   opacity: 1;
 }
 
 
 /* =================================================================== */
+/* 페이징 */
 
+.paging_ul {
+  color: #000000;
+  display: flex;
+  justify-content: center;
+}
+
+.paging_main {
+  color: #000000;
+  display: flex;
+  justify-content: space-between;
+  width: 10vw;
+}
+
+.paging_main div a {
+  color: #000000;
+}
+
+.paging_main div a:active {
+  font-weight: bold;
+  color: purple;
+}
+
+/* =================================================== */
+/* footer 내역 */
+footer {
+  display: inline-block;
+  width: 100%;
+  margin: auto;
+  background-color: rgba(164, 178, 192, 0.142);
+}
+
+.footer,
+.Copyright {
+  margin-bottom: 32px;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0px;
+  font-weight: 400;
+  --tw-text-opacity: 1;
+  color: rgb(153 153 153 / var(--tw-text-opacity));
+}
+
+/* =========================================================== */
