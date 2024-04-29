@@ -5,7 +5,6 @@
 }
 
 @font-face {
-
     /* font-face 지시자 내 font-family 에 지정하는 폰트명은 사용자 임의로 지정 가능. */
     font-family: Nanum_Gothic_bold;
     src: url(./font/Nanum_Gothic/NanumGothic-Bold.ttf);
@@ -16,12 +15,9 @@
     font-family: Nanum_Gothic;
     src: url(./font/Nanum_Gothic/NanumGothic-Regular.ttf);
 
-
     font-family: Jua-Regular;
     src: url(./font/Jua/Jua-Regular.ttf);
-
 }
-
 
 .inline_section {
     display: inline-block;
@@ -30,41 +26,6 @@
 main {
     height: 120vh;
     max-height: 200vh;
-
-
-}
-
-header {
-
-    height: 7vh;
-    width: 100%;
-    background-color: rgba(164, 178, 192, 0.142);
-}
-
-.headlogo {
-    display: flex;
-    padding-left: 40px;
-    padding-right: 40px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-footer {
-    display: inline-block;
-    width: 100%;
-    margin: auto;
-    background-color: rgba(164, 178, 192, 0.142);
-}
-
-.footer,
-.Copyright {
-    margin-bottom: 32px;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    letter-spacing: 0px;
-    font-weight: 400;
-    --tw-text-opacity: 1;
-    color: rgb(153 153 153 / var(--tw-text-opacity));
 }
 
 
@@ -92,6 +53,12 @@ section {
     /* overflow-clip-margin: content-box; */
 }
 
+@media screen and (width > 1200px) {
+    .region {
+        flex-basis: 30%;
+    }
+}
+
 @media screen and (width >=1300px) {
     .slider_content {
         width: 1200px;
@@ -104,7 +71,6 @@ section {
     .slider_content {
         width: 900px;
         height: 500px;
-
     }
 
 }
@@ -116,6 +82,9 @@ section {
 
     }
 
+    .region {
+        flex-basis: 50%;
+    }
 
     .form input[type="email"],
     .form input[type="password"] {
@@ -127,7 +96,7 @@ section {
     }
 }
 
-@media screen and (900px > width >=700px) {
+@media screen and (900px > width >=720px) {
     .slider_content {
         width: 600px;
         height: 450px;
@@ -143,18 +112,23 @@ section {
         width: 50vw;
     }
 
-    .region {
-        flex-basis: 25%;
-        width: auto;
-
+    .region,
+    .region_inner {
+        flex-basis: 50%;
     }
 }
 
-@media screen and (700px > width >=500px) {
+@media screen and (720px > width >=500px) {
     .slider_content {
         width: 500px;
         height: 400px;
 
+    }
+
+    .region,
+    .region_inner {
+        flex-basis: 100%;
+        flex-direction: column;
     }
 
     .form input[type="email"],
@@ -219,7 +193,6 @@ section {
     background-color: #007bff;
     color: white;
     cursor: pointer;
-
     margin-bottom: 10px;
 }
 
@@ -240,19 +213,16 @@ section {
     height: 200px;
     margin: auto;
     display: flex;
+    justify-content: space-evenly;
     flex-wrap: nowrap;
 }
 
 .region {
-
+    margin-right: 1vw;
     position: relative;
     overflow: hidden;
     border-radius: 12px;
     margin-bottom: 20px;
-}
-
-.region:not(:nth-child(5n)) {
-    margin-right: 1vw;
 }
 
 .region a {
@@ -273,27 +243,34 @@ section {
     left: 0;
     right: 0;
     padding: 8px;
+    text-align: center;
     background-color: rgba(255, 255, 255, 0.8);
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
 }
 
-@media screen and (width > 1200px) {
-    .region {
-        flex-basis: 30%;
-    }
+.regionbutton {
+    position: relative;
+    top: 70px;
+    right: 30px;
 }
 
-@media screen and (1200px >=width >=700px) {
-    .region {
-        flex-basis: 50%;
-    }
+.regionbutton a img {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    padding: 3px;
+    border-radius: 50%;
+    background-color: #d3dadc7d;
 }
 
-@media screen and (700px > width) {
-    .region {
-        flex-basis: 100%;
-    }
+
+.region:nth-child(-n+4) {
+    display: block;
+}
+
+.region {
+    display: none;
 }
 
 .selectarea>li {
@@ -302,10 +279,8 @@ section {
     padding: 5px 10px;
     font-size: 0.8rem;
     line-height: 32px;
-
     letter-spacing: 0px;
     font-weight: 600;
-
     flex: 0 0 auto;
     cursor: pointer;
     align-items: center;
@@ -325,5 +300,50 @@ section {
 .selectarea li.selected {
     background-color: #3489ae82;
     font-weight: bold;
+    color: white;
     border-radius: 20px;
+}
+
+
+.lodging_inner {
+    width: 100%;
+
+    display: flex;
+
+    margin-top: 1vw;
+    background-color: aqua;
+}
+
+
+
+.lodging {
+    margin-right: 1vw;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    flex-basis: 30%;
+}
+
+/* .lodging a {
+    width: 100%;
+    height: 100%;
+    display: block;
+} */
+
+.lodging img {
+    position: absolute;
+  
+    width: 100%;
+    inset: 0px;
+    color: transparent;
+}
+
+.lodging a div span {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: rgba(17, 17, 17, 0.8);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
 }

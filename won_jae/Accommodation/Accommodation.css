@@ -1,0 +1,220 @@
+/* header */
+header {
+    height: 7vh;
+    width: 100%;
+    background-color: rgba(164, 178, 192, 0.142);
+}
+
+/* 객실 검색 상단바 */
+.nav_1 {
+    /* height: 15px; */
+}
+
+.search_bar {
+    height: 20%;
+    display: flex;
+    /* width: 1200px; */
+    /* flex-direction: row; */
+    /* justify-content: space-between; */
+    justify-content: space-evenly;
+    align-items: stretch;
+    position: sticky;
+    /* padding-top: 10px; */
+    top: 7vh;
+    /* margin: 3vh 0; */
+    background-color: rgb(217, 236, 248);
+    height: 8vh;
+    line-height: 8vh;
+}
+
+/* main */
+/* 상단 이미지 */
+.main_screen {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.name_details {
+    display: flex;
+    margin-top: -20px;
+}
+
+.main_img_area {
+    height: 440px;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 8px;
+}
+
+.main_img_large {
+    min-width: 445px;
+    height: 100%;
+    cursor: pointer;
+    grid-row: span 2 / span 2;
+    position: relative;
+}
+
+.main_img_large img {
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.main_img_small {
+    min-width: 185.5px;
+    height: 100%;
+    cursor: pointer;
+    grid-row: span 1 / span 1;
+    position: relative;
+}
+
+.main_img_small:nth-child(4) img {
+    border-top-right-radius: 8px;
+}
+
+.main_img_small:nth-child(5) img {
+    border-bottom-right-radius: 8px;
+}
+
+.main_img_area img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.main_img_area img:hover {
+    opacity: 50%;
+    /* transition-timing-function: ease-in-out; */
+    transition-duration: 500ms;
+}
+
+/* 정보 네이게이션(위치이동) */
+.nav_4 {
+    /* margin: 0;
+    padding: 0; */
+    width: 800px;
+    height: 40px;
+    text-align: center;
+    background-color: beige;
+}
+
+.nav_5 {
+    list-style: none;
+}
+
+.nav_5 li {
+    float: left;
+    width: 15%;
+    /* height: 40px; */
+    line-height: 40px;
+    /* padding: 0 10px; */
+    /* background-size: 900px 40px; */
+}
+
+/* article */
+.information {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* 호텔 소개(정보) */
+.hotel_information {
+    width: 800px;
+    white-space: pre-line;
+    font-size: 12px;
+}
+
+/* 위치 */
+.map {
+    flex-direction: column;
+}
+
+.map_image {
+    background: url(../image/location_shilla.png) 0/100% 100%;
+    width: 350px;
+    height: 200px;
+    /* position: relative; */
+    /* display: flex; */
+}
+
+.map_location1 {
+    list-style: none;
+    position: absolute;
+    /* left: calc(100% + 50px); */
+    /* display: flex; */
+    margin-top: 200px;
+    margin-left: -45px;
+}
+
+/* .map_location1 {
+    list-style: none;
+    position: absolute;
+    left: calc(100% + 50px);
+    display: flex;
+} */
+
+.map_location2 {
+    /* display: inline-block; */
+    /* vertical-align: middle; */
+    /* line-height: normal; */
+}
+
+/* 시설 및 서비스 */
+
+/* 객실 */
+.room_type {
+    /* display: flex; */
+    background-color: rgb(238, 236, 225);
+    padding: 20px;
+    margin: 20px 0;
+    box-sizing: border-box;
+    /* border: solid; */
+    border-radius: 20px;
+}
+
+.room_type_name {
+    /* flex-direction: column; */
+}
+
+.room_information {
+    display: flex;
+}
+
+.room_information_image {
+    width: 600px;
+    height: 350px;
+    margin-right: 20px;
+}
+
+
+.room_information_details {
+    /* flex-direction: row; */
+    position: relative;
+    font-size: 20px;
+}
+
+.room_information_price {
+    position: relative;
+    right: 0;
+    bottom: 0;
+}
+
+/* footer */
+footer {
+    display: inline-block;
+
+    width: 100%;
+    margin: auto;
+    background-color: rgba(164, 178, 192, 0.142);
+}
+
+.footer,
+.Copyright {
+    margin-bottom: 32px;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    letter-spacing: 0px;
+    font-weight: 400;
+    --tw-text-opacity: 1;
+    color: rgb(153 153 153 / var(--tw-text-opacity));
+}
