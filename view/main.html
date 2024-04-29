@@ -15,6 +15,7 @@
         <img src="../image/hotsix_logo1.png" class="logo" src="" alt="logo">
         <nav>
             <ul class="nav_link">
+                <li><a href="#">Login</a></li>
                 <li><a href="#">Reservation</a></li>
                 <li><a href="#">Event</a></li>
             </ul>
@@ -27,7 +28,8 @@
             <div class="mainimg">
                 <div id="slider" class="slider">
                     <div class="slider_content">
-                        <img class="slide" src="../image/background2.jpg">
+                        <!-- <video src="" muted autoplay loop poster="../image/background2.jpg"></video> -->
+                        <img class="slide" src="../image/background2.jpg" alt="">
                     </div>
                 </div>
 
@@ -53,15 +55,15 @@
                 <div class="region">
                     <a href="#">
                         <div>
-                            <img src="../image/busan.png">
+                            <img src="../image/busan.png" alt="">
                             <span>부산</span>
                         </div>
                     </a>
                 </div>
                 <div class="region">
-                    <a href="#" value="서울">
+                    <a href="#">
                         <div>
-                            <img src="../image/seoul.png">
+                            <img src="../image/seoul.png" alt="">
                             <span>서울</span>
                         </div>
                     </a>
@@ -69,7 +71,7 @@
                 <div class="region">
                     <a href="#">
                         <div>
-                            <img src="../image/jeonju.png">
+                            <img src="../image/jeonju.png" alt="">
                             <span>전주</span>
                         </div>
                     </a>
@@ -77,7 +79,7 @@
                 <div class="region">
                     <a href="#">
                         <div>
-                            <img src="../image/busan.png">
+                            <img src="../image/busan.png" alt="">
                             <span>부산</span>
                         </div>
                     </a>
@@ -85,7 +87,7 @@
                 <div class="region">
                     <a href="#">
                         <div>
-                            <img src="../image/busan.png">
+                            <img src="../image/busan.png" alt="">
                             <span>부산</span>
                         </div>
                     </a>
@@ -93,7 +95,7 @@
                 <div class="region">
                     <a href="#">
                         <div>
-                            <img src="../image/jeonju.png">
+                            <img src="../image/jeonju.png" alt="">
                             <span>전주</span>
                         </div>
                     </a>
@@ -101,7 +103,7 @@
                 <div class="region">
                     <a href="#">
                         <div>
-                            <img src="../image/jeonju.png">
+                            <img src="../image/jeonju.png" alt="">
                             <span>전주</span>
                         </div>
                     </a>
@@ -109,7 +111,7 @@
                 <div class="region">
                     <a href="#">
                         <div>
-                            <img src="../image/jeonju.png">
+                            <img src="../image/jeonju.png" alt="">
                             <span>전주</span>
                         </div>
                     </a>
@@ -117,7 +119,7 @@
                 <div class="region">
                     <a href="#">
                         <div>
-                            <img src="../image/jeonju.png">
+                            <img src="../image/jeonju.png" alt="">
                             <span>전주</span>
                         </div>
                     </a>
@@ -125,7 +127,7 @@
                 <div class="region">
                     <a href="#">
                         <div>
-                            <img src="../image/jeonju.png">
+                            <img src="../image/jeonju.png" alt="">
                             <span>전주</span>
                         </div>
                     </a>
@@ -133,14 +135,13 @@
                 <div class="region">
                     <a href="#">
                         <div>
-                            <img src="../image/jeonju.png">
+                            <img src="../image/jeonju.png" alt="">
                             <span>전주</span>
                         </div>
                     </a>
                 </div>
                 <div class="regionbutton">
-                    <a href="#"><img src="../image/free-icon-right-arrow-271228.png"></a>
-
+                    <a><img src="../image/free-icon-right-arrow-271228.png" alt=""></a>
                 </div>
             </div>
         </section>
@@ -151,97 +152,203 @@
                     style="justify-content: space-between; align-items: center; display: flex; box-sizing: border-box;">
                     <h2 style="display: block; font-size: 1.125rem; line-height: normal;">추천 숙소</h2>
                 </div>
-                <ul class="selectarea"
-                    style="display: flex; width: 100%; overflow-x: auto; overscroll-behavior: none;gap: 6px 8px; flex-wrap: nowrap;">
-                    <li id="TAB_0" tabindex="0" role="tab" aria-selected="true" class="">전체</li>
-                    <li id="TAB_0" tabindex="1" role="tab" aria-selected="false" class="">호텔</li>
-                    <li id="TAB_0" tabindex="2" role="tab" aria-selected="false" class="">펜션.풀빌라</li>
-                    <li id="TAB_0" tabindex="3" role="tab" aria-selected="false" class="">게스트하우스</li>
+                <ul class="selectarea" role="tablist">
+                    <li id="TAB_0" tabindex="0" role="tab" aria-selected="true">전체</li>
+                    <li id="TAB_1" tabindex="1" role="tab" aria-selected="false">호텔</li>
+                    <li id="TAB_2" tabindex="2" role="tab" aria-selected="false">펜션.풀빌라</li>
+                    <li id="TAB_3" tabindex="3" role="tab" aria-selected="false">게스트하우스</li>
                 </ul>
             </div>
             <div class="lodging_inner">
+
                 <div class="lodging">
                     <div>
-                        <a href="#">
-                            <div style="width: 100% !important;
-                            height: auto !important;
-                            padding-top: 60% !important;">
-                                <img src="../image/jeonju.png">
+                        <a href="">
+                            <div class="lodging_img">
+                                <img src="../image/hotel1.JPG" alt="">
                             </div>
-                            <div
-                                style="height: 134px;display: flex;flex-direction: column;
-                            -webkit-box-pack: justify;justify-content: space-between;padding-left: 4px;padding-right: 4px;">
-                                <div><span>a</span></div>
-                                <div>
-                                    <h3
-                                        style="font-size: 1rem;line-height: 1.5rem;letter-spacing: 0px;font-weight: 700;--tw-text-opacity: 1;color: rgb(51 51 51 / var(--tw-text-opacity));
-                                overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;">
-                                        test</h3>
-                                </div>
-                                <div style="    margin-top: -2px;
-                                display: flex;
-                                -webkit-box-flex: 1;
-                                flex-grow: 1;
-                                flex-direction: row;
-                                -webkit-box-align: center;
-                                align-items: center;
-                                overflow: hidden;
-                                text-overflow: ellipsis;
-                                white-space: nowrap;"><span>asdasd</span></div>
-                                <div><span></span></div>
-                                <div><span></span></div>
+                            <div class="lodging_value">
+                                <ul>
+                                    <li class="lodging_type">호텔</li>
+                                    <li class="lodging_infor">제주 호텔</li>
+                                    <li class="lodging_address">제주시 애월읍</li>
+                                    <li class="lodging_num">0.0 별점<sub>9999명 평가</sub></li>
+                                    <li class="coupon">쿠폰적용시</li>
+                                    <li>
+                                        <span class="coupon_pay">90000</span>
+                                        <span class="coupon_pay">원</span>
+                                        <span class="lodging_pay"></span>
+                                    </li>
+                                </ul>
                             </div>
                         </a>
                     </div>
                 </div>
                 <div class="lodging">
                     <div>
-                        <a href="#">
-                            <img src="../image/jeonju.png">
-                            <div><span></span></div>
-                            <div><span></span></div>
-                            <div><span></span></div>
-                            <div><span></span></div>
-                            <div><span></span></div>
+                        <a href="">
+                            <div class="lodging_img">
+                                <img src="../image/hotel2.JPG" alt="">
+                            </div>
+                            <div class="lodging_value">
+                                <ul>
+                                    <li class="lodging_type">호텔</li>
+                                    <li class="lodging_infor">전주 한옥 호텔</li>
+                                    <li class="lodging_address">전라북도 전주시 완산구</li>
+                                    <li class="lodging_num"> 9.0 별점<sub>9999명 평가</sub></li>
+                                    <li class="coupon">쿠폰적용시</li>
+                                    <li>
+                                        <span class="coupon_pay">80000</span>
+                                        <span class="coupon_pay">원</span>
+                                        <span class="lodging_pay">90000원</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </a>
                     </div>
                 </div>
                 <div class="lodging">
                     <div>
-                        <a href="#">
-                            <img src="../image/jeonju.png">
-                            <div><span></span></div>
-                            <div><span></span></div>
-                            <div><span></span></div>
-                            <div><span></span></div>
-                            <div><span></span></div>
+                        <a href="">
+                            <div class="lodging_img">
+                                <img src="../image/hotel3.JPG" alt="">
+                            </div>
+                            <div class="lodging_value">
+                                <ul>
+                                    <li class="lodging_type">호텔</li>
+                                    <li class="lodging_infor">강남 호텔</li>
+                                    <li class="lodging_address">서울시 강남구</li>
+                                    <li class="lodging_num">9.0 별점<sub>9999명 평가</sub></li>
+                                    <li class="coupon">쿠폰적용시</li>
+                                    <li>
+                                        <span class="coupon_pay">60000</span>
+                                        <span class="coupon_pay">원</span>
+                                        <span class="lodging_pay">80000원</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </a>
                     </div>
                 </div>
                 <div class="lodging">
                     <div>
-                        <a href="#">
-                            <img src="../image/jeonju.png">
-                            <div><span>a</span></div>
-                            <div><span>a</span></div>
-                            <div><span>a</span></div>
-                            <div><span>a</span></div>
-                            <div><span>a</span></div>
+                        <a href="">
+                            <div class="lodging_img">
+                                <img src="../image/hotel4.JPG" alt="">
+                            </div>
+                            <div class="lodging_value">
+                                <ul>
+                                    <li class="lodging_type">호텔</li>
+                                    <li class="lodging_infor">전주 호텔</li>
+                                    <li class="lodging_address">전라북도 전주시 완산구</li>
+                                    <li class="lodging_num">별점<sub>9999명 평가</sub></li>
+                                    <li class="coupon">쿠폰적용시</li>
+                                    <li>
+                                        <span class="coupon_pay">20000</span>
+                                        <span class="coupon_pay">원</span>
+                                        <span class="lodging_pay">80000원</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </a>
                     </div>
                 </div>
                 <div class="lodging">
                     <div>
-                        <a href="#">
-                            <img src="../image/jeonju.png">
-                            <div><span></span></div>
-                            <div><span></span></div>
-                            <div><span></span></div>
-                            <div><span></span></div>
-                            <div><span></span></div>
+                        <a href="">
+                            <div class="lodging_img">
+                                <img src="../image/hotel4.JPG" alt="">
+                            </div>
+                            <div class="lodging_value">
+                                <ul>
+                                    <li class="lodging_type">호텔</li>
+                                    <li class="lodging_infor">전주 호텔</li>
+                                    <li class="lodging_address">전라북도 전주시 완산구</li>
+                                    <li class="lodging_num">별점<sub>9999명 평가</sub></li>
+                                    <li class="coupon">쿠폰적용시</li>
+                                    <li>
+                                        <span class="coupon_pay">20000</span>
+                                        <span class="coupon_pay">원</span>
+                                        <span class="lodging_pay">80000원</span>
+                                    </li>
+                                </ul>
+                            </div>
                         </a>
                     </div>
                 </div>
+                <div class="lodging">
+                    <div>
+                        <a href="">
+                            <div class="lodging_img">
+                                <img src="../image/hotel4.JPG" alt="">
+                            </div>
+                            <div class="lodging_value">
+                                <ul>
+                                    <li class="lodging_type">호텔</li>
+                                    <li class="lodging_infor">전주 호텔</li>
+                                    <li class="lodging_address">전라북도 전주시 완산구</li>
+                                    <li class="lodging_num">별점<sub>9999명 평가</sub></li>
+                                    <li class="coupon">쿠폰적용시</li>
+                                    <li>
+                                        <span class="coupon_pay">20000</span>
+                                        <span class="coupon_pay">원</span>
+                                        <span class="lodging_pay">80000원</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="lodging">
+                    <div>
+                        <a href="">
+                            <div class="lodging_img">
+                                <img src="../image/hotel4.JPG" alt="">
+                            </div>
+                            <div class="lodging_value">
+                                <ul>
+                                    <li class="lodging_type">호텔</li>
+                                    <li class="lodging_infor">전주 호텔</li>
+                                    <li class="lodging_address">전라북도 전주시 완산구</li>
+                                    <li class="lodging_num">별점<sub>9999명 평가</sub></li>
+                                    <li class="coupon">쿠폰적용시</li>
+                                    <li>
+                                        <span class="coupon_pay">20000</span>
+                                        <span class="coupon_pay">원</span>
+                                        <span class="lodging_pay">80000원</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="lodging">
+                    <div>
+                        <a href="">
+                            <div class="lodging_img">
+                                <img src="../image/hotel4.JPG" alt="">
+                            </div>
+                            <div class="lodging_value">
+                                <ul>
+                                    <li class="lodging_type">호텔</li>
+                                    <li class="lodging_infor">전주 호텔</li>
+                                    <li class="lodging_address">전라북도 전주시 완산구</li>
+                                    <li class="lodging_num">별점<sub>9999명 평가</sub></li>
+                                    <li class="coupon">쿠폰적용시</li>
+                                    <li>
+                                        <span class="coupon_pay">20000</span>
+                                        <span class="coupon_pay">원</span>
+                                        <span class="lodging_pay">80000원</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="lodgingbutton">
+                    <a><img src="../image/free-icon-right-arrow-271228.png" alt=""></a>
+                </div>
+            </div>
         </section>
 
 
@@ -254,7 +361,8 @@
         </section>
     </main>
 
-
+    <div class="empty_box">
+    </div>
 
     <footer style="margin-top: 100px;">
         <div>

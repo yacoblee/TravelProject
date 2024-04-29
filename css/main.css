@@ -2,6 +2,7 @@
     margin: 0;
     text-decoration-line: none;
     list-style: none;
+    font-family: Nanum_Gothic;
 }
 
 @font-face {
@@ -24,21 +25,26 @@
 }
 
 main {
-    height: 120vh;
+    height: 160vh;
     max-height: 200vh;
+
 }
 
+.empty_box {
+    height: 30vh;
+}
 
 /*이승현 메인화면 미디어쿼리 적용*/
 
 section {
     display: flex;
+    max-width: 1400px;
     justify-content: center;
     margin: auto;
-
 }
 
 .slider_content {
+    width: 80vw;
     overflow: hidden;
     position: relative;
 }
@@ -55,13 +61,13 @@ section {
 
 @media screen and (width > 1200px) {
     .region {
-        flex-basis: 30%;
+        flex-basis: 20%;
     }
 }
 
 @media screen and (width >=1300px) {
     .slider_content {
-        width: 1200px;
+
         height: 500px;
 
     }
@@ -69,7 +75,7 @@ section {
 
 @media screen and (1300px > width >=1100px) {
     .slider_content {
-        width: 900px;
+
         height: 500px;
     }
 
@@ -77,13 +83,12 @@ section {
 
 @media screen and (1100px > width >=900px) {
     .slider_content {
-        width: 800px;
         height: 500px;
 
     }
 
     .region {
-        flex-basis: 50%;
+        /* flex-basis: 20%; */
     }
 
     .form input[type="email"],
@@ -129,6 +134,7 @@ section {
     .region_inner {
         flex-basis: 100%;
         flex-direction: column;
+
     }
 
     .form input[type="email"],
@@ -203,13 +209,11 @@ section {
 /* .region_section 스타일 수정 */
 .region_section {
     display: block;
-    max-width: 1400px;
     margin: 0 auto;
     padding: 0 20%;
 }
 
 .region_inner {
-    max-width: 1200px;
     height: 200px;
     margin: auto;
     display: flex;
@@ -222,11 +226,7 @@ section {
     position: relative;
     overflow: hidden;
     border-radius: 12px;
-    margin-bottom: 20px;
-}
-
-.region a {
-    display: block;
+    flex-basis: 20%;
 }
 
 .region img {
@@ -239,23 +239,34 @@ section {
 
 .region span {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 8px;
+    line-height: 1.5em;
+    font-weight: bold;
+
+
+    padding: 10px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8);
-    border-bottom-left-radius: 12px;
+    border-radius: 10px;
+    /* 
     border-bottom-right-radius: 12px;
+    border-bottom-right-radius: 12px; */
 }
 
-.regionbutton {
+.regionbutton,
+.lodgingbutton {
     position: relative;
-    top: 70px;
-    right: 30px;
+    display: flex;
 }
 
-.regionbutton a img {
+.regionbutton a,
+.lodgingbutton a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.regionbutton a img,
+.lodgingbutton a img {
     position: absolute;
     width: 28px;
     height: 28px;
@@ -264,13 +275,31 @@ section {
     background-color: #d3dadc7d;
 }
 
-
-.region:nth-child(-n+4) {
+/*메인페이지 이미지 보여주는 갯수 제한 지역, 숙소 */
+.region:nth-child(-n+5) {
     display: block;
 }
 
 .region {
     display: none;
+}
+
+.lodging:nth-child(-n+4) {
+    display: block;
+}
+
+.lodging {
+    display: none;
+}
+
+/* E */
+.selectarea {
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+    overscroll-behavior: none;
+    gap: 6px 8px;
+    flex-wrap: nowrap;
 }
 
 .selectarea>li {
@@ -307,43 +336,105 @@ section {
 
 .lodging_inner {
     width: 100%;
-
     display: flex;
-
-    margin-top: 1vw;
-    background-color: aqua;
+    gap: 10px;
+    flex-basis: 25%;
 }
 
-
-
 .lodging {
+    width: 100%;
     margin-right: 1vw;
     position: relative;
     overflow: hidden;
+    flex-wrap: wrap;
     border-radius: 12px;
     margin-bottom: 20px;
-    flex-basis: 30%;
+    flex-basis: 25%;
 }
 
-/* .lodging a {
+.lodging_img {
     width: 100%;
-    height: 100%;
-    display: block;
-} */
+    height: auto;
+    padding-top: 100%;
+}
 
 .lodging img {
     position: absolute;
-  
+    border-radius: 5px;
     width: 100%;
-    inset: 0px;
+    height: auto;
+    inset: 1px;
     color: transparent;
 }
 
-.lodging a div span {
+
+.lodging_value {
     display: flex;
-    flex-direction: row;
-    text-align: center;
-    background-color: rgba(17, 17, 17, 0.8);
-    border-bottom-left-radius: 12px;
-    border-bottom-right-radius: 12px;
+    background-color: rgba(136, 136, 235, 0.042);
+
 }
+
+.lodging_value ul,
+.lodging_value li {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+/* 추천 숙소 글꼴  S */
+.lodging_type {
+    font-size: 0.6875rem;
+    font-weight: 600;
+}
+
+.lodging_infor {
+    line-height: 1.5em;
+    font-weight: bold;
+    color: #5a89bb;
+    overflow: hidden;
+}
+
+
+.lodging_address {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: rgba(144, 144, 144, 0.634);
+    overflow: hidden;
+}
+
+.lodging_num {
+    flex-direction: row !important;
+
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: rgba(130, 125, 125, 0.708);
+    overflow: hidden;
+}
+
+.coupon {
+    font-size: 0.75rem;
+    line-height: normal;
+    font-weight: 600;
+    color: rgb(153 153 153 / 0.7);
+}
+
+.coupon+li {
+    flex-direction: row !important;
+}
+
+.coupon_pay {
+    font-size: 1.125em;
+    line-height: normal;
+    letter-spacing: 0px;
+    font-weight: 700;
+}
+
+.lodging_pay {
+    font-size: 0.825em;
+    line-height: normal;
+    text-decoration: line-through;
+    color: rgb(153 153 153 / 0.7);
+
+}
+
+/* 추천 숙소 글꼴  E */
