@@ -24,7 +24,7 @@
 }
 
 main {
-    height: 120vh;
+    height: 160vh;
     max-height: 200vh;
 }
 
@@ -333,7 +333,7 @@ section {
 
 .lodging img {
     position: absolute;
-  
+    border-radius: 5px;
     width: 100%;
     inset: 0px;
     color: transparent;
@@ -347,3 +347,37 @@ section {
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
 }
+
+.lodging_value {
+    display: flex;
+    margin-top: 20px;
+    background-color: chartreuse;
+    flex-direction: row;
+    align-items: center;
+    opacity: 0.6;
+}
+
+.lodging_value:nth-child(n) {
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
