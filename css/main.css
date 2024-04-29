@@ -2,6 +2,7 @@
     margin: 0;
     text-decoration-line: none;
     list-style: none;
+    font-family: Nanum_Gothic;
 }
 
 @font-face {
@@ -311,7 +312,7 @@ section {
     display: flex;
 
     margin-top: 1vw;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 
@@ -335,49 +336,111 @@ section {
     position: absolute;
     border-radius: 5px;
     width: 100%;
-    inset: 0px;
+    inset: 1px;
     color: transparent;
 }
 
-.lodging a div span {
+/* .lodging a div span {
     display: flex;
     flex-direction: row;
     text-align: center;
     background-color: rgba(17, 17, 17, 0.8);
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
-}
+} */
 
 .lodging_value {
     display: flex;
     margin-top: 20px;
-    background-color: chartreuse;
-    flex-direction: row;
-    align-items: center;
-    opacity: 0.6;
 }
 
-.lodging_value:nth-child(n) {
+.lodging_value ul,
+.lodging_value li {
+    display: flex;
+    width: 100%;
     flex-direction: column;
-    align-items: center;
+}
+
+.lodging_value ul li:nth-child(1) {
+    font-size: 0.6875rem;
+    line-height: normal;
+    letter-spacing: 0px;
+    font-weight: 600;
+}
+
+.lodging_value ul li:nth-child(2) {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0px;
+    font-weight: 700;
+    color: rgb(51 51 51 / var(--tw-text-opacity));
+    overflow: hidden;
 }
 
 
-/*
+.lodging_value ul li:nth-child(3) {
+    font-size: 0.8125rem;
+    letter-spacing: 0px;
+    font-weight: 600;
+    color: rgb(153 153 153 / 0.7);
+    overflow: hidden;
+}
+
+.lodging_value ul li:nth-child(4) {
+    display: inline-block;
+    font-size: 0.8125rem;
+    letter-spacing: 0px;
+    font-weight: 500;
+    color: rgb(112 112 112 / 0.7);
+}
+
+.lodging_value ul li:nth-child(5) {
+    font-size: 0.75rem;
+    line-height: normal;
+    letter-spacing: 0px;
+    font-weight: 600;
+
+    color: rgb(153 153 153 / 0.7);
+}
+
+
+.lodging_value ul li:nth-child(6) {
+    font-size: 1.125rem;
+    line-height: normal;
+    letter-spacing: 0px;
+    font-weight: 700;
+}
 
 
 
 
+.product_img {
+    position: relative;
+    margin-right: 20px;
+}
+
+.infor_aa {
+    display: flex;
+    gap: 110px;
+}
+
+.infor_sl {
+    font-size: 14px;
+    border-left: 1px solid gray;
+    padding-left: 10px;
+}
+
+.infor_price {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.product_a {
+    display: inline-block;
+    vertical-align: top;
+}
 
 
-
-
-
-
-
-
-
-
-
-
-*/
+.product_infor span+div {
+    font-size: 10px;
+}
