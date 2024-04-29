@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const button = document.querySelector(".regionbutton");
 
     let currentIndex = 0;
-    const maxIndex = Math.ceil(regions.length / 3) - 1;
+    const maxIndex = Math.ceil(regions.length / 5) - 1;
 
     button.addEventListener("click", function () {
         const nextIndex = currentIndex + 1;
-        const start = nextIndex * 3;
-        const end = start + 4;
+        const start = nextIndex * 5;
+        const end = start + 5;
         for (let i = 0; i < regions.length; i++) {
             if (i >= start && i < end) {
                 regions[i].style.display = "block";
@@ -28,6 +28,38 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+/* 숙소 4개씩 보이는 기능 추가*/
+document.addEventListener("DOMContentLoaded", function () {
+    const lodgings = document.querySelectorAll(".lodging");
+    const button = document.querySelector(".lodgingbutton");
+
+    let currentIndex = 0;
+    const maxIndex = Math.ceil(lodgings.length / 4) - 1;
+
+    button.addEventListener("click", function () {
+        const nextIndex = currentIndex + 1;
+        const start = nextIndex * 4;
+        const end = Math.min(start + 4, lodgings.length);
+
+        lodgings.forEach((lodging, index) => {
+            if (index >= start && index < end) {
+                lodging.style.display = "block";
+            } else {
+                lodging.style.display = "none";
+            }
+        });
+
+        currentIndex = nextIndex;
+        if (currentIndex >= maxIndex) {
+            button.style.display = "none";
+        }
+    });
+
+    lodgings.forEach(lodging => {
+        lodging.style.transition = "transform 0.5s ease";
+    });
+});
+
 /*추천 숙소 체크 기능*/
 document.addEventListener('DOMContentLoaded', function () {
     const selectAreas = document.querySelector('.selectarea');
@@ -41,60 +73,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     const regions = document.querySelectorAll(".region");
-//     const button = document.querySelector(".regionbutton");
-//     const regionInner = document.querySelector(".region_inner");
-
-//     let currentIndex = 0;
-//     const maxIndex = Math.ceil(regions.length / 3) - 1;
-//     let isMouseDown = false;
-//     let startX;
-//     let scrollLeft;
-
-//     button.addEventListener("click", function () {
-//         const nextIndex = currentIndex + 1;
-//         const start = nextIndex * 3;
-//         const end = start + 3;
-
-//         for (let i = 0; i < regions.length; i++) {
-//             if (i >= start && i < end) {
-//                 regions[i].style.display = "block";
-//             } else {
-//                 regions[i].style.display = "none";
-//             }
-//         }
-
-//         currentIndex = nextIndex;
-
-//         if (currentIndex >= maxIndex) {
-//             button.style.display = "none";
-//         }
-//     });
-
-//     regions.forEach(region => {
-//         region.style.transition = "transform 0.3s ease";
-//         region.addEventListener("mousedown", (e) => {
-//             isMouseDown = true;
-//             startX = e.pageX - region.offsetLeft;
-//             scrollLeft = region.scrollLeft;
-//         });
-
-//         region.addEventListener("mouseleave", () => {
-//             isMouseDown = false;
-//         });
-
-//         region.addEventListener("mouseup", () => {
-//             isMouseDown = false;
-//         });
-
-//         region.addEventListener("mousemove", (e) => {
-//             if (!isMouseDown) return;
-//             e.preventDefault();
-//             const x = e.pageX - region.offsetLeft;
-//             const walk = (x - startX) * 2; // 조절할 스크롤 속도
-//             region.scrollLeft = scrollLeft - walk;
-//         });
-//     });
-// });
