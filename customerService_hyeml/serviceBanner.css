@@ -213,6 +213,7 @@ footer {
 }
 .customer_bar a span{
     font-size: 90%;
+}
 /*  체크 필요  */
 
 
@@ -317,22 +318,27 @@ input[type="checkbox"]:checked+label+div {
 /*1:1 문의의 사이즈 조절, 폰트 배열 조절*/
 
 .onetoone form{
-    display: inline-block;
+    display: block;
     width: 40vw;
     min-width: 500px;
+    /* height: 70vh; */
     font-size: 18px;  
     text-align: initial;
     margin-bottom: 20px;
+    background-color: aqua;
 }
 .onetoone table{
+    /* display: block; */
     height: 300px;
-    min-height: 300px;
+    /* min-height: 300px; */
+    background-color: blueviolet;
 }
 
 .onetoone li{
     height: 40px;
     padding: 0 2vw ;
     line-height: 40px;
+    background-color: brown;
 }
 .onetoone th{
     width: 100px;
