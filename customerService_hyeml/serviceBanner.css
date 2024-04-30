@@ -23,20 +23,73 @@
     src: url(../css/font/Jua/Jua-Regular.ttf);
 
 }
-header {
 
-    height: 7vh;
-    width: 100%;
+/*header css S*/
+header li,
+header a,
+header button {
+    font: Nanum_Gothic_Bold;
+    font-size: 16px;
+    color: rgba(32, 50, 56, 0.774);
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    height: 8vh;
+    padding: 30px 10%;
     background-color: rgba(164, 178, 192, 0.142);
 }
 
-.headlogo {
-    display: flex;
-    padding-left: 40px;
-    padding-right: 40px;
-    align-items: center;
-    justify-content: space-between;
+.logo {
+    cursor: pointer;
+    margin-right: auto;
 }
+
+.nav_link {
+    list-style: none;
+}
+
+.nav_link li {
+    display: inline-block;
+    padding: 0px 20px;
+
+}
+
+.nav_link li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_link li a:hover {
+    border-radius: 10px;
+    color: white;
+    background-color: rgba(0, 135, 169, 0.39);
+}
+
+header button {
+    margin-left: 20px;
+    padding: 7px 7px;
+    /* background-color: rgba(61, 173, 201, 0.732); */
+    background-color: #3489ae82;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+header button:hover {
+    color: white;
+    background-color: rgba(0, 135, 169, 0.39);
+}
+
+/*header css E*/
+
+
+
+/*footer css S*/
 
 footer {
     display: inline-block;
@@ -45,9 +98,9 @@ footer {
     background-color: rgba(164, 178, 192, 0.142);
 }
 
-
 .footer,
 .Copyright {
+    font: Nanum_Gothic_Bold;
     margin-bottom: 32px;
     font-size: 0.75rem;
     line-height: 1rem;
@@ -56,6 +109,8 @@ footer {
     --tw-text-opacity: 1;
     color: rgb(153 153 153 / var(--tw-text-opacity));
 }
+
+/* footer css E*/
 
 
 /* ======================================== */
