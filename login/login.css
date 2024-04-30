@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    text-decoration-line: none;
+    list-style: none;
+}
+
 @font-face {
 
     /* font-face 지시자 내 font-family 에 지정하는 폰트명은 사용자 임의로 지정 가능. */
@@ -15,7 +21,10 @@
 
 }
 
-body {
+/* ==================================================== */
+/* 로그인 */
+
+.login_bg {
     display: flex;
     justify-content: center;    /* 수평 중앙 정렬 */
     align-items: center;        /* 수직 중앙 정렬 */
@@ -24,10 +33,10 @@ body {
     text-align: center;
 }
 
-body::before {
+.login_bg::before {
     content: "";
     background: url(../image/남산1.jpg) no-repeat 0/cover;
-    opacity: 0.5;
+    opacity: 0.6;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -55,7 +64,7 @@ body::before {
     width: 260px;
     padding: 10px;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     color: black;
     background-color: lightgray;
     font-family: Nanum_Gothic;
@@ -91,9 +100,42 @@ body::before {
     color: black;
 }
 
-.login_form button_fix {
+.login_form .button_fix {
     flex: auto;
 }
 .button_fix .find {
     width: 265px;
+}
+
+/* ==================================================== */
+/* 마이페이지 */
+.mypage_main {
+    display: flex;
+    justify-content: start
+    align-items: center;
+    margin-top: 50px;
+
+    /* width: auto; */
+    width: 70vw;
+    height: auto;
+
+}
+
+
+/* 좌측 메뉴목록 */
+.mypage_left_menu {
+    background-color: skyblue;
+    display: flex;
+    width: 20%;
+    border: 1px solid;
+}
+
+
+/* 메인 내용 */
+.mypage_right_main {
+    background-color: gray;
+    display: flex;
+    flex-flow: column;
+    width: 80%;
+    border: 1px solid;
 }

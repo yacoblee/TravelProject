@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원정보</title>
+
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    <header>
+        <img src="../image/hotsix_logo1.png" class="logo" src="" alt="logo">
+        <nav>
+            <ul class="nav_link">
+                <li><a href="#">Reservation</a></li>
+                <li><a href="#">Event</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="cta"><button>Customer Service</button></a>
+    </header>
+
+    <main>
+        <section class="mainimg">
+            <div class="mypage_main">
+                <div class="mypage_left_menu">
+                    <ul>
+                        <li>
+                            <a href="">예약내역</a>
+                        </li>
+                        <li>
+                            <a href="">찜목록</a>
+                        </li>
+                        <li>
+                            <a href="">내정보</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mypage_right_main">
+                    <h1>내 정보 관리</h1>
+                    <hr>
+
+                    <h2>회원정보</h2>
+                    <div>
+                        <div>
+                            <label for="nickname">닉네임</label>
+                        </div>
+                        <div>
+                            <input type="text" id="nickname" name="nickname" placeholder="닉네임을 입력하세요.">
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="user_nm">이름</label>
+                        </div>
+                        <div>
+                            <input type="text" id="user_nm" name="user_nm" placeholder="이름을 입력하세요.">
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <label for="phone_num">연락처</label>
+                        <input type="number" id="phone_num" name="phone_num" placeholder="연락처를 입력하세요." minlength="10" maxlength="11">
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+
+    <footer style="margin-top: 100px;">
+        <div>
+            <div class="customer">
+            </div>
+            <div class="footer" style="text-align:center;">
+                회사명 : 테스트페이지
+                대표 : 이승현<br>
+                주소 : 서울 구로구 경인로55길 58, 구로밸리온 1005호<br>
+                TEL : 1234-1234
+                FAX : 02) 1234-1234<br>
+                고객지원 : 010-0000-0000
+                사업자번호 : 000-00-1234<br>
+                Copyrightⓒ by yacobleee
+                All rights reserved.<br>
+                WebMaster: yacobleee@naver.com
+            </div>
+
+            <p class="Copyright" style="text-align: center;">Copyright LS COMPANY Corp. All rights reserved.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+<!-- 
+
+Hot-six 토마토팜 점검목록
+
+1. 상품상세 화면의 수량부분에서 -수량 직접입력이 가능하며, 총 상품금액 부분에 -금액이 계산되어보임
+2. 상품수량 제한이 없는데 수량을 해아릴수없을정도로 많이 입력하면 상품금액의 표현이 정상적이지 않게 보이는 증상
+(항목이 틀어지거나 금액이 정수가 아닌것으로 표현 ex. 총 상품금액  :  2.12e+34원)
+3. 로그인 필요 기능 동작 시 메세지 창의 로딩바 시간 종료되면 로그인 화면으로 이동해야할것으로 보여짐
+4. 관리자페이지 상단 화면경로가 화면이 바뀌어도 변경되지않음.(관리자페이지 > 채팅상담)
+5. 관리자페이지 채팅상담 화면에서 브라우저가로를 줄였을때 화면 반응형적용되며 목록부분이 부자연스럽고 깨져보임(겹침)
+6. 리스트 서치하는 부분에서 서치가 그부분에 표시되는게 아니라 상단에 표시되는부분이 아쉬움.
+7. 핸드폰 화면에서 리스트들이 전부 뭉게져서 보이는 증상
+8. 메인화면으로 돌아갈때마다 계속 팝업이 노출되는 증상
+9. 이벤트 화면에 사진만있고 클릭후 설명이 있는 페이지가 없어서 아쉬움
+10. 메인 화면의 이벤트내용이 있지만 클릭시 해당 이벤트상세화면으로의 연결이 안되어있어서 아쉬움
+11. 구매하기를 눌렀을때 오른쪽 바에 가격 취합이 되지 않는증상
+12. 장바구니에 물건이 담겨있을 때 아이콘 위로 표시가 없어서 아쉬움
+13. 장바구니 페이지 들어갔을 때 넣어뒀던 상품들이 전체선택 되어있지 않아 바로 전체 상품금액을 볼 수 없어서 불편하다
+14. 상품페이지에서 후기나 문의 작성하기를 눌렀을 때 로그인하라는 알림창 노출되고 로딩바가 끝난 후에 로그인 창으로 연결시키거나 바로 들어갈 수 없어서 아쉬움
+15. 챗봇 사용시 날짜오류
+15. 챗봇 상담시 뒤로가기 추가필요
+16. 밀키트 주문 페이지에서 왼쪽 사이드바 '밀키트' 에 전체 선택 해제를 하나씩 눌러서 없애야 해서 불편함
+17. 메인화면에서 상품화면에 버튼을 눌러서 이동하기에 이어서 마우스 클릭후 드래그하는 스와이프 기능도 추가하면 좋겠다
+
+-->
