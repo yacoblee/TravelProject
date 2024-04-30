@@ -320,23 +320,18 @@ input[type="checkbox"]:checked+label+div {
     text-align: initial;
 }
 
-.onetoone table{
-    display: block;
-    height: 500px;
-}
+/* .onetoone table{
+        display: block;
+ } */
 
-.onetoone li{
-    height: 40px;
-    line-height: 40px;
-    
-    padding: 0 2vw ;
-    margin: 2vh 0;
-}
+
+
 .onetoone th{
     width: 100px;
     
     font-weight: 400;
     text-align: center;
+    /* background-color: brown; */
 }
 .onetoone td{
     padding: 2vh 0;
@@ -356,9 +351,9 @@ input[type="checkbox"]:checked+label+div {
 .onetoone select{
     height: 40px;
     width: 15vw;
-    font-size: 17px;
     min-width: 300px;
     
+    font-size: 17px;
     border-radius: 5px;
 }
 input[id="one_named"]{
@@ -367,13 +362,13 @@ input[id="one_named"]{
 }
 
 .onetoone input[id*="phone"]{
-    width: 5vw;
+    width: 4vw;
     min-width: 60px;
 }
 
 .onetoone input[type="radio"]{
-    height: 15px;
-    width: 15px;
+    height: 20px;
+    width: 20px;
 }
 
 .onetoone button{
