@@ -388,38 +388,42 @@ input[type="checkbox"]:checked+label+div {
 
 /*1:1 문의의 사이즈 조절, 폰트 배열 조절*/
 
-.onetoone form{
-    width: 40vw;
-    min-width: 450px;
-
-    margin-bottom: 20px;
+.customer_form1, .customer_form2{
+    min-width: 400px;
+    margin: 30px 0;
     
-    font-size: 18px;  
-    text-align: initial;
+    display: grid;
+    /* gap: 20px; */
+    border-top: 2px solid rgba(85, 83, 83, 0.768);
+    text-align: left;
 }
-
-/* .onetoone table{
-        display: block;
- } */
-
-
-
-.onetoone th{
-    width: 100px;
+.customer_form1{
+    grid-template: repeat(3, 1fr) / 1fr 4fr ;
     
-    font-weight: 400;
-    text-align: center;
-    /* background-color: brown; */
 }
-.onetoone td{
-    padding: 1vh 0;
+.customer_form2{
+    grid-template: repeat(3, 1fr) 4fr / 1fr 4fr ;
+}
+.customer_form1 div ,.customer_form2 div{
+    padding: 10px;
+    border-bottom:2px solid rgba(192, 192, 192, 0.5) ;
+    /* border: 0.5px solid silver; */
+}
+.customer_form1 div:nth-of-type(odd),
+.customer_form2 div:nth-of-type(odd){
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.customer_form2_radio{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
 .onetoone label{
-    font-size: 18px;
-    opacity: 0.8;
+    padding: 0 2px;
 }
-
 
 .onetoone input[id="one_content"]{
     white-space: pre;
@@ -431,14 +435,10 @@ input[type="checkbox"]:checked+label+div {
     width: 15vw;
     min-width: 300px;
     
-    font-size: 17px;
-    border: 0.5px solid;
+    font-size: 16px;
+    border: 0.5px solid rgba(192, 192, 192, 0.7);
     border-radius: 5px;
 }
-/* input[id="one_named"]{
-    width: 30vw;
-    min-width: 400px
-} */
 
 
 .onetoone input[id*="phone"]{
@@ -446,19 +446,19 @@ input[type="checkbox"]:checked+label+div {
     min-width: 60px;
 }
 
-.onetoone input[type="radio"]{
+.onetoone input[type="radio"]{ 
     height: 20px;
     width: 20px;
+    margin: 5px;
 }
 
 .onetoone button{
     display: inline-block;
     height: 30px;
     width: 80px;
-    
     line-height: 30px;
-    position: relative;
-    left: 10vw;
+    
+    margin-left: 5vw;
 }
 
 /* ======================================= */
@@ -519,9 +519,9 @@ input[type="checkbox"]:checked+label+div {
 } 
 .notice_list a{
     flex: 1;
+
     text-decoration: none;
     color: black;
-
 }
 
 .notice_list>ul>li:hover{
