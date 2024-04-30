@@ -20,7 +20,6 @@
     src: url(./font/Jua/Jua-Regular.ttf);
 }
 
-    display: inline-block;
 
 main {
     height: 250vh;
@@ -160,7 +159,6 @@ section {
     margin-top: 50px;
 
     width: auto;
-
     position: absolute;
     top: 70%;
     left: 50%;
@@ -213,7 +211,8 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 10%;
+    padding: 1% 10%;
+
 }
 
 .region_inner {
@@ -232,6 +231,7 @@ section {
     overflow: hidden;
     border-radius: 12px;
     flex-basis: 20%;
+
 }
 
 .region img {
@@ -248,14 +248,10 @@ section {
     line-height: 1.5em;
     font-weight: bold;
 
-
     padding: 10px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
-    /* 
-    border-bottom-right-radius: 12px;
-    border-bottom-right-radius: 12px; */
 }
 
 .regionbutton,
@@ -444,3 +440,75 @@ section {
 }
 
 /* 추천 숙소 글꼴  E */
+.event_section {
+    display: block;
+    padding: 1% 10%;
+
+}
+
+.event_inner {
+    display: block;
+    flex-shrink: 0;
+    width: 300px;
+    height: 100%;
+    position: relative;
+}
+
+
+.event_inner>figure {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+/* figure img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+    inset: 0px;
+    transform: none;
+    transition: all 0.6s ease-in-out 0s;
+    transform-origin: left bottom;
+} */
+
+article {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    bottom: 4.5rem;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease 0s;
+    z-index: 2;
+}
+
+/*호버시 추가할 효과*/
+.event_inner18bt5rs figure::after,
+.event_inner section::after {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+article h3 {
+    min-height: 9rem;
+    display: flex;
+    align-items: flex-end;
+
+    line-height: 1.4;
+    font-family: NanumSquare, "Noto Sans KR", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    word-break: keep-all;
+    white-space: break-spaces;
+    overflow-wrap: normal;
+}
