@@ -1,9 +1,17 @@
 /* header */
-header {
+body>header {
     height: 7vh;
     width: 100%;
     background-color: rgba(164, 178, 192, 0.142);
-}
+  }
+  
+.headlogo {
+    display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+    align-items: center;
+    justify-content: space-between;
+  }
 
 /* 객실 검색 상단바 */
 .nav_1 {
@@ -17,14 +25,13 @@ header {
     /* flex-direction: row; */
     /* justify-content: space-between; */
     justify-content: space-evenly;
-    align-items: stretch;
+    align-items: center;
     position: sticky;
     /* padding-top: 10px; */
     top: 10px;
     /* margin: 3vh 0; */
     background-color: rgb(246, 251, 255);
     height: 8vh;
-    line-height: 8vh;
 }
 
 /* main */
@@ -89,7 +96,7 @@ header {
 }
 
 /* 정보 네이게이션(위치이동) */
-.nav_4 {
+.nav_2 {
     /* margin: 0;
     padding: 0; */
     width: 800px;
@@ -98,17 +105,15 @@ header {
     background-color: rgb(247, 247, 235);
 }
 
-.nav_5 {
+.nav_3 {
     list-style: none;
+    display: flex;
 }
 
-.nav_5 li {
-    float: left;
-    width: 15%;
-    /* height: 40px; */
+.nav_3 li {
+    flex: 1;
+    /* justify-content: space-evenly; */
     line-height: 40px;
-    /* padding: 0 10px; */
-    /* background-size: 900px 40px; */
 }
 
 /* article */
@@ -241,6 +246,22 @@ header {
 .purchase_price {
     text-align: end;
     font-weight: bold;
+}
+
+/* 이용정보 */
+
+/* 리뷰 */
+.review {
+    display: flex;
+    gap: 10px;
+    /* margin: calc(100%); */
+}
+
+.review_design {
+    /* flex: 1; */
+    width: 350px;
+    height: 350px;
+    background-color: antiquewhite;
 }
 
 /* footer */
