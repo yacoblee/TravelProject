@@ -63,13 +63,15 @@ footer {
 .side_bar_all{
     display: flex;
     justify-content: center;
+    /* background-image: url(../image/보드바.png); */
 }
 
 .left_side_bar, .right_side_bar{
     display: flex;
     justify-content: center;
+    align-items: center;
 
-    width: 15vw;
+    width: 10vw;
 }
 /* 가운데 메인 화면 */
 .customer_box, .onetoone, .notice , .notice_content{
@@ -93,22 +95,24 @@ footer {
     top:30vh;
     
     text-align: center;
+    /* z-index: 1; */
 }
 
 .right_side_bar_box{
-    width: 15vw;
+    width: 10vw;
 
     text-align: center;
 
     position: fixed;
     top:30vh;
+    /* z-index: 1; */
 }
 
 /* 왼쪽 사이드 바에 대한 설정 */
 
 .left_side_bar a {
     display: block;
-    width: 15vw;
+    width: 10vw;
     line-height: 50px;
 
     text-decoration: none;
@@ -181,79 +185,93 @@ footer {
 
 
 .customer_bar div:nth-of-type(2){
-    display: inline-flex;
+    
     min-width:450px;
     width: 30vw;
     height: 10vh;
-    line-height: 10vh;
+    
     border: 1px solid silver;
     border-radius: 10px;
     background-color: rgb(164, 178, 192, 0.142);
-    /* text-align: center; */
+    
+    display: inline-flex;
     justify-content: space-evenly;
     align-items: center;
     margin: 4vh 0;
 }
 .customer_bar a{
+    width: 100px;
+    height: 5vh;
+    line-height: 5vh;
+    vertical-align: middle;
+    font-size: 110%;
+    
     background-color: rgb(164, 178, 192, 0.2);
     border: 1px solid rgba(192, 192, 192, 0.629);
     border-radius: 5px;
     color: rgb(12, 12, 11);
-    vertical-align: middle;
+    
+    text-decoration: none;
 }
-.customer_bar a span::after{
+
+.customer_bar a span{
+    display: none;
+}
+.customer_bar a:hover span{
+    display: inline;
+}
+
+
+.customer_bar a::before{
     display: inline;
     content: "\f4ad";
     font:var(--fa-font-solid);
-}
-.customer_bar a span{
-    font-size: 90%;
-}
-/*  체크 필요  */
-
-
-.customer_bar span , .customer_bar a{
-
-    width: 120px;
-    height: 5vh;
-    line-height: 5vh;
-    font-size: 110%;
-    text-decoration: none;
-    vertical-align: middle;
-    /* color: black; */
+    font-size: 120%;
 }
 
 .customer_bar .callme::before{
-    display: inline-block;
     content: "\f095";
     font:var(--fa-font-solid);
+
+    
 }
 
 /* asked Question 3가지 라벨 박스 */
 
 .askedQuestion {
-    display: inline-block;
+    display: flex;
     min-width: 450px;
     width: 30vw;
-    height: 5vh;
-    line-height: 5vh;
+    /* height: 5vh; */
+    justify-content: space-evenly;
+    align-items: center;
     margin-bottom: 2vh;
 }
+
 .askedQuestion label{
-    display: inline-block;
-    width: 9vw;
     min-width: 120px;
     height: 5vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: rgba(169, 198, 227, 0.26);
+    
     border-radius: 10px;
     border: 0.5px solid rgba(216, 216, 216, 0.484);
     
+}
+
+.askedQuestion label:hover{
+    height: 120%;
 }
 .askedQuestion label:hover,
 .customer_bar a:hover{
     background-color: rgba(169, 198, 227, 0.834) ;
     color: white;
     cursor: pointer;
+    box-shadow: 1px 1px 3px black;
 }
 
 /*QNA 완성*/
@@ -292,7 +310,12 @@ input[type="checkbox"]:checked+label+div {
     margin: 2vh 0;
     
     border-bottom: solid 1px silver;
+}
+
+.question_all label:hover{
     cursor: pointer;
+    font-weight: 700;
+
 }
 
 .question_all label::before{
@@ -312,7 +335,7 @@ input[type="checkbox"]:checked+label+div {
 
 .onetoone form{
     width: 40vw;
-    min-width: 500px;
+    min-width: 450px;
 
     margin-bottom: 20px;
     
@@ -320,26 +343,21 @@ input[type="checkbox"]:checked+label+div {
     text-align: initial;
 }
 
-.onetoone table{
-    display: block;
-    height: 500px;
-}
+/* .onetoone table{
+        display: block;
+ } */
 
-.onetoone li{
-    height: 40px;
-    line-height: 40px;
-    
-    padding: 0 2vw ;
-    margin: 2vh 0;
-}
+
+
 .onetoone th{
     width: 100px;
     
     font-weight: 400;
     text-align: center;
+    /* background-color: brown; */
 }
 .onetoone td{
-    padding: 2vh 0;
+    padding: 1vh 0;
 }
 
 .onetoone label{
@@ -356,24 +374,26 @@ input[type="checkbox"]:checked+label+div {
 .onetoone select{
     height: 40px;
     width: 15vw;
-    font-size: 17px;
     min-width: 300px;
     
+    font-size: 17px;
+    border: 0.5px solid;
     border-radius: 5px;
 }
-input[id="one_named"]{
-    width: 20vw;
+/* input[id="one_named"]{
+    width: 30vw;
     min-width: 400px
-}
+} */
+
 
 .onetoone input[id*="phone"]{
-    width: 5vw;
+    width: 4vw;
     min-width: 60px;
 }
 
 .onetoone input[type="radio"]{
-    height: 15px;
-    width: 15px;
+    height: 20px;
+    width: 20px;
 }
 
 .onetoone button{
@@ -426,31 +446,27 @@ input[id="one_named"]{
 }
 
 .notice_list ul ul{
-    display: flex;
-    justify-content: space-between;
-    
-    height: 5vh;
-    line-height: 5vh;
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    width: 45vw;
+    height: 6vh;
+    line-height: 6vh;
     
     text-align: center;
     border-bottom: 0.5px solid silver;
 }
 
-.notice_list ul ul>li:nth-of-type(1){
-    width: 40px;
-}
-.notice_list ul ul>li:nth-last-of-type(1){
-    width: 100px;
-}
 
-.notice_list li a {
-    display: block;
-    height: 5vh;
-    width: calc(40vw - 40px - 100px);
-    min-width: 250px;
+.notice_list li {
+    display: flex;
+    justify-content: center;
 
-    color: black;
+} 
+.notice_list a{
+    flex: 1;
     text-decoration: none;
+    color: black;
+
 }
 
 .notice_list>ul>li:hover{
@@ -495,8 +511,13 @@ input[id="one_named"]{
 }
 
 .sevice_content_box{
-    min-width: 300px;
     margin: 4vh;
+}
+
+.sevice_content_box ul {
+    min-width: 500px;
+    width: 40vw;
+
 }
 .sevice_content_box li:nth-of-type(1) {
     border-bottom: 0.5px solid silver;
@@ -504,6 +525,7 @@ input[id="one_named"]{
 .sevice_content_box p {
     margin: 1vh;
 
+    text-align: initial;
     white-space: pre-line;
 }
 .content_title h2{

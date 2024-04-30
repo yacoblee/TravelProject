@@ -20,6 +20,7 @@
             </div>
         </div>
     </header>
+    
     <div class="side_bar_all">
         <nav class="left_side_bar">
             <ul>
@@ -36,21 +37,27 @@
             </div>
             <form action="#" >
                 <h3>답변 받으실 분</h3>
-                <ul>
-                    <li><label for="named" >성명</label></li>
-                    <li><input type="text" id="named" minlength="2" placeholder=" 이름" required></li>
-                    <li><label for="e-mail">이메일</label></li>
-                    <li><input type="email" id="e-mail" placeholder=" hot@sssix.com" required></li>
-                    <li><label for="phonenum">연락처</label></li>
-                    <li><input type="text" id="phonenum" minlength="2" maxlength="3" size="4" placeholder=" 010" required> -
-                    <input type="text" id="phone_second" minlength="3" maxlength="4" size="4" required> -
-                    <input type="text" id="phone_third" minlength="3" maxlength="4" size="4" required></li>
-                </ul>
+                <table>
+                    <tr>
+                        <th><label for="named" >성명</label></th>
+                        <td><input type="text" id="named" minlength="2" placeholder=" 이름" required></td>
+                    </tr>
+                    <tr>
+                        <th><label for="e-mail">이메일</label></th>
+                        <td><input type="email" id="e-mail" placeholder=" hot@sssix.com" required></td>
+                    </tr>
+                    <tr>
+                        <th><label for="phonenum">연락처</label></th>
+                        <td><input type="text" id="phonenum" minlength="2" maxlength="3" size="4" placeholder=" 010" required> -
+                            <input type="text" id="phone_second" minlength="3" maxlength="4" size="4" required> -
+                            <input type="text" id="phone_third" minlength="3" maxlength="4" size="4" required></td>
+                    </tr>
+                </table>
                 <h3>고객 불편 신고하기</h3>
                 <table>
                     <tr>
                         <th><label for="one_named">제목</label></th>
-                        <td><input type="text" id="one_named"></td>
+                        <td><input type="text" id="one_named"style="width: 30vw; min-width: 300px"></td>
                     </tr>
                     <tr>
                         <th><label for="one_type">유형</label></th>
@@ -68,7 +75,7 @@
                     </tr>
                     <tr>
                         <th><label for="one_content">내용</label></th>
-                        <td><input type="text" id="one_content" placeholder=" 내용 입력" style="width: 20vw; min-width: 300px; height: 15vh;"></td>
+                        <td><textarea name="one_content" id="one_content" cols="60" rows="10" placeholder=" 내용 입력" required></textarea></td>
                     </tr>
                 </table>
                 <input type="radio"> 개인 정보 및 이용에 동의 합니다.
