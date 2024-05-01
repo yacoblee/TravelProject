@@ -1,17 +1,63 @@
 /* header */
-body>header {
-    height: 7vh;
-    width: 100%;
-    background-color: rgba(164, 178, 192, 0.142);
-  }
-  
-.headlogo {
+header li,
+header a,
+header button {
+    font: Nanum_Gothic_Bold;
+    font-size: 16px;
+    color: rgba(32, 50, 56, 0.774);
+    text-decoration: none;
+}
+
+header {
     display: flex;
-    padding-left: 40px;
-    padding-right: 40px;
-    align-items: center;
+    box-sizing: border-box;
     justify-content: space-between;
-  }
+    align-items: center;
+    height: 8vh;
+    padding: 30px 10%;
+    background-color: rgba(164, 178, 192, 0.142);
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.nav_link {
+    list-style: none;
+}
+
+.nav_link li {
+    display: inline-block;
+    padding: 0px 20px;
+
+}
+
+.nav_link li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_link li a:hover {
+    border-radius: 10px;
+    color: white;
+    background-color: rgba(0, 135, 169, 0.39);
+}
+
+header button {
+    margin-left: 20px;
+    padding: 7px 7px;
+    /* background-color: rgba(61, 173, 201, 0.732); */
+    background-color: #3489ae82;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+header button:hover {
+    color: white;
+    background-color: rgba(0, 135, 169, 0.39);
+}
 
 /* 객실 검색 상단바 */
 .nav_1 {
@@ -19,7 +65,7 @@ body>header {
 }
 
 .search_bar {
-    height: 20%;
+    /* height: 20%; */
     display: flex;
     /* width: 1200px; */
     /* flex-direction: row; */
@@ -28,10 +74,9 @@ body>header {
     align-items: center;
     position: sticky;
     /* padding-top: 10px; */
-    top: 10px;
-    /* margin: 3vh 0; */
-    background-color: rgb(246, 251, 255);
-    height: 8vh;
+    top: 0;
+    background-color: white;
+    height: 10vh;
 }
 
 /* main */
@@ -102,7 +147,7 @@ body>header {
     width: 800px;
     height: 40px;
     text-align: center;
-    background-color: rgb(247, 247, 235);
+    background-color: rgba(164, 178, 192, 0.142);
 }
 
 .nav_3 {
@@ -118,29 +163,44 @@ body>header {
 
 /* article */
 .information {
-    display: flex;
-    flex-wrap: wrap;
+    width: 1200px;
+    height: 500px;
+    display: grid;
+    grid-template: 3fr 2fr / repeat(3, 1fr);
+    /* flex-wrap: wrap; */
 }
 
 /* 호텔 소개(정보) */
 .hotel_information {
-    width: 800px;
+    /* width: 800px; */
+    grid-area: 1 / 1 / 2 / -2;
+    /* font-size: 12px; */
+}
+
+.hotel_information_1 {
     white-space: pre-line;
-    font-size: 12px;
+
 }
 
 /* 위치 */
 .map {
+    grid-area: 1 / -1 / -1 / -2;
+    display: flex;
     flex-direction: column;
     /* justify-content: center; */
+    align-items: center;
+}
+
+.map_title {
+    /* align-items: normal; */
 }
 
 .map_image {
-    background: url(../image/location_shilla.png) 0/100% 100%;
+    background: url(../image/hotel/location_shilla.png) 0/100% 100%;
     width: 350px;
     height: 200px;
 
-    /* position: relative; */
+    position: relative;
     /* display: flex; */
 }
 
@@ -150,7 +210,7 @@ body>header {
     /* left: calc(100% + 50px); */
     /* display: flex; */
     margin-top: 200px;
-    margin-left: -45px;
+    /* margin-left: -45px; */
 }
 
 /* .map_location1 {
@@ -167,31 +227,56 @@ body>header {
 }
 
 /* 시설 및 서비스 */
+.service_area {
+    grid-area: 2 / 1 / -1 / -2;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-evenly; */
+}
+
+.service_area_details {
+    padding: 0 50px;
+    justify-content: space-evenly;
+
+}
+
+.service_area_details>span {
+    margin-right: 10px;
+}
+
+.service_area_details img,
+.map_location1 img {
+    width: 24px;
+    margin-bottom: -7px;
+}
 
 /* 객실 */
 .room_type {
     /* display: flex; */
-    background-color: rgb(238, 236, 225);
+    background-color: rgba(164, 178, 192, 0.142);
     padding: 20px;
-    margin: 20px 0;
+    margin: 40px 0;
     box-sizing: border-box;
     /* border: solid; */
     border-radius: 20px;
 }
 
 .room_type_name {
+    font-size: 22px;
     /* flex-direction: column; */
 }
 
 .room_information {
     display: flex;
     justify-content: space-evenly;
+    /* align-content: center; */
 }
 
 .room_information_image {
     width: 600px;
     height: 350px;
     margin-right: 20px;
+    border-radius: 20px;
 }
 
 
@@ -206,13 +291,16 @@ body>header {
     display: flex;
     flex-direction: column;
     /* align-content: space-around; */
+    border-radius: 20px;
+    font-size: 18px;
 
-    background-color: aliceblue;
+    background-color: white;
     /* width: 500px; */
     height: 150px;
 }
 
 .room_information_content div {
+    padding: 10px;
     /* align-content: space-between; */
     /* justify-content: space-evenly; */
 }
@@ -248,11 +336,38 @@ body>header {
     font-weight: bold;
 }
 
+.w-btn-outline {
+    position: relative;
+    padding: 15px 30px;
+    border-radius: 15px;
+    background-color: rgba(164, 178, 192, 0.142);
+    /* font-family: "paybooc-Light", sans-serif; */
+    /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); */
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.w-btn-indigo-outline {
+    border: 3px solid white;
+    color: #000000;
+}
+
+.w-btn-indigo-outline:hover {
+    color: #000000;
+    background: white;
+}
+
 /* 이용정보 */
+.hotel_guide li {
+    padding: 5px;
+}
+
 
 /* 리뷰 */
 .review {
     display: flex;
+    justify-content: space-evenly;
     gap: 10px;
     /* margin: calc(100%); */
 }
