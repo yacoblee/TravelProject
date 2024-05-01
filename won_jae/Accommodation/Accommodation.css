@@ -1,17 +1,63 @@
 /* header */
-body>header {
-    height: 7vh;
-    width: 100%;
-    background-color: rgba(164, 178, 192, 0.142);
-  }
-  
-.headlogo {
+header li,
+header a,
+header button {
+    font: Nanum_Gothic_Bold;
+    font-size: 16px;
+    color: rgba(32, 50, 56, 0.774);
+    text-decoration: none;
+}
+
+header {
     display: flex;
-    padding-left: 40px;
-    padding-right: 40px;
-    align-items: center;
+    box-sizing: border-box;
     justify-content: space-between;
-  }
+    align-items: center;
+    height: 8vh;
+    padding: 30px 10%;
+    background-color: rgba(164, 178, 192, 0.142);
+}
+
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+}
+
+.nav_link {
+    list-style: none;
+}
+
+.nav_link li {
+    display: inline-block;
+    padding: 0px 20px;
+
+}
+
+.nav_link li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_link li a:hover {
+    border-radius: 10px;
+    color: white;
+    background-color: rgba(0, 135, 169, 0.39);
+}
+
+header button {
+    margin-left: 20px;
+    padding: 7px 7px;
+    /* background-color: rgba(61, 173, 201, 0.732); */
+    background-color: #3489ae82;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+header button:hover {
+    color: white;
+    background-color: rgba(0, 135, 169, 0.39);
+}
 
 /* 객실 검색 상단바 */
 .nav_1 {
@@ -19,7 +65,7 @@ body>header {
 }
 
 .search_bar {
-    height: 20%;
+    /* height: 20%; */
     display: flex;
     /* width: 1200px; */
     /* flex-direction: row; */
@@ -28,10 +74,9 @@ body>header {
     align-items: center;
     position: sticky;
     /* padding-top: 10px; */
-    top: 10px;
-    /* margin: 3vh 0; */
-    background-color: rgb(246, 251, 255);
-    height: 8vh;
+    top: 0;
+    background-color: white;
+    height: 10vh;
 }
 
 /* main */
@@ -102,7 +147,7 @@ body>header {
     width: 800px;
     height: 40px;
     text-align: center;
-    background-color: rgb(247, 247, 235);
+    background-color: rgba(164, 178, 192, 0.142);
 }
 
 .nav_3 {
@@ -171,27 +216,30 @@ body>header {
 /* 객실 */
 .room_type {
     /* display: flex; */
-    background-color: rgb(238, 236, 225);
+    background-color: rgba(164, 178, 192, 0.142);
     padding: 20px;
-    margin: 20px 0;
+    margin: 40px 0;
     box-sizing: border-box;
     /* border: solid; */
     border-radius: 20px;
 }
 
 .room_type_name {
+    font-size: 22px;
     /* flex-direction: column; */
 }
 
 .room_information {
     display: flex;
     justify-content: space-evenly;
+    /* align-content: center; */
 }
 
 .room_information_image {
     width: 600px;
     height: 350px;
     margin-right: 20px;
+    border-radius: 20px;
 }
 
 
@@ -206,13 +254,16 @@ body>header {
     display: flex;
     flex-direction: column;
     /* align-content: space-around; */
+    border-radius: 20px;
+    font-size: 18px;
 
-    background-color: aliceblue;
+    background-color: white;
     /* width: 500px; */
     height: 150px;
 }
 
 .room_information_content div {
+    padding: 10px;
     /* align-content: space-between; */
     /* justify-content: space-evenly; */
 }
@@ -248,11 +299,38 @@ body>header {
     font-weight: bold;
 }
 
+.w-btn-outline {
+    position: relative;
+    padding: 15px 30px;
+    border-radius: 15px;
+    background-color: rgba(164, 178, 192, 0.142);
+    /* font-family: "paybooc-Light", sans-serif; */
+    /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); */
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.w-btn-indigo-outline {
+    border: 3px solid white;
+    color: #1e6b7b;
+}
+
+.w-btn-indigo-outline:hover {
+    color: #1e6b7b;
+    background: white;
+}
+
 /* 이용정보 */
+.hotel_guide li {
+    padding: 5px;
+}
+
 
 /* 리뷰 */
 .review {
     display: flex;
+    justify-content: space-evenly;
     gap: 10px;
     /* margin: calc(100%); */
 }
