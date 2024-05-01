@@ -10,16 +10,15 @@
 
 <body>
   <header>
-    <div class="headlogo">
-      <div>
-        <a class="logo" style="font-size: 18px;">logo</a>
-      </div>
-
-      <div>
-        <a href="#">이벤트</a>
-        <a href="#">고객센터</a>
-      </div>
-    </div>
+    <img src="../image/hotsix_logo1.png" class="logo" src="" alt="logo">
+    <nav>
+      <ul class="nav_link">
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Reservation</a></li>
+        <li><a href="#">Event</a></li>
+      </ul>
+    </nav>
+    <a href="#" class="cta"><button>Customer Service</button></a>
   </header>
 
   <main>
@@ -30,6 +29,31 @@
           <div class="left_check_header">
             <h3>상세 조건 검색</h3>
           </div>
+          <div class="product_region">
+            <label for="region">
+              <h3>지역 선택</h3>
+            </label>
+            <select id="region" name="region">
+              <option value="seoul">서울</option>
+              <option value="busan">부산</option>
+              <option value="incheon">인천</option>
+              <option value="daejeon">대전</option>
+              <option value="gwangju">광주</option>
+              <option value="daegu">대구</option>
+              <option value="ulsan">울산</option>
+              <option value="sejong">세종</option>
+              <option value="gyeonggi">경기</option>
+              <option value="gangwon">강원</option>
+              <option value="chungbuk">충북</option>
+              <option value="chungnam">충남</option>
+              <option value="jeonbuk">전북</option>
+              <option value="jeonnam">전남</option>
+              <option value="gyeongbuk">경북</option>
+              <option value="gyeongnam">경남</option>
+              <option value="jeju">제주</option>
+            </select>
+          </div>
+
           <div>
             <div class="check_box_align">
               <label>
@@ -141,10 +165,14 @@
         </article>
         <!-- mainlist -->
         <div class="right_main_product">
-          <header>
+          <div class="favorit_header">
             <h2>숙소</h2>
-            <div></div>
-          </header>
+            <div class="favorit_li">
+              <button class="button active" id="recommend_btn">추천순</button>
+              <button class="button" id="popularity_btn">인기순</button>
+              <button class="button" id="rating_btn">별점순</button>
+            </div>
+          </div>
 
           <div class="main_product_list">
             <a class="product_img" target="_blank"
@@ -157,7 +185,12 @@
                 </span>
               </div>
               <div class="product_infor_hover">
-                <div class="infor_sl">별점 <sub>9,999명</sub></div>
+                <div class="infor_sl"><svg class="feather feather-star" fill="none" height="15" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="15"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg><sub> (9,999)</sub></div>
                 <div class="infor_aa">
                   <div class="infor_sl">숙박 예약 <sub>17:00 체크인</sub></div>
                   <div class="infor_price">560,000 원</div>
@@ -179,13 +212,16 @@
                 </span>
               </div>
               <div class="product_infor_hover">
+                <div class="infor_sl"><svg class="feather feather-star" fill="none" height="15" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="15"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg><sub> (9,999)</sub></div>
                 <div class="infor_aa">
                   <div class="infor_sl">숙박 예약 <sub>17:00 체크인</sub></div>
                   <div class="infor_price">320,000 원</div>
                 </div>
-              </div>
-              <div class="product_infor_hover0">
-                <div class="infor_sl">별점 <sub>9,999명</sub></div>
               </div>
             </a>
             <span class="btn_like">
@@ -203,13 +239,16 @@
                 </span>
               </div>
               <div class="product_infor_hover">
+                <div class="infor_sl"><svg class="feather feather-star" fill="none" height="15" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="15"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg><sub> (9,999)</sub></div>
                 <div class="infor_aa">
                   <div class="infor_sl">숙박 예약 <sub>17:00 체크인</sub></div>
                   <div class="infor_price">327,000 원</div>
                 </div>
-              </div>
-              <div class="product_infor_hover0">
-                <div class="infor_sl">별점 <sub>9,999명</sub></div>
               </div>
             </a>
             <span class="btn_like">
@@ -227,13 +266,74 @@
                 </span>
               </div>
               <div class="product_infor_hover">
+                <div class="infor_sl"><svg class="feather feather-star" fill="none" height="15" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="15"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg><sub> (9,999)</sub></div>
                 <div class="infor_aa">
                   <div class="infor_sl">숙박 예약 <sub>17:00 체크인</sub></div>
-                  <div class="infor_price">32,000 원</div>
+                  <div class="infor_price">320,000 원</div>
                 </div>
               </div>
-              <div class="product_infor_hover0">
-                <div class="infor_sl">별점 <sub>9,999명</sub></div>
+            </a>
+            <span class="btn_like">
+              <button class="like_aaa" type="button">찜하기</button>
+            </span>
+
+          </div>
+          <div class="main_product_list">
+            <a class="product_img" target="_blank"
+              href="https://www.yeogi.com/domestic-accommodations/7095?checkIn=2024-04-28&checkOut=2024-04-29&personal=2">
+              <img src="./hotel-1559199_1280.jpg" alt="숙소 이미지">
+              <div class="product_a">
+                <span class="product_infor">
+                  <span>성남 블루 호텔</span>
+                  <div>경기 성남 야탑역 5번 출구</div>
+                </span>
+              </div>
+              <div class="product_infor_hover">
+                <div class="infor_sl">
+                  <svg class="feather feather-star" fill="none" height="15" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="15"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg><sub> (9,999)</sub>
+                </div>
+                <div class="infor_aa">
+                  <div class="infor_sl">숙박 예약 <sub>17:00 체크인</sub></div>
+                  <div class="infor_price">320,000 원</div>
+                </div>
+              </div>
+            </a>
+            <span class="btn_like">
+              <button class="like_aaa" type="button">찜하기</button>
+            </span>
+
+          </div>
+          <div class="main_product_list">
+            <a class="product_img" target="_blank"
+              href="https://www.yeogi.com/domestic-accommodations/7095?checkIn=2024-04-28&checkOut=2024-04-29&personal=2">
+              <img src="./hotel-1559199_1280.jpg" alt="숙소 이미지">
+              <div class="product_a">
+                <span class="product_infor">
+                  <span>성남 블루 호텔</span>
+                  <div>경기 성남 야탑역 5번 출구</div>
+                </span>
+              </div>
+              <div class="product_infor_hover">
+                <div class="infor_sl"><svg class="feather feather-star" fill="none" height="15" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="15"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                  </svg><sub> (9,999)</sub></div>
+                <div class="infor_aa">
+                  <div class="infor_sl">숙박 예약 <sub>17:00 체크인</sub></div>
+                  <div class="infor_price">320,000 원</div>
+                </div>
               </div>
             </a>
             <span class="btn_like">

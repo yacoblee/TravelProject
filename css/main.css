@@ -20,14 +20,12 @@
     src: url(./font/Jua/Jua-Regular.ttf);
 }
 
-.inline_section {
-    display: inline-block;
-}
 
 main {
-    height: 160vh;
-    max-height: 200vh;
-
+    min-height: 100%;
+    height: 250vh;
+    max-height: 300vh;
+    position: relative;
 }
 
 .empty_box {
@@ -38,18 +36,22 @@ main {
 
 section {
     display: flex;
-    max-width: 1400px;
+    max-width: 1800px;
     justify-content: center;
-    margin: auto;
+}
+
+.mainimg_section {
+    max-width: 100vw;
 }
 
 .slider_content {
-    width: 80vw;
+    width: 100vw;
     overflow: hidden;
     position: relative;
 }
 
 .slider_content img {
+    background: cover;
     border-radius: 5px;
     opacity: 0.7;
     width: 100%;
@@ -67,16 +69,13 @@ section {
 
 @media screen and (width >=1300px) {
     .slider_content {
-
-        height: 500px;
-
+        height: 600px;
     }
 }
 
 @media screen and (1300px > width >=1100px) {
     .slider_content {
-
-        height: 500px;
+        height: 600px;
     }
 
 }
@@ -91,50 +90,53 @@ section {
         /* flex-basis: 20%; */
     }
 
+
     .form input[type="email"],
-    .form input[type="password"] {
-        display: none;
+    .form input[type="password"],
+    .form input[type="text"] {
+        width: 40vw;
     }
 
-    .form input[type="text"] {
-        width: 50vw;
+    .region_inner {
+        height: 250px !important;
     }
 }
 
 @media screen and (900px > width >=720px) {
     .slider_content {
-        width: 600px;
+
         height: 450px;
 
     }
 
     .form input[type="email"],
-    .form input[type="password"] {
-        display: none;
-    }
-
+    .form input[type="password"],
     .form input[type="text"] {
-        width: 50vw;
+        width: 40vw;
     }
 
-    .region,
-    .region_inner {
-        flex-basis: 50%;
+    .region {
+        flex-basis: 25%;
     }
+
+    .region_inner {
+        height: 250px !important;
+    }
+
 }
 
-@media screen and (720px > width >=500px) {
+@media screen and (720px > width) {
     .slider_content {
-        width: 500px;
-        height: 400px;
+        height: 300px;
 
     }
 
-    .region,
-    .region_inner {
-        flex-basis: 100%;
-        flex-direction: column;
+    .region {
+        flex-basis: 25%;
+    }
 
+    .region_inner {
+        height: 150px !important;
     }
 
     .form input[type="email"],
@@ -158,7 +160,6 @@ section {
     margin-top: 50px;
 
     width: auto;
-
     position: absolute;
     top: 70%;
     left: 50%;
@@ -208,13 +209,17 @@ section {
 
 /* .region_section 스타일 수정 */
 .region_section {
-    display: block;
-    margin: 0 auto;
-    padding: 0 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1% 10%;
+
 }
 
 .region_inner {
-    height: 200px;
+    flex-direction: row;
+    width: 100%;
+    height: 300px;
     margin: auto;
     display: flex;
     justify-content: space-evenly;
@@ -227,10 +232,12 @@ section {
     overflow: hidden;
     border-radius: 12px;
     flex-basis: 20%;
+
 }
 
 .region img {
     position: absolute;
+    object-fit: cover;
     height: 100%;
     width: 100%;
     inset: 0px;
@@ -242,14 +249,10 @@ section {
     line-height: 1.5em;
     font-weight: bold;
 
-
     padding: 10px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
-    /* 
-    border-bottom-right-radius: 12px;
-    border-bottom-right-radius: 12px; */
 }
 
 .regionbutton,
@@ -438,3 +441,151 @@ section {
 }
 
 /* 추천 숙소 글꼴  E */
+.event_section {
+    display: block;
+    padding: 1% 10%;
+
+}
+
+.event {
+    box-sizing: initial;
+    display: grid;
+    grid-template: repeat(5, 1fr) repeat(5, .5fr)/ repeat(3, 1fr) repeat(9, .5fr);
+    position: relative;
+    height: 500px;
+}
+
+.event_inner {
+    border-radius: 5%;
+    display: grid;
+    position: relative;
+}
+
+.event_inner:nth-child(1) {
+    height: 100%;
+    object-fit: cover;
+    grid-row: 1 / span 10;
+    grid-column: 1 / span 3;
+    overflow: hidden;
+}
+
+.event_inner:nth-child(2) {
+    border-radius: 5%;
+    height: 100%;
+    margin-left: 10%;
+    object-fit: cover;
+    grid-row: 3 / span 6;
+    grid-column: 4 / span 4;
+    overflow: hidden;
+}
+
+.event_inner:nth-child(3) {
+    border-radius: 5%;
+    height: 100%;
+    margin-left: 10%;
+    object-fit: cover;
+    grid-row: 3 / span 6;
+    grid-column: 8 / span 4;
+    overflow: hidden;
+}
+
+figure img {
+    width: 100%;
+    height: 100%;
+}
+
+.event_inner:nth-child(2) article {}
+
+article {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    bottom: 4.5rem;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease 0s;
+    z-index: 2;
+}
+
+article h3 {
+    min-height: 9rem;
+    display: flex;
+    align-items: flex-end;
+
+    line-height: 1.4;
+    font-family: NanumSquare, "Noto Sans KR", sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    word-break: keep-all;
+    white-space: break-spaces;
+    overflow-wrap: normal;
+}
+
+.left {
+    position: relative;
+    width: 100px;
+    height: 30xp;
+    left: 25%;
+    top: 25%;
+    grid-area: 1 / 11 / 1 / 11;
+}
+
+.invite {
+    background-color: #d5fafa1e;
+    color: #d8dbdd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 40em;
+    height: 3em;
+    min-height: 2em;
+    text-align: center;
+    border-radius: 1.5rem;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    word-spacing: 0.2rem;
+}
+
+.leftbutton img {
+
+    width: 28px;
+    height: 28px;
+    padding: 3px;
+    border-radius: 50%;
+    background-color: #d3dadc7d;
+}
+
+.rightbutton img {
+
+    width: 28px;
+    height: 28px;
+    padding: 3px;
+    border-radius: 50%;
+    background-color: #d3dadc7d;
+}
+
+/* figure img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+    inset: 0px;
+    transform: none;
+    transition: all 0.6s ease-in-out 0s;
+    transform-origin: left bottom;
+} */
+
+/*호버시 추가할 효과*/
+/* .event_inner18bt5rs figure::after,
+.event_inner section::after {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+} */

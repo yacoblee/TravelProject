@@ -9,17 +9,18 @@
 </head>
 <body>
     <header>
-        <div class="headlogo">
-            <div>
-                <a class="logo" style="font-size: 20px;">logo</a>
-            </div>
-
-            <div>
-                <a href="#">이벤트</a>
-                <a href="./sevice_index.html">고객센터</a>
-            </div>
-        </div>
+        <img src="../image/hotsix_logo1.png" class="logo" src="" alt="logo">
+        <nav>
+            <ul class="nav_link">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Reservation</a></li>
+                <li><a href="#">Event</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="cta"><button>Customer Service</button></a>
     </header>
+
+    
     <div class="side_bar_all">
         <nav class="left_side_bar">
             <ul>
@@ -36,41 +37,47 @@
             </div>
             <form action="#" >
                 <h3>답변 받으실 분</h3>
-                <ul>
-                    <li><label for="named" >성명</label></li>
-                    <li><input type="text" id="named" minlength="2" placeholder=" 이름" required></li>
-                    <li><label for="e-mail">이메일</label></li>
-                    <li><input type="email" id="e-mail" placeholder=" hot@sssix.com" required></li>
-                    <li><label for="phonenum">연락처</label></li>
-                    <li><input type="text" id="phonenum" minlength="2" maxlength="3" size="4" placeholder=" 010" required> -
-                    <input type="text" id="phone_second" minlength="3" maxlength="4" size="4" required> -
-                    <input type="text" id="phone_third" minlength="3" maxlength="4" size="4" required></li>
-                </ul>
+                <div class="customer_form1">
+                    
+                    <div><label for="named" >성명</label></div>
+                    <div><input type="text" id="named" minlength="2" placeholder=" 이름" required></div>
+                    
+                    
+                    <div><label for="e-mail">이메일</label></div>
+                    <div><input type="email" id="e-mail" placeholder=" hot@sssix.com" required></div>
+                    
+                    
+                    <div><label for="phonenum">연락처</label></div>
+                    <div><input type="text" id="phonenum" minlength="2" maxlength="3" size="4" placeholder=" 010" required> -
+                            <input type="text" id="phone_second" minlength="3" maxlength="4" size="4" required> -
+                            <input type="text" id="phone_third" minlength="3" maxlength="4" size="4" required></div>
+                    
+                </div>
                 <h3>고객 불편 신고하기</h3>
-                <table>
-                    <tr>
-                        <th><label for="one_named">제목</label></th>
-                        <td><input type="text" id="one_named"></td>
-                    </tr>
-                    <tr>
-                        <th><label for="one_type">유형</label></th>
-                        <td><select name="one_type" id="one_type"> 
-                            <option value="상담유형을 선택해주세요">상담유형을 선택해주세요.</option>
-                            <option value="숙소관련문의">숙소 관련 문의</option>
-                            <option value="결제관련문의">결제 관련 문의</option>
-                            <option value="기타문의">기타 문의</option>
-                        </select></td>
-                    </tr>
-                    <tr>
-                        <th><label>상담방법</label></th>
-                        <td><label><input type="radio" id="one_how" name="one_how" value="sendEmail"> 이메일 </label>
-                        <label><input type="radio" name="one_how" value="callphone"> 전화</label></td>
-                    </tr>
-                    <tr>
-                        <th><label for="one_content">내용</label></th>
-                        <td><input type="text" id="one_content" placeholder=" 내용 입력" style="width: 20vw; min-width: 300px; height: 15vh;"></td>
-                    </tr>
-                </table>
+                <div class="customer_form2">
+                    
+                    <div><label for="one_named">제목</label></div>
+                    <div><input type="text" id="one_named"style="width: 30vw; min-width: 300px"></div>
+                    
+                    
+                    <div><label for="one_type">유형</label></div>
+                    <div><select name="one_type" id="one_type"> 
+                        <option value="상담유형을 선택해주세요">상담유형을 선택해주세요.</option>
+                        <option value="숙소관련문의">숙소 관련 문의</option>
+                        <option value="결제관련문의">결제 관련 문의</option>
+                        <option value="기타문의">기타 문의</option>
+                    </select></div>
+                    
+                    
+                    <div><label>상담방법</label></div>
+                    <div class="customer_form2_radio"><label><input type="radio" id="one_how" name="one_how" value="sendEmail"> 이메일 </label> 
+                    <label><input type="radio" name="one_how" value="callphone"> 전화</label></div>
+                    
+                    
+                    <div><label for="one_content">내용</label></div>
+                    <div><textarea name="one_content" id="one_content" cols="60" rows="10" placeholder=" 내용 입력" required></textarea></div>
+                    
+                </div>
                 <input type="radio"> 개인 정보 및 이용에 동의 합니다.
                 <button>전송</button>
             </form>
@@ -93,10 +100,9 @@
             </div>
         </aside>
     </div>
-    <footer>
+    <footer style="margin-top: 100px;">
         <div>
             <div class="customer">
-
             </div>
             <div class="footer" style="text-align:center;">
                 회사명 : 테스트페이지
@@ -111,7 +117,8 @@
                 WebMaster: yacobleee@naver.com
             </div>
 
-            <p class="Copyright" style="text-align: center;">Copyright LS COMPANY Corp. All rights reserved.</p>
+            <p class="Copyright" style="text-align: center;">Copyright LS COMPANY Corp. All rights reserved.
+            </p>
         </div>
     </footer>
 </body>
