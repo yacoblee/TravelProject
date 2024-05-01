@@ -5,18 +5,131 @@
   text-decoration: none;
 }
 
+@font-face {
+  /* font-face 지시자 내 font-family 에 지정하는 폰트명은 사용자 임의로 지정 가능. */
+  font-family: Nanum_Gothic_bold;
+  src: url(./font/Nanum_Gothic/NanumGothic-Bold.ttf);
+
+  font-family: Nanum_Gothic_ExtraBold;
+  src: url(./font/Nanum_Gothic/NanumGothic-ExtraBold.ttf);
+
+  font-family: Nanum_Gothic;
+  src: url(./font/Nanum_Gothic/NanumGothic-Regular.ttf);
+
+  font-family: Jua-Regular;
+  src: url(./font/Jua/Jua-Regular.ttf);
+}
+
+body {
+  font-family: Nanum_Gothic_bold;
+}
+
+button,
+label,
+input,
+select {
+  font-family: Jua-Regular;
+}
+
+/* ======================================================================== */
 body>header {
   height: 7vh;
   width: 100%;
   background-color: rgba(164, 178, 192, 0.142);
 }
 
-.headlogo {
+/*header css S*/
+header li,
+header a,
+header button {
+    font: Nanum_Gothic_Bold;
+    font-size: 16px;
+    color: rgba(32, 50, 56, 0.774);
+    text-decoration: none;
+}
+
+header {
   display: flex;
-  padding-left: 40px;
-  padding-right: 40px;
-  align-items: center;
+  box-sizing: border-box;
   justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  padding: 30px 10%;
+  background-color: rgba(164, 178, 192, 0.142);
+}
+
+.logo {
+  cursor: pointer;
+  margin-right: auto;
+}
+
+.nav_link {
+  list-style: none;
+}
+
+.nav_link li {
+  display: inline-block;
+  padding: 0px 20px;
+
+}
+
+.nav_link li a {
+  transition: all 0.3s ease 0s;
+}
+
+.nav_link li a:hover {
+  border-radius: 10px;
+  color: white;
+  background-color: rgba(0, 135, 169, 0.39);
+}
+
+header button {
+  margin-left: 20px;
+  padding: 7px 7px;
+  /* background-color: rgba(61, 173, 201, 0.732); */
+  background-color: #3489ae82;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+header button:hover {
+  color: white;
+  background-color: rgba(0, 135, 169, 0.39);
+}
+
+/*header css E*/
+
+/* ==================================================================== */
+/* 지역선택 박스 */
+
+.product_region {
+  width: 300px;
+  margin: 50px auto;
+  border-bottom: 1px solid gray;
+  padding-bottom: 50px;
+}
+
+.product_region>label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.product_region>select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.product_region>select:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 /* ===================================================================== */
@@ -24,9 +137,9 @@ body>header {
   display: flex;
   width: 1200px;
   margin: auto;
-  gap: 20px;
-  justify-content: space-between;
-  /* justify-content: space-around; */
+  gap: 30px;
+  /* justify-content: space-between; */
+  justify-content: space-around;
 }
 
 .left_main_check {
@@ -40,9 +153,39 @@ body>header {
   flex: 3;
 }
 
-.right_main_product header h2 {
+main .right_main_product>.favorit_header {
+  display: flex;
+  justify-content: space-between;
+}
+
+main .right_main_product .favorit_header h2 {
   margin-block: 20px;
 }
+
+.right_main_product .favorit_li {
+  display: flex;
+  align-items: center;
+}
+
+.right_main_product .button {
+  height: 5vh;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 8px 16px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.right_main_product .button:hover {
+  background-color: #f0f0f0;
+}
+
+.right_main_product .button:active {
+  background-color: #99ccff;
+  color: #fff;
+}
+
 
 /* ===================================================================== */
 
@@ -163,30 +306,38 @@ body>header {
 .main_product_list {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .main_product_list .product_img img {
   width: 20vw;
-  height: 22vh;
+  height: 24vh;
   border-radius: 5px;
+  /* z-index: 3; */
 }
 
 .product_img {
   flex-basis: 85%;
   margin-bottom: 10px;
   color: #000000;
+  
+  position: relative;
+  margin-right: 20px;
+  
+  /* z-index: 3; */
 }
 
 .product_a {
   display: inline-block;
   vertical-align: top;
+  /* z-index: 3; */
 }
 
 .product_infor {
   font-weight: bold;
   vertical-align: top;
   font-size: large;
+  padding-left: 30px;
 }
 
 .btn_like {
@@ -211,26 +362,41 @@ body>header {
   background-color: white;
 }
 
-.product_infor span+div {
-  font-size: 10px;
+.like_aaa:hover {
+  background-color: #f0f0f0;
 }
 
-.product_img {
-  position: relative;
-  margin-right: 20px;
+.product_infor span+div {
+  font-size: 10px;
+  padding-left: 30px;
+}
+
+.infor_aa,
+.infor_sl {
+  right: 0;
+  opacity: 0;
+}
+
+.infor_sl svg {
+  color: darkgoldenrod;
 }
 
 .infor_aa {
   display: flex;
-  gap: 110px;
+  justify-content: space-around;
+  align-items: end;
 }
 
 .infor_sl {
   font-size: 14px;
-  border-left: 1px solid gray;
   padding-left: 10px;
 }
 
+.product_infor_hover>.infor_sl {
+  margin-top: 8vh;
+  margin-bottom: 10px;
+  margin-left: 2vw;
+}
 
 .infor_price {
   font-size: 18px;
@@ -238,37 +404,62 @@ body>header {
 }
 
 /* ================================================================= */
-/* 호버 효과 */
+/* 상품 이미지 호버 효과 */
 
-.product_infor_hover,
-.product_infor_hover0 {
+.product_infor_hover {
+  width: 20vw;
+  height: 24vh;
   position: absolute;
   left: 0;
-  opacity: 0;
-  background-color: #fff;
+  /* opacity: 0; */
+  background-color: rgba(164, 178, 192, 0.142);
   padding: 10px;
   border: 1px solid #ccc;
+  border-radius: 5px;
   white-space: nowrap;
   z-index: -1;
+  /* text-align: right; */
 }
 
 .product_infor_hover {
-  top: 50%;
-  transition: right 0.6s ease, opacity 0.6s ease;
-  transition: left 0.6s ease, opacity 0.6s ease;
+  top: 0;
+  transition: right .9s ease, opacity .9s ease;
+  transition: left .9s ease, opacity .9s ease;
 }
 
-.product_infor_hover0 {
-  width: 10vw;
-  top: 25%;
+.product_img .product_infor_hover {
+  opacity: 1;
+  /* z-index: 1; */
+}
+
+.product_img:active {
+  color: rgba(164, 178, 192, 0.142);
+}
+
+.product_img .infor_aa,
+.product_img .infor_sl {
   transition: right 0.7s ease, opacity 0.7s ease;
   transition: left 0.7s ease, opacity 0.7s ease;
 }
 
-.product_img:hover .product_infor_hover,
-.product_img:hover .product_infor_hover0 {
-  left: 25vw;
+.product_img:hover .product_infor_hover {
+  background-color: rgb(211, 211, 211, .3);
+  left: 18vw;
   opacity: 1;
+
+  width: 22vw;
+}
+
+.product_img:hover .infor_aa,
+.product_img:hover .infor_sl {
+  opacity: 1;
+  transition: right 0.7s ease, opacity 0.7s ease;
+  transition: left 0.7s ease, opacity 0.7s ease;
+}
+
+.product_img:hover .product_a {
+  opacity: 0;
+  transition: .3s;
 }
 
 
