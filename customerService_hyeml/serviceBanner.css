@@ -393,7 +393,6 @@ input[type="checkbox"]:checked+label+div {
     margin: 30px 0;
     
     display: grid;
-    /* gap: 20px; */
     border-top: 2px solid rgba(85, 83, 83, 0.768);
     text-align: left;
 }
@@ -407,7 +406,6 @@ input[type="checkbox"]:checked+label+div {
 .customer_form1 div ,.customer_form2 div{
     padding: 10px;
     border-bottom:2px solid rgba(192, 192, 192, 0.5) ;
-    /* border: 0.5px solid silver; */
 }
 .customer_form1 div:nth-of-type(odd),
 .customer_form2 div:nth-of-type(odd){
@@ -546,6 +544,10 @@ input[type="checkbox"]:checked+label+div {
     transform: rotate(180deg);
 }
 
+.notice_page a:not(:first-child):not(:last-child)[href="#"]{
+    text-decoration: underline;
+    font-weight: 700;
+}
 /* ==================================== */
 /*  공지사항 상세페이지 */
 
@@ -560,10 +562,6 @@ input[type="checkbox"]:checked+label+div {
     width: 40px;
 }
 
-.notice_page a:not(:first-child):not(:last-child)[href="#"]{
-    text-decoration: underline;
-    font-weight: 700;
-}
 
 .sevice_content_box{
     margin: 4vh;
