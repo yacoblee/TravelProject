@@ -22,9 +22,10 @@
 
 
 main {
+    min-height: 100%;
     height: 250vh;
     max-height: 300vh;
-
+    position: relative;
 }
 
 .empty_box {
@@ -446,34 +447,54 @@ section {
 
 }
 
+.event {
+    box-sizing: initial;
+    display: grid;
+    grid-template: repeat(5, 1fr) repeat(5, .5fr)/ repeat(3, 1fr) repeat(9, .5fr);
+    position: relative;
+    height: 500px;
+}
+
 .event_inner {
-    display: block;
-    flex-shrink: 0;
-    width: 300px;
-    height: 100%;
+    border-radius: 5%;
+    display: grid;
     position: relative;
 }
 
-
-.event_inner>figure {
-    position: relative;
-    width: 100%;
+.event_inner:nth-child(1) {
     height: 100%;
-    border-radius: 0px;
+    object-fit: cover;
+    grid-row: 1 / span 10;
+    grid-column: 1 / span 3;
     overflow: hidden;
 }
 
-/* figure img {
-    position: absolute;
+.event_inner:nth-child(2) {
+    border-radius: 5%;
+    height: 100%;
+    margin-left: 10%;
+    object-fit: cover;
+    grid-row: 3 / span 6;
+    grid-column: 4 / span 4;
+    overflow: hidden;
+}
+
+.event_inner:nth-child(3) {
+    border-radius: 5%;
+    height: 100%;
+    margin-left: 10%;
+    object-fit: cover;
+    grid-row: 3 / span 6;
+    grid-column: 8 / span 4;
+    overflow: hidden;
+}
+
+figure img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 0px;
-    inset: 0px;
-    transform: none;
-    transition: all 0.6s ease-in-out 0s;
-    transform-origin: left bottom;
-} */
+}
+
+.event_inner:nth-child(2) article {}
 
 article {
     width: 80%;
@@ -486,17 +507,6 @@ article {
     color: rgb(255, 255, 255);
     transition: all 0.3s ease 0s;
     z-index: 2;
-}
-
-/*호버시 추가할 효과*/
-.event_inner18bt5rs figure::after,
-.event_inner section::after {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
 }
 
 article h3 {
@@ -512,3 +522,70 @@ article h3 {
     white-space: break-spaces;
     overflow-wrap: normal;
 }
+
+.left {
+    position: relative;
+    width: 100px;
+    height: 30xp;
+    left: 25%;
+    top: 25%;
+    grid-area: 1 / 11 / 1 / 11;
+}
+
+.invite {
+    background-color: #d5fafa1e;
+    color: #d8dbdd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 40em;
+    height: 3em;
+    min-height: 2em;
+    text-align: center;
+    border-radius: 1.5rem;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    word-spacing: 0.2rem;
+}
+
+.leftbutton img {
+
+    width: 28px;
+    height: 28px;
+    padding: 3px;
+    border-radius: 50%;
+    background-color: #d3dadc7d;
+}
+
+.rightbutton img {
+
+    width: 28px;
+    height: 28px;
+    padding: 3px;
+    border-radius: 50%;
+    background-color: #d3dadc7d;
+}
+
+/* figure img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0px;
+    inset: 0px;
+    transform: none;
+    transition: all 0.6s ease-in-out 0s;
+    transform-origin: left bottom;
+} */
+
+/*호버시 추가할 효과*/
+/* .event_inner18bt5rs figure::after,
+.event_inner section::after {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+} */
