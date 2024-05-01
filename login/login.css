@@ -110,32 +110,145 @@
 
 /* ==================================================== */
 /* 마이페이지 */
-.mypage_main {
-    display: flex;
-    /* justify-content: start; */
-    /* align-items: center; */
-    margin-top: 10vh;
 
-    width: 70vw;
+.mypage_main_box {
     height: 100vh;
-
 }
 
-/* 좌측 메뉴목록 */
-.mypage_left_menu {
-    /* background-color: skyblue; */
+.mypage_main {
     display: flex;
-    width: 20%;
-    border: 1px solid;
+    height: 90vh;
+    width: 80vw;
+    flex-direction: column;
+    text-align: center;
+}
+
+.mygate_title {
+    flex-basis: 20%;
+}
+
+.mygate_body {
+    flex-basis: 80%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.mypage_left_menu {
+    flex-basis: 20%;
+}
+
+.mypage_right_main {
+    flex: 1;
+}
+
+.mypage_left_menu ul {
+    margin-top: 10vh;
+    background-color: aqua;
 }
 
 .mypage_left_menu li {
+    display: flex;
+    justify-content: center;
 
 }
 
-/* 메인 내용 */
+.mypage_left_menu a {
+    flex: 1;
+    line-height: 60px;
+}
+
 .mypage_right_main {
-    /* background-color: gray; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 60vh;
+    justify-content: center;
+    
+}
+
+.sum_title {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.mypage_main {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    margin: 5vh 10vh;
+    width: 100vw;
+    height: 160vh;
+    grid-template: 1fr .5fr repeat(8, 1fr) / 2fr .5fr 3.5fr .5fr 3.5fr;
+    
+}
+
+.mygate_title {
+    grid-area: 1 / 1 / 2 / 6;
+    background-color: lightseagreen;
+}
+
+.mypage_left_menu {
+    grid-area: 3 / 1 / 6 / 2;
+    background-color: lightblue;
+}
+
+.mypage_right_main {
+    grid-area: 3 / 3 / -1 / 6;
+    background-color: darkgrey;
+}
+
+.sum_title {
+    grid-area: 2 / 3 / 3 / 4;
+
+} */
+
+
+
+
+/* 좌측 메뉴목록 */
+/* .mypage_left_menu {
+    background-color: skyblue;
+    display: flex;
+    width: 20%;
+    border: 1px solid;
+} */
+
+
+/* 메인 내용 */
+/* .mypage_right_main {
+    background-color: gray;
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -149,4 +262,4 @@
     padding:0 2vw;
     margin: 2vh;
     text-align: left;
-}
+} */
