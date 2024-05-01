@@ -123,11 +123,12 @@
     text-align: center;
 }
 
-.mygate_title {
+.mypage_title {
     flex-basis: 20%;
+    align-content: center;
 }
 
-.mygate_body {
+.mypage_body {
     flex-basis: 80%;
 
     display: flex;
@@ -138,10 +139,6 @@
     flex-basis: 20%;
 }
 
-.mypage_right_main {
-    flex: 1;
-}
-
 .mypage_left_menu ul {
     margin-top: 10vh;
     background-color: aqua;
@@ -150,7 +147,7 @@
 .mypage_left_menu li {
     display: flex;
     justify-content: center;
-
+    
 }
 
 .mypage_left_menu a {
@@ -159,21 +156,52 @@
 }
 
 .mypage_right_main {
+    flex: 1;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template: .3fr repeat(7, .1fr) / 2fr 4fr 2fr 4fr;
     height: 60vh;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.mypage_right_main div {
+    display: flex;
+    align-items: center;
+}
+
+.mypage_right_main input {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    background-color: lightgray;
+    font-family: Nanum_Gothic;
+}
+
+.mypage_right_main div:nth-child(even) {
     justify-content: center;
-    
 }
 
 .sum_title {
-    grid-area: 1 / 1 / 2 / 3;
+    grid-area: 1 / 1 / 2 / 5;
+    align-content: center;
 }
 
+.mypage_right_main_bottom {
+    display: flex;
+    flex-direction: column;
+    flex-basis: .5vh;
+}
 
+.mypage_right_main_bottom a {
+    flex: ;
+    justify-content: right;
+}
 
-
-
+.mypage_right_main_button {
+    grid-area: 8 / 4 / 9 / 5;
+}
 
 
 
