@@ -199,8 +199,9 @@
     justify-content: right;
 }
 
-.mypage_right_main_button {
-    grid-area: 8 / 4 / 9 / 5;
+.mypage_right_button {
+    /* grid-area: 8 / 4 / 9 / 5; */
+    text-align: right;
 }
 
 
