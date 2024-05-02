@@ -48,18 +48,9 @@ section {
     width: 100%;
     overflow: hidden;
     position: relative;
+    transition: height 0.5s ease-out;
 }
 
-/* 
-.slider_content img {
-    background: cover;
-    border-radius: 5px;
-    opacity: 0.7;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    overflow: clip;
-} */
 
 .slider_content video {
     /* background: cover; */
@@ -72,6 +63,7 @@ section {
     overflow: clip;
     /* overflow-clip-margin: content-box; */
 }
+
 
 @media screen and (width > 1200px) {
     .region {
@@ -311,6 +303,8 @@ section {
 }
 
 /* E */
+
+/* 추천숙소 배치 영역 S */
 .selectarea {
     display: flex;
     width: 100%;
@@ -398,6 +392,8 @@ section {
     flex-direction: column;
 }
 
+/* 추천 숙소 배치 영역 E */
+
 /* 추천 숙소 글꼴  S */
 .lodging_type {
     font-size: 0.6875rem;
@@ -454,8 +450,168 @@ section {
 
 }
 
+
 /* 추천 숙소 글꼴  E */
 .event_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0% 10%;
+    margin-top: 7%;
+}
+
+.event {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: 500px;
+
+}
+
+.event_inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-right: 10px;
+}
+
+.event_first {
+
+    flex-basis: 40%;
+    height: auto;
+}
+
+.event_second {
+    top: 20%;
+    flex-basis: 25%;
+    height: auto;
+}
+
+.event_third {
+    top: 20%;
+    flex-basis: 25%;
+    height: auto;
+}
+
+.event_inner img {
+    border-radius: 5%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.event_first article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 80%;
+    top: 70%;
+    position: absolute;
+    left: 50%;
+
+    border-radius: 5%;
+    transform: translateX(-50%);
+    color: rgb(255, 255, 255);
+    transition: all 0.5s ease 0s;
+}
+
+.event_inner:not(.event_first) article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    border-radius: 5%;
+    transform: translateX(-50%);
+    color: rgb(8, 8, 8);
+    transition: all 0.5s ease 0s;
+}
+
+.event_inner:hover article {
+    bottom: 5%;
+}
+
+.event_inner:not(.event_first):hover article {
+    bottom: -5%;
+}
+
+/*첫 번째 아이템에만 참여하기 버튼 생성*/
+.event_inner:not(.event_first) .invite {
+    display: none;
+}
+
+.event_first .invite {
+    background-color: #7ba2ba7a;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    max-width: 15em;
+    height: 2.5em;
+    min-height: 2em;
+    text-align: center;
+    border-radius: 15px;
+    letter-spacing: 0.2em;
+    margin-top: 10px;
+    padding: 3px;
+    font-weight: 600;
+    text-transform: uppercase;
+    word-spacing: 0.2rem;
+}
+
+.left {
+    position: absolute;
+    display: flex;
+    right: 8%;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.leftbuttons,
+.rightbuttons {
+    position: absolute;
+    left: 35px;
+    transform: translateX(-50%);
+}
+
+.leftbuttons img,
+.rightbuttons img {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    padding: 3px;
+    border-radius: 50%;
+    background-color: #d3dadc7d;
+}
+
+article h3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    line-height: 1.4;
+    font-weight: 800;
+    font-size: 1.6rem;
+    word-break: keep-all;
+    white-space: pre-wrap;
+    overflow-wrap: normal;
+}
+
+.leftbuttons {
+    left: 5%;
+}
+
+.rightbuttons {
+    right: 5%;
+}
+
+
+/* .event_section {
     display: block;
     padding: 1% 10%;
     margin-top: 7%;
@@ -475,7 +631,7 @@ section {
     position: relative;
 }
 
-.event_inner:nth-child(1) {
+.event_first {
     height: 100%;
     object-fit: cover;
     grid-row: 1 / span 10;
@@ -483,7 +639,7 @@ section {
     overflow: hidden;
 }
 
-.event_inner:nth-child(2) {
+.event_second {
     border-radius: 5%;
     height: 100%;
     margin-left: 5%;
@@ -493,7 +649,7 @@ section {
 
 }
 
-.event_inner:nth-child(3) {
+.event_third {
     border-radius: 5%;
     height: 100%;
     margin-left: 5%;
@@ -503,8 +659,8 @@ section {
 
 }
 
-.event_inner:nth-child(2) article,
-.event_inner:nth-child(3) article {
+.event_second article,
+.event_third article {
     bottom: calc(100% - 100% - 40%);
     color: black;
 }
@@ -531,28 +687,27 @@ article h3 {
     display: grid;
     align-items: flex-end;
     justify-content: center;
-    min-height: 9rem;
     line-height: 1.4;
     font-weight: 800;
     font-size: 1.6rem;
     word-break: keep-all;
-    white-space: break-spaces;
+    white-space: pre-wrap;
     overflow-wrap: normal;
 }
 
-.invite {
-    background-color: #d5fafa1e;
-    color: #d8dbdd;
+.event_first .invite {
+    background-color: #7ba2ba9e;
+    color: #ffffff;
     display: grid;
     align-items: center;
     justify-content: center;
-    max-width: 20em;
-    height: 3em;
+    max-width: 15em;
+    height: 2.5em;
     min-height: 2em;
     text-align: center;
-    border-radius: 1.5em;
+    border-radius: 1em;
     letter-spacing: 0.2em;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     word-spacing: 0.2rem;
 }
@@ -584,7 +739,7 @@ article h3 {
     padding: 3px;
     border-radius: 50%;
     background-color: #d3dadc7d;
-}
+} */
 
 /* figure img {
     position: absolute;
