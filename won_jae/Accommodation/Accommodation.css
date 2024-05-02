@@ -245,7 +245,8 @@ header button:hover {
 }
 
 .service_area_details img,
-.map_location1 img {
+.map_location1 img
+.main_review img {
     width: 24px;
     margin-bottom: -7px;
 }
@@ -376,7 +377,7 @@ header button:hover {
     /* flex: 1; */
     width: 350px;
     height: 350px;
-    background-color: antiquewhite;
+    background-color: rgba(164, 178, 192, 0.142);
 }
 
 /* footer */
