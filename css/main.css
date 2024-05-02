@@ -184,7 +184,7 @@ section {
 }
 
 .form {
-    background-color: rgba(255, 255, 255, 0.229);
+    background-color: rgba(255, 255, 255, 0);
     border-radius: 5px;
     display: flex;
     flex-direction: row;
@@ -224,7 +224,8 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 1% 10%;
+    padding: 0% 10%;
+    margin-top: 7%;
 
 }
 
@@ -290,27 +291,6 @@ section {
     background-color: #d3dadc7d;
 }
 
-@keyframes myAnimation {
-    0% {
-        left: 9%;
-    }
-
-    25% {
-        left: 7%;
-    }
-
-    50% {
-        left: 5%;
-    }
-
-    75% {
-        left: 3%;
-    }
-
-    100% {
-        left: 1%;
-    }
-}
 
 /*메인페이지 이미지 보여주는 갯수 제한 지역, 숙소 */
 .region:nth-child(-n+5) {
@@ -478,7 +458,7 @@ section {
 .event_section {
     display: block;
     padding: 1% 10%;
-
+    margin-top: 7%;
 }
 
 .event {
@@ -506,21 +486,27 @@ section {
 .event_inner:nth-child(2) {
     border-radius: 5%;
     height: 100%;
-    margin-left: 10%;
+    margin-left: 5%;
     object-fit: cover;
-    grid-row: 3 / span 6;
+    grid-row: 3 / -3;
     grid-column: 4 / span 4;
-    overflow: hidden;
+
 }
 
 .event_inner:nth-child(3) {
     border-radius: 5%;
     height: 100%;
-    margin-left: 10%;
+    margin-left: 5%;
     object-fit: cover;
-    grid-row: 3 / span 6;
+    grid-row: 3 / -3;
     grid-column: 8 / span 4;
-    overflow: hidden;
+
+}
+
+.event_inner:nth-child(2) article,
+.event_inner:nth-child(3) article {
+    bottom: calc(100% - 100% - 40%);
+    color: black;
 }
 
 figure img {
@@ -528,32 +514,47 @@ figure img {
     height: 100%;
 }
 
-
 article {
+    display: grid;
+    justify-content: center;
+    align-items: center;
     width: 80%;
     position: absolute;
     left: 50%;
-    bottom: 4.5rem;
+    bottom: 2em;
     transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
     color: rgb(255, 255, 255);
-    transition: all 0.3s ease 0s;
-    z-index: 2;
+    transition: all 0.5s ease 0s;
 }
 
 article h3 {
-    min-height: 9rem;
-    display: flex;
+    display: grid;
     align-items: flex-end;
-
+    justify-content: center;
+    min-height: 9rem;
     line-height: 1.4;
-    font-family: NanumSquare, "Noto Sans KR", sans-serif;
-    font-weight: 400;
+    font-weight: 800;
     font-size: 1.6rem;
     word-break: keep-all;
     white-space: break-spaces;
     overflow-wrap: normal;
+}
+
+.invite {
+    background-color: #d5fafa1e;
+    color: #d8dbdd;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    max-width: 20em;
+    height: 3em;
+    min-height: 2em;
+    text-align: center;
+    border-radius: 1.5em;
+    letter-spacing: 0.2em;
+    font-weight: 600;
+    text-transform: uppercase;
+    word-spacing: 0.2rem;
 }
 
 .left {
@@ -562,25 +563,10 @@ article h3 {
     height: 30xp;
     left: 25%;
     top: 25%;
-    grid-area: 1 / 11 / 1 / 11;
+    grid-area: 1 / 12 / 1 / 12;
 }
 
-.invite {
-    background-color: #d5fafa1e;
-    color: #d8dbdd;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 40em;
-    height: 3em;
-    min-height: 2em;
-    text-align: center;
-    border-radius: 1.5rem;
-    letter-spacing: 0.3rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    word-spacing: 0.2rem;
-}
+
 
 .leftbutton img {
 

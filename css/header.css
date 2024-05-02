@@ -38,7 +38,7 @@ header {
     align-items: center;
     height: 8vh;
     padding: 30px 10%;
-    background-color: rgba(164, 178, 192, 0.142);
+    background-color: rgba(49, 134, 214, 0.466);
 }
 
 .logo {
@@ -52,16 +52,18 @@ header {
 
 .nav_link li {
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0px 30px;
 
 }
 
 .nav_link li a {
-    transition: all 0.3s ease 0s;
+    padding: 7px 7px;
+
+    transition: all 0.5s ease 0s;
 }
 
 .nav_link li a:hover {
-    border-radius: 10px;
+    border-radius: 50px;
     color: white;
     background-color: rgba(0, 135, 169, 0.39);
 }
@@ -69,7 +71,6 @@ header {
 header button {
     margin-left: 20px;
     padding: 7px 7px;
-    /* background-color: rgba(61, 173, 201, 0.732); */
     background-color: #3489ae82;
     border: none;
     border-radius: 50px;
@@ -80,6 +81,14 @@ header button {
 header button:hover {
     color: white;
     background-color: rgba(0, 135, 169, 0.39);
+}
+
+header .reserve ul {
+    visibility: hidden;
+}
+
+header .reserve:hover .reservation {
+    display: block;
 }
 
 /*header css E*/
