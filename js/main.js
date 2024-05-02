@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
     regions.forEach(region => {
-        region.style.transition = "transform 3s ease-out";
+        region.style.animation = "myAnimation .5s ease-in .5s";
     });
 });
 
