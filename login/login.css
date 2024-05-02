@@ -103,39 +103,192 @@
 .login_form .button_fix {
     flex: auto;
 }
+
 .button_fix .find {
     width: 265px;
 }
 
 /* ==================================================== */
 /* 마이페이지 */
+
+.mypage_main_box {
+    height: 100vh;
+}
+
 .mypage_main {
     display: flex;
-    justify-content: start
+    height: 90vh;
+    width: 80vw;
+    flex-direction: column;
+    text-align: center;
+}
+
+.mypage_title {
+    flex-basis: 20%;
+    align-content: center;
+}
+
+.mypage_body {
+    flex-basis: 80%;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.mypage_left_menu {
+    flex-basis: 20%;
+}
+
+.mypage_left_menu ul {
+    margin-top: 10vh;
+    background-color: aqua;
+}
+
+.mypage_left_menu li {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.mypage_left_menu a {
+    flex: 1;
+    line-height: 60px;
+}
+
+.mypage_right_main {
+    flex: 1;
+    display: grid;
+    grid-template: .3fr repeat(7, .1fr) / 2fr 4fr 2fr 4fr;
+    height: 60vh;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.mypage_right_main div {
+    display: flex;
     align-items: center;
-    margin-top: 50px;
+}
 
-    /* width: auto; */
-    width: 70vw;
-    height: auto;
+.mypage_right_main input {
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    background-color: lightgray;
+    font-family: Nanum_Gothic;
+}
 
+.mypage_right_main div:nth-child(even) {
+    justify-content: center;
+}
+
+.sum_title {
+    grid-area: 1 / 1 / 2 / 5;
+    align-content: center;
+}
+
+.mypage_right_main_bottom {
+    display: flex;
+    flex-direction: column;
+    flex-basis: .5vh;
+}
+
+.mypage_right_main_bottom a {
+    flex: ;
+    justify-content: right;
+}
+
+.mypage_right_button {
+    /* grid-area: 8 / 4 / 9 / 5; */
+    text-align: right;
 }
 
 
-/* 좌측 메뉴목록 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+.mypage_main {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    margin: 5vh 10vh;
+    width: 100vw;
+    height: 160vh;
+    grid-template: 1fr .5fr repeat(8, 1fr) / 2fr .5fr 3.5fr .5fr 3.5fr;
+    
+}
+
+.mygate_title {
+    grid-area: 1 / 1 / 2 / 6;
+    background-color: lightseagreen;
+}
+
 .mypage_left_menu {
+    grid-area: 3 / 1 / 6 / 2;
+    background-color: lightblue;
+}
+
+.mypage_right_main {
+    grid-area: 3 / 3 / -1 / 6;
+    background-color: darkgrey;
+}
+
+.sum_title {
+    grid-area: 2 / 3 / 3 / 4;
+
+} */
+
+
+
+
+/* 좌측 메뉴목록 */
+/* .mypage_left_menu {
     background-color: skyblue;
     display: flex;
     width: 20%;
     border: 1px solid;
-}
+} */
 
 
 /* 메인 내용 */
-.mypage_right_main {
+/* .mypage_right_main {
     background-color: gray;
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     width: 80%;
     border: 1px solid;
 }
+
+.mypage_right_main h1 {
+    min-width:450px;
+    width: 40vw;
+    margin-bottom: 4vh;
+    padding:0 2vw;
+    margin: 2vh;
+    text-align: left;
+} */
