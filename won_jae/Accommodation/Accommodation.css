@@ -77,9 +77,33 @@ header button:hover {
     top: 0;
     background-color: white;
     height: 10vh;
+    z-index: 9999;
+}
+
+.location_search_bar {
+    width: 250px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    background-color: rgba(0, 135, 169, 0.39);
+}
+
+@media screen and (width < 870px) {
+    .main_img_large {
+        min-width: 200px !important;
+    }
+
+    .main_img_small {
+        min-width: 85.5px !important;
+    }
+
 }
 
 /* main */
+section>h2 {
+    margin-top: 35px;
+}
+
 /* 상단 이미지 */
 .main_screen {
     max-width: 1200px;
@@ -142,23 +166,29 @@ header button:hover {
 
 /* 정보 네이게이션(위치이동) */
 .nav_2 {
-    /* margin: 0;
-    padding: 0; */
-    width: 800px;
+    width: fit-content;
     height: 40px;
     text-align: center;
     background-color: rgba(164, 178, 192, 0.142);
+    padding: 0;
+    box-shadow: 1px 4px 20px 0px rgb(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
 
 .nav_3 {
     list-style: none;
-    display: flex;
+    padding: 0;
 }
 
 .nav_3 li {
     flex: 1;
     /* justify-content: space-evenly; */
     line-height: 40px;
+    cursor: pointer;
+    display: inline-block;
+    margin-left: 25px;
+    margin-right: 25px;
+    min-width: 70px;
 }
 
 /* article */
@@ -177,9 +207,10 @@ header button:hover {
     /* font-size: 12px; */
 }
 
-.hotel_information_1 {
-    white-space: pre-line;
-
+.hotel_information p {
+    /* white-space: pre-line; */
+    margin: 0;
+    line-height: 23px;
 }
 
 /* 위치 */
@@ -188,7 +219,8 @@ header button:hover {
     display: flex;
     flex-direction: column;
     /* justify-content: center; */
-    align-items: center;
+    /* align-items: center; */
+    margin: 0px auto;
 }
 
 .map_title {
@@ -202,6 +234,9 @@ header button:hover {
 
     position: relative;
     /* display: flex; */
+    border-radius: 15px;
+    box-shadow: 1px 4px 20px 0px rgb(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 .map_location1 {
@@ -209,8 +244,10 @@ header button:hover {
     position: absolute;
     /* left: calc(100% + 50px); */
     /* display: flex; */
-    margin-top: 200px;
-    /* margin-left: -45px; */
+    margin-top: 212px;
+    margin-left: 8px;
+    padding: 0px;
+    line-height: 20px;
 }
 
 /* .map_location1 {
@@ -224,6 +261,8 @@ header button:hover {
     /* display: inline-block; */
     /* vertical-align: middle; */
     /* line-height: normal; */
+    font-size: 14px;
+    margin-left: 30px;
 }
 
 /* 시설 및 서비스 */
@@ -237,7 +276,7 @@ header button:hover {
 .service_area_details {
     padding: 0 50px;
     justify-content: space-evenly;
-
+    line-height: 30px;
 }
 
 .service_area_details>span {
@@ -245,7 +284,8 @@ header button:hover {
 }
 
 .service_area_details img,
-.map_location1 img {
+.map_location1 img,
+.main_review img {
     width: 24px;
     margin-bottom: -7px;
 }
@@ -292,7 +332,7 @@ header button:hover {
     flex-direction: column;
     /* align-content: space-around; */
     border-radius: 20px;
-    font-size: 18px;
+    font-size: 17px;
 
     background-color: white;
     /* width: 500px; */
@@ -365,6 +405,38 @@ header button:hover {
 
 
 /* 리뷰 */
+.main_review {
+    /* height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-evenly; */
+}
+
+.review_create,
+.review_more {
+    /* height: 50px; */
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.review_create>a,
+.review_more>a {
+    text-decoration: none;
+    padding: 5px 8px;
+    border-radius: 15px;
+    /* border: 2px solid rgba(164, 178, 192, 0.142); */
+    color: black;
+    margin: 10px 0;
+
+}
+
+.review_create>a:hover,
+.review_more>a:hover {
+    background-color: rgba(164, 178, 192, 0.142);
+    transition: 0.4s;
+}
+
 .review {
     display: flex;
     justify-content: space-evenly;
@@ -375,8 +447,64 @@ header button:hover {
 .review_design {
     /* flex: 1; */
     width: 350px;
-    height: 350px;
-    background-color: antiquewhite;
+    height: 400px;
+    background-color: rgba(164, 178, 192, 0.142);
+    border-radius: 30px;
+
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.review_star {
+    margin-bottom: 10px;
+}
+
+.review_star .left-area {
+    float: left;
+}
+
+.review_star .right-area {
+    float: right;
+}
+
+.review_star>img {
+    /* background-color: yellow; */
+}
+
+.review_img {
+    width: 340px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.review_img_size {
+    width: 150px;
+    height: 130px;
+    background-color: white;
+    border-radius: 20px;
+
+    position: relative;
+
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+.review_img>a {
+    /* align-items: center; */
+    position: absolute;
+    left: calc((100% - 24px)/2);
+    bottom: calc((100% - 24px)/2);
+}
+
+.review_content {
+    width: 325px;
+    height: 150px;
+    background-color: white;
+    border-radius: 20px;
+    margin-left: 7px;
+    /* justify-content: center; */
 }
 
 /* footer */

@@ -26,7 +26,7 @@
             <div class="search_bar">
                 <div>
                     <span></span>
-                    <input type="text" placeholder="여행지를 입력해주세요" maxlength=10>
+                    <input class="location_search_bar" type="location" placeholder="여행지를 입력해주세요" maxlength=10>
                 </div>
                 <div>
                     <span></span>
@@ -79,7 +79,7 @@
                         <li>시설 및 서비스</li>
                         <li>객실</li>
                         <li>이용 정보</li>
-                        <li>리뷰</li>
+                        <li><a href="#review">리뷰</a></li>
                     </ul>
                 </div>
             </nav>
@@ -87,17 +87,15 @@
             <article class="information">
                 <section class="hotel_information">
                     <h2>호텔 소개</h2>
-                    <p class="hotel_information_1">
-                        한국의 전통미와 현대적 감각을 겸비하고 있는 세계 속의 명문호텔 서울신라호텔은 세계 최고의 럭셔리 어번 (Urban) 라이프스타일 호텔로
-                        고객들에게 최고급 서비스를 제공합니다.
-                        한국을 대표하는 럭셔리 호텔로서 '일상이 최고의 순간이 되는 곳' 이라는 컨셉을 새롭게 선보이며 휴식은 물론 고급 식문화, 예술, 뷰티,
-                        웨딩, 엔터테인먼트 등 고객의 고품격 라이프스타일을 제안하는 공간으로 거듭나고 있습니다.
-                    </p>
+                    <p>한국의 전통미와 현대적 감각을 겸비하고 있는 세계 속의 명문호텔 서울신라호텔은 세계 최고의 럭셔리</p>
+                    <p>어번 (Urban) 라이프스타일 호텔로고객들에게 최고급 서비스를 제공합니다.</p>
+                    <p>한국을 대표하는 럭셔리 호텔로서 '일상이 최고의 순간이 되는 곳' 이라는 컨셉을 새롭게 선보이며 휴식은 물론 고급 식문화, 예술, 뷰티,</p>
+                    <p>웨딩, 엔터테인먼트 등 고객의 고품격 라이프스타일을 제안하는 공간으로 거듭나고 있습니다.</p>
                 </section>
 
                 <section class="map">
                     <h2 class="map_title">위치</h2>
-                    <div class="map_image" href="https://naver.me/5SWSRkDq">
+                    <div class="map_image" onclick="location.href='https://naver.me/5SWSRkDq'">
                         <!-- <a href="https://naver.me/5SWSRkDq"></a> -->
                         <ul class="map_location1">
                             <li>
@@ -105,7 +103,7 @@
                                 <strong>서울 중구 장충동2가 202</strong>
                             </li>
                             <li class="map_location2">동대입구역 5번 출구 도보 5분</li>
-                            <li>신라면세점 도보 3분</li>
+                            <li class="map_location2">신라면세점 도보 3분</li>
                         </ul>
                     </div>
 
@@ -333,23 +331,60 @@
             </ul>
         </section>
 
-        <section>
+        <section id="review" class="main_review">
             <h2>리뷰</h2>
             <!-- <button>후기작성</button> -->
-            <a href="#">
-                <img src="../image/icon/review_icon.svg" style="width: 24px; margin-right: 8px;" />
-                리뷰쓰기
-            </a>
+            <div class="review_create">
+                <a href="#">
+                    <img src="../image/icon/review_icon.svg" alt="">
+                    리뷰쓰기
+                </a>
+            </div>
             <!-- <input type="text"> -->
             <div class="review">
-                <div class="review_design"></div>
+                <div class="review_design">
+                    <div class="review_star">
+                        <div class="left-area">
+                            <img src="../image/icon/star_icon.svg" alt="">
+                            <img src="../image/icon/star_icon.svg" alt="">
+                            <img src="../image/icon/star_icon.svg" alt="">
+                            <img src="../image/icon/star_icon.svg" alt="">
+                            <img src="../image/icon/star_icon.svg" alt="">
+                        </div>
+                        <div class="right-area">
+                            <span>2주전</span>
+                        </div>
+                    </div>
+
+                    <div>유저 닉네임</div>
+                    <div class="review_img">
+                        <div class="review_img_size">
+                            <a href="">
+                                <img src="../image/icon/image_icon.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="review_img_size">
+                            <a href="">
+                                <img src="../image/icon/image_icon.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div>
+                        <span>후기</span>
+                        <div class="review_content">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
                 <div class="review_design"></div>
                 <div class="review_design"></div>
             </div>
-            <a href="#">
-                <img src="../image/icon/plus_icon.svg" style="width: 24px; margin-right: 8px;" /><img>
-                더보기
-            </a>
+            <div class="review_more">
+                <a href="#">
+                    <img src="../image/icon/plus_icon.svg" alt="">
+                    더보기
+                </a>
+            </div>
         </section>
     </main>
 
