@@ -126,17 +126,18 @@
 .mypage_title {
     flex-basis: 20%;
     align-content: center;
+    /* font-size: xx-large; */
 }
 
 .mypage_body {
     flex-basis: 80%;
 
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
 }
 
 .mypage_left_menu {
-    flex-basis: 20%;
+    flex-basis: 15%;
 }
 
 .mypage_left_menu ul {
@@ -158,18 +159,21 @@
 .mypage_right_main {
     flex: 1;
     display: grid;
-    grid-template: .3fr repeat(7, .1fr) / 2fr 4fr 2fr 4fr;
-    height: 60vh;
-    gap: 5px;
-    margin: 10px 0;
+    grid-template: repeat(7, 3fr) / 1fr 3fr 1fr 3fr;
+    height: 65vh;
+    gap: 10px;
+    align-items: center;
+    border: 1px solid;
 }
 
 .mypage_right_main div {
     display: flex;
+    height: 5vh;
     align-items: center;
 }
 
 .mypage_right_main input {
+    width: 15vw;
     margin: 10px;
     padding: 10px;
     border: none;
@@ -177,6 +181,16 @@
     color: black;
     background-color: lightgray;
     font-family: Nanum_Gothic;
+}
+
+.mail_add select {
+    width: 15vw;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+
+    background-color: darkgray;
 }
 
 .mypage_right_main div:nth-child(even) {
@@ -189,24 +203,34 @@
 }
 
 .mypage_right_main_bottom {
-    display: flex;
-    flex-direction: column;
-    flex-basis: .5vh;
-}
-
-.mypage_right_main_bottom a {
-    flex: ;
+    flex-basis: 4vw;
     justify-content: right;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: darkgrey;
+    font-family: Nanum_Gothic_bold;
 }
 
-.mypage_right_button {
-    /* grid-area: 8 / 4 / 9 / 5; */
-    text-align: right;
+/* .mypage_right_main_bottom a {
+    justify-content: right;
+} */
+
+.mail {
+    grid-area: 3/1/4/2;
 }
 
+.mail_add {
+    grid-area: 3 / 2 / 4 / 5;
+}
 
+/* .pw {
+    grid-area: 5/1/6/2;
+} */
 
-
+input[id*="mail"]:nth-of-type(2) {
+    width: 170px;
+} 
 
 
 
