@@ -113,7 +113,25 @@ footer {
 }
 
 /* footer css E*/
+.left_side_bar li{
+    display: flex;
+}
 
+.left_side_bar a{
+    flex : 1;
+    
+    line-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: rgb(164, 178, 192, 0.142);
+    border: 0.5px solid rgba(216, 216, 216, 0.484);
+    border-radius: 5px;
+    text-decoration: none;
+    transition: 0.5s;
+    
+}
 
 
 .left_side_bar a:hover{
@@ -138,7 +156,7 @@ footer {
     border: 0.5px solid rgba(216, 216, 216, 0.484);
     border-radius: 5px;
     background-color: rgb(164, 178, 192, 0.142);
-
+    
 }
 .right_side_bar_box div:nth-last-child(1){
     white-space: pre-line;
@@ -149,22 +167,13 @@ footer {
     font-size: 14px;
     opacity: 0.8;
 }
-/*  */
 
 /* ======================================== */
 
 .side_bar_all,.customer_box, .onetoone, .notice , .notice_content{
     margin-top: 10vh;
 }
-.left_side_bar a{
-    color: black;
-    background-color: rgb(164, 178, 192, 0.142);
-    border: 0.5px solid rgba(216, 216, 216, 0.484);
-    border-radius: 5px;
-    
-    transition: 0.5s;
 
-}
 
 
 
@@ -229,7 +238,8 @@ footer {
     vertical-align: middle;
     font-size: 110%;
     padding: 0 10px;
-    text-indent: 10px;
+    text-align: center;
+    
     
     background-color: rgb(164, 178, 192, 0.2);
     border: 1px solid rgba(192, 192, 192, 0.629);
@@ -409,6 +419,7 @@ input[type="checkbox"]:checked+label+div {
     height: 40px;
     width: 15vw;
     min-width: 300px;
+    background-color: rgba(240, 248, 255, 0.559);
     
     font-size: 16px;
     border: 0.5px solid rgba(192, 192, 192, 0.7);
@@ -431,8 +442,8 @@ input[type="checkbox"]:checked+label+div {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    height: 30px;
-    width: 60px;
+    height: 40px;
+    width: 80px;
     line-height: 30px;
     border: 1px solid rgba(169, 198, 227, 0.26);
     border-radius: 5px;
@@ -443,7 +454,7 @@ input[type="checkbox"]:checked+label+div {
 }
 
 .onetoone button:hover{
-    background-color: rgba(169, 198, 227, 0.26);
+    background-color: rgba(126, 185, 244, 0.26);
     text-shadow: 1px 1px 1px silver;
     transform: scale(110%);
     transition: 0.2s;
@@ -452,28 +463,32 @@ input[type="checkbox"]:checked+label+div {
 
 /* ======================================= */
 .notice_search{
-    display: flex;
-    justify-content: end;
+    
+    
     
     height: 50px;
-    /* width: 60vw; */
-    min-width: 450px;
     line-height: 50px;
     padding: 0 2vh;
     margin-bottom: 2vh;
-
+    
     background-color: rgb(164, 178, 192, 0.142);
     border-radius: 5px;
 }
+
+
 .notice_search select{
-    height: 25px;
+    height: 60%;
     width: 60px;
+    margin: 0 1vw;
     
     text-align: center;
 }
 .notice_search input{
     height: 25px;   
     width: 200px;
+
+    border: 0.5px solid silver;
+    border-radius: 5px;
 }
 
 .notice button{
@@ -483,6 +498,7 @@ input[type="checkbox"]:checked+label+div {
     color: white;
     background-color: rgba(76, 75, 75, 0.623);
     border: 1px solid  rgba(169, 198, 227, 0.26);
+    border-radius: 5px;
 
     transition: 0.5s;
 }
@@ -600,6 +616,9 @@ input[type="checkbox"]:checked+label+div {
 /* 미디어 쿼리 적용 */
 
 
+/* 미디어 쿼리 적용 */
+
+
 /* 모바일 세로 (해상도 ~ 479px)*/ 
 /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
 
@@ -632,21 +651,17 @@ input[type="checkbox"]:checked+label+div {
         display: flex;
     }
     
-    .left_side_bar a {
-        flex : 1;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
     .customer_bar, .notice_content, .sevice_content_box{
         margin-top: -1vh;
     }
-    .customer_bar a{
+    /* .customer_bar a{
         transform: scale(110%);
         padding: 5px;
         text-indent: 10px;
-    }
+    } */
+
+
+    
     .onetoone, .notice{
         width: 98vw;
     }
@@ -658,10 +673,20 @@ input[type="checkbox"]:checked+label+div {
         padding: 20px;
         grid-template-columns: 1fr;
     }
+
+    .customer_form1{
+        grid-template-rows: repeat(6,1fr);
+    }
+    .customer_form2{
+        grid-template-rows: repeat(7, 1fr) auto ;
+    }
     .customer_form2 div:nth-of-type(odd),
     .customer_form1 div:nth-of-type(odd){
-        display: block;
+        display: flex;
+        justify-content: flex-start;
+        /* text-indent: 2vw; */
     }
+
     .customer_bar,.notice_bar,.sevice_content_bar,.onetoone_bar{
         justify-self: center; 
     }
@@ -675,6 +700,33 @@ input[type="checkbox"]:checked+label+div {
         text-align: center;
         
     }
+    .sevice_content_bar li:nth-last-child(1){
+        /* word-break: break-all;
+        display: flex; */
+    }
+    .sevice_content_bar li:nth-last-child(1) p{
+        word-wrap: normal;
+    }
+    .notice_search{
+        width: 98vw;
+        display: flex;
+        
+    }
+    .notice_search form{
+        flex: 1;
+
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: center;
+        justify-content: space-evenly;
+        justify-items: center;
+    }
+    .notice_search input{
+        width: 100%;
+        height: 70%;
+
+    }
+
 
 
 }
@@ -711,16 +763,6 @@ input[type="checkbox"]:checked+label+div {
         min-width: 120px;
         display: flex;
     }
-    .left_side_bar a{
-        flex:1;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    /* .right_side_bar_box {
-        display: none;
-    } */
     .customer_bar a{
         transform: scale(90%);
 
@@ -733,18 +775,45 @@ input[type="checkbox"]:checked+label+div {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-content: center;
     }
     .notice_list{
-        width: 60vw;
+        width: 55vw;
+        display: grid;
+        justify-content: center;
+        /* align-i: center; */
+
     }
+
     .notice_page{
         text-align: center;
     }
+    .notice_search{
+        width: 50vw;
+        display: flex;
+        
+    }
+    .notice_search form{
+        flex: 1;
 
-@media (min-width:1024px){
-    /* 전체적인 페이지 구성. */
-.side_bar_all{
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: center;
+        justify-content: space-evenly;
+        justify-items: center;
+    }
+    .notice_search input{
+        width: 100%;
+        height: 70%;
+
+    }
+
+
+
+    
+    @media (min-width:1024px){
+        /* 전체적인 페이지 구성. */
+        .side_bar_all{
     display: flex;
     justify-content: center;
     
@@ -753,6 +822,10 @@ input[type="checkbox"]:checked+label+div {
     left: 5vw;
 }
 
+.left_side_bar ul{
+
+    width: 15vw;
+}
 .right_side_bar_box{
     right: 5vw;
 }
@@ -765,76 +838,40 @@ input[type="checkbox"]:checked+label+div {
     
     margin-top: 10vh;
     width: 60vw;
-    /* min-width: 600px; */
     
     text-align: center;
 }
 .customer_form1, .notice_list ul{
     width: 55vw;
 }
+.notice_search{
+    width: 50vw;
+    display: flex;
+    /* justify-content: end; */
+
+}
+.notice_search form{
+    flex : 1;
+    display: grid;
+    grid-template-columns: 5fr 2fr 1fr;
+    justify-items: end;
+    align-items: center;
+}
+.notice_search input{
+    width: 100%;
+    height: 70%;
+    min-width: 180px
+
+}
+.customer_bar a{
+    transform: scale(90%);
+    text-indent: 0;
+
+}
 
 /* ================================== */
 /* 양쪽 사이드 바에 대한 포지션과 , 사이즈 조절. */
-.left_side_bar ul{
-    /* height: 150px; */
-    width: 15vw;
-    min-width: 150px;
-    /* position: fixed;
-    top:30vh; */
-    
-    text-align: center;
-    /* z-index: 1; */
-}
 
-.right_side_bar_box{
-    flex: 1;
 
-    text-align: center;
 
-}
-
-/* 왼쪽 사이드 바에 대한 설정 */
-.left_side_bar li{
-    display: flex;
-}
-.left_side_bar a {
-    flex: 1;
-    line-height: 50px;
-
-    text-decoration: none;
-    color: black;
-    background-color: rgb(164, 178, 192, 0.142);
-    border: 0.5px solid rgba(216, 216, 216, 0.484);
-    border-radius: 5px;
-    
-    transition: 0.5s;
-}
-
-.left_side_bar a:hover{
-    background-color: rgba(169, 198, 227, 0.26);
-    text-shadow: 1px 1px 2px rgb(19, 19, 19);
-    
-    transition: 0.3s;
-    transform: scale(120% , 120%);
-}
-
-/* 오른쪽 사이드 바에대한 설정 */
-
-.right_side_bar_box div{
-    padding: 1vh;
-    
-    border: 0.5px solid rgba(216, 216, 216, 0.484);
-    border-radius: 5px;
-    background-color: rgb(164, 178, 192, 0.142);
-
-}
-.right_side_bar_box div:nth-last-child(1){
-    white-space: pre-line;
-}
-.right_side_bar_box div:nth-of-type(even){
-    line-height: 25px;
-    color: rgb(97, 97, 97);
-    font-size: 14px;
-    opacity: 0.8;
-}
 }
