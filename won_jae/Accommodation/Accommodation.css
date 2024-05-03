@@ -194,7 +194,7 @@ section>h2 {
 
 /* article */
 .information {
-    /* width: 1200px; */
+    width: 1200px;
     height: 500px;
     display: grid;
     grid-template: 3fr 2fr / repeat(3, 1fr);
