@@ -18,14 +18,23 @@
         <img src="../image/hotsix_logo1.png" class="logo" src="" alt="logo">
         <nav>
             <ul class="nav_link">
-                <li><a href="#">Reservation</a></li>
+                <li><a href="#">Login</a></li>
+
+                <li> <a href="#">Reservation</a>
+                    <ul class="reserve">
+                        <li><a href="#">호텔</a></li>
+                        <li><a href="#">게스트하우스</a></li>
+                        <li><a href="#">펜션</a></li>
+                        <li><a href="#">모텔</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Event</a></li>
             </ul>
         </nav>
         <a href="#" class="cta"><button>Customer Service</button></a>
     </header>
 
-    <main class="mypage_main_box">
+    <!-- <main class="mypage_main_box"> -->
         <section>
             <form>
                 <div class="mypage_main">
@@ -55,6 +64,7 @@
                             </div>
                             <div>
                                 <input type="text" id="nickname" name="nickname" placeholder="닉네임을 입력하세요.">
+                                <button class="mypage_right_main_bottom">중복확인</button>
                             </div>
                             <div class="mail">
                                 <label for="mail">e-Mail</label>
@@ -84,11 +94,7 @@
                                 <input type="tel" id="phone_num" name="phone_num" placeholder="연락처를 입력하세요."
                                     minlength="10" maxlength="11" num>
                                 <button class="mypage_right_main_bottom">인증</button>
-                                <!-- <input type="text" id="phone_num" name="phone_num" placeholder="연락처를 입력하세요." minlength="10" maxlength="11" num>
-                                <input type="text" id="phone_num" name="phone_num" placeholder="연락처를 입력하세요." minlength="10" maxlength="11" num> -->
                             </div>
-                            <!-- <div class="pw"> -->
-                            <!-- <div></div><div></div> -->
                             <div>
                                 <label for="login_pw">비밀번호</label>
                             </div>
@@ -107,34 +113,33 @@
                                 <label for="post_num">우편번호</label>
                             </div>
                             <div>
-                                <input type="text" name="post_num" id="post_num">
-                                <button class="mypage_right_main_bottom">주소</button>
+                                <input type="text" class="add_input" name="post_num" id="post_num" readonly>
+                                <button class="mypage_right_main_bottom">주소검색</button>
                             </div>
                             <div>
                                 <label for="address">주소</label>
                             </div>
                             <div>
-                                <input type="text" id="address" name="address">
+                                <input type="text" class="add_dtl" id="address" name="address">
                             </div>
                             <div>
                                 <label for="address_dtl">상세주소</label>
                             </div>
                             <div>
-                                <input type="text" id="address_dtl" name="address_dtl">
+                                <input type="text" class="add_dtl" id="address_dtl" name="address_dtl">
                             </div>
 
                         </div>
-                        <!-- <div class="mypage_right_button">
-                        <button><a href="">수정</a></button>
-                        <button><a href="">회원탈퇴</a></button>
-                    </div> -->
                     </div>
                 </div>
             </form>
         </section>
-    </main>
+    <!-- </main> -->
 
-    <footer style="margin-top: 100px;">
+    <div class="empty_box">
+    </div>
+
+    <footer style="margin-top: 200px;">
         <div>
             <div class="customer">
             </div>
