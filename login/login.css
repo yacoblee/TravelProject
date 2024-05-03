@@ -26,9 +26,12 @@
 
 .login_bg {
     display: flex;
-    justify-content: center;    /* 수평 중앙 정렬 */
-    align-items: center;        /* 수직 중앙 정렬 */
-    height: 100vh;              /* 화면 전체 높이 */
+    justify-content: center;
+    /* 수평 중앙 정렬 */
+    align-items: center;
+    /* 수직 중앙 정렬 */
+    height: 100vh;
+    /* 화면 전체 높이 */
     margin: auto;
     text-align: center;
 }
@@ -44,7 +47,7 @@
     bottom: 0px;
 }
 
-.login_form ,
+.login_form,
 .login_form>form>div {
     /* border: none; */
     border-radius: 5px;
@@ -55,11 +58,12 @@
     padding: 20px;
     border: none;
     background-color: white;
-    width: 400px;               /* 로그인 기본 크기 */
+    width: 400px;
+    /* 로그인 기본 크기 */
     opacity: .8;
 }
 
-.login_form input{
+.login_form input {
     margin: 10px;
     width: 260px;
     padding: 10px;
@@ -95,6 +99,7 @@
 .login_form>form>div>a {
     font-size: medium;
 }
+
 .login_form>form>div>a:hover {
     font-weight: 800;
     color: black;
@@ -148,7 +153,7 @@
 .mypage_left_menu li {
     display: flex;
     justify-content: center;
-    
+
 }
 
 .mypage_left_menu a {
@@ -324,3 +329,58 @@
     margin: 2vh;
     text-align: left;
 } */
+
+
+
+.empty_box {
+    height: 30vh;
+}
+
+.mypage_reserve {
+    display: flex;
+    max-width: 1800px;
+    justify-content: center;
+    max-height: 160;
+}
+
+
+
+.mypage_right_reserve {
+    flex: 1;
+    display: grid;
+    /* grid-template: repeat(7, 3fr) / 1fr 3fr 1fr 3fr; */
+    grid-template: repeat(11, 1fr) / repeat(5, 1fr) repeat(4, .5fr);
+    height: 500px;
+    position: relative;
+    margin-top: 5%;
+
+
+    align-items: center;
+    border: .5px solid;
+}
+
+
+.reserve_title {
+    align-items: center;
+    justify-content: center;
+    grid-area: 1 / 1 / 1 / 1;
+}
+
+.myreserve {
+    background-color: azure;
+    width: 100%;
+    height: 100%;
+    grid-area: 2 / 1 / span 2 / span 9;
+}
+
+.myreserve_img {
+    padding: 0 3%;
+    display: flex;
+    width: 100%;
+    height: calc((500px)/4);
+}
+
+img {
+    flex-basis: 20%;
+    height: calc((500px - 50px)/5);
+}

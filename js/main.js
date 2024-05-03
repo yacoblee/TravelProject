@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         for (let i = 0; i < regions.length; i++) {
             if (i >= start && i < end) {
                 regions[i].style.display = "block";
+                regions[i].style.overflow = "hidden";
             } else {
                 regions[i].style.display = "none";
             }
