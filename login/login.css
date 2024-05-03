@@ -159,7 +159,8 @@
 .mypage_right_main {
     flex: 1;
     display: grid;
-    grid-template: repeat(7, 3fr) / 1fr 3fr 1fr 3fr;
+    /* grid-template: repeat(7, 3fr) / 1fr 3fr 1fr 3fr; */
+    grid-template: repeat(11, 3fr) / 1fr 3fr;
     height: 65vh;
     gap: 10px;
     align-items: center;
@@ -173,7 +174,7 @@
 }
 
 .mypage_right_main input {
-    width: 15vw;
+    width: 30vw;
     margin: 10px;
     padding: 10px;
     border: none;
@@ -190,7 +191,7 @@
     border: none;
     border-radius: 10px;
 
-    background-color: darkgray;
+    background-color: lightgray;
 }
 
 .mypage_right_main div:nth-child(even) {
@@ -198,7 +199,8 @@
 }
 
 .sum_title {
-    grid-area: 1 / 1 / 2 / 5;
+    /* grid-area: 1 / 1 / 2 / 5; */
+    grid-area: 1 / 1 / 2 / 3;
     align-content: center;
 }
 
@@ -208,7 +210,7 @@
     padding: 10px;
     border: none;
     border-radius: 5px;
-    background-color: darkgrey;
+    background-color: lightgray;
     font-family: Nanum_Gothic_bold;
 }
 
@@ -220,17 +222,23 @@
     grid-area: 3/1/4/2;
 }
 
-.mail_add {
+/* .mail_add input {
     grid-area: 3 / 2 / 4 / 5;
+} */
+
+.mail_add input,
+.mail_add select {
+    width: 20%;
+
 }
 
 /* .pw {
     grid-area: 5/1/6/2;
 } */
 
-input[id*="mail"]:nth-of-type(2) {
+/* input[id*="mail"]:nth-of-type(2) {
     width: 170px;
-} 
+} */
 
 
 
