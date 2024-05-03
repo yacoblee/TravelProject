@@ -297,11 +297,75 @@ input[class="add_dtl"] {
     width: 30vw;
 }
 
+/* ====================================================== */
+/* 찜목록 */
+.mylike_list_body {
+    display: grid;
+    gap: 20px;
+    grid-template: repeat(3,1fr) / repeat(2,1fr);
+}
+
+/* 숙소 명 */
+.mylike_bold {  
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.font_red {
+    color: red;
+    text-align: right;
+}
+
+.font_cancel {
+    text-decoration: line-through;
+}
+
+.mylike_list_body>div>div>span {
+    margin-top: 10px;
+}
+
+.mylike_list_body p {
+    justify-self: flex-end;
+    /* align-items: end; */
+}
+
+/* 숙소 이미지 크기 */
+.mylike_img img{
+    border-radius: 10px;
+    /* width: 300px;
+    height: 200px; */
+}
+
+.mylike_list_body>div {
+    display: flex;
+    /* flex-wrap: wrap; */
+    border: 1px solid silver;
+    border-radius: 10px;
+}
+.mylike_list_body>div:hover {
+    box-shadow: 2px 2px 6px black;
+    transform: scale(110%);
+    
+}
+
+.mylike_list_body>div>div {
+    padding: 5px;
+
+}
 
 
-
-
-
+.mylike_list_body>div>div:nth-of-type(odd) {
+    flex-basis: 70%;
+}
+.mylike_list_body>div>div:nth-of-type(even) {
+    white-space: pre-line;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    text-align: left;
+    font-size: 12px;
+    justify-content: space-between;
+}
 
 
 
