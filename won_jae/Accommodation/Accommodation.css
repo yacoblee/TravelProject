@@ -301,6 +301,11 @@ section>h2 {
     border-radius: 20px;
 }
 
+.room_type h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
 .room_type_name {
     font-size: 22px;
     /* flex-direction: column; */
@@ -308,7 +313,7 @@ section>h2 {
 
 .room_information {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     /* align-content: center; */
 }
 
