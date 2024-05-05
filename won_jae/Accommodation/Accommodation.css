@@ -173,7 +173,26 @@ header button:hover {
         width: 486px !important;
     }
 
-    /* 숙소 */
+    .room_information {
+        display: block !important;
+        justify-content: space-between;
+    }
+
+    .room_information_image {
+        width: 100% !important;
+        height: 350px !important;
+        margin-right: 20px;
+        border-radius: 20px;
+    }
+
+    .room_information_price {
+        width: 100% !important;
+        margin-left: 0 !important;
+    }
+
+    .purchase_price {
+        text-align: center !important;
+    }
 }
 
 @media screen and (width < 955px) {
@@ -190,9 +209,40 @@ header button:hover {
     }
 }
 
+@media screen and (width < 800px) {
+    .name_details {
+        margin-bottom: 10px !important;
+    }
+
+    .top_review h2 {
+        margin-top: 15px;
+    }
+
+    .information2 {
+        display: block !important;
+    }
+
+    .service_area>h2 {
+        margin-left: 0 !important;
+    }
+
+    .service_area_details {
+        padding: 0 !important;
+    }
+
+    .room>h2 {
+        margin-bottom: 10px;
+        margin-top: 30px !important;
+    }
+
+    .room_type {
+        margin-top: 5px !important;
+    }
+}
+
 /* main */
 section h2 {
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 30px;
 }
 
@@ -433,10 +483,16 @@ section h2 {
 }
 
 .service_area_details {
+    display: block;
     padding: 0 50px;
     margin: 0;
+    text-align: center;
     justify-content: space-evenly;
     line-height: 30px;
+}
+
+.service_area_details div {
+    display: inline-block;
 }
 
 .service_area_details>span {
@@ -453,6 +509,10 @@ section h2 {
 }
 
 /* 객실 */
+.room>h2 {
+    margin-top: 50px;
+}
+
 .room_type {
     /* display: flex; */
     background-color: rgba(164, 178, 192, 0.142);
@@ -592,12 +652,13 @@ section h2 {
 }
 
 .main_review h2 {
+    margin-top: 45px;
     margin-bottom: 5px;
 }
 
 .review_location {
-    display: flex;
-    padding-bottom: 20px;
+    /* display: flex; */
+    margin-bottom: 35px;
 }
 
 .review_location .left_area {
@@ -616,6 +677,7 @@ section h2 {
 }
 
 .review_design {
+    width: 100%;
     height: 400px;
     background-color: rgba(164, 178, 192, 0.142);
     border-radius: 30px;
@@ -635,19 +697,15 @@ section h2 {
 }
 
 .review_star {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-/* .review_star .left-area {
-    float: left;
+.review_star img {
+    width: 20px;
 }
 
-.review_star .right-area {
-    float: right;
-} */
-
-.review_star>img {
-    /* background-color: yellow; */
+.review_date {
+    font-size: 14px;
 }
 
 .review_img {
@@ -684,11 +742,10 @@ section h2 {
     height: 150px;
     background-color: white;
     border-radius: 20px;
-    margin-left: 7px;
     /* justify-content: center; */
 }
 
-/* 더보기 */
+/* 리뷰 더보기 */
 .review_more {
     /* height: 50px; */
     display: flex;
