@@ -1,9 +1,3 @@
-html,
-body {
-    height: 100%;
-    font-family: Arial, sans-serif;
-}
-
 * {
     margin: 0;
     text-decoration-line: none;
@@ -11,11 +5,22 @@ body {
 }
 
 header {
-
     height: 7vh;
     width: 100%;
     background-color: rgba(164, 178, 192, 0.142);
+    height: 60px;
+    width: 100%;
+    background-color: rgba(164, 178, 192, 0.142);
 }
+
+
+html,
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+
 
 .headlogo {
     display: flex;
@@ -40,7 +45,6 @@ h1.title {
     font-size: 1.5rem;
     padding-left: 40px;
     padding-right: 40px;
-    /* margin-left: ; */
 }
 
 .tabs {
@@ -62,12 +66,13 @@ h1.title {
     list-style: none;
     padding: 0;
     margin: 0;
-    /* font-size: ; */
 }
 
 .tabs li {
     display: inline-block;
     text-align: center;
+    font-weight: bold;
+    color: rgb(155, 147, 147);
     width: 110px;
     padding: 15px 5px;
     background: #ffffff;
@@ -128,6 +133,47 @@ main section .title {
     font-size: 0.8rem;
 }
 
+
+/* .tabs section img:hover {
+    transform: scale(1.05); 
+    transition: transform 0.3s ease-in-out; 
+} */
+
+/* .tabs section img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.tabs section img:hover {
+    transform: scale(1.1);
+} */
+
+
+/* .tabs section img {
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center center;
+    display: block;
+}
+
+.tabs section img:hover {
+    transform: scale(1.1);
+} */
+
+.img_box {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.img_box img {
+    transition: transform 0.4s ease-in-out;
+
+}
+
+.img_box:hover img {
+    transform: scale(1.05);
+}
+
 @media screen and (min-width: 1070px) {
     .tabs section img {
         width: 30vw;
@@ -171,9 +217,6 @@ input#tab4:checked~.content section:nth-child(4) {
 
 section {
     flex: 1;
-    /* margin-bottom: 100px;
-    margin-top: 15px;
-    margin-left: 35px; */
 }
 
 section article {
@@ -190,15 +233,6 @@ article:nth-child(3n) {
     padding-right: 0px;
 }
 
-
-header {
-    height: 60px;
-    width: 100%;
-    /*max-width: 1200px;*/
-    background-color: rgba(164, 178, 192, 0.142);
-
-}
-
 .headlogo {
     display: flex;
     padding-left: 40px;
@@ -208,10 +242,8 @@ header {
 }
 
 
-
 footer {
     display: inline-block;
-    /*max-width: 1200px;*/
     width: 100%;
     margin: auto;
     background-color: rgba(164, 178, 192, 0.142);
