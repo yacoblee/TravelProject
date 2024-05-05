@@ -6,22 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>이벤트 페이지</title>
     <link rel="stylesheet" type="text/css" href="./css/event.css">
+    <link rel="stylesheet" type="text/css" href="./css/header.css">
 </head>
 
 <body>
     <header>
-        <div class="headlogo">
-            <div>
-                <a class="logo" style="font-size: 18px;" href="./view/main.html">logo</a>
-            </div>
+        <a href="../TravelProject/view/main.html">
+            <img src="../TravelProject/image/hotsix_logo1.png" class="logo" alt="logo">
+        </a>
 
-            <div>
-                <a href="../dragon.html">이벤트</a>
-                <a href="../customerService_hyeml/sevice_index.html">고객센터</a>
-            </div>
-        </div>
+        <nav>
+            <ul class="nav_link">
+                <li><a href="../TravelProject/login/login.html">Login</a></li>
+
+                <li> <a href="./won_jae/mainlist.html">Reservation</a>
+                    <ul class="reserve">
+                        <li><a href="#">호텔</a></li>
+                        <li><a href="#">게스트하우스</a></li>
+                        <li><a href="#">펜션</a></li>
+                        <li><a href="#">모텔</a></li>
+                    </ul>
+                </li>
+                <li><a href="../TravelProject/dragon.html">Event</a></li>
+            </ul>
+        </nav>
+        <a href="../TravelProject/customerService_hyeml/sevice_index.html" class="cta"><button>Customer
+                Service</button></a>
     </header>
-
 
     <!-- 메인 컨텐츠 섹션 -->
     <main>
@@ -230,10 +241,9 @@
         </div>
     </main>
 
-    <footer>
+    <footer style="margin-top: 200px;">
         <div>
             <div class="customer">
-
             </div>
             <div class="footer" style="text-align:center;">
                 회사명 : 테스트페이지
@@ -248,10 +258,10 @@
                 WebMaster: yacobleee@naver.com
             </div>
 
-            <p class="Copyright" style="text-align: center;">Copyright LS COMPANY Corp. All rights reserved.</p>
+            <p class="Copyright" style="text-align: center;">Copyright LS COMPANY Corp. All rights reserved.
+            </p>
         </div>
     </footer>
-
 </body>
 
 </html>
