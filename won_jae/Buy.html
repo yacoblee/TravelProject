@@ -5,41 +5,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./Buy.css">
+  <link rel="stylesheet" href="../css/header.css">
   <title>Document</title>
 
 </head>
 
 <body>
   <header>
-    <div class="headlogo">
-      <div>
-        <a class="logo" style="font-size: 18px;">logo</a>
-      </div>
+    <img src="../image/hotsix_logo1.png" class="logo" src="" alt="logo">
+    <nav>
+        <ul class="nav_link">
+            <li><a href="#">Login</a></li>
 
-      <div>
-        <a href="#">이벤트</a>
-        <a href="#">고객센터</a>
-      </div>
-    </div>
-  </header>
+            <li> <a href="#">Reservation</a>
+                <ul class="reserve">
+                    <li><a href="#">호텔</a></li>
+                    <li><a href="#">게스트하우스</a></li>
+                    <li><a href="#">펜션</a></li>
+                    <li><a href="#">모텔</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Event</a></li>
+        </ul>
+    </nav>
+    <a href="#" class="cta"><button>Customer Service</button></a>
+</header>
 
   <main>
     <div class="bor_ai">
       <a class="buy_a1" href="#">
-        <svg class="feather feather-arrow-left" fill="none" height="30" stroke="currentColor" stroke-linecap="round"
-          stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-          <line x1="19" x2="5" y1="12" y2="12" />
-          <polyline points="12 19 5 12 12 5" />
-        </svg>
-        <h1 style="width: 700px;">예약 확인 및 결제</h1>
+        <h1><svg class="feather feather-arrow-left" fill="none" height="30" stroke="currentColor" stroke-linecap="round"
+            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <line x1="19" x2="5" y1="12" y2="12" />
+            <polyline points="12 19 5 12 12 5" />
+          </svg>
+          예약 확인 및 결제</h1>
       </a>
     </div>
 
-    <form action="#">
+
+    <form action="./succesbuy.html">
       <section class="section_id">
 
         <div class="desktop_left">
-
           <div class="buy_a1b">
             <h2>예약자 정보</h2>
             <div class="buy_id">
@@ -49,13 +57,13 @@
               </label>
             </div>
 
-            <div class="buy_id">
+            <div class="buy_call">
               <label>
                 <div class="buy_id00">휴대폰 번호</div>
                 <input class="buy_id01" type="tel" placeholder="010 - 1234 - 5678" required>
               </label>
               <button>인증번호 전송</button>
-              <p style="font-size: 10px; color: gray; margin-left: 10px;">개인 정보 보호를 위해 안심번호로 숙소에 전달됩니다.</p>
+              <p>개인 정보 보호를 위해 안심번호로 숙소에 전달됩니다.</p>
             </div>
 
             <div class="buy_label">
@@ -78,14 +86,32 @@
                 <h2>결제 수단</h2>
               </div>
               <div class="payment">
-                <div class="payment_type">신용/체크카드</div>
-                <div class="payment_type">휴대폰 결제</div>
-                <div class="payment_type">Toss</div>
-                <div class="payment_type">카카오페이</div>
+                <div class="payment_type">
+                  <input id="payTypeBtnA" type="radio" name="pay" value="Credit" checked>
+                  <label for="payTypeBtnA"><span>신용/체크카드</span></label>
+                  <div class="payTypeA">80만원 이상 결제시 20% 할인 적용</div>
+                </div>
+
+                <div class="payment_type">
+                  <input id="payTypeBtnB" type="radio" name="pay" value="Toss">
+                  <label for="payTypeBtnB"><span>Toss</span></label>
+                  <div class="payTypeB">70만원 이상 결제시 15% 할인 적용</div>
+                </div>
+
+                <div class="payment_type">
+                  <input id="payTypeBtnC" type="radio" name="pay" value="Kakao">
+                  <label for="payTypeBtnC"><span>카카오페이</span></label>
+                  <div class="payTypeC">50만원 이상 결제시 페이백 20%</div>
+                </div>
+                <div class="payment_type">
+                  <input id="payTypeBtnD" type="radio" name="pay" value="Naver">
+                  <label for="payTypeBtnD"><span>네이버페이</span></label>
+                  <div class="payTypeD">30만원 이상 결제시 5% 추가 할인</div>
+                </div>
               </div>
               <div style="margin-left: 30px;">
                 <label>
-                  <input type="checkbox" name="reused" value="reused" checked>
+                  <input class="reused_check" type="checkbox" name="reused" value="reused" checked>
                   <span>이 결제 수단을 다음에도 사용</span>
                 </label>
               </div>
@@ -99,23 +125,24 @@
               <h2 style="margin: 30px 30px;">결제 정보</h2>
             </div>
             <div class="buy_inform_li">
-              <ul style="border-bottom: 1px solid black; padding-bottom: 15px;">
+              <ul style="border-bottom: 1px solid lightgray; padding-bottom: 15px;">
                 <li>객실 가격(1박)</li>
-                <li>60,000원</li>
+                <li>560,000원</li>
               </ul>
             </div>
             <div class="buy_inform_li">
               <ul>
                 <li style="font-size: 12px; font-weight: 600;">총 결제 금액</li>
-                <li style="font-size: 24px; font-weight: bold; color: red;">60,000원</li>
+                <li style="font-size: 24px; font-weight: bold; color: red;">560,000원</li>
               </ul>
             </div>
 
             <div class="pay_agree">
               <!-- 큰 화면일때는 리스트로 보이지만
-              화면이 줄어들었을때는 박스리스트형식으로 보이게 -->
+                화면이 줄어들었을때는 박스리스트형식으로 보이게 -->
               <div class="agree_box">
-                <input class="check_reqir" type="checkbox" name="payment_agree" value="marster_checkbox"> 약관 전체동의</input>
+                <input class="check_reqir" type="checkbox" name="payment_agree" value="marster_checkbox"> 약관
+                전체동의</input>
                 <div>
                   <div class="check_reqir">
                     <label>
@@ -144,13 +171,10 @@
                 </div>
               </div>
             </div>
-
             <div class="last_payment">
-              <button type="submit">결제하기</button>
+              <button type="submit" id="payment_receipt">결제하기</button>
             </div>
           </div>
-
-
         </div>
 
         <div class="buy_gap"></div> <!-- 빈 공간 -->
@@ -159,10 +183,10 @@
 
           <div class="bor_bi">
             <div class="buy_id0a1">
-              <h2 style="margin-top: 30px;">롯데호텔 제주</h2>
+              <h2 style="margin-top: 30px;">성남 블랙 호텔</h2>
             </div>
             <div class="lodging_img">
-              <img src="https://image.goodchoice.kr/resize_792x480/affiliate/2022/02/10/6204da5a97f08.jpg" alt="호텔 이미지">
+              <img src="./hotel-1559199_1280.jpg" alt="호텔 이미지">
             </div>
             <table>
               <tbody>
@@ -178,6 +202,13 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="map_lodging">
+            <img src="./image/hotel/location_shilla.png" alt="">
+          </div>
+          <div>
+            <p>위치</p>
+            <p>동대입구역 5번 출구 도보 5분</p>
           </div>
 
         </div>
