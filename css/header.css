@@ -38,7 +38,8 @@ header {
     align-items: center;
     height: 8vh;
     padding: 30px 10%;
-    background-color: rgba(49, 134, 214, 0.466);
+    /* background-color: rgba(49, 134, 214, 0.466); */
+    background-color: rgba(49, 134, 214, 0.39);
 }
 
 .logo {
@@ -52,30 +53,31 @@ header {
 
 .nav_link li {
     display: inline-block;
+    position: relative;
     padding: 0px 30px;
-
 }
 
 .nav_link li a {
     padding: 7px 7px;
-
     transition: all 0.5s ease 0s;
 }
 
 .nav_link li a:hover {
     border-radius: 50px;
     color: white;
-    background-color: rgba(0, 135, 169, 0.39);
+    background-color: rgba(33, 147, 176, 0.39);
 }
 
 .reserve {
     display: none;
     position: absolute;
+    top: 30px;
+    left: 5px;
     background-color: rgba(0, 135, 169, 0.452);
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
-    width: 180px;
+    width: 140px;
 }
 
 .nav_link li:hover .reserve {
@@ -87,33 +89,41 @@ header {
 }
 
 .reserve li {
+    display: flex;
+    width: 140px;
     padding: 5px 0;
 }
 
 .reserve a {
+    width: 100%;
+    text-align: center;
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.reserve li:hover {
-    color: rgba(95, 131, 152, 0.475);
-    transition: color 0.5s ease;
+.reserve a:hover {
+
+    color: rgba(95, 131, 152, 0.397);
+    transform: scale(110%, 110%);
+    transition: color 0.3s ease;
 }
 
-header button {
+
+
+header .cta {
     margin-left: 20px;
     padding: 7px 7px;
     background-color: #3489ae82;
     border: none;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease 0s;
+    transition: all 0.4s ease;
 }
 
-header button:hover {
+header .cta:hover {
     color: white;
-    background-color: rgba(0, 135, 169, 0.39);
+    background-color: rgba(75, 149, 167, 0.489);
 }
 
 
