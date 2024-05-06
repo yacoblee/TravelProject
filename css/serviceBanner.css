@@ -456,9 +456,7 @@ input[type="checkbox"]:checked+label+div {
 .notice_list ul ul{
     display: grid;
     grid-template-columns: 1fr 8fr 1fr;
-    /* width: 45vw; */
     height: 6vh;
-    /* line-height: 6vh; */
     min-height: 40px;
     align-items: center;
     text-align: center;
@@ -565,9 +563,6 @@ input[type="checkbox"]:checked+label+div {
 @media all and (max-width:767px) {
 
     .side_bar_all{
-        /* margin-top: 10vh; */
-        /* height: 100vh; */
-
         display: grid;
         grid-template: 50px auto / 1fr;
         padding: 2vw;
@@ -650,7 +645,7 @@ input[type="checkbox"]:checked+label+div {
         word-wrap: normal;
     }
     .notice_search{
-        width: 98vw;
+        width: 95vw;
         display: flex;
         
     }
@@ -660,7 +655,6 @@ input[type="checkbox"]:checked+label+div {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
         align-items: center;
-        justify-content: space-evenly;
         justify-items: center;
     }
     .notice_search input{
@@ -734,8 +728,6 @@ input[type="checkbox"]:checked+label+div {
         width: 55vw;
         display: grid;
         justify-content: center;
-        /* align-i: center; */
-
     }
 
     .notice_page{
