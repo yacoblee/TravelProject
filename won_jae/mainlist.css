@@ -209,6 +209,12 @@ main .right_main_product .favorit_header h2 {
   justify-content: space-between;
 }
 
+.empty_price input {
+  width: 100px;
+  height: 25px;
+  padding-left: 5px;
+}
+
 /* ===================================================================== */
 
 .left_check_header {
@@ -299,6 +305,25 @@ main .right_main_product .favorit_header h2 {
   background-color: blue;
 }
 
+.public_facility_out>button {
+  border: none;
+  color: blue;
+  background-color: white;
+} 
+
+.public_facility_out label {
+  border: none;
+  color: blue;
+  background-color: white;
+} 
+
+.facility_button:nth-child(n+7) {
+  display: none;
+}
+
+/* .public_facility_out:active .facility_button {
+  display: block;
+} */
 
 /* ======================================================================== */
 /* 메인 리스트 */
@@ -323,19 +348,19 @@ main .right_main_product .favorit_header h2 {
   
   position: relative;
   margin-right: 20px;
-  
   /* z-index: 3; */
 }
 
 .product_a {
   display: inline-block;
-  vertical-align: top;
+  transform: translateX(25%);
+  /* vertical-align: top; */
   /* z-index: 3; */
 }
 
+
 .product_infor {
   font-weight: bold;
-  vertical-align: top;
   font-size: large;
   padding-left: 30px;
 }
@@ -359,66 +384,110 @@ main .right_main_product .favorit_header h2 {
   cursor: pointer;
   --tw-border-opacity: 1;
   border-color: rgb(183 213 246 / var(--tw-border-opacity));
-  background-color: white;
+
 }
 
-.like_aaa:hover {
+.btn_like input {
+  display: none;
+}
+
+/* .like_aaa:hover {
   background-color: #f0f0f0;
+} */
+
+/* ============================================================ */
+.btn_like .like_aaa input {
+  display: none;
 }
 
-.product_infor span+div {
+.btn_like label {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn_like label span {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  text-indent: -9999em;
+  background: url("./heart-regular.svg") no-repeat 0/cover; 
+  transition: .3s;
+}
+
+.btn_like input[id^=like]:checked + label span {
+  background: url("./heart-solid.svg") no-repeat 0/cover;
+  transition: .3s;
+}
+
+/* ============================================================ */
+.product_infor div {
+  text-align: end;
+}
+
+.product_infor div+div {
   font-size: 10px;
   padding-left: 30px;
+  margin-bottom: 80px;
+  text-align: end;
 }
 
-.infor_aa,
-.infor_sl {
-  right: 0;
-  opacity: 0;
-}
-
-.infor_sl svg {
-  color: darkgoldenrod;
+.infor_sl img[src] {
+  width: 15px;
+  height: 15px;
 }
 
 .infor_aa {
   display: flex;
-  justify-content: space-around;
+  /* justify-content: space-around; */
   align-items: end;
+  gap: 100px;
 }
 
 .infor_sl {
   font-size: 14px;
   padding-left: 10px;
+  margin-top: 15px;
+
+  text-align: end;
 }
 
-.product_infor_hover>.infor_sl {
+/* .product_infor_hover>.infor_sl {
   margin-top: 8vh;
   margin-bottom: 10px;
   margin-left: 2vw;
-}
+} */
 
 .infor_price {
   font-size: 18px;
   font-weight: bold;
 }
 
+.infor_price em {
+  text-align: end;
+  font-size: 14px;
+  font-weight: 500;
+  color: darkgray;
+  text-decoration: line-through;
+  padding-right: 5px;
+}
+
 /* ================================================================= */
 /* 상품 이미지 호버 효과 */
 
 .product_infor_hover {
+  position: absolute;
+  left: 3%;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(4, 1fr) .5fr;
   width: 20vw;
   height: 24vh;
-  position: absolute;
-  left: 0;
-  /* opacity: 0; */
-  background-color: rgba(164, 178, 192, 0.142);
-  padding: 10px;
+  padding: 5px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  white-space: nowrap;
+  box-sizing: border-box;
+  gap: 10px;
   z-index: -1;
-  /* text-align: right; */
+  /* background-color: lightblue; */
 }
 
 .product_infor_hover {
@@ -429,12 +498,11 @@ main .right_main_product .favorit_header h2 {
 
 .product_img .product_infor_hover {
   opacity: 1;
-  /* z-index: 1; */
 }
 
-.product_img:active {
-  color: rgba(164, 178, 192, 0.142);
-}
+/* .product_img img {
+  vertical-align: top;
+} */
 
 .product_img .infor_aa,
 .product_img .infor_sl {
@@ -442,22 +510,51 @@ main .right_main_product .favorit_header h2 {
   transition: left 0.7s ease, opacity 0.7s ease;
 }
 
-.product_img:hover .product_infor_hover {
-  background-color: rgb(211, 211, 211, .3);
-  left: 18vw;
+.product_infor_hover div:nth-child(1) {
+  grid-area: 1 / 5 / 4 / 6;
+  text-align: center;
+  align-content: center;
+  white-space: pre-line;
+
+  font-weight: bold;
+  background-color: whitesmoke;
+}
+
+.product_infor_hover div:nth-child(2) {
+  background: url(./hotel-1559199_1280.jpg) no-repeat 0/cover;
+  border-radius: 5px;
+  text-indent: -9999em;
+
+  grid-column: 1 / 3;
+  grid-row: 2 / 4;
+  
+}
+
+.product_infor_hover div:nth-child(3) {
+  background: url(./hotel-1559199_1280.jpg) no-repeat 0/cover;
+  border-radius: 5px;
+  text-indent: -9999em;
+  
+  grid-column: 3 / 5;
+  grid-row: 2 / 4;
+}
+
+.product_img>img:hover~.product_infor_hover {
+  /* background: url(./hotel-1559199_1280.jpg) no-repeat 0/cover; */
+  left: 20vw;
   opacity: 1;
 
   width: 22vw;
 }
 
-.product_img:hover .infor_aa,
+/* .product_img:hover .infor_aa,
 .product_img:hover .infor_sl {
   opacity: 1;
   transition: right 0.7s ease, opacity 0.7s ease;
   transition: left 0.7s ease, opacity 0.7s ease;
-}
+} */
 
-.product_img:hover .product_a {
+.product_img img:hover+.product_a {
   opacity: 0;
   transition: .3s;
 }
@@ -486,6 +583,43 @@ main .right_main_product .favorit_header h2 {
 .paging_main div a:active {
   font-weight: bold;
   color: purple;
+}
+
+/* ==================================================== */
+
+.up-down-btn {
+  position: fixed;
+  right: 10%;
+  bottom: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.up-down-btn a {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 50%;
+
+  justify-content: center;
+  align-items: center;
+
+  background: url();
+  text-indent: -9999em;
+}
+
+.up-down-btn a:first-child {
+  background: url(./arrow-up.svg) no-repeat center/100% 100%;
+}
+
+.up-down-btn a:last-child {
+  background: url(./arrow-down-solid.svg) no-repeat center/100% 100%;
+}
+
+.up-down-btn a:hover {
+  box-shadow: 4px 4px lightgray;
 }
 
 /* =================================================== */
