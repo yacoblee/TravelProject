@@ -612,20 +612,36 @@ input#tab4:checked~.mypage_body>.container section:nth-child(4) {
     }
 }
 
+/* 예약내역 상세페이지 S */
+.container {
+    flex: 1;
+    height: 700px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container>h3 {
+    margin-bottom: 2vw;
+    font-size: 1.4em;
+}
 
 .reserve_detail {
     display: grid;
-    grid-template: repeat(10, 1fr)/repeat(6, .5fr);
+    grid-template: repeat(10, .5fr)/repeat(4, .5fr);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.121);
     position: relative;
     align-items: center;
-    width: 70vw;
-    height: 700px;
+    width: 50vw;
+    height: 600px;
     padding: 20px;
+    border-radius: 10px;
 }
 
 
 .reserve_detail_img {
-    grid-area: 1/1/span 3/span 3;
+    grid-area: 1/1/span 4/span 2;
     width: 100%;
     height: 100%;
     border-radius: 5px
@@ -635,87 +651,127 @@ input#tab4:checked~.mypage_body>.container section:nth-child(4) {
     object-fit: contain;
     width: 100%;
     height: 100%;
-    background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.121);
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.hotelinfo {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.049);
+    grid-area: 5/1/5/span 2;
 }
 
 .hotelname {
-    grid-area: 1/4/1/span 3;
+    grid-area: 6/1/6/span 2;
 }
 
 .roomname {
-    grid-area: 2/4/2/span 3;
+    grid-area: 7/1/7/span 2;
 }
 
 .hoteladdress {
-    grid-area: 3/4/3/span 3;
+    grid-area: 8/1/8/span 2;
 }
 
 .reserve_tag {
-    grid-area: 4/1/4/span 6;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.049);
+    grid-area: 1/3/1/span 2;
 
 }
 
 
 .reserve_name {
-    grid-area: 5/1/5/span 3;
+    grid-area: 2/3/2/span 2;
 }
 
 .reserve_person {
-    grid-area: 5/3/5/span 3;
+    grid-area: 3/3/3/span 2;
 }
 
 .reserve_date {
-    grid-area: 6/1/6/span 3;
+    grid-area: 4/3/4/span 2;
 }
 
 .reserve_phone {
-    grid-area: 7/1/7/span 3;
+    grid-area: 5/3/5/span 2;
 }
 
 .reserve_mail {
-    grid-area: 8/1/8/span 3;
+    grid-area: 6/3/6/span 2;
+}
+
+.reserve_payment {
+    grid-area: 7/3/7/span 2;
+
 }
 
 .reserve_purchase {
-    grid-area: 9/1/9/span 3;
+    grid-area: 8/3/8/span 2;
 }
 
-.reserve_name p,
-.reserve_person p,
-.reserve_date p,
-.reserve_phone p,
-.reserve_mail p,
-.reserve_purchase p {
-    display: inline-block;
-    margin: 5px 0;
-    padding: 0 2%;
+.ser {
+    grid-area: 6/1/span 2 /1;
 }
 
-.reserve_tag hr {
-    margin-top: 10px;
-    /* 구분선과의 간격 조정 */
-}
 
+.hotelname,
+.roomname,
+.hoteladdress,
 .reserve_name,
 .reserve_person,
 .reserve_date,
 .reserve_phone,
 .reserve_mail,
+.reserve_payment,
 .reserve_purchase {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    /* 내부 그리드를 2x1로 구성 */
-    gap: 5px;
-    /* 그리드 아이템 사이의 간격 조정 */
+    grid-template-columns: .5fr .5fr;
+    border-bottom: solid rgba(0, 0, 0, 0.041);
+
 }
 
+.hotelname p:first-child,
+.roomname p:first-child,
 .reserve_name p:first-child,
+.hoteladdress p:first-child,
 .reserve_person p:first-child,
 .reserve_date p:first-child,
 .reserve_phone p:first-child,
 .reserve_mail p:first-child,
+.reserve_payment p:first-child,
 .reserve_purchase p:first-child {
     font-weight: bold;
-    /* 각 내부 그리드의 첫 번째 p 태그에만 볼드체 적용 */
+
 }
+
+.reserve_purchase span {
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
+.reserve_cancel {
+    grid-row: 10;
+    grid-column: 3 / span 2;
+    text-align: center;
+}
+
+.reserve_cancel a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(63, 120, 181, 0.619);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.reserve_cancel a:hover {
+    background-color: rgb(135, 206, 250);
+}
+
+
+
+
+/* 예약내역 상세페이지 E */

@@ -98,7 +98,6 @@ header {
 .reserve a {
     width: 100%;
     text-align: center;
-    color: white;
     text-decoration: none;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     transition: color 0.3s ease;
@@ -110,6 +109,7 @@ header {
     transform: scale(110%, 110%);
     transition: color 0.3s ease;
 }
+
 header .cta {
     margin-left: 20px;
     padding: 7px 7px;
