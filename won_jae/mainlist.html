@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./mainlist.css">
+  <link rel="stylesheet" href="../css/header.css">
   <title>숙소 리스트</title>
 </head>
 
@@ -12,14 +13,22 @@
   <header>
     <img src="../image/hotsix_logo1.png" class="logo" src="" alt="logo">
     <nav>
-      <ul class="nav_link">
-        <li><a href="#">Login</a></li>
-        <li><a href="#">Reservation</a></li>
-        <li><a href="#">Event</a></li>
-      </ul>
+        <ul class="nav_link">
+            <li><a href="#">Login</a></li>
+
+            <li> <a href="#">Reservation</a>
+                <ul class="reserve">
+                    <li><a href="#">호텔</a></li>
+                    <li><a href="#">게스트하우스</a></li>
+                    <li><a href="#">펜션</a></li>
+                    <li><a href="#">모텔</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Event</a></li>
+        </ul>
     </nav>
-    <a href="#" class="cta"><button>Customer Service</button></a>
-  </header>
+    <a href="#" class="cta">Customer Service</a>
+</header>
 
   <main>
     <section>
@@ -71,19 +80,19 @@
               <label>
                 <input class="checked_all_box" type="radio" name="condition_lodging" value="camping"> 캠핑
               </label>
+
             </div>
 
             <div class="left_check_price">
               <h3>가격 <sup style="font-size: 12px; font-weight: lighter;">1박 기준</sup></h3>
               <div class="price_range">
                 <label>
-                  <input id="price_range" type="range" name="price_range" value="200,000" min="1" max="500,000"
-                    step="10,000">
+                  <div class="empty_price">
+                    <span><input type="text" placeholder="&#8361;10,000" min="10,000"></span>
+                    &mdash;
+                    <span><input type="text" placeholder="&#8361;800,000" max="800,000"></span>
+                  </div>
                 </label>
-                <div class="empty_price">
-                  <span>&#8361;1</span>
-                  <span>&#8361;500,000</span>
-                </div>
               </div>
             </div>
 
@@ -92,71 +101,87 @@
                 <h3>시설</h3>
                 <ul>
                   <li>
-                    <div class="public_facilities">공용시설</div>
-                    <ul class="facility_flex">
-                      <li class="facility_button"><button class="facility_design" type="button" value="사우나">
-                          <span>사우나</span></button></li>
-                      <li class="facility_button"><button class="facility_design" type="button" value="수영장">
-                          <span>수영장</span></button></li>
-                      <li class="facility_button"><button class="facility_design" type="button" value="BBQ">
-                          <span>BBQ</span></button></li>
-                      <li class="facility_button"><button class="facility_design" type="button" value="레스토랑">
-                          <span>레스토랑</span></button></li>
-                      <li class="facility_button"><button class="facility_design" type="button" value="매점">
-                          <span>매점</span></button></li>
-                      <li class="facility_button"><button class="facility_design" type="button" value="피트니스">
-                          <span>피트니스</span></button></li>
-                      <li class="facility_button"><button class="facility_design" type="button" value="공용샤워장">
-                          <span>공용샤워장</span></button></li>
-                      <li class="facility_button"><button class="facility_design" type="button" value="공용화장실">
-                          <span>공용화장실</span></button></li>
-                      <li class="facility_button"><button class="facility_design" type="button" value="건조기">
-                          <span>건조기</span></button></li>
-                      <li class="facility_button"><button class="facility_design" type="button" value="주방/식당">
-                          <span>주방/식당</span></button></li>
-                    </ul>
+                    <div class="public_facility_out">
+                      <div class="public_facilities">공용시설</div>
+                      <ul class="facility_flex">
+                        <li class="facility_button"><button class="facility_design" type="button" value="사우나">
+                            <span>사우나</span></button></li>
+                        <li class="facility_button"><button class="facility_design" type="button" value="수영장">
+                            <span>수영장</span></button></li>
+                        <li class="facility_button"><button class="facility_design" type="button" value="BBQ">
+                            <span>BBQ</span></button></li>
+                        <li class="facility_button"><button class="facility_design" type="button" value="레스토랑">
+                            <span>레스토랑</span></button></li>
+                        <li class="facility_button"><button class="facility_design" type="button" value="매점">
+                            <span>매점</span></button></li>
+                        <li class="facility_button"><button class="facility_design" type="button" value="피트니스">
+                            <span>피트니스</span></button></li>
+                        <li class="facility_button"><button class="facility_design" type="button" value="공용샤워장">
+                            <span>공용샤워장</span></button></li>
+                        <li class="facility_button"><button class="facility_design" type="button" value="공용화장실">
+                            <span>공용화장실</span></button></li>
+                        <li class="facility_button"><button class="facility_design" type="button" value="건조기">
+                            <span>건조기</span></button></li>
+                        <li class="facility_button"><button class="facility_design" type="button" value="주방/식당">
+                            <span>주방/식당</span></button></li>
+                      </ul>
+                      <button type="button">
+                        더 보기
+                      </button>
+                    </div>
                   </li>
                   <li>
-                    <div class="public_facilities">객실 내 시설</div>
-                    <ul class="facility_flex">
-                      <li class="facility_button"><button class="facility_design" type="button" value="스파/월풀">
-                          <span>스파/월풀</span></button></li>
-                      <li class="facility_button"><button class="facility_design" type="button" value="객실스파">
-                          <span>객실스파</span></button></li>
-                      <li class="facility_button"><button class="facility_design" type="button" value="미니바">
-                          <span>미니바</span></button></li>
-                      <li class="facility_button"><button class="facility_design" type="button" value="와이파이">
-                          <span>와이파이</span></button></li>
-                      <li class="facility_button"><button class="facility_design" type="button" value="에어컨">
-                          <span>에어컨</span></button></li>
-                      <li class="facility_button"><button class="facility_design" type="button" value="욕실용품">
-                          <span>욕실용품</span></button></li>
-                    </ul>
+                    <div class="public_facility_out">
+                      <div class="public_facilities">객실 내 시설</div>
+                      <ul class="facility_flex">
+                        <li class="facility_button"><button class="facility_design" type="button" value="스파/월풀">
+                            <span>스파/월풀</span></button></li>
+                        <li class="facility_button"><button class="facility_design" type="button" value="객실스파">
+                            <span>객실스파</span></button></li>
+                        <li class="facility_button"><button class="facility_design" type="button" value="미니바">
+                            <span>미니바</span></button></li>
+                        <li class="facility_button"><button class="facility_design" type="button" value="와이파이">
+                            <span>와이파이</span></button></li>
+                        <li class="facility_button"><button class="facility_design" type="button" value="에어컨">
+                            <span>에어컨</span></button></li>
+                        <li class="facility_button"><button class="facility_design" type="button" value="욕실용품">
+                            <span>욕실용품</span></button></li>
+                      </ul>
+                      <button type="button">
+                        더 보기
+                      </button>
+                    </div>
                   </li>
                   <li>
-                    <div class="public_facilities">기타시설</div>
-                    <ul class="facility_flex">
-                      <li class="facility_button"><button class="facility_design" value="조식포함">
-                          <span>조식포함</span></button></li>
-                      <li class="facility_button"><button class="facility_design" value="무료주차">
-                          <span>무료주차</span></button></li>
-                      <li class="facility_button"><button class="facility_design" value="반려견동반">
-                          <span>반려견동반</span></button></li>
-                      <li class="facility_button"><button class="facility_design" value="사우나/찜질방">
-                          <span>사우나/찜질방</span></button></li>
-                      <li class="facility_button"><button class="facility_design" value="캠프파이어">
-                          <span>캠프파이어</span></button></li>
-                      <li class="facility_button"><button class="facility_design" value="짐보관가능">
-                          <span>짐보관가능</span></button></li>
-                      <li class="facility_button"><button class="facility_design" value="개인사물함">
-                          <span>개인사물함</span></button></li>
-                      <li class="facility_button"><button class="facility_design" value="객실내흡연">
-                          <span>객실내흡연</span></button></li>
-                      <li class="facility_button"><button class="facility_design" value="객실내취사">
-                          <span>객실내취사</span></button></li>
-                      <li class="facility_button"><button class="facility_design" value="픽업가능">
-                          <span>픽업가능</span></button></li>
-                    </ul>
+                    <div class="public_facility_out">
+                      <div class="public_facilities">기타시설</div>
+                      <ul class="facility_flex">
+                        <li class="facility_button"><button class="facility_design" value="조식포함">
+                            <span>조식포함</span></button></li>
+                        <li class="facility_button"><button class="facility_design" value="무료주차">
+                            <span>무료주차</span></button></li>
+                        <li class="facility_button"><button class="facility_design" value="반려견동반">
+                            <span>반려견동반</span></button></li>
+                        <li class="facility_button"><button class="facility_design" value="사우나/찜질방">
+                            <span>사우나/찜질방</span></button></li>
+                        <li class="facility_button"><button class="facility_design" value="캠프파이어">
+                            <span>캠프파이어</span></button></li>
+                        <li class="facility_button"><button class="facility_design" value="짐보관가능">
+                            <span>짐보관가능</span></button></li>
+                        <li class="facility_button"><button class="facility_design" value="개인사물함">
+                            <span>개인사물함</span></button></li>
+                        <li class="facility_button"><button class="facility_design" value="객실내흡연">
+                            <span>객실내흡연</span></button></li>
+                        <li class="facility_button"><button class="facility_design" value="객실내취사">
+                            <span>객실내취사</span></button></li>
+                        <li class="facility_button"><button class="facility_design" value="픽업가능">
+                            <span>픽업가능</span></button></li>
+                      </ul>
+
+                      <button type="button">
+                        더 보기
+                      </button>
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -176,171 +201,263 @@
 
           <div class="main_product_list">
             <a class="product_img" target="_blank"
-              href="https://www.yeogi.com/domestic-accommodations/7095?checkIn=2024-04-28&checkOut=2024-04-29&personal=2">
+              href="./Accommodation/Accommodation.html">
               <img src="./hotel-1559199_1280.jpg" alt="숙소 이미지">
               <div class="product_a">
                 <span class="product_infor">
-                  <span>성남 블랙 호텔</span>
+                  <div>성남 블랙 호텔</div>
                   <div>경기 성남 분당 미금역 3번 출구</div>
                 </span>
-              </div>
-              <div class="product_infor_hover">
-                <div class="infor_sl"><svg class="feather feather-star" fill="none" height="15" stroke="currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="15"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <polygon
-                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                  </svg><sub> (9,999)</sub></div>
-                <div class="infor_aa">
-                  <div class="infor_sl">숙박 예약 <sub>17:00 체크인</sub></div>
-                  <div class="infor_price">560,000 원</div>
-                </div>
-              </div>
-            </a>
-            <span class="btn_like">
-              <button class="like_aaa" type="button">찜하기</button>
-            </span>
-          </div>
-          <div class="main_product_list">
-            <a class="product_img" target="_blank"
-              href="https://www.yeogi.com/domestic-accommodations/7095?checkIn=2024-04-28&checkOut=2024-04-29&personal=2">
-              <img src="./hotel-1559199_1280.jpg" alt="숙소 이미지">
-              <div class="product_a">
-                <span class="product_infor">
-                  <span>성남 레드 호텔</span>
-                  <div>경기 성남 정자역 3번 출구</div>
-                </span>
-              </div>
-              <div class="product_infor_hover">
-                <div class="infor_sl"><svg class="feather feather-star" fill="none" height="15" stroke="currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="15"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <polygon
-                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                  </svg><sub> (9,999)</sub></div>
-                <div class="infor_aa">
-                  <div class="infor_sl">숙박 예약 <sub>17:00 체크인</sub></div>
-                  <div class="infor_price">320,000 원</div>
-                </div>
-              </div>
-            </a>
-            <span class="btn_like">
-              <button class="like_aaa" type="button">찜하기</button>
-            </span>
-          </div>
-          <div class="main_product_list">
-            <a class="product_img" target="_blank"
-              href="https://www.yeogi.com/domestic-accommodations/7095?checkIn=2024-04-28&checkOut=2024-04-29&personal=2">
-              <img src="./hotel-1559199_1280.jpg" alt="숙소 이미지">
-              <div class="product_a">
-                <span class="product_infor">
-                  <span>성남 그린 호텔</span>
-                  <div>경기 성남 모란역 3번 출구</div>
-                </span>
-              </div>
-              <div class="product_infor_hover">
-                <div class="infor_sl"><svg class="feather feather-star" fill="none" height="15" stroke="currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="15"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <polygon
-                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                  </svg><sub> (9,999)</sub></div>
-                <div class="infor_aa">
-                  <div class="infor_sl">숙박 예약 <sub>17:00 체크인</sub></div>
-                  <div class="infor_price">327,000 원</div>
-                </div>
-              </div>
-            </a>
-            <span class="btn_like">
-              <button class="like_aaa" type="button">찜하기</button>
-            </span>
-          </div>
-          <div class="main_product_list">
-            <a class="product_img" target="_blank"
-              href="https://www.yeogi.com/domestic-accommodations/7095?checkIn=2024-04-28&checkOut=2024-04-29&personal=2">
-              <img src="./hotel-1559199_1280.jpg" alt="숙소 이미지">
-              <div class="product_a">
-                <span class="product_infor">
-                  <span>성남 블루 호텔</span>
-                  <div>경기 성남 야탑역 5번 출구</div>
-                </span>
-              </div>
-              <div class="product_infor_hover">
-                <div class="infor_sl"><svg class="feather feather-star" fill="none" height="15" stroke="currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="15"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <polygon
-                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                  </svg><sub> (9,999)</sub></div>
-                <div class="infor_aa">
-                  <div class="infor_sl">숙박 예약 <sub>17:00 체크인</sub></div>
-                  <div class="infor_price">320,000 원</div>
-                </div>
-              </div>
-            </a>
-            <span class="btn_like">
-              <button class="like_aaa" type="button">찜하기</button>
-            </span>
-
-          </div>
-          <div class="main_product_list">
-            <a class="product_img" target="_blank"
-              href="https://www.yeogi.com/domestic-accommodations/7095?checkIn=2024-04-28&checkOut=2024-04-29&personal=2">
-              <img src="./hotel-1559199_1280.jpg" alt="숙소 이미지">
-              <div class="product_a">
-                <span class="product_infor">
-                  <span>성남 블루 호텔</span>
-                  <div>경기 성남 야탑역 5번 출구</div>
-                </span>
-              </div>
-              <div class="product_infor_hover">
                 <div class="infor_sl">
-                  <svg class="feather feather-star" fill="none" height="15" stroke="currentColor" stroke-linecap="round"
-                    stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="15"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <polygon
-                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                  </svg><sub> (9,999)</sub>
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <sub> (9,999)</sub>
                 </div>
                 <div class="infor_aa">
-                  <div class="infor_sl">숙박 예약 <sub>17:00 체크인</sub></div>
-                  <div class="infor_price">320,000 원</div>
+                  <div class="infor_sl"><sub>17:00 체크인</sub></div>
+                  <div class="infor_price">
+                    <p></p><em>560,000</em>460,000 원
+                  </div>
                 </div>
+              </div>
+              <div class="product_infor_hover">
+                <div>
+                  I
+                  N
+                  F
+                  O
+                  R
+                </div>
+                <div>사진</div>
+                <div>사진</div>
               </div>
             </a>
             <span class="btn_like">
-              <button class="like_aaa" type="button">찜하기</button>
+              <div class="like_aaa">
+                <input id="like_A" type="checkbox" name="like" value="Like-A">
+                <label for="like_A"><span>찜하기</span></label>
+              </div>
             </span>
-
           </div>
           <div class="main_product_list">
             <a class="product_img" target="_blank"
-              href="https://www.yeogi.com/domestic-accommodations/7095?checkIn=2024-04-28&checkOut=2024-04-29&personal=2">
+              href="./Accommodation/Accommodation.html">
               <img src="./hotel-1559199_1280.jpg" alt="숙소 이미지">
               <div class="product_a">
                 <span class="product_infor">
-                  <span>성남 블루 호텔</span>
-                  <div>경기 성남 야탑역 5번 출구</div>
+                  <div>성남 블랙 호텔</div>
+                  <div>경기 성남 분당 미금역 3번 출구</div>
                 </span>
+                <div class="infor_sl">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <sub> (9,999)</sub>
+                </div>
+                <div class="infor_aa">
+                  <div class="infor_sl"><sub>17:00 체크인</sub></div>
+                  <div class="infor_price">
+                    <em>560,000</em>500,000 원
+                  </div>
+                </div>
               </div>
               <div class="product_infor_hover">
-                <div class="infor_sl"><svg class="feather feather-star" fill="none" height="15" stroke="currentColor"
-                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="15"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <polygon
-                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                  </svg><sub> (9,999)</sub></div>
-                <div class="infor_aa">
-                  <div class="infor_sl">숙박 예약 <sub>17:00 체크인</sub></div>
-                  <div class="infor_price">320,000 원</div>
+                <div>
+                  I
+                  N
+                  F
+                  O
+                  R
                 </div>
+                <div>사진</div>
+                <div>사진</div>
               </div>
             </a>
             <span class="btn_like">
-              <button class="like_aaa" type="button">찜하기</button>
+              <div class="like_aaa">
+                <input id="like_B" type="checkbox" name="like" value="Like-B">
+                <label for="like_B"><span>찜하기</span></label>
+              </div>
             </span>
-
           </div>
+          <div class="main_product_list">
+            <a class="product_img" target="_blank"
+              href="./Accommodation/Accommodation.html">
+              <img src="./hotel-1559199_1280.jpg" alt="숙소 이미지">
+              <div class="product_a">
+                <span class="product_infor">
+                  <div>성남 블랙 호텔</div>
+                  <div>경기 성남 분당 미금역 3번 출구</div>
+                </span>
+                <div class="infor_sl">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <sub> (9,999)</sub>
+                </div>
+                <div class="infor_aa">
+                  <div class="infor_sl"><sub>18:00 체크인</sub></div>
+                  <div class="infor_price">
+                    <em>560,000</em>520,000 원
+                  </div>
+                </div>
+              </div>
+              <div class="product_infor_hover">
+                <div>
+                  I
+                  N
+                  F
+                  O
+                  R
+                </div>
+                <div>사진</div>
+                <div>사진</div>
+              </div>
+            </a>
+            <span class="btn_like">
+              <div class="like_aaa">
+                <input id="like_C" type="checkbox" name="like" value="Like-C">
+                <label for="like_C"><span>찜하기</span></label>
+              </div>
+            </span>
+          </div>
+          <div class="main_product_list">
+            <a class="product_img" target="_blank"
+              href="./Accommodation/Accommodation.html">
+              <img src="./hotel-1559199_1280.jpg" alt="숙소 이미지">
+              <div class="product_a">
+                <span class="product_infor">
+                  <div>성남 블랙 호텔</div>
+                  <div>경기 성남 분당 미금역 3번 출구</div>
+                </span>
+                <div class="infor_sl">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <sub> (9,999)</sub>
+                </div>
+                <div class="infor_aa">
+                  <div class="infor_sl"><sub>16:00 체크인</sub></div>
+                  <div class="infor_price">
+                    <em>560,000</em>480,000 원
+                  </div>
+                </div>
+              </div>
+              <div class="product_infor_hover">
+                <div>
+                  I
+                  N
+                  F
+                  O
+                  R
+                </div>
+                <div>사진</div>
+                <div>사진</div>
+              </div>
+            </a>
+            <span class="btn_like">
+              <div class="like_aaa">
+                <input id="like_D" type="checkbox" name="like" value="Like-D">
+                <label for="like_D"><span>찜하기</span></label>
+              </div>
+            </span>
+          </div>
+          <div class="main_product_list">
+            <a class="product_img" target="_blank"
+              href="./Accommodation/Accommodation.html">
+              <img src="./hotel-1559199_1280.jpg" alt="숙소 이미지">
+              <div class="product_a">
+                <span class="product_infor">
+                  <div>성남 블랙 호텔</div>
+                  <div>경기 성남 분당 미금역 3번 출구</div>
+                </span>
+                <div class="infor_sl">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <sub> (9,999)</sub>
+                </div>
+                <div class="infor_aa">
+                  <div class="infor_sl"><sub>16:00 체크인</sub></div>
+                  <div class="infor_price">
+                    <em>560,000</em>470,000 원
+                  </div>
+                </div>
+              </div>
+              <div class="product_infor_hover">
+                <div>
+                  I
+                  N
+                  F
+                  O
+                  R
+                </div>
+                <div>사진</div>
+                <div>사진</div>
+              </div>
+            </a>
+            <span class="btn_like">
+              <div class="like_aaa">
+                <input id="like_E" type="checkbox" name="like" value="Like-E">
+                <label for="like_E"><span>찜하기</span></label>
+              </div>
+            </span>
+          </div>
+          <div class="main_product_list">
+            <a class="product_img" target="_blank"
+              href="./Accommodation/Accommodation.html">
+              <img src="./hotel-1559199_1280.jpg" alt="숙소 이미지">
+              <div class="product_a">
+                <span class="product_infor">
+                  <div>성남 블랙 호텔</div>
+                  <div>경기 성남 분당 미금역 3번 출구</div>
+                </span>
+                <div class="infor_sl">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <img src="./image/icon/8666698_star_icon.svg" alt="별점">
+                  <sub> (9,999)</sub>
+                </div>
+                <div class="infor_aa">
+                  <div class="infor_sl"><sub>15:00 체크인</sub></div>
+                  <div class="infor_price">
+                    <em>560,000</em>390,000 원
+                  </div>
+                </div>
+              </div>
+              <div class="product_infor_hover">
+                <div>
+                  I
+                  N
+                  F
+                  O
+                  R
+                </div>
+                <div>사진</div>
+                <div>사진</div>
+              </div>
+            </a>
+            <span class="btn_like">
+              <div class="like_aaa">
+                <input id="like_F" type="checkbox" name="like" value="Like-F">
+                <label for="like_F"><span>찜하기</span></label>
+              </div>
+            </span>
+          </div>
+
 
           <ul class="paging_ul">
             <li class="paging_main">
@@ -352,6 +469,11 @@
             </li>
           </ul>
     </section>
+
+    <div class="up-down-btn">
+      <a href="#">up</a>
+      <a href="#">down</a>
+    </div>
   </main>
 
   <footer style="margin-top: 100px;">
