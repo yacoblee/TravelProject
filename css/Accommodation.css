@@ -27,9 +27,6 @@ body {
 
 }
 
-/* header */
-
-
 /* 객실 검색 상단바 */
 .nav_1 {
     /* height: 15px; */
@@ -191,7 +188,7 @@ body {
     .occupancy_box div {
         display: none;
     }
-    
+
 
 }
 
@@ -215,6 +212,8 @@ section h2 {
 
 .name_details {
     margin-bottom: 25px;
+
+    display: flex;
 }
 
 .name_details h1 {
@@ -224,12 +223,64 @@ section h2 {
 
 .name_details span {
     font-size: 12px;
+    align-content: center;
+    margin-left: 5px;
 }
 
 .name_details img {
-    width: 26px;
-    margin-bottom: -5px;
+    /* width: 26px; */
+    /* margin-bottom: -5px; */
     /* fill: red; */
+}
+
+.btn_like {
+    /* position: absolute; */
+    right: 10%;
+    width: 10%;
+}
+
+.like_aaa {
+    align-items: center;
+    border-radius: 100px;
+    border-width: 1.5px;
+    border-color: lightgray;
+    height: 32px;
+    margin-bottom: -5px;
+    /* flex-wrap: wrap; */
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    --tw-border-opacity: 1;
+    border-color: rgb(183 213 246 / var(--tw-border-opacity));
+
+}
+
+.btn_like input {
+    display: none;
+}
+
+/* ============================================================ */
+.btn_like .like_aaa input {
+    display: none;
+}
+
+.btn_like label {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn_like label span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    text-indent: -9999em;
+    background: url("../image/icon/heart-regular.svg") no-repeat 0/cover;
+    transition: .3s;
+}
+
+.btn_like input[id^=like]:checked+label span {
+    background: url("../image/icon/heart-solid.svg") no-repeat 0/cover;
+    transition: .3s;
 }
 
 
@@ -309,7 +360,7 @@ section h2 {
     margin-left: 25px;
     margin-right: 25px;
     min-width: 70px;
-    
+
 }
 
 .nav_3 a {
