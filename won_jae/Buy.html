@@ -28,7 +28,7 @@
             <li><a href="#">Event</a></li>
         </ul>
     </nav>
-    <a href="#" class="cta"><button>Customer Service</button></a>
+    <a href="#" class="cta">Customer Service</a>
 </header>
 
   <main>
@@ -39,7 +39,8 @@
             <line x1="19" x2="5" y1="12" y2="12" />
             <polyline points="12 19 5 12 12 5" />
           </svg>
-          예약 확인 및 결제</h1>
+          예약 확인 및 결제
+        </h1>
       </a>
     </div>
 
@@ -76,7 +77,21 @@
             </div>
 
             <div class="buy_id_banner">
-              이벤트관련 배너 자리
+              쿠폰
+              <!-- <div class="결제-페이지">
+                <h2>결제 정보</h2>
+                <form>
+                  결제 관련 입력 필드들
+                  <label for="쿠폰-선택">쿠폰 선택:</label>
+                  <select id="쿠폰-선택" name="쿠폰-선택">
+                    <option value="">쿠폰을 선택하세요</option>
+                    <option value="10퍼센트할인">10% 할인 쿠폰</option>
+                    <option value="무료배송">무료 배송 쿠폰</option>
+                    다른 유효한 쿠폰들
+                  </select>
+                  <input type="submit" value="적용">
+                </form>
+              </div> -->
             </div>
           </div>
 
@@ -88,25 +103,21 @@
               <div class="payment">
                 <div class="payment_type">
                   <input id="payTypeBtnA" type="radio" name="pay" value="Credit" checked>
-                  <label for="payTypeBtnA"><span>신용/체크카드</span></label>
-                  <div class="payTypeA">80만원 이상 결제시 20% 할인 적용</div>
+                  <label for="payTypeBtnA"><span>카카오페이</span></label>
                 </div>
 
                 <div class="payment_type">
                   <input id="payTypeBtnB" type="radio" name="pay" value="Toss">
                   <label for="payTypeBtnB"><span>Toss</span></label>
-                  <div class="payTypeB">70만원 이상 결제시 15% 할인 적용</div>
                 </div>
 
                 <div class="payment_type">
                   <input id="payTypeBtnC" type="radio" name="pay" value="Kakao">
-                  <label for="payTypeBtnC"><span>카카오페이</span></label>
-                  <div class="payTypeC">50만원 이상 결제시 페이백 20%</div>
+                  <label for="payTypeBtnC"><span>네이버페이</span></label>
                 </div>
                 <div class="payment_type">
                   <input id="payTypeBtnD" type="radio" name="pay" value="Naver">
-                  <label for="payTypeBtnD"><span>네이버페이</span></label>
-                  <div class="payTypeD">30만원 이상 결제시 5% 추가 할인</div>
+                  <label for="payTypeBtnD"><span>신용/체크카드</span></label>
                 </div>
               </div>
               <div style="margin-left: 30px;">
@@ -114,6 +125,43 @@
                   <input class="reused_check" type="checkbox" name="reused" value="reused" checked>
                   <span>이 결제 수단을 다음에도 사용</span>
                 </label>
+              </div>
+
+              <div class="payment_inner">
+                <div><span class="pay_in_back">혜택</span><span>카카오페이</span>
+                  <div>호텔/펜션 - 7만원 이상, 10% 할인 (오전 0시, 일 800명)
+                    <b>최대 할인금액 1만원</b>
+                    모텔 - 2만원 이상, <b>2천원 할인</b>(오전 0시, 일 800명)
+                  </div>
+                </div>
+                <div><span class="pay_in_back">혜택</span><span>토스페이</span>
+                  <div>3만원 이상, 10% 최대 1만원 (오전 0시, 일 700명)
+                    2만원 이상, <b>2천원 할인</b>(오후 4시, 일 300명)
+                    + 첫결제 시, <b>5천원 캐시백</b>
+                  </div>
+                </div>
+                <div><span class="pay_in_back">혜택</span><span>네이버페이</span>
+                  <div>국내숙소 - 10만원 이상, 7% <b>쵀대 1만원 할인</b>
+                    (오전 0시, 일 600명)
+                  </div>
+                </div>
+                <div><span class="pay_in_back">혜택</span><span>신용/체크 카드</span>
+                  <div>국내숙소 - 7만원 이상, <b>5천원 할인</b>
+                    오전 0시 우리 (일 80명), 롯데 (일 220명)
+                    삼성 (일 190명), 농협 (일 150명), 하나 (일 120명)
+                  </div>
+
+                  <div>국내숙소 - 현대카드 M포인트 10% 사용, 0.5% 적립
+                    <b>최대 5,000P 사용가능</b>
+                  </div>
+                </div>
+
+                <div>
+                  <button type="button">
+                    <span>모든 혜택 보기</span>
+                  </button>
+                </div>
+                
               </div>
             </div>
           </section>
@@ -125,15 +173,21 @@
               <h2 style="margin: 30px 30px;">결제 정보</h2>
             </div>
             <div class="buy_inform_li">
+              <ul style="font-size: 12px;">
+                <li></li>
+                <li style="text-decoration: line-through;">560,000원</li>
+              </ul>
+            </div>
+            <div class="buy_inform_li">
               <ul style="border-bottom: 1px solid lightgray; padding-bottom: 15px;">
                 <li>객실 가격(1박)</li>
-                <li>560,000원</li>
+                <li>360,000원</li>
               </ul>
             </div>
             <div class="buy_inform_li">
               <ul>
                 <li style="font-size: 12px; font-weight: 600;">총 결제 금액</li>
-                <li style="font-size: 24px; font-weight: bold; color: red;">560,000원</li>
+                <li style="font-size: 24px; font-weight: bold; color: red;">360,000원</li>
               </ul>
             </div>
 

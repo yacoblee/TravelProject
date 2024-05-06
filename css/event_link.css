@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    text-decoration-line: none;
+    list-style: none;
+}
+
+header {
+    height: 7vh;
+    width: 100%;
+    background-color: rgba(164, 178, 192, 0.142);
+    height: 60px;
+    width: 100%;
+    background-color: rgba(164, 178, 192, 0.142);
+}
+
+html,
+body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.headlogo {
+    display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.headlogo {
+    display: flex;
+    padding-left: 40px;
+    padding-right: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+h1 {
+    font-size: 1.5rem;
+}
+
+main {
+    width: 866px;
+    margin: 0 auto;
+}
+
+.packProductWarn {
+    font-size: 12px;
+}
+
+li {
+    display: inline-block;
+}
+
+.packViewDesc p {
+    line-height: 24px;
+}
+
+.packViewDesc {
+    margin-top: 30px;
+}
+
+.packProductWarn {
+    margin-top: 15px;
+}
+
+dt {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.packViewDesc p.bin {
+    padding-left: 15px;
+    text-indent: -15px;
+}
+
+.packViewDesc p.in {
+    padding-left: 10px;
+    text-indent: -10px;
+}
+
+/*혜택설명*/
+.packProductDesc dl dd p {
+    color: #444;
+    line-height: 25px;
+}
+
+.packProductDesc dl dd p.in {
+    padding-left: 10px;
+    text-indent: -10px;
+    color: #444;
+    line-height: 25px;
+}
+
+.packProductDesc dl dd p.bin {
+    padding-left: 16px;
+    text-indent: -16px;
+    color: #444;
+    line-height: 25px;
+}
+
+.brpc {
+    display: block;
+}
+
+.brmo {
+    display: none;
+}
+
+@media (max-width: 640px) {
+
+    /*상단본문*/
+    .packArticle dl dd p {
+        line-height: 22px;
+    }
+
+    .packArticle dl dd p.bin {
+        padding-left: 16px;
+        text-indent: -16px;
+    }
+
+    .packArticle dl dd p.in {
+        padding-left: 9px;
+        text-indent: -9px;
+    }
+
+    /*혜택설명*/
+    dd.info_desc p {
+        color: #666;
+        line-height: 20px;
+    }
+
+    dd.info_desc p.in {
+        padding-left: 9px;
+        text-indent: -9px;
+    }
+
+    dd.info_desc p.bin {
+        padding-left: 15px;
+        text-indent: -15px;
+    }
+
+    .brpc {
+        display: none;
+    }
+
+    .brmo {
+        display: block;
+    }
+}
+
+a.linkpc {
+    margin-top: 5px;
+    display: inline-block;
+    color: #81725f;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+a.linkmo {
+    display: none;
+}
+
+@media screen and (max-width: 640px) {
+    a.linkmo {
+        margin-top: 7px;
+        display: inline-block;
+        color: #81725f;
+        text-decoration: none;
+        font-size: 1em;
+        font-weight: bold;
+    }
+
+    a.linkpc {
+        display: none;
+    }
+}
+
+footer {
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+    background-color: rgba(164, 178, 192, 0.142);
+}
+
+.footer,
+.Copyright {
+    margin-bottom: 32px;
+    font-size: 0.75rem;
+    line-height: 1rem;
+    letter-spacing: 0px;
+    font-weight: 400;
+    --tw-text-opacity: 1;
+    color: rgb(153 153 153 / var(--tw-text-opacity));
+}
