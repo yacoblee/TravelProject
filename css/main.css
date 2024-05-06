@@ -499,7 +499,7 @@ section {
 .coupon {
     grid-area: 5/1/5/span 2;
     font-size: 0.8rem;
-    padding: 0 2%;
+    padding: 0 3%;
     font-weight: 700;
     color: rgba(45, 77, 137, 0.634);
 }
@@ -515,7 +515,7 @@ section {
 
 .lodging_pay {
     font-size: 1em;
-    line-height: normal;
+    margin-bottom: 50px;
     text-decoration: line-through;
     color: rgb(153 153 153 / 0.7);
 }
