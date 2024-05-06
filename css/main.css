@@ -99,6 +99,7 @@ section {
     .form input[type="password"],
     .form input[type="text"] {
         width: 40vw;
+        transition: all 0.5s ease;
     }
 
     .region_inner {
@@ -113,10 +114,11 @@ section {
 
     }
 
-    .form input[type="email"],
-    .form input[type="password"],
-    .form input[type="text"] {
-        width: 40vw;
+    .form_section .form input[type="email"],
+    .form_section .form input[type="password"],
+    .form_section .form input[type="text"] {
+        width: 20vw;
+        transition: linear 0.5s ease;
     }
 
     .region {
@@ -148,8 +150,9 @@ section {
         display: none;
     }
 
-    .form input[type="text"] {
-        width: 50vw;
+    .form_section .form input[type="text"] {
+        width: 60vw;
+        transition: all 0.5s ease 0s;
     }
 }
 
@@ -318,7 +321,7 @@ section {
     height: 32px;
     max-width: 212px;
     padding: 5px 10px;
-    font-size: 0.8rem;
+    font-size: 1em;
     line-height: 32px;
     letter-spacing: 0px;
     font-weight: 600;
@@ -379,7 +382,12 @@ section {
 }
 
 
-.lodging_value {
+
+
+/* 추천 숙소 배치 영역 E */
+
+/* 추천 숙소 글꼴  S */
+/* .lodging_value {
     display: flex;
     background-color: rgba(136, 136, 235, 0.042);
 
@@ -392,16 +400,14 @@ section {
     flex-direction: column;
 }
 
-/* 추천 숙소 배치 영역 E */
-
-/* 추천 숙소 글꼴  S */
 .lodging_type {
-    font-size: 0.6875rem;
+    font-size: 0.9em;
     font-weight: 600;
 }
 
 .lodging_infor {
     line-height: 1.5em;
+    font-size: 1.2em;
     font-weight: bold;
     color: #5a89bb;
     overflow: hidden;
@@ -409,7 +415,7 @@ section {
 
 
 .lodging_address {
-    font-size: 0.8125rem;
+    font-size: 0.9em;
     font-weight: 600;
     color: rgba(144, 144, 144, 0.634);
     overflow: hidden;
@@ -417,16 +423,15 @@ section {
 
 .lodging_num {
     flex-direction: row !important;
-
-    font-size: 0.8125rem;
+    font-size: 0.9rem;
     font-weight: 500;
     color: rgba(130, 125, 125, 0.708);
     overflow: hidden;
 }
 
 .coupon {
-    font-size: 0.75rem;
-    line-height: normal;
+    font-size: 0.8rem;
+    margin-top: 10px;
     font-weight: 600;
     color: rgb(153 153 153 / 0.7);
 }
@@ -436,65 +441,111 @@ section {
 }
 
 .coupon_pay {
-    font-size: 1.125em;
+    font-size: 1.3em;
     line-height: normal;
     letter-spacing: 0px;
     font-weight: 700;
 }
 
 .lodging_pay {
-    font-size: 0.825em;
+    font-size: 0.9em;
     line-height: normal;
     text-decoration: line-through;
     color: rgb(153 153 153 / 0.7);
+} */
+.lodging_value {
+    display: grid;
+    grid-template: repeat(auto-fit, (5, .4fr)) /repeat(auto-fill, (2, 1fr));
+    background-color: rgba(136, 136, 235, 0.042);
+    width: 100%;
+    height: 18vh;
+    align-items: center;
+}
+
+.lodging_type {
+    grid-area: 1/1/1/1;
+    font-size: 0.9em;
+    font-weight: 600;
 
 }
 
+.lodging_infor {
+    grid-area: 2/1/2/span 2;
+    line-height: 1.5em;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #5a89bb;
+    overflow: hidden;
+}
+
+
+.lodging_address {
+    grid-area: 3/1/3/span 2;
+    font-size: 0.9em;
+    font-weight: 600;
+    color: rgba(45, 77, 137, 0.634);
+    overflow: hidden;
+}
+
+.lodging_num {
+    grid-area: 4/1/ 4 /span 2;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0% 0%;
+    color: rgba(130, 125, 125, 0.708);
+    overflow: hidden;
+}
+
+.coupon {
+    grid-area: 5/1/5/span 2;
+    font-size: 0.8rem;
+    padding: 0 2%;
+    font-weight: 700;
+    color: rgba(45, 77, 137, 0.634);
+}
+
+.coupon_pay {
+    margin-left: 5px;
+    font-size: 1.5em;
+    line-height: normal;
+    letter-spacing: 0px;
+    font-weight: 700;
+    color: rgba(26, 65, 116, 0.741);
+}
+
+.lodging_pay {
+    font-size: 1em;
+    line-height: normal;
+    text-decoration: line-through;
+    color: rgb(153 153 153 / 0.7);
+}
 
 /* 추천 숙소 글꼴  E */
 .event_section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
     padding: 0% 10%;
     margin-top: 7%;
 }
 
 .event {
-    position: relative;
     display: flex;
+    position: relative;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
     transition: transform 0.5s ease;
     width: 100%;
-    height: 500px;
-
+    height: auto;
 }
 
 .event_inner {
+    display: flex;
     position: relative;
     width: 100%;
     height: 100%;
-    margin-right: 10px;
-}
-
-.event_first {
-
-    flex-basis: 40%;
-    height: auto;
-}
-
-.event_second {
-    top: 20%;
-    flex-basis: 25%;
-    height: auto;
-}
-
-.event_third {
-    top: 20%;
-    flex-basis: 25%;
-    height: auto;
 }
 
 .event_inner img {
@@ -504,19 +555,48 @@ section {
     object-fit: cover;
 }
 
+.event_first {
+    top: 1vw;
+    flex-basis: 35%;
+    height: 100%;
+}
+
+.event_second {
+    top: 4vw;
+    flex-basis: 25%;
+    height: 100%;
+}
+
+.event_third {
+    top: 4vw;
+    flex-basis: 25%;
+    height: 100%;
+}
+
+article h3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    line-height: 1.4;
+    font-weight: 800;
+    font-size: 1.6rem;
+    word-break: keep-all;
+    white-space: pre-wrap;
+    overflow-wrap: normal;
+}
+
 .event_first article {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-end;
     width: 80%;
-    top: 70%;
+    bottom: 10%;
     position: absolute;
     left: 50%;
-
     border-radius: 5%;
     transform: translateX(-50%);
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255) !important;
     transition: all 0.5s ease 0s;
 }
 
@@ -524,12 +604,14 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-end;
     width: 80%;
     position: absolute;
+    top: 100%;
     left: 50%;
     border-radius: 5%;
     transform: translateX(-50%);
-    color: rgb(8, 8, 8);
+    color: rgb(8, 8, 8) !important;
     transition: all 0.5s ease 0s;
 }
 
@@ -538,7 +620,7 @@ section {
 }
 
 .event_inner:not(.event_first):hover article {
-    bottom: -5%;
+    bottom: 5%;
 }
 
 /*첫 번째 아이템에만 참여하기 버튼 생성*/
@@ -548,7 +630,7 @@ section {
 
 .event_first .invite {
     background-color: #7ba2ba7a;
-    color: #ffffff;
+    color: #ffffff !important;
     display: flex;
     align-items: center;
     max-width: 15em;
@@ -564,10 +646,10 @@ section {
     word-spacing: 0.2rem;
 }
 
-.left {
+.right {
     position: absolute;
     display: flex;
-    right: 8%;
+    right: 5%;
     top: 0;
     justify-content: center;
     align-items: center;
@@ -576,40 +658,38 @@ section {
 .leftbuttons,
 .rightbuttons {
     position: absolute;
-    left: 35px;
-    transform: translateX(-50%);
-}
-
-.leftbuttons img,
-.rightbuttons img {
-    position: absolute;
+    background-size: 30px 30px;
+    background-position: center;
     width: 28px;
     height: 28px;
-    padding: 3px;
+    padding: 0px;
+    border: none;
     border-radius: 50%;
-    background-color: #d3dadc7d;
-}
-
-article h3 {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    line-height: 1.4;
-    font-weight: 800;
-    font-size: 1.6rem;
-    word-break: keep-all;
-    white-space: pre-wrap;
-    overflow-wrap: normal;
+    cursor: pointer;
+    transition: transform 0.1s, filter 0.1s;
 }
 
 .leftbuttons {
-    left: 5%;
+    background-image: url(../image/leftbutton.png);
+    margin-right: 40px;
+    transform: translateX(-20%);
 }
 
 .rightbuttons {
-    right: 5%;
+    background-image: url(../image/rightbutton.png);
+    transform: translateX(20%);
 }
 
+.leftbuttons:focus,
+.rightbuttons:focus {
+    outline: none;
+}
+
+.leftbuttons:active,
+.rightbuttons:active {
+    transform: scale(0.9);
+    filter: brightness(90%);
+}
 
 /* .event_section {
     display: block;

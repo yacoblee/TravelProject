@@ -26,25 +26,28 @@
             <div class="search_bar">
                 <div>
                     <span></span>
-                    <input class="location_search_bar" type="location" placeholder="여행지를 입력해주세요" maxlength=10>
+                    <input class="location_search_box" type="location" placeholder="여행지를 입력해주세요" maxlength=10>
                 </div>
-                <div>
-                    <span></span>
-                    <div>체크인</div>
+                <div class="date_box">
+                    <div class="check_in_date">
+                        <span></span>
+                        <div>체크인</div>
+                    </div>
+                    <div class="check_out_date">
+                        <span></span>
+                        <div>체크아웃</div>
+                    </div>
                 </div>
-                <div>
-                    <span></span>
-                    <div>체크아웃</div>
-                </div>
-                <div>
+                <div class="occupancy_box">
                     <span></span>
                     <div>인원수</div>
                 </div>
-                <button>검색</button>
+                <button class="search_button">검색</button>
             </div>
             <div class="name_details">
                 <h1>서울 신라호텔</h1>
                 <span>호텔&middot;5성급</span>
+                <img src="../image/icon/heart_straight_icon.svg" alt="" />
             </div>
 
             <div class="main_img_area">
@@ -78,160 +81,171 @@
                 </div>
             </nav>
 
-            <section>
-                <h2>리뷰</h2>
-                <div class="top_review_area">
-                    <div class="scroll_area">
-                        <div class="item">
-                            <div>
-                                <span>닉넴</span>
-                                <span>날짜</span>
+            <article class="information1">
+                <section class="top_review">
+                    <h2>리뷰</h2>
+                    <div class="top_review_location">
+                        <span>
+                            <img src="../image/icon/full_star_icon.svg" alt="">
+                        </span>
+                        <span><strong>9.8</strong></span>
+                        <span>534명의 리뷰</span>
+                        <a href="#review">리뷰보기</a>
+                    </div>
+                    <div class="top_review_area">
+                        <div class="scroll_area">
+                            <div class="item">
+                                <div>
+                                    <span>닉넴</span>
+                                    <span>날짜</span>
+                                </div>
+                                <p>리뷰 테스트</p>
                             </div>
-                            <p>불안해진 재연이asdasdasdasdasdasdasdasdasd</p>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <span>닉넴</span>
-                                <span>날짜</span>
+                            <div class="item">
+                                <div>
+                                    <span>닉넴</span>
+                                    <span>날짜</span>
+                                </div>
+                                <p>리뷰 테스트</p>
                             </div>
-                            <p>불안해진 재연이</p>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <span>닉넴</span>
-                                <span>날짜</span>
+                            <div class="item">
+                                <div>
+                                    <span>닉넴</span>
+                                    <span>날짜</span>
+                                </div>
+                                <p>리뷰 테스트</p>
                             </div>
-                            <p>불안해진 재연이</p>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <span>닉넴</span>
-                                <span>날짜</span>
+                            <div class="item">
+                                <div>
+                                    <span>닉넴</span>
+                                    <span>날짜</span>
+                                </div>
+                                <p>리뷰 테스트</p>
                             </div>
-                            <p>불안해진 재연이</p>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <span>닉넴</span>
-                                <span>날짜</span>
+                            <div class="item">
+                                <div>
+                                    <span>닉넴</span>
+                                    <span>날짜</span>
+                                </div>
+                                <p>리뷰 테스트</p>
                             </div>
-                            <p>불안해진 재연이</p>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <span>닉넴</span>
-                                <span>날짜</span>
+                            <div class="item">
+                                <div>
+                                    <span>닉넴</span>
+                                    <span>날짜</span>
+                                </div>
+                                <p>리뷰 테스트</p>
                             </div>
-                            <p>불안해진 재연이</p>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <span>닉넴</span>
-                                <span>날짜</span>
+                            <div class="item">
+                                <div>
+                                    <span>닉넴</span>
+                                    <span>날짜</span>
+                                </div>
+                                <p>리뷰 테스트</p>
                             </div>
-                            <p>불안해진 재연이</p>
-                        </div>
-                        <div class="item">
-                            <div>
-                                <span>닉넴</span>
-                                <span>날짜</span>
+                            <div class="item">
+                                <div>
+                                    <span>닉넴</span>
+                                    <span>날짜</span>
+                                </div>
+                                <p>리뷰 테스트</p>
                             </div>
-                            <p>불안해진 재연이</p>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
-            <section class="map">
-                <h2 class="map_title">위치</h2>
-                <div class="map_location">
-                    <div class="map_image" onclick="location.href='https://naver.me/5SWSRkDq'"></div>
-                    <ul class="map_location_details1">
-                        <li>
-                            <img src="../image/icon/map_pin_icon.svg">
-                            <strong>서울 중구 장충동2가 202</strong>
-                        </li>
-                        <li class="map_location_details2">동대입구역 5번 출구 도보 5분</li>
-                        <li class="map_location_details2">신라면세점 도보 3분</li>
-                    </ul>
-                </div>
-            </section>
+                <section class="map">
+                    <h2>위치</h2>
+                    <div>
+                        <img src="../image/icon/map_pin_icon.svg">
+                        <strong>서울 중구 장충동2가 202</strong>
+                    </div>
+                    <div class="map_location">
+                        <iframe class="map_image"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202463.6480465151!2d126.8575943195893!3d37.54341170825401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2ed7f0d9e75%3A0x49ec999d2ee31371!2z7ISc7Jq47Iug65287Zi47YWU!5e0!3m2!1sko!2skr!4v1714920884708!5m2!1sko!2skr"
+                            style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <!-- <div class="map_image" onclick="window.open('https://naver.me/5SWSRkDq')"></div> -->
+                        <ul class="map_location_details1">
+                            <li class="map_location_details2">동대입구역 5번 출구 도보 5분</li>
+                            <li class="map_location_details2">신라면세점 도보 3분</li>
+                        </ul>
+                    </div>
+                </section>
+            </article>
 
-            <article class="information">
+            <article class="information2">
                 <section class="hotel_information">
                     <div>
                         <h2>호텔 소개</h2>
-                        <p>한국의 전통미와 현대적 감각을 겸비하고 있는 세계 속의 명문호텔 서울신라호텔은 세계 최고의 럭셔리</p>
-                        <p>어번 (Urban) 라이프스타일 호텔로고객들에게 최고급 서비스를 제공합니다.</p>
-                        <p>한국을 대표하는 럭셔리 호텔로서 '일상이 최고의 순간이 되는 곳' 이라는 컨셉을 새롭게 선보이며 휴식은 물론 고급 식문화, 예술, 뷰티,</p>
-                        <p>웨딩, 엔터테인먼트 등 고객의 고품격 라이프스타일을 제안하는 공간으로 거듭나고 있습니다.</p>
+                        <p>한국의 전통미와 현대적 감각을 겸비하고 있는 세계 속의 명문호텔 서울신라호텔은</p>
+                        <p>세계 최고의 럭셔리 어번 (Urban) 라이프스타일 호텔로고객들에게 최고급 서비스를 제공합니다.</p>
+                        <p>한국을 대표하는 럭셔리 호텔로서 '일상이 최고의 순간이 되는 곳' 이라는 컨셉을 </p>
+                        <p>새롭게 선보이며 휴식은 물론 고급 식문화, 예술, 뷰티,웨딩, 엔터테인먼트 등 고객의</p>
+                        <p>고품격 라이프스타일을 제안하는 공간으로 거듭나고 있습니다.</p>
                     </div>
                 </section>
 
                 <section class="service_area">
                     <h2>시설 및 서비스</h2>
-                    <ul class="service_area_details">
-                        <span>
+                    <div class="service_area_details">
+                        <div>
                             <img src="../image/icon/wifi_high_icon.svg">
                             와이파이
-                        </span>
-                        <span>
+                        </div>
+                        <div>
                             <img src="../image/icon/swim_icon.svg">
                             수영장
-                        </span>
-                        <span>
+                        </div>
+                        <div>
                             <img src="../image/icon/fitness_icon.svg">
                             피트니스
-                        </span>
-                        <span>
+                        </div>
+                        <div>
                             <img src="../image/icon/sauna-icon.svg">
                             사우나
-                        </span>
-                        <span>
+                        </div>
+                        <div>
                             <img src="../image/icon/restaurant_icon.svg">
                             레스토랑
-                        </span>
-                        <span>
+                        </div>
+                        <div>
                             <img src="../image/icon/wine_icon.svg">
                             라운지 바
-                        </span>
-                        <span>
+                        </div>
+                        <div>
                             <img src="../image/icon/nonsmoking_icon.svg">
                             금연
-                        </span>
-                        <span>
+                        </div>
+                        <div>
                             <img src="../image/icon/car_icon.svg">
                             주차
-                        </span>
-                        <span>
+                        </div>
+                        <div>
                             <img src="../image/icon/bathtub2_icon.svg">
                             객실욕조
-                        </span>
-                        <span>
+                        </div>
+                        <div>
                             <img src="../image/icon/air_conditioning_icon.svg">
                             에어컨
-                        </span>
-                        <span>
+                        </div>
+                        <div>
                             <img src="../image/icon/television_simple_icon.svg">
                             TV
-                        </span>
-                        <span>
+                        </div>
+                        <div>
                             <img src="../image/icon/suitcase_icon.svg">
                             짐보관가능
-                        </span>
-                        <span>
+                        </div>
+                        <div>
                             <img src="../image/icon/alarm_icon.svg">
                             모닝콜
-                        </span>
-                        <span>
-                            <img src="../image/icon/ladder_simple_icon.svg">
-                            모닝콜
-                        </span>
-                    </ul>
+                        </div>
+                    </div>
                 </section>
             </article>
 
-            <section id="room">
+            <section id="room" class="room">
                 <h2>객실</h2>
                 <div class="room_type">
                     <h3 class="room_type_name">디럭스 더블</h3>
@@ -391,46 +405,53 @@
 
         <section id="review" class="main_review">
             <h2>리뷰</h2>
-            <!-- <button>후기작성</button> -->
-            <div class="review_create">
-                <a href="#">
-                    <img src="../image/icon/review_icon.svg" alt="">
-                    리뷰쓰기
-                </a>
+            <div class="review_location">
+                <div class="left_area">
+                    <span>
+                        <img src="../image/icon/full_star_icon.svg" alt="">
+                    </span>
+                    <span><strong>9.8</strong></span>
+                    <span>534명의 리뷰</span>
+                </div>
+                <div class="right_area">
+                    <span>최신순</span>
+                </div>
             </div>
-            <!-- <input type="text"> -->
             <div class="review">
                 <div class="review_design">
-                    <div class="review_star">
-                        <div class="left-area">
-                            <img src="../image/icon/star_icon.svg" alt="">
-                            <img src="../image/icon/star_icon.svg" alt="">
-                            <img src="../image/icon/star_icon.svg" alt="">
-                            <img src="../image/icon/star_icon.svg" alt="">
-                            <img src="../image/icon/star_icon.svg" alt="">
-                        </div>
-                        <div class="right-area">
-                            <span>2주전</span>
-                        </div>
+                    <div class="review_username">
+                        <img src="" alt="">
+                        <div>유저 닉네임</div>
                     </div>
+                    <div class="review_content">
+                        <div class="review_star">
+                            <div>
+                                <img src="../image/icon/full_star_icon.svg" alt="">
+                                <img src="../image/icon/full_star_icon.svg" alt="">
+                                <img src="../image/icon/full_star_icon.svg" alt="">
+                                <img src="../image/icon/full_star_icon.svg" alt="">
+                                <img src="../image/icon/full_star_icon.svg" alt="">
+                                <span class="review_date">2주전</span>
+                            </div>
+                        </div>
 
-                    <div>유저 닉네임</div>
-                    <div class="review_img">
-                        <div class="review_img_size">
-                            <a href="">
-                                <img src="../image/icon/image_icon.svg" alt="">
-                            </a>
+                        <div class="review_img">
+                            <div class="review_img_size">
+                                <a href="">
+                                    <img src="../image/icon/image_icon.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="review_img_size">
+                                <a href="">
+                                    <img src="../image/icon/image_icon.svg" alt="">
+                                </a>
+                            </div>
                         </div>
-                        <div class="review_img_size">
-                            <a href="">
-                                <img src="../image/icon/image_icon.svg" alt="">
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <span>후기</span>
-                        <div class="review_content">
-                            <p></p>
+                        <div>
+                            <span>후기</span>
+                            <div class="review_text">
+                                <p></p>
+                            </div>
                         </div>
                     </div>
                 </div>
