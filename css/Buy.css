@@ -447,10 +447,24 @@ input[type="submit"]:hover {
   align-items: center;
 }
 
-.map_lodging img {
+.map_lodging iframe {
   width: 100%;
-  /* height: 20%; */
+  /* height: 50%; */
   border: 1px solid lightgray;
+}
+
+.map_location {
+  display: flex;
+  flex-direction: column;
+}
+
+.map_location_details1 {
+  line-height: 40px;
+}
+
+.map_location_details2 {
+  font-size: 14px;
+  line-height: 30px;
 }
 
 /* ================================================== */
@@ -542,13 +556,44 @@ input[id] {
   transition: .3s;
 }
 
-.payTypeB {
+.payment_type .payTypeAImg {
+  background: url(./kakaopay.png) no-repeat 0/cover;
+  width: 10vw;
+  height: 7vh;
+  text-indent: -9999em;
+}
+
+.payment_type .payTypeBImg {
+  background: url(./toss.png) no-repeat 0/cover;
+  width: 10vw;
+  height: 7vh;
+  text-indent: -9999em;
+}
+
+.payment_type .payTypeCImg {
+  background: url(./naver-pay.jpg) no-repeat 0/cover;
+  width: 10vw;
+  height: 7vh;
+  text-indent: -9999em;
+}
+
+.payment_type .payTypeDImg {
+  background: url(./credit-card.svg) no-repeat 0/100% 80%;
+  width: 10vw;
+  height: 7vh;
+  text-indent: -9999em;
+}
+
+
+/* .payTypeB {
   display: none;
 }
 
 #payTypeBtnB:checked ~ .payTypeB {
   display: block;
-}
+} */
+
+
 /* ================================================ */
 
 .payment_inner {

@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Accommodation.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/Accommodation.css">
+
     <title>상품 페이지</title>
 </head>
 
@@ -14,11 +16,19 @@
         <nav>
             <ul class="nav_link">
                 <li><a href="#">Login</a></li>
-                <li><a href="#">Reservation</a></li>
+
+                <li> <a href="#">Reservation</a>
+                    <ul class="reserve">
+                        <li><a href="#">호텔</a></li>
+                        <li><a href="#">게스트하우스</a></li>
+                        <li><a href="#">펜션</a></li>
+                        <li><a href="#">모텔</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">Event</a></li>
             </ul>
         </nav>
-        <a href="#" class="cta"><button>Customer Service</button></a>
+        <a href="#" class="cta">Customer Service</a>
     </header>
 
     <main class="main_screen">
@@ -60,10 +70,10 @@
 
             <div class="main_img_area">
                 <div class="main_img_large"><img
-                        src="https://image.goodchoice.kr/resize_792x480/affiliate/2022/02/10/6204da5a97f08.jpg" alt="">
+                        src="https://image.goodchoice.kr/exhibition/itemContents/444f1e5a26087b15ef64e6089397d748.jpg" alt="">
                 </div>
                 <div class="main_img_small"><img
-                        src="https://www.yeogi.com/_next/image?url=https%3A%2F%2Fimage.goodchoice.kr%2Fexhibition%2FitemContents%2F5b47375bfd058fb453bf276e30efb874.jpg&w=1200&q=75" alt="">
+                        src="https://image.goodchoice.kr/exhibition/itemContents/5b47375bfd058fb453bf276e30efb874.jpg" alt="">
                 </div>
                 <div class="main_img_small"><img
                         src="https://www.yeogi.com/_next/image?url=https%3A%2F%2Fimage.goodchoice.kr%2Fexhibition%2FitemContents%2Fc20b103eb057acde8900b19545a19610.jpg&w=1200&q=75" alt="">
@@ -467,7 +477,7 @@
                 <div class="review_design"></div>
             </div>
             <div class="review_more">
-                <a href="#">
+                <a href="../review/review.html" target="_blank">
                     <img src="../image/icon/plus_icon.svg" alt="">
                     더보기
                 </a>
@@ -475,10 +485,9 @@
         </section>
     </main>
 
-    <footer>
+    <footer style="margin-top: 200px;">
         <div>
             <div class="customer">
-
             </div>
             <div class="footer" style="text-align:center;">
                 회사명 : 테스트페이지
@@ -493,7 +502,8 @@
                 WebMaster: yacobleee@naver.com
             </div>
 
-            <p class="Copyright" style="text-align: center;">Copyright LS COMPANY Corp. All rights reserved.</p>
+            <p class="Copyright" style="text-align: center;">Copyright LS COMPANY Corp. All rights reserved.
+            </p>
         </div>
     </footer>
 </body>
