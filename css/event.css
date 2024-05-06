@@ -41,6 +41,11 @@ footer {
     height: 50px;
 }
 
+p,
+h4 {
+    color: black;
+}
+
 h1.title {
     font-size: 1.5rem;
     padding-left: 40px;
@@ -132,31 +137,6 @@ main section .title {
     margin: 4px;
     font-size: 0.8rem;
 }
-
-
-/* .tabs section img:hover {
-    transform: scale(1.05); 
-    transition: transform 0.3s ease-in-out; 
-} */
-
-/* .tabs section img {
-    transition: transform 0.3s ease-in-out;
-}
-
-.tabs section img:hover {
-    transform: scale(1.1);
-} */
-
-
-/* .tabs section img {
-    transition: transform 0.3s ease-in-out;
-    transform-origin: center center;
-    display: block;
-}
-
-.tabs section img:hover {
-    transform: scale(1.1);
-} */
 
 .img_box {
     position: relative;
