@@ -435,6 +435,21 @@ main .right_main_product .favorit_header h2 {
 }
 
 /* ============================================================ */
+
+@media (width >= 1680px) {
+  .main_product_list {
+    display: flex;
+  
+    width: 95%;
+    padding: 5px;
+    flex-direction: column;
+    margin-bottom: 40px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.121);
+  }
+}
+/* ============================================================ */
 .product_infor div {
   text-align: end;
 }
@@ -493,7 +508,7 @@ main .right_main_product .favorit_header h2 {
   position: absolute;
   left: 3%;
   display: grid;
-  grid-template: repeat(3, 1fr) / repeat(4, 1fr) .5fr;
+  grid-template: repeat(2, .5fr) repeat(2, 1fr) / repeat(4, 1fr);
   width: 20vw;
   height: 24vh;
   padding: 5px;
@@ -528,7 +543,6 @@ main .right_main_product .favorit_header h2 {
 .product_infor_hover div:nth-child(1) {
   grid-area: 1 / 1 / 2 / 6;
   text-align: center;
-  align-content: center;
   white-space: pre-line;
 
   font-weight: bold;
@@ -536,29 +550,78 @@ main .right_main_product .favorit_header h2 {
 }
 
 .product_infor_hover div:nth-child(2) {
-  background: url(https://www.yeogi.com/_next/image?url=https%3A%2F%2Fimage.goodchoice.kr%2Faffiliate%2F2022%2F02%2F10%2F6204d80840f57.jpg&w=1200&q=75) no-repeat 0/cover;
   border-radius: 5px;
   text-indent: -9999em;
-
+  
   grid-column: 1 / 3;
-  grid-row: 2 / 4;
+  grid-row: 2 / 5;
   
 }
 
 .product_infor_hover div:nth-child(3) {
-  background: url(https://www.yeogi.com/_next/image?url=https%3A%2F%2Fimage.goodchoice.kr%2Faffiliate%2F2022%2F02%2F10%2F6204d820b3e49.jpg&w=1200&q=75) no-repeat 0/cover;
   border-radius: 5px;
   text-indent: -9999em;
   
   grid-column: 3 / 5;
-  grid-row: 2 / 4;
+  grid-row: 2 / 5;
+}
+/* ================================================================ */
+/* 호버시 이미지 */
+
+.product_infor_hover>.pro_info_A:nth-child(2) {
+  background: url(https://www.yeogi.com/_next/image?url=https%3A%2F%2Fimage.goodchoice.kr%2Faffiliate%2F2022%2F02%2F10%2F6204d80840f57.jpg&w=1200&q=75) no-repeat 0/cover;
 }
 
+.product_infor_hover>.pro_info_A:nth-child(3) {
+  background: url(https://www.yeogi.com/_next/image?url=https%3A%2F%2Fimage.goodchoice.kr%2Faffiliate%2F2022%2F02%2F10%2F6204d820b3e49.jpg&w=1200&q=75) no-repeat 0/cover;
+}
+
+.product_infor_hover>.pro_info_B:nth-child(2) {
+  background: url(../image/room01.jpg) no-repeat 0/cover;
+}
+
+.pro_info_B:nth-child(3) {
+  background: url(../image/room02.jpg) no-repeat 0/cover;
+}
+
+.pro_info_C:nth-child(2) {
+  background: url(../image/room03.jpg) no-repeat 0/cover;
+}
+
+.pro_info_C:nth-child(3) {
+  background: url(../image/room09.jpg) no-repeat 0/cover;
+}
+
+.pro_info_D:nth-child(2) {
+  background: url(../image/room04.jpg) no-repeat 0/cover;
+}
+
+.pro_info_D:nth-child(3) {
+  background: url(../image/room05.jpg) no-repeat 0/cover;
+}
+
+.pro_info_E:nth-child(2) {
+  background: url(../image/room06.jpg) no-repeat 0/cover;
+}
+
+.pro_info_E:nth-child(3) {
+  background: url(../image/room07.jpg) no-repeat 0/cover;
+}
+
+.pro_info_F:nth-child(2) {
+  background: url(../image/room10.jpg) no-repeat 0/cover;
+}
+
+.pro_info_F:nth-child(3) {
+  background: url(../image/room11.jpg) no-repeat 0/cover;
+}
+
+/* ================================================================ */
 .product_img>img:hover~.product_infor_hover {
   /* background: url(./hotel-1559199_1280.jpg) no-repeat 0/cover; */
   left: 20vw;
   opacity: 1;
-
+  
   width: 22vw;
 }
 
@@ -605,10 +668,11 @@ main .right_main_product .favorit_header h2 {
 .up-down-btn {
   position: fixed;
   right: 10%;
-  bottom: 25%;
+  bottom: 30%;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  opacity: .5;
 }
 
 .up-down-btn a {
@@ -621,12 +685,8 @@ main .right_main_product .favorit_header h2 {
   justify-content: center;
   align-items: center;
 
-  background: url();
-  text-indent: -9999em;
-}
-
-.up-down-btn a {
   background: url(../image/icon/arrow-up.svg) no-repeat center/100% 100%;
+  text-indent: -9999em;
 }
 
 .up-down-btn a:hover {

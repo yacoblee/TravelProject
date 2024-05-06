@@ -4,7 +4,6 @@
   list-style: none;
   text-decoration: none;
   font-family: Nanum_Gothic_bold;
-  scroll-behavior: smooth;
 }
 
 @media (width <=900px) {
