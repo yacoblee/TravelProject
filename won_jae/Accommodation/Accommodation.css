@@ -120,33 +120,30 @@ header button:hover {
     border-radius: 5px;
     outline: none;
     margin-right: 5px;
+    cursor: pointer;
 }
 
 .date_box {
     display: flex;
 }
 
-.check_in_date {
-    width: 8vw;
-    height: 38px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-
-}
-
-.check_out_date {
-    width: 8vw;
-    height: 38px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-
-}
-
+.check_in_date,
+.check_out_date,
 .occupancy_box {
     width: 8vw;
     height: 38px;
     border: 1px solid #ccc;
     border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    padding-left: 3px;
+    font-size: 13.5px;
+    color: gray;
+}
+
+.occupancy_box {
+    padding-left: 5px;
 }
 
 .search_button {
@@ -240,6 +237,12 @@ header button:hover {
     }
 }
 
+@media screen and (width < 410px) {
+    .review_username {
+        display: none;
+    }
+}
+
 /* main */
 section h2 {
     margin-top: 20px;
@@ -263,6 +266,10 @@ section h2 {
 
 .name_details span {
     font-size: 12px;
+}
+
+.name_details img {
+    fill: red;
 }
 
 
@@ -330,7 +337,6 @@ section h2 {
 }
 
 .nav_3 {
-    list-style: none;
     padding: 0;
 }
 
@@ -343,6 +349,21 @@ section h2 {
     margin-left: 25px;
     margin-right: 25px;
     min-width: 70px;
+    
+}
+
+.nav_3 a {
+    padding: 5px 8px;
+    border-radius: 15px;
+    /* border: 2px solid rgba(164, 178, 192, 0.142); */
+    color: black;
+    margin-top: -6px;
+    margin-bottom: 10px;
+}
+
+.nav_3 a:hover {
+    background-color: rgba(164, 178, 192, 0.142);
+    transition: 0.4s;
 }
 
 /* article */
@@ -499,6 +520,9 @@ section h2 {
     margin-right: 10px;
 }
 
+.date_box img,
+.occupancy_box img,
+.name_details img,
 .service_area_details img,
 .top_review img,
 .map img,
@@ -759,7 +783,8 @@ section h2 {
     border-radius: 15px;
     /* border: 2px solid rgba(164, 178, 192, 0.142); */
     color: black;
-    margin: 10px 0;
+    margin-top: -6px;
+    margin-bottom: 10px;
 
 }
 
