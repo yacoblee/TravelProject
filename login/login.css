@@ -119,12 +119,8 @@
 
 .login_bg {
     display: flex;
-    justify-content: right;
-    /* 수평 중앙 정렬 */
-    align-items: center;
-    /* 수직 중앙 정렬 */
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     text-align: center;
 }
 
@@ -139,31 +135,29 @@
     bottom: 0px;
 }
 
+.login_bg section {
+    justify-content: right;
+}
+
 .login_form,
-.login_form>form>div {
-    /* border: none; */
+.login_form>div {
     border-radius: 5px;
-    display: inline-block;
 }
 
 .login_form {
     flex: 1;
-    display: grid;
-    grid-template: repeat(10, 1fr) / .5fr 2fr;
     align-content: center;
-    align-items: center;
-    height: 100vh;
-    /* width: 500px; */
-    padding: 20px;
+    height: 100%;
     border: none;
+    box-sizing: border-box;
+    padding: 5px;
     background-color: white;
     opacity: .8;
-    
 }
 
 .login_form input {
-    margin: 10px;
     width: 160px;
+    margin: 10px;
     padding: 10px;
     border: none;
     border-radius: 10px;
@@ -172,12 +166,18 @@
     font-family: Nanum_Gothic;
 }
 
+.login_info {
+    display: grid;
+    grid-template: repeat(8, .5fr) / 1fr 2fr;
+    align-items: center;
+
+}
 
 .sign_btn {
     grid-area: 7/1/8/3;
 }
 .login_form button {
-    display: inline-block;
+    /* display: inline-block; */
     width: 80px;
     margin: 10px;
     padding: 10px;
@@ -200,15 +200,20 @@
 .login_title {
     font-family: Nanum_Gothic_ExtraBold;
     grid-area: 1/1/2/3;
-    /* font-size: 30px; */
+    height: 10%;
 }
 
-.login_form>form>div>a {
+.login_title h1{
+    height: 100%;
+    align-content: center;
+}
+
+.login_form>div>a {
     font-size: medium;
     color: rgb(134, 133, 133);
 }
 
-.login_form>form>div>a:hover {
+.login_form>div>a:hover {
     font-weight: 800;
     color: black;
 }
@@ -483,7 +488,8 @@ input[class="add_dtl"] {
     justify-content: space-between;
 }
 
-
+/* =================================================== */
+/* 예약목록 */
 
 .empty_box {
     height: 30vh;
