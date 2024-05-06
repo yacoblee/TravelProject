@@ -72,7 +72,7 @@ header {
 .reserve {
     display: none;
     position: absolute;
-    top: 30px;
+    top: 27px;
     left: 5px;
     background-color: rgb(223 223 223 / 70%);
     padding: 10px;
@@ -98,21 +98,17 @@ header {
 .reserve a {
     width: 100%;
     text-align: center;
-    color: white;
     text-decoration: none;
     text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     transition: color 0.3s ease;
 }
 
 .nav_link li .reserve a:hover {
-
     background-color: rgb(177 190 213 / 50%);
     border-radius: 0px;
     transform: scale(110%, 110%);
     transition: color 0.3s ease;
 }
-
-
 
 header .cta {
     margin-left: 20px;
