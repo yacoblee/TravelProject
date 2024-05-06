@@ -14,22 +14,22 @@
   <header>
     <img src="../image/hotsix_logo1.png" class="logo" src="" alt="logo">
     <nav>
-        <ul class="nav_link">
-            <li><a href="#">Login</a></li>
+      <ul class="nav_link">
+        <li><a href="#">Login</a></li>
 
-            <li> <a href="#">Reservation</a>
-                <ul class="reserve">
-                    <li><a href="#">호텔</a></li>
-                    <li><a href="#">게스트하우스</a></li>
-                    <li><a href="#">펜션</a></li>
-                    <li><a href="#">모텔</a></li>
-                </ul>
-            </li>
-            <li><a href="#">Event</a></li>
-        </ul>
+        <li> <a href="#">Reservation</a>
+          <ul class="reserve">
+            <li><a href="#">호텔</a></li>
+            <li><a href="#">게스트하우스</a></li>
+            <li><a href="#">펜션</a></li>
+            <li><a href="#">모텔</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Event</a></li>
+      </ul>
     </nav>
     <a href="#" class="cta">Customer Service</a>
-</header>
+  </header>
 
   <main>
     <div class="bor_ai">
@@ -103,21 +103,21 @@
               <div class="payment">
                 <div class="payment_type">
                   <input id="payTypeBtnA" type="radio" name="pay" value="Credit" checked>
-                  <label for="payTypeBtnA"><span>카카오페이</span></label>
+                  <label for="payTypeBtnA"><span class="payTypeAImg">카카오페이</span></label>
                 </div>
 
                 <div class="payment_type">
                   <input id="payTypeBtnB" type="radio" name="pay" value="Toss">
-                  <label for="payTypeBtnB"><span>Toss</span></label>
+                  <label for="payTypeBtnB"><span class="payTypeBImg">Toss</span></label>
                 </div>
 
                 <div class="payment_type">
                   <input id="payTypeBtnC" type="radio" name="pay" value="Kakao">
-                  <label for="payTypeBtnC"><span>네이버페이</span></label>
+                  <label for="payTypeBtnC"><span class="payTypeCImg">네이버페이</span></label>
                 </div>
                 <div class="payment_type">
                   <input id="payTypeBtnD" type="radio" name="pay" value="Naver">
-                  <label for="payTypeBtnD"><span>신용/체크카드</span></label>
+                  <label for="payTypeBtnD"><span class="payTypeDImg">신용/체크카드</span></label>
                 </div>
               </div>
               <div style="margin-left: 30px;">
@@ -161,7 +161,7 @@
                     <span>모든 혜택 보기</span>
                   </button>
                 </div>
-                
+
               </div>
             </div>
           </section>
@@ -258,12 +258,14 @@
             </table>
           </div>
           <div class="map_lodging">
-            <img src="./image/hotel/location_shilla.png" alt="">
+            <iframe class="map_image"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202463.6480465151!2d126.8575943195893!3d37.54341170825401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2ed7f0d9e75%3A0x49ec999d2ee31371!2z7ISc7Jq47Iug65287Zi47YWU!5e0!3m2!1sko!2skr!4v1714920884708!5m2!1sko!2skr"
+              style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
-          <div>
-            <p>위치</p>
-            <p>동대입구역 5번 출구 도보 5분</p>
-          </div>
+          <ul class="map_location_details1">
+            <li class="map_location_details2">동대입구역 5번 출구 도보 5분</li>
+            <li class="map_location_details2">신라면세점 도보 3분</li>
+          </ul>
 
         </div>
       </section>
