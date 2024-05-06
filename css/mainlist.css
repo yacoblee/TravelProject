@@ -3,6 +3,7 @@
   padding: 0;
   list-style: none;
   text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 @font-face {
@@ -525,7 +526,7 @@ main .right_main_product .favorit_header h2 {
 }
 
 .product_infor_hover div:nth-child(1) {
-  grid-area: 1 / 5 / 4 / 6;
+  grid-area: 1 / 1 / 2 / 6;
   text-align: center;
   align-content: center;
   white-space: pre-line;
