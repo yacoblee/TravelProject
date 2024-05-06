@@ -28,65 +28,7 @@ body {
 }
 
 /* header */
-header li,
-header a,
-header button {
-    font-size: 16px;
-    color: rgba(32, 50, 56, 0.774);
-    text-decoration: none;
-}
 
-header {
-    display: flex;
-    box-sizing: border-box;
-    justify-content: space-between;
-    align-items: center;
-    height: 8vh;
-    padding: 30px 10%;
-    background-color: rgba(164, 178, 192, 0.142);
-    scroll-behavior: smooth;
-}
-
-.logo {
-    cursor: pointer;
-    margin-right: auto;
-}
-
-.nav_link {
-    list-style: none;
-}
-
-.nav_link li {
-    display: inline-block;
-    padding: 0px 20px;
-
-}
-
-.nav_link li a {
-    transition: all 0.3s ease 0s;
-}
-
-.nav_link li a:hover {
-    border-radius: 10px;
-    color: white;
-    background-color: rgba(0, 135, 169, 0.39);
-}
-
-header button {
-    margin-left: 20px;
-    padding: 7px 7px;
-    /* background-color: rgba(61, 173, 201, 0.732); */
-    background-color: #3489ae82;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease 0s;
-}
-
-header button:hover {
-    color: white;
-    background-color: rgba(0, 135, 169, 0.39);
-}
 
 /* 객실 검색 상단바 */
 .nav_1 {
@@ -106,7 +48,7 @@ header button:hover {
     top: 0;
     background-color: white;
     height: 10vh;
-    z-index: 9999;
+    z-index: 1;
 }
 
 .location_search_box {
@@ -152,7 +94,7 @@ header button:hover {
     border: none;
     /* border: 1px solid rgba(0, 135, 169, 0.39); */
     border-radius: 5px;
-    background-color: rgba(0, 135, 169, 0.39);
+    background-color: rgb(177 190 213 / 50%);
 }
 
 @media screen and (width < 870px) {
@@ -237,6 +179,22 @@ header button:hover {
     }
 }
 
+@media screen and (width < 640px) {
+    .check_in_date div {
+        display: none;
+    }
+
+    .check_out_date div {
+        display: none;
+    }
+
+    .occupancy_box div {
+        display: none;
+    }
+    
+
+}
+
 @media screen and (width < 410px) {
     .review_username {
         display: none;
@@ -269,7 +227,9 @@ section h2 {
 }
 
 .name_details img {
-    fill: red;
+    width: 26px;
+    margin-bottom: -5px;
+    /* fill: red; */
 }
 
 
@@ -362,7 +322,7 @@ section h2 {
 }
 
 .nav_3 a:hover {
-    background-color: rgba(164, 178, 192, 0.142);
+    background-color: rgb(223 223 223 / 50%);
     transition: 0.4s;
 }
 
@@ -522,7 +482,6 @@ section h2 {
 
 .date_box img,
 .occupancy_box img,
-.name_details img,
 .service_area_details img,
 .top_review img,
 .map img,
@@ -539,7 +498,7 @@ section h2 {
 
 .room_type {
     /* display: flex; */
-    background-color: rgba(164, 178, 192, 0.142);
+    background-color: rgb(223 223 223 / 40%);
     padding: 20px;
     margin: 40px 0;
     box-sizing: border-box;
@@ -559,7 +518,7 @@ section h2 {
 
 .room_information {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     /* align-content: center; */
 }
 
@@ -606,7 +565,7 @@ section h2 {
     flex-direction: column;
     /* flex-flow: column wrap; */
     /* justify-content: space-evenly; */
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: 300px;
     /* padding: 15px; */
 }
@@ -629,13 +588,14 @@ section h2 {
     font-weight: bold;
     letter-spacing: 2px;
     font-size: 22px;
+    color: red;
 }
 
 .w-btn-outline {
     position: relative;
     padding: 15px 30px;
     border-radius: 15px;
-    background-color: rgba(164, 178, 192, 0.142);
+    background-color: rgb(223 223 223 / 50%);
     /* font-family: "paybooc-Light", sans-serif; */
     /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); */
     text-decoration: none;
@@ -703,7 +663,7 @@ section h2 {
 .review_design {
     width: 100%;
     height: 400px;
-    background-color: rgba(164, 178, 192, 0.142);
+    background-color: rgb(223 223 223 / 40%);
     border-radius: 30px;
 
     padding: 20px;
@@ -789,26 +749,6 @@ section h2 {
 }
 
 .review_more>a:hover {
-    background-color: rgba(164, 178, 192, 0.142);
+    background-color: rgb(223 223 223 / 70%);
     transition: 0.4s;
-}
-
-/* footer */
-footer {
-    display: inline-block;
-
-    width: 100%;
-    margin: auto;
-    background-color: rgba(164, 178, 192, 0.142);
-}
-
-.footer,
-.Copyright {
-    margin-bottom: 32px;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    letter-spacing: 0px;
-    font-weight: 400;
-    --tw-text-opacity: 1;
-    color: rgb(153 153 153 / var(--tw-text-opacity));
 }
