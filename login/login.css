@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    padding: 0;
     text-decoration-line: none;
     list-style: none;
 }
@@ -24,14 +25,14 @@
 /* ==================================================== */
 /* 로그인 */
 
-.login_bg {
+/* .login_bg {
     display: flex;
     justify-content: center;
-    /* 수평 중앙 정렬 */
+    수평 중앙 정렬
     align-items: center;
-    /* 수직 중앙 정렬 */
+    수직 중앙 정렬
     height: 100vh;
-    /* 화면 전체 높이 */
+    화면 전체 높이
     margin: auto;
     text-align: center;
 }
@@ -49,7 +50,6 @@
 
 .login_form,
 .login_form>form>div {
-    /* border: none; */
     border-radius: 5px;
     display: inline-block;
 }
@@ -59,7 +59,6 @@
     border: none;
     background-color: white;
     width: 400px;
-    /* 로그인 기본 크기 */
     opacity: .8;
 }
 
@@ -93,7 +92,115 @@
 
 .login_title {
     font-family: Nanum_Gothic_ExtraBold;
-    font-size: 30px;
+}
+
+.login_form>form>div>a {
+    font-size: medium;
+    color: rgb(134, 133, 133);
+}
+
+.login_form>form>div>a:hover {
+    font-weight: 800;
+    color: black;
+}
+
+.login_form .button_fix {
+    flex: auto;
+}
+
+.button_fix .find {
+    width: 265px;
+} */
+
+
+
+/* ========================================================== */
+/* 로그인 화면 구조변경 ing */
+
+.login_bg {
+    display: flex;
+    justify-content: right;
+    /* 수평 중앙 정렬 */
+    align-items: center;
+    /* 수직 중앙 정렬 */
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+}
+
+.login_bg::before {
+    content: "";
+    background: url(../image/남산1.jpg) no-repeat 0/cover;
+    opacity: 0.6;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+.login_form,
+.login_form>form>div {
+    /* border: none; */
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.login_form {
+    flex: 1;
+    display: grid;
+    grid-template: repeat(10, 1fr) / .5fr 2fr;
+    align-content: center;
+    align-items: center;
+    height: 100vh;
+    /* width: 500px; */
+    padding: 20px;
+    border: none;
+    background-color: white;
+    opacity: .8;
+    
+}
+
+.login_form input {
+    margin: 10px;
+    width: 160px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    background-color: lightgray;
+    font-family: Nanum_Gothic;
+}
+
+
+.sign_btn {
+    grid-area: 7/1/8/3;
+}
+.login_form button {
+    display: inline-block;
+    width: 80px;
+    margin: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: darkgrey;
+    font-size: large;
+    font-family: Jua-Regular;
+}
+
+.sign_find {
+    grid-area: 8/1/9/3;
+}
+
+.login_form button:hover {
+    background-color: blue;
+    color: white;
+}
+
+.login_title {
+    font-family: Nanum_Gothic_ExtraBold;
+    grid-area: 1/1/2/3;
+    /* font-size: 30px; */
 }
 
 .login_form>form>div>a {
@@ -114,12 +221,10 @@
     width: 265px;
 }
 
+
+
 /* ==================================================== */
 /* 마이페이지 */
-
-.mypage_main_box {
-    /* height: 100vh; */
-}
 
 .mypage_main {
     display: flex;
@@ -313,7 +418,7 @@ input[class="add_dtl"] {
 /* 숙소 명 */
 .mylike_bold {
     font-weight: 800;
-    font-size: 16px;
+    font-size: 1.2em;
 }
 
 .font_red {
@@ -331,19 +436,22 @@ input[class="add_dtl"] {
 
 .mylike_list_body p {
     justify-self: flex-end;
-    /* align-items: end; */
+    
 }
 
 /* 숙소 이미지 크기 */
 .mylike_img img {
     border-radius: 10px;
-    /* width: 300px;
-    height: 200px; */
+    width: 100%;
+}
+
+.mylike_img a {
+    flex: 1;
+
 }
 
 .mylike_list_body>div {
     display: flex;
-    /* flex-wrap: wrap; */
     border: 1px solid silver;
     border-radius: 10px;
 }
@@ -361,93 +469,19 @@ input[class="add_dtl"] {
 
 
 .mylike_list_body>div>div:nth-of-type(odd) {
-    flex-basis: 70%;
+    flex-basis: 60%;
+    display: flex;
 }
 
 .mylike_list_body>div>div:nth-of-type(even) {
     white-space: pre-line;
     display: flex;
     flex-direction: column;
-    flex-basis: 30%;
+    flex-basis: 40%;
     text-align: left;
-    font-size: 12px;
+    font-size: 1em;
     justify-content: space-between;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 
-.mypage_main {
-    display: grid;
-    justify-content: center;
-    text-align: center;
-    margin: 5vh 10vh;
-    width: 100vw;
-    height: 160vh;
-    grid-template: 1fr .5fr repeat(8, 1fr) / 2fr .5fr 3.5fr .5fr 3.5fr;
-    
-}
-
-.mygate_title {
-    grid-area: 1 / 1 / 2 / 6;
-    background-color: lightseagreen;
-}
-
-.mypage_left_menu {
-    grid-area: 3 / 1 / 6 / 2;
-    background-color: lightblue;
-}
-
-.mypage_right_main {
-    grid-area: 3 / 3 / -1 / 6;
-    background-color: darkgrey;
-}
-
-.sum_title {
-    grid-area: 2 / 3 / 3 / 4;
-
-} */
-
-
-
-
-/* 좌측 메뉴목록 */
-/* .mypage_left_menu {
-    background-color: skyblue;
-    display: flex;
-    width: 20%;
-    border: 1px solid;
-} */
-
-
-/* 메인 내용 */
-/* .mypage_right_main {
-    background-color: gray;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    border: 1px solid;
-}
-
-.mypage_right_main h1 {
-    min-width:450px;
-    width: 40vw;
-    margin-bottom: 4vh;
-    padding:0 2vw;
-    margin: 2vh;
-    text-align: left;
-} */
 
 
 
@@ -455,49 +489,7 @@ input[class="add_dtl"] {
     height: 30vh;
 }
 
-/* .mypage_reserve {
-    display: flex;
-    max-width: 1800px;
-    justify-content: center;
-    max-height: 160;
-}
 
-.mypage_right_reserve {
-    flex: 1;
-    display: grid;
-    grid-template: repeat(11, 1fr) / repeat(5, 1fr) repeat(4, .5fr);
-    height: 500px;
-    position: relative;
-    margin-top: 5%;
-    align-items: center;
-    border: .5px solid;
-}
-
-
-.reserve_title {
-    align-items: center;
-    justify-content: center;
-    grid-area: 1 / 1 / 1 / 1;
-}
-
-.myreserve {
-    background-color: azure;
-    width: 100%;
-    height: 100%;
-    grid-area: 2 / 1 / span 2 / span 9;
-}
-
-.myreserve_img {
-    padding: 0 3%;
-    display: flex;
-    width: 100%;
-    height: calc((500px)/4);
-}
-
-img {
-    flex-basis: 20%;
-    height: calc((500px - 50px)/5);
-} */
 .mypage_reserve {
     display: flex;
     max-width: 1800px;

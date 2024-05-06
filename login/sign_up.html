@@ -11,13 +11,14 @@
 </head>
 
 <body class="login_bg">
-    <section>
+    <!-- <section>
         <div class="login_form">
             <form action="./login.html">
                 <h1 class="login_title">Hot6-Join</h1>
 
                 <input type="text" id="login_id" name="login_id" placeholder="아이디를 입력하세요." minlength="4" required>
                 <input type="password" id="login_pw" name="login_pw" placeholder="비밀번호를 입력하세요." minlength="8" required>
+                <input type="password" id="login_pw_chk" name="login_pw_chk" placeholder="비밀번호를 입력하세요." minlength="8" required>
                 <input type="num" id="phone_num" name="phone_num" placeholder="연락처를 입력하세요." minlength="10" maxlength="11" required>
                 <div>
                     <button type="submit" id="sign_up">sign up</button>
@@ -28,7 +29,59 @@
                 </div>
             </form>
         </div>
+    </section> -->
+
+
+
+    <section>
+        <form action="./login.html">
+            <div class="login_form">
+                <div class="login_title">
+                    <h1>Hot6-Join</h1>
+                </div>
+                <div>
+                    <label for="login_id">ID</label>
+                </div>
+                <div>
+                    <input type="text" id="login_id" name="login_id" placeholder="아이디를 입력하세요." minlength="4" required>
+                </div>
+                <div>
+                    <label for="nickname">닉네임</label>
+                </div>
+                <div>
+                    <input type="text" id="nickname" name="nickname" placeholder="닉네임을 입력하세요.">
+                    <button class="mypage_right_main_bottom">중복확인</button>
+                </div>
+                <div>
+                    <label for="nickname">닉네임</label>
+                </div>
+                <div>
+                    <input type="password" id="login_pw" name="login_pw" placeholder="비밀번호를 입력하세요." minlength="8" required>
+                </div>
+                <div>
+                    <label for="nickname">닉네임</label>
+                </div>
+                <div>
+                    <input type="password" id="login_pw_chk" name="login_pw_chk" placeholder="비밀번호를 입력하세요." minlength="8" required>
+                </div>
+                <div>
+                    <label for="nickname">닉네임</label>
+                </div>
+                <div>
+                    <input type="num" id="phone_num" name="phone_num" placeholder="연락처를 입력하세요." minlength="10" maxlength="11" required>
+                </div>
+
+                <div class="sign_btn">
+                    <button type="submit" id="sign_up">sign up</button>
+                    <button type="button" id="sign_in" onclick="location.href='./login.html'">sign in</button>
+                </div>
+                <div class="sign_find">
+                    <a href="./id_find.html">ID 찾기</a> &#124; <a href="./pw_find.html">PW 찾기</a>
+                </div>
+            </div>
+        </form>
     </section>
+
 </body>
 
 </html>
