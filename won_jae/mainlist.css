@@ -32,13 +32,12 @@ select {
 }
 
 /* ======================================================================== */
-body>header {
+/* body>header {
   height: 7vh;
   width: 100%;
   background-color: rgba(164, 178, 192, 0.142);
-}
-
-/*header css S*/
+} */
+/* 
 header li,
 header a,
 header button {
@@ -81,12 +80,12 @@ header {
   border-radius: 10px;
   color: white;
   background-color: rgba(0, 135, 169, 0.39);
-}
+} */
 
-header button {
+/* header button {
   margin-left: 20px;
   padding: 7px 7px;
-  /* background-color: rgba(61, 173, 201, 0.732); */
+  background-color: rgba(61, 173, 201, 0.732);
   background-color: #3489ae82;
   border: none;
   border-radius: 50px;
@@ -97,7 +96,7 @@ header button {
 header button:hover {
   color: white;
   background-color: rgba(0, 135, 169, 0.39);
-}
+} */
 
 /*header css E*/
 
@@ -410,12 +409,12 @@ main .right_main_product .favorit_header h2 {
   width: 25px;
   height: 25px;
   text-indent: -9999em;
-  background: url("./heart-regular.svg") no-repeat 0/cover; 
+  background: url("./image/icon/heart-regular.svg") no-repeat 0/cover; 
   transition: .3s;
 }
 
 .btn_like input[id^=like]:checked + label span {
-  background: url("./heart-solid.svg") no-repeat 0/cover;
+  background: url("./image/icon/heart-solid.svg") no-repeat 0/cover;
   transition: .3s;
 }
 
@@ -611,11 +610,11 @@ main .right_main_product .favorit_header h2 {
 }
 
 .up-down-btn a:first-child {
-  background: url(./arrow-up.svg) no-repeat center/100% 100%;
+  background: url(./image/icon/arrow-up.svg) no-repeat center/100% 100%;
 }
 
 .up-down-btn a:last-child {
-  background: url(./arrow-down-solid.svg) no-repeat center/100% 100%;
+  background: url(./image/icon/arrow-down-solid.svg) no-repeat center/100% 100%;
 }
 
 .up-down-btn a:hover {

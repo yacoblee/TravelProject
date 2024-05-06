@@ -61,7 +61,7 @@ h2 {
 }
 
 /* =========================================== */
-header {
+/* header {
   height: 7vh;
   width: 100%;
   background-color: rgba(164, 178, 192, 0.142);
@@ -73,7 +73,7 @@ header {
   padding-right: 40px;
   align-items: center;
   justify-content: space-between;
-}
+} */
 
 /* ============================================================== */
 /* 주문 내역 */
