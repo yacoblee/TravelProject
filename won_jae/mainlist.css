@@ -212,6 +212,14 @@ main .right_main_product .favorit_header h2 {
   width: 100px;
   height: 25px;
   padding-left: 5px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.empty_price input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
 
 /* ===================================================================== */
@@ -329,8 +337,14 @@ main .right_main_product .favorit_header h2 {
 
 .main_product_list {
   display: flex;
+
+  width: 90%;
+  padding: 5px;
   flex-direction: column;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.121);
 }
 
 .main_product_list .product_img img {
@@ -341,12 +355,13 @@ main .right_main_product .favorit_header h2 {
 }
 
 .product_img {
-  flex-basis: 85%;
+
   margin-bottom: 10px;
   color: #000000;
   
   position: relative;
   margin-right: 20px;
+
   /* z-index: 3; */
 }
 
