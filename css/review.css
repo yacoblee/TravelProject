@@ -1,0 +1,119 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* 리뷰정보 */
+.review_title {
+    display: flex;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.hotel_star {
+    align-content: center;
+}
+
+.hotel_star img,
+.review_star img,
+.review_design img,
+.review_img_size img {
+    width: 24px;
+    margin-bottom: -7px;
+}
+
+/* 리뷰상세 */
+
+.review_design {
+    width: 100%;
+    height: auto;
+    /* background-color: rgb(223 223 223 / 40%); */
+    border-radius: 30px;
+
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+}
+
+.review_username {
+    flex: 1;
+
+    display: -webkit-inline-box;
+}
+.review_username>div {
+    margin-left: 10px;
+}
+
+.review_content {
+    flex: 3;
+}
+
+.review_star {
+    margin-bottom: 15px;
+}
+
+.review_star img {
+    width: 20px;
+}
+
+.review_date {
+    float: right;
+    font-size: 14px;
+}
+
+.review_img {
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    gap: 8px;
+}
+
+.review_img_size {
+    width: auto;
+    height: auto;
+    min-width: 150px;
+    min-height: 130px;
+    background-color: white;
+    border-radius: 20px;
+
+    position: relative;
+
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+.review_img>a {
+    /* align-items: center; */
+    position: absolute;
+    left: calc((100% - 24px)/2);
+    bottom: calc((100% - 24px)/2);
+}
+
+.review_text {
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    border-radius: 20px;
+    /* justify-content: center; */
+}
+
+/* 페이지네이션 */
+.page_nation {
+    text-align: center;
+}
+
+.page_nation>a {
+    font-size: 17px;
+}
+
+.page_nation img {
+    width: 18px;
+    margin-bottom: -7px;
+}
