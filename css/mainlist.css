@@ -424,12 +424,12 @@ main .right_main_product .favorit_header h2 {
   width: 25px;
   height: 25px;
   text-indent: -9999em;
-  background: url("./image/icon/heart-regular.svg") no-repeat 0/cover; 
+  background: url("../image/icon/heart-regular.svg") no-repeat 0/cover; 
   transition: .3s;
 }
 
 .btn_like input[id^=like]:checked + label span {
-  background: url("./image/icon/heart-solid.svg") no-repeat 0/cover;
+  background: url("../image/icon/heart-solid.svg") no-repeat 0/cover;
   transition: .3s;
 }
 
