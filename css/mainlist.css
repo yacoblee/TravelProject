@@ -625,12 +625,8 @@ main .right_main_product .favorit_header h2 {
   text-indent: -9999em;
 }
 
-.up-down-btn a:first-child {
-  background: url(./image/icon/arrow-up.svg) no-repeat center/100% 100%;
-}
-
-.up-down-btn a:last-child {
-  background: url(./image/icon/arrow-down-solid.svg) no-repeat center/100% 100%;
+.up-down-btn a {
+  background: url(../image/icon/arrow-up.svg) no-repeat center/100% 100%;
 }
 
 .up-down-btn a:hover {
