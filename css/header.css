@@ -110,9 +110,6 @@ header {
     transform: scale(110%, 110%);
     transition: color 0.3s ease;
 }
-
-
-
 header .cta {
     margin-left: 20px;
     padding: 7px 7px;
