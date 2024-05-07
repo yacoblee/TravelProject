@@ -245,11 +245,15 @@ h2 {
 .buy_id_banner {
   border-radius: 12px;
   line-height: 70px;
+
   background-color: lightblue;
   text-align: center;
   margin: 30px;
 }
 
+.buy_id_banner a {
+  color: black;
+}
 /* =================================================== */
 /* 쿠폰 관련 코드 */
 /* .결제-페이지 {
