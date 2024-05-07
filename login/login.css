@@ -48,7 +48,7 @@
     height: 100vh;
     width: 100vw;
     text-align: center;
-    align-items: center;
+    /* align-items: center; */
     justify-content: right;
 }
 
@@ -75,7 +75,8 @@
     align-content: center;
     align-items: center;
     height: 100%;
-    width: 700px;
+    /* width: 700px; */
+    width: 600px;
 
     border: none;
     box-sizing: border-box;
@@ -102,7 +103,8 @@
     border-top: 2px solid rgb(177, 190, 213);
     border-bottom: 2px solid rgb(177, 190, 213);
     margin: 20px 0;
-    width: 600px;
+    /* width: 600px; */
+    width: 500px;
 }
 
 .login_info>.mail {
@@ -391,7 +393,6 @@ input[class="add_dtl"] {
 
 .mylike_list_body p {
     justify-self: flex-end;
-
 }
 
 /* 숙소 이미지 크기 */
@@ -403,7 +404,6 @@ input[class="add_dtl"] {
 }
 
 .mylike_img a {
-    /* flex: 1; */
     width: 100%;
     height: 220px;
 }
@@ -417,12 +417,10 @@ input[class="add_dtl"] {
 .mylike_list_body>div:hover {
     box-shadow: 2px 2px 6px black;
     transform: scale(110%);
-
 }
 
 .mylike_list_body>div>div {
     padding: 5px;
-
 }
 
 
