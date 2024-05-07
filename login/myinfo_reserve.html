@@ -15,25 +15,31 @@
 
 <body>
     <header>
-        <a href="../view/main.html" class="logo"><img src="../image/hotsix_logo1.png" class="logo" alt="logo"></a>
+        <a href="../view/main.html" class="logo"><img src="../image/logo.png" class="logo" src="" alt="logo"></a>
         <nav>
             <ul class="nav_link">
-                <li><a href="#">Login</a></li>
-
-                <li> <a href="#">Reservation</a>
-                    <ul class="reserve">
-                        <li><a href="#">호텔</a></li>
-                        <li><a href="#">게스트하우스</a></li>
-                        <li><a href="#">펜션</a></li>
-                        <li><a href="#">모텔</a></li>
+                <li><a href="../login/login.html">Login</a></li>
+                <li><a href="../login/myinfo.html">MyPage</a>
+                    <ul class="myinfo">
+                        <li><a href="../login/myinfo_reserve.html">예약내역</a></li>
+                        <li><a href="../login/mylike_list.html">찜목록</a></li>
+                        <li><a href="../login/myinfo.html">내정보</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Event</a></li>
+
+                <li> <a href="../Reservation_list/mainlist.html">Reservation</a>
+                    <ul class="reserve">
+                        <li><a href="../Reservation_list/mainlist.html">호텔</a></li>
+                        <li><a href="../Reservation_list/mainlist.html">게스트하우스</a></li>
+                        <li><a href="../Reservation_list/mainlist.html">펜션</a></li>
+                        <li><a href="../Reservation_list/mainlist.html">모텔</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Event/dragon.html">Event</a></li>
             </ul>
         </nav>
-        <a href="#" class="cta">Customer Service</a>
+        <a href="../customerService/sevice_index.html" class="cta">Customer Service</a>
     </header>
-
 
     <section class="mypage_reserve">
         <form>
@@ -78,7 +84,8 @@
                                         <p>인원수: 2</p>
                                     </div>
                                     <div class="buttons">
-                                        <button class="detail-btn">상세보기</button>
+                                        <button class="detail-btn"
+                                            onClick="location.href='myinfo_reserved_detail.html'">상세보기</button>
                                         <button class="review-btn">리뷰하기</button>
                                     </div>
                                 </div>
