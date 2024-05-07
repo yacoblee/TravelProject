@@ -71,14 +71,21 @@
                         <div class="mail_add">
                             <input type="text" id="mail" name="mail" placeholder="메일주소를 입력하세요.">
                             <i class="fa-solid fa-at"></i>
-                            <input type="text" id="mail" name="mail" placeholder="메일주소를 입력하세요.">
+                            <!-- <input type="text" id="mail" name="mail" placeholder="메일주소를 입력하세요.">
                             <select name="mail_add" id="mail_add">
                                 <option value="">직접입력</option>
                                 <option value="naver">naver.com</option>
                                 <option value="gmail">gmail.com</option>
                                 <option value="nate">nate.com</option>
                                 <option value="daum">daum.net</option>
-                            </select>
+                            </select> -->
+                            <input type="text" list="mail_add" placeholder="메일주소를 입력하세요.">
+                            <datalist id="mail_add">
+                                <option value="naver.com"></option>
+                                <option value="gmail.com"></option>
+                                <option value="nate.com"></option>
+                                <option value="daum.net"></option>
+                            </datalist>
                         </div>
                         <div>
                             <label for="user_nm">이름</label>
