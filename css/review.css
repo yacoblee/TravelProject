@@ -111,19 +111,19 @@ main {
 }
 
 /* 페이지네이션 */
-.page_nation {
+.pagination {
     text-align: center;
     letter-spacing: 10px;
     margin-top: 50px;
 }
 
-.page_nation>a {
+.pagination>a {
     font-size: 17px;
     text-decoration: none;
     color: black;
 }
 
-.page_nation img {
+.pagination img {
     width: 18px;
     margin-bottom: -4px;
 }
