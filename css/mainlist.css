@@ -137,6 +137,7 @@ header button:hover {
   display: flex;
   width: 1200px;
   margin: auto;
+  margin-top: 40px;
   gap: 30px;
   /* justify-content: space-between; */
   justify-content: space-around;
