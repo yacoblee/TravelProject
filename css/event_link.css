@@ -103,11 +103,12 @@ p {
 button {
     border: none;
     cursor: pointer;
-    width: 140px;
-    height: 40px;
+    width: 800px;
+    height: 60px;
     transition: .4s ease-in;
     font-weight: 600;
     border-radius: 15px;
+    border: 1px solid #fff;
 }
 
 .wrap {
