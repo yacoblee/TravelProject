@@ -449,6 +449,16 @@ main .right_main_product .favorit_header h2 {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.121);
   }
 }
+
+@media (width >= 1920px) {
+  .main_product_list {
+    width: 100%;
+  }
+
+  .btn_like {
+    right: 11%;
+  }
+}
 /* ============================================================ */
 .product_infor div {
   text-align: end;
