@@ -28,20 +28,11 @@ body {
 }
 
 /* 객실 검색 상단바 */
-.nav_1 {
-    /* height: 15px; */
-}
-
 .search_bar {
-    /* height: 20%; */
     display: flex;
-    /* width: 1200px; */
-    /* flex-direction: row; */
-    /* justify-content: space-between; */
     justify-content: space-evenly;
     align-items: center;
     position: sticky;
-    /* padding-top: 10px; */
     top: 0;
     background-color: white;
     height: 10vh;
@@ -49,17 +40,12 @@ body {
 }
 
 .location_search_box {
-    /* width: 250px;
-    height: 40px; */
-    /* border: none; */
-    /* background-color: rgba(0, 135, 169, 0.39); */
     width: 16vw;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
     margin-right: 5px;
-    /* cursor: pointer; */
 }
 
 .date_box {
@@ -90,7 +76,6 @@ body {
     width: 6vw;
     height: 40px;
     border: none;
-    /* border: 1px solid rgba(0, 135, 169, 0.39); */
     border-radius: 5px;
     background-color: rgb(177 190 213 / 50%);
     cursor: pointer;
@@ -130,6 +115,16 @@ body {
 
     .purchase_price {
         text-align: center !important;
+    }
+
+    .room_information_price>a {
+        width: 100% !important;
+    }
+}
+
+@media screen and (width < 965px) {
+    .review_username {
+        display: none !important;
     }
 }
 
@@ -190,14 +185,6 @@ body {
     .occupancy_box div {
         display: none;
     }
-
-
-}
-
-@media screen and (width < 410px) {
-    .review_username {
-        display: none;
-    }
 }
 
 /* main */
@@ -229,14 +216,7 @@ section h2 {
     margin-left: 5px;
 }
 
-.name_details img {
-    /* width: 26px; */
-    /* margin-bottom: -5px; */
-    /* fill: red; */
-}
-
 .btn_like {
-    /* position: absolute; */
     right: 10%;
     width: 10%;
 }
@@ -248,7 +228,6 @@ section h2 {
     border-color: lightgray;
     height: 32px;
     margin-bottom: -5px;
-    /* flex-wrap: wrap; */
     font-size: 12px;
     font-weight: 600;
     cursor: pointer;
@@ -332,7 +311,6 @@ section h2 {
 
 .main_img_area img:hover {
     opacity: 50%;
-    /* transition-timing-function: ease-in-out; */
     transition-duration: 500ms;
 }
 
@@ -344,7 +322,6 @@ section h2 {
     background-color: white;
     padding: 0;
     margin: 20px 0;
-    /* box-shadow: 1px 4px 20px 0px rgb(0, 0, 0, 0.2); */
     box-shadow: 1px 1.5px 10px 0px rgb(0, 0, 0, 0.1);
     border-radius: 8px;
 }
@@ -355,7 +332,6 @@ section h2 {
 
 .nav_3 li {
     flex: 1;
-    /* justify-content: space-evenly; */
     line-height: 40px;
     cursor: pointer;
     display: inline-block;
@@ -368,7 +344,6 @@ section h2 {
 .nav_3 a {
     padding: 5px 8px;
     border-radius: 15px;
-    /* border: 2px solid rgba(164, 178, 192, 0.142); */
     color: black;
     margin-top: -6px;
     margin-bottom: 10px;
@@ -414,7 +389,7 @@ section h2 {
 }
 
 .scroll_area .item {
-    display: inline-block;
+    display: inline-table;
     height: 153px;
     width: 486px;
     background-color: rgb(250 250 250 / 1);
@@ -442,16 +417,13 @@ section h2 {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    white-space: normal;
 }
 
 
 /* 위치 */
 .map {
     flex: 1;
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* margin: 0px auto; */
 }
 
 .map h2 {
@@ -459,14 +431,9 @@ section h2 {
 }
 
 .map_image {
-    /* background: url(../image/hotel/location_shilla.png) 0/100% 100%; */
     width: 450px;
     height: 250px;
     margin-top: 20px;
-
-    /* position: relative; */
-    /* display: flex; */
-    /* flex-direction: row; */
     border-radius: 15px;
     box-shadow: 1px 4px 20px 0px rgb(0, 0, 0, 0.2);
     cursor: pointer;
@@ -494,12 +461,9 @@ section h2 {
 /* 호텔 소개(정보) */
 .hotel_information {
     flex: 1;
-    /* width: 800px; */
-    /* font-size: 12px; */
 }
 
 .hotel_information p {
-    /* white-space: pre-line; */
     margin: 0;
     line-height: 23px;
 }
@@ -509,7 +473,6 @@ section h2 {
     flex: 1;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly; */
 }
 
 .service_area>h2 {
@@ -553,13 +516,11 @@ section h2 {
 }
 
 .room_type {
-    /* display: flex; */
-    background-color: rgb(223 223 223 / 40%);
     padding: 20px;
     margin: 40px 0;
     box-sizing: border-box;
-    /* border: solid; */
     border-radius: 20px;
+    background-color: rgb(223 223 223 / 40%);
 }
 
 .room_type h3 {
@@ -569,13 +530,11 @@ section h2 {
 
 .room_type_name {
     font-size: 22px;
-    /* flex-direction: column; */
 }
 
 .room_information {
     display: flex;
     justify-content: space-around;
-    /* align-content: center; */
 }
 
 .room_information_image {
@@ -589,26 +548,19 @@ section h2 {
 .room_information_details {
     display: flex;
     flex-direction: column;
-    /* flex-direction: row; */
-    /* font-size: 20px; */
 }
 
 .room_information_content {
+    height: 150px;
     display: flex;
     flex-direction: column;
-    /* align-content: space-around; */
     border-radius: 20px;
     font-size: 17px;
-
     background-color: white;
-    /* width: 500px; */
-    height: 150px;
 }
 
 .room_information_content div {
     padding: 10px;
-    /* align-content: space-between; */
-    /* justify-content: space-evenly; */
 }
 
 .room_information_price {
@@ -619,11 +571,8 @@ section h2 {
 
     display: flex;
     flex-direction: column;
-    /* flex-flow: column wrap; */
-    /* justify-content: space-evenly; */
     margin-top: 20px;
     margin-left: 300px;
-    /* padding: 15px; */
 }
 
 .room_information_price div {
@@ -648,14 +597,13 @@ section h2 {
 }
 
 .w-btn-outline {
-    position: relative;
+    width: 100%;
     padding: 15px 30px;
     border-radius: 15px;
     background-color: rgb(223 223 223 / 50%);
-    /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2); */
-    text-decoration: none;
     font-weight: 600;
     transition: 0.25s;
+    cursor: pointer;
 }
 
 .w-btn-indigo-outline {
@@ -668,7 +616,7 @@ section h2 {
     background: white;
 }
 
-.room_information_price a {
+.room_information_price>a {
     width: 200px;
     height: 55px;
 }
@@ -685,26 +633,16 @@ section h2 {
 
 .hotel_guide li::marker {
     content: "- ";
-    /* color: red; 마커 색상 */
-    /* font-size: 1em; 마커 크기 */
 }
 
 
 /* 리뷰 */
-.main_review {
-    /* height: 700px;
-    display: flex;
-    flex-direction: column;
-    align-content: space-evenly; */
-}
-
 .main_review h2 {
     margin-top: 45px;
     margin-bottom: 5px;
 }
 
 .review_location {
-    /* display: flex; */
     margin-bottom: 35px;
 }
 
@@ -729,13 +667,6 @@ section h2 {
     font-size: 15px;
 }
 
-.review {
-    /* display: flex; */
-    /* justify-content: space-evenly; */
-    /* gap: 10px; */
-    /* margin: calc(100%); */
-}
-
 .review_design {
     width: 100%;
     height: 400px;
@@ -753,6 +684,7 @@ section h2 {
 
     display: -webkit-inline-box;
 }
+
 .review_username>div {
     margin-left: 10px;
 }
@@ -783,8 +715,6 @@ section h2 {
 }
 
 .review_img_size {
-    /* width: auto;
-    height: auto; */
     width: 200px;
     height: 180px;
     background-color: white;
@@ -795,10 +725,6 @@ section h2 {
     width: 100%;
     height: 100%;
     border-radius: 20px;
-    /* align-items: center; */
-    /* position: absolute; */
-    /* left: calc((100% - 24px)/2); */
-    /* bottom: calc((100% - 24px)/2); */
 }
 
 .review_room {
@@ -812,7 +738,6 @@ section h2 {
     height: 150px;
     background-color: white;
     border-radius: 20px;
-    /* justify-content: center; */
 }
 
 .review_text p {
@@ -821,12 +746,10 @@ section h2 {
     white-space: pre-line;
     overflow: auto;
     padding: 10px;
-    /* margin-top: 20px; */
 }
 
 /* 리뷰 더보기 */
 .review_more {
-    /* height: 50px; */
     display: flex;
     justify-content: end;
     align-items: center;
@@ -836,7 +759,6 @@ section h2 {
     text-decoration: none;
     padding: 5px 8px;
     border-radius: 15px;
-    /* border: 2px solid rgba(164, 178, 192, 0.142); */
     color: black;
     margin-top: -6px;
     margin-bottom: 10px;
@@ -846,4 +768,30 @@ section h2 {
 .review_more>a:hover {
     background-color: rgb(223 223 223 / 70%);
     transition: 0.4s;
+}
+
+/* 탑버튼 */
+.top_btn {
+    position: fixed;
+    bottom: 10%;
+    right: 10%;
+}
+
+.top_btn img {
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (width < 1600px) {
+    .top_btn {
+        right: 0;
+
+    }
+}
+
+@media screen and (width < 1270px) {
+    .top_btn {
+        display: none;
+
+    }
 }
