@@ -15,31 +15,38 @@
 
 <body>
     <header>
-        <img src="../image/hotsix_logo1.png" class="logo" src="" alt="logo">
+        <a href="../view/main.html" class="logo"><img src="../image/logo.png" class="logo" src="" alt="logo"></a>
         <nav>
             <ul class="nav_link">
-                <li><a href="#">Login</a></li>
-
-                <li> <a href="#">Reservation</a>
-                    <ul class="reserve">
-                        <li><a href="#">호텔</a></li>
-                        <li><a href="#">게스트하우스</a></li>
-                        <li><a href="#">펜션</a></li>
-                        <li><a href="#">모텔</a></li>
+                <li><a href="../login/login.html">Login</a></li>
+                <li><a href="../login/myinfo.html">MyPage</a>
+                    <ul class="myinfo">
+                        <li><a href="../login/myinfo_reserve.html">예약내역</a></li>
+                        <li><a href="../login/mylike_list.html">찜목록</a></li>
+                        <li><a href="../login/myinfo.html">내정보</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Event</a></li>
+
+                <li> <a href="../Reservation_list/mainlist.html">Reservation</a>
+                    <ul class="reserve">
+                        <li><a href="../Reservation_list/mainlist.html">호텔</a></li>
+                        <li><a href="../Reservation_list/mainlist.html">게스트하우스</a></li>
+                        <li><a href="../Reservation_list/mainlist.html">펜션</a></li>
+                        <li><a href="../Reservation_list/mainlist.html">모텔</a></li>
+                    </ul>
+                </li>
+                <li><a href="../Event/dragon.html">Event</a></li>
             </ul>
         </nav>
         <a href="#" class="cta">Customer Service</a>
     </header>
 
-    <div class="container">
-        <section class="mypage_reserve">
+    <section class="mypage_reserve">
+        <div class="container_reserve">
             <form>
                 <div class="mypage_main">
                     <div class="mypage_title">
-                        <h1>회원 정보 관리</h1>
+                        <h1>예약 세부내역</h1>
                     </div>
                     <div class="mypage_body">
                         <div class="mypage_left_menu">
@@ -55,8 +62,8 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="container">
-                            <h3>예약 세부내역</h3>
+                        <div class="container_detail">
+
                             <section class="reserve_detail">
                                 <div class="reserve_detail_img">
                                     <div class="image"><img src="../image/hotel1.JPG" alt="Hotel Image"></div>
@@ -117,8 +124,8 @@
                         </div>
                     </div>
                 </div>
-    </div>
-    </form>
+            </form>
+        </div>
     </section>
 
 

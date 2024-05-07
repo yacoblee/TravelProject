@@ -531,7 +531,7 @@ input#tab4:checked~.mypage_body>.container section:nth-child(4) {
 
 .container {
     position: relative;
-    width: 80vw;
+    width: 60vw;
     height: 700px;
     flex-direction: column;
     padding: 20px;
@@ -613,18 +613,13 @@ input#tab4:checked~.mypage_body>.container section:nth-child(4) {
 }
 
 /* 예약내역 상세페이지 S */
-.container {
+.container_detail {
     flex: 1;
     height: 700px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.container>h3 {
-    margin-bottom: 2vw;
-    font-size: 1.4em;
 }
 
 .reserve_detail {
@@ -659,6 +654,8 @@ input#tab4:checked~.mypage_body>.container section:nth-child(4) {
 .hotelinfo {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.049);
     grid-area: 5/1/5/span 2;
+    padding: 10px;
+    background-color: rgba(177, 190, 213, 0.233);
 }
 
 .hotelname {
@@ -676,9 +673,10 @@ input#tab4:checked~.mypage_body>.container section:nth-child(4) {
 .reserve_tag {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.049);
     grid-area: 1/3/1/span 2;
+    padding: 10px;
+    background-color: rgba(177, 190, 213, 0.233);
 
 }
-
 
 .reserve_name {
     grid-area: 2/3/2/span 2;
@@ -713,7 +711,6 @@ input#tab4:checked~.mypage_body>.container section:nth-child(4) {
     grid-area: 6/1/span 2 /1;
 }
 
-
 .hotelname,
 .roomname,
 .hoteladdress,
@@ -727,7 +724,6 @@ input#tab4:checked~.mypage_body>.container section:nth-child(4) {
     display: grid;
     grid-template-columns: .5fr .5fr;
     border-bottom: solid rgba(0, 0, 0, 0.041);
-
 }
 
 .hotelname p:first-child,
@@ -741,6 +737,7 @@ input#tab4:checked~.mypage_body>.container section:nth-child(4) {
 .reserve_payment p:first-child,
 .reserve_purchase p:first-child {
     font-weight: bold;
+    padding: 10px;
 
 }
 
@@ -770,8 +767,5 @@ input#tab4:checked~.mypage_body>.container section:nth-child(4) {
 .reserve_cancel a:hover {
     background-color: rgb(135, 206, 250);
 }
-
-
-
 
 /* 예약내역 상세페이지 E */
