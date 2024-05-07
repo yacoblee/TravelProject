@@ -25,100 +25,9 @@
 /* ==================================================== */
 /* 로그인 */
 
-/* .login_bg {
-    display: flex;
-    justify-content: center;
-    수평 중앙 정렬
-    align-items: center;
-    수직 중앙 정렬
-    height: 100vh;
-    화면 전체 높이
-    margin: auto;
-    text-align: center;
-}
-
-.login_bg::before {
-    content: "";
-    background: url(../image/남산1.jpg) no-repeat 0/cover;
-    opacity: 0.6;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-}
-
-.login_form,
-.login_form>form>div {
-    border-radius: 5px;
-    display: inline-block;
-}
-
-.login_form {
-    padding: 20px;
-    border: none;
-    background-color: white;
-    width: 400px;
-    opacity: .8;
-}
-
-.login_form input {
-    margin: 10px;
-    width: 260px;
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    color: black;
-    background-color: lightgray;
-    font-family: Nanum_Gothic;
-}
-
-.login_form button {
-    display: inline-block;
-    width: 120px;
-    margin: 10px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: darkgrey;
-    font-size: large;
-    font-family: Jua-Regular;
-}
-
-.login_form button:hover {
-    background-color: blue;
-    color: white;
-}
-
-.login_title {
-    font-family: Nanum_Gothic_ExtraBold;
-}
-
-.login_form>form>div>a {
-    font-size: medium;
-    color: rgb(134, 133, 133);
-}
-
-.login_form>form>div>a:hover {
-    font-weight: 800;
-    color: black;
-}
-
-.login_form .button_fix {
-    flex: auto;
-}
-
-.button_fix .find {
-    width: 265px;
-} */
-
-
-/* ========================================================== */
-/* 로그인 화면 구조변경 ing */
 .login_index {
     display: grid;
     grid-template: repeat(4, .5fr) / 1fr 3fr;
-    /* grid-template: repeat(9, .5fr) / 1fr 3fr ; */
     width: 400px;
     align-items: center;
     border-top: 2px solid rgb(177, 190, 213);
@@ -131,9 +40,8 @@
 }
 
 
-
-/* ========================================================== */
-/* 회원가입 화면 구조변경 ing */
+/* ==================================================== */
+/* 회원가입 */
 
 .login_bg {
     display: flex;
@@ -153,11 +61,6 @@
     left: 0px;
     right: 0px;
     bottom: 0px;
-}
-
-.login_info form {
-    display: inline-block;
-
 }
 
 .login_form,
@@ -209,7 +112,6 @@
 .mail_add {
     height: 100%;
     line-height: 100%;
-
 }
 
 .mail_add>i {
@@ -275,6 +177,15 @@
     width: 205px;
 }
 
+.login_form .id_pw_find>a {
+    font-size: medium;
+    color: rgb(134, 133, 133);
+}
+
+.login_form .id_pw_find>a:hover {
+    font-weight: 800;
+    color: black;
+}
 
 
 /* ==================================================== */
@@ -282,7 +193,6 @@
 
 .mypage_main {
     display: flex;
-    /* height: 90vh; */
     width: 80vw;
     flex-direction: column;
     text-align: center;
@@ -295,7 +205,6 @@
 
 .mypage_body {
     flex-basis: 80%;
-
     display: flex;
 }
 
@@ -311,12 +220,10 @@
 .mypage_left_menu li {
     display: flex;
     justify-content: center;
-
 }
 
 .mypage_left_menu a {
     flex: 1;
-
     line-height: 50px;
     display: flex;
     justify-content: center;
@@ -332,7 +239,6 @@
 .mypage_left_menu a:hover {
     background-color: rgba(169, 198, 227, 0.26);
     text-shadow: 1px 1px 2px rgb(19, 19, 19);
-
     transition: 0.3s;
     transform: scale(120%, 120%);
 }
@@ -341,10 +247,7 @@
     flex: 1;
     display: grid;
     min-width: 800px;
-    /* grid-template: repeat(7, 3fr) / 1fr 3fr 1fr 3fr; */
-    grid-template: repeat(11, 3fr) / 1fr 3fr;
-    /* height: 75vh; */
-    /* gap: 10px; */
+    grid-template: repeat(10, 3fr) 4fr / 1fr 3fr;
     padding: 2vw;
     align-items: center;
 }
@@ -352,7 +255,6 @@
 .mypage_right_main div {
     display: flex;
     height: 100%;
-    /* height: 5vh; */
     align-items: center;
     border-bottom: 1px solid lightgray;
 }
@@ -381,7 +283,6 @@
     padding: 10px;
     border: none;
     border-radius: 10px;
-
     background-color: rgba(169, 198, 227, 0.26);
 }
 
@@ -390,24 +291,13 @@
 }
 
 .sum_title {
-    /* grid-area: 1 / 1 / 2 / 5; */
     text-align: initial;
     grid-area: 1 / 1 / 2 / 3;
     padding-left: 2vw;
     margin: 2vh;
-    /* align-content: center; */
-    /* justify-content: left; */
 }
 
 .mypage_right_main_bottom {
-    /* flex-basis: 5vw;
-    justify-content: right;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: lightgray;
-    font-family: Nanum_Gothic_bold; */
-
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -432,18 +322,44 @@
     grid-area: 3/1/4/2;
 }
 
-/* .mail_add input,
-.mail_add select {
-    width: 35%;
-
-} */
-
 input[class="add_input"] {
     width: 5vw;
 }
 
 input[class="add_dtl"] {
     width: 30vw;
+}
+
+.mypage_right_main .mypage_button {
+    width: 100%;
+    grid-area: 11/1/12/3;
+    gap: 70%;
+    border: none;
+}
+
+/* .mylike_list_body .mylike_button {
+    width: 100%;
+    grid-area: 4/1/5/3;
+} */
+
+.mypage_button button {
+    width: 90px;
+    height: 40px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgb(177, 190, 213);
+    border-radius: 5px;
+    background-color: rgb(223, 223, 223, 0.7);
+    font-size: large;
+    font-family: Jua-Regular;
+}
+
+.mypage_button button:hover {
+    background-color: rgb(177, 190, 213, 0.7);
+    text-shadow: 1px 1px 1px silver;
+    transform: scale(110%);
+    transition: 0.2s;
+    cursor: pointer;
 }
 
 /* ====================================================== */
@@ -482,11 +398,14 @@ input[class="add_dtl"] {
 .mylike_img img {
     border-radius: 10px;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .mylike_img a {
-    flex: 1;
-
+    /* flex: 1; */
+    width: 100%;
+    height: 220px;
 }
 
 .mylike_list_body>div {
