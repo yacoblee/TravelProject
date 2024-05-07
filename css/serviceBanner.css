@@ -2,7 +2,7 @@
     padding: 0px;
     margin: 0ch;
     list-style: none;
-    font-family: Nanum_Gothic_bold;
+    font-family: 'Nanum_Gothic_bold';
     scroll-behavior: smooth;
     text-decoration: none;
     transition: 0.3s;
@@ -679,7 +679,6 @@ input[type="checkbox"]:checked+label+div {
         gap: 1vh;
     }
     .left_side_bar{
-        display: block;
         width: 15%;
         
 
@@ -689,7 +688,6 @@ input[type="checkbox"]:checked+label+div {
     }
 
     .right_side_bar_box{
-        /* display: flex; */
         width: 15%;
         position: fixed;
         right: 0;
@@ -762,64 +760,53 @@ input[type="checkbox"]:checked+label+div {
     @media (min-width:1024px){
         /* 전체적인 페이지 구성. */
         .side_bar_all{
-    display: flex;
-    justify-content: center;
-    
-}
-.left_side_bar{
-    left: 5vw;
-}
+        display: flex;
+        justify-content: center;
+    }
+    .left_side_bar{
+        left: 10vw;
+    }
 
-.left_side_bar ul{
+    .left_side_bar ul{
+        width: 10vw;
+    }
 
-    width: 15vw;
-}
-.right_side_bar_box{
-    right: 5vw;
-}
+    .right_side_bar_box{
+        width: 10vw;
+        right: 10vw;
+    }
 
 /* 가운데 메인 화면 */
-.customer_box, .onetoone, .notice , .notice_content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    .customer_box, .onetoone, .notice , .notice_content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     
-    margin-top: 10vh;
-    width: 60vw;
+        margin-top: 10vh;
+        width: 60vw;
     
-    text-align: center;
-}
-.customer_form1, .notice_list ul{
-    width: 50vw;
-}
-.notice_search{
-    width: 50vw;
-    display: flex;
-    /* justify-content: end; */
+        text-align: center;
+    }
+    .customer_form1, .notice_list ul{
+        width: 50vw;
+    }
+    .notice_search{
+        width: 50vw;
+        display: flex;
+        /* justify-content: end; */
 
-}
-.notice_search form{
-    flex : 1;
-    display: grid;
-    grid-template-columns: 5fr 2fr 1fr;
-    justify-items: end;
-    align-items: center;
-}
-.notice_search input{
-    width: 100%;
-    height: 70%;
-    min-width: 180px
+    }
+    .notice_search form{
+        flex : 1;
+        display: grid;
+        grid-template-columns: 5fr 2fr 1fr;
+        justify-items: end;
+        align-items: center;
+    }
+    .notice_search input{
+        width: 100%;
+        height: 70%;
+        min-width: 180px;
 
-}
-.customer_bar a{
-    transform: scale(90%);
-    text-indent: 0;
-
-}
-
-/* ================================== */
-/* 양쪽 사이드 바에 대한 포지션과 , 사이즈 조절. */
-
-
-
+    }
 }
