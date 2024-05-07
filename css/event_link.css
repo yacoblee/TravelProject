@@ -1,197 +1,128 @@
-* {
-    margin: 0;
-    text-decoration-line: none;
-    list-style: none;
-}
-
-header {
-    height: 7vh;
-    width: 100%;
-    background-color: rgba(164, 178, 192, 0.142);
-    height: 60px;
-    width: 100%;
-    background-color: rgba(164, 178, 192, 0.142);
-}
-
-html,
-body {
-    height: 100%;
-    font-family: Arial, sans-serif;
-}
-
-.headlogo {
-    display: flex;
-    padding-left: 40px;
-    padding-right: 40px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.headlogo {
-    display: flex;
-    padding-left: 40px;
-    padding-right: 40px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-
 h1 {
     font-size: 1.5rem;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
-main {
-    width: 866px;
-    margin: 0 auto;
-}
-
-.packProductWarn {
+p {
     font-size: 12px;
 }
 
+.packageTopImg,
+.packProductList {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.packageTopImg img,
+.packProductList {
+    max-width: 100%;
+    height: auto;
+}
+
 li {
-    display: inline-block;
+    display: inline-block
 }
 
-.packViewDesc p {
-    line-height: 24px;
-}
 
-.packViewDesc {
-    margin-top: 30px;
-}
-
-.packProductWarn {
-    margin-top: 15px;
-}
-
-dt {
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-.packViewDesc p.bin {
-    padding-left: 15px;
-    text-indent: -15px;
-}
-
-.packViewDesc p.in {
-    padding-left: 10px;
-    text-indent: -10px;
-}
-
-/*혜택설명*/
-.packProductDesc dl dd p {
-    color: #444;
-    line-height: 25px;
-}
-
-.packProductDesc dl dd p.in {
-    padding-left: 10px;
-    text-indent: -10px;
-    color: #444;
-    line-height: 25px;
-}
-
-.packProductDesc dl dd p.bin {
-    padding-left: 16px;
-    text-indent: -16px;
-    color: #444;
-    line-height: 25px;
-}
-
-.brpc {
-    display: block;
-}
-
-.brmo {
-    display: none;
-}
-
-@media (max-width: 640px) {
-
-    /*상단본문*/
-    .packArticle dl dd p {
-        line-height: 22px;
-    }
-
-    .packArticle dl dd p.bin {
-        padding-left: 16px;
-        text-indent: -16px;
-    }
-
-    .packArticle dl dd p.in {
-        padding-left: 9px;
-        text-indent: -9px;
-    }
-
-    /*혜택설명*/
-    dd.info_desc p {
-        color: #666;
-        line-height: 20px;
-    }
-
-    dd.info_desc p.in {
-        padding-left: 9px;
-        text-indent: -9px;
-    }
-
-    dd.info_desc p.bin {
-        padding-left: 15px;
-        text-indent: -15px;
-    }
-
-    .brpc {
-        display: none;
-    }
-
-    .brmo {
-        display: block;
+@media (max-width: 600px) {
+    .packageTopImg img {
+        width: 85%;
     }
 }
 
-a.linkpc {
-    margin-top: 5px;
-    display: inline-block;
-    color: #81725f;
-    text-decoration: none;
-    font-size: 1em;
-    font-weight: bold;
-}
-
-a.linkmo {
-    display: none;
-}
-
-@media screen and (max-width: 640px) {
-    a.linkmo {
-        margin-top: 7px;
-        display: inline-block;
-        color: #81725f;
-        text-decoration: none;
-        font-size: 1em;
-        font-weight: bold;
-    }
-
-    a.linkpc {
-        display: none;
+@media (min-width: 601px) and (max-width: 1024px) {
+    .packageTopImg img {
+        width: 80%;
     }
 }
 
-footer {
-    display: inline-block;
-    width: 100%;
-    margin: auto;
-    background-color: rgba(164, 178, 192, 0.142);
+@media (min-width: 1025px) {
+    .packageTopImg img {
+        width: 60%;
+    }
 }
 
-.footer,
-.Copyright {
-    margin-bottom: 32px;
-    font-size: 0.75rem;
-    line-height: 1rem;
-    letter-spacing: 0px;
-    font-weight: 400;
-    --tw-text-opacity: 1;
-    color: rgb(153 153 153 / var(--tw-text-opacity));
+
+.packViewContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+
+p {
+    font-size: 12px;
+}
+
+.packageTopImg img,
+.packProductList img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1300px) {
+    .packViewContent {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+
+    .packageTopImg,
+    .packViewDesc {
+        flex: 1;
+    }
+
+    .packageTopImg img {
+        width: 60%;
+    }
+
+    .packViewDesc {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    .packageTopImg img {
+        width: 80%;
+    }
+
+    .packViewDesc {
+        padding: 0 20px;
+    }
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    width: 140px;
+    height: 40px;
+    transition: .4s ease-in;
+    font-weight: 600;
+    border-radius: 15px;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.btn01:hover {
+    background: rgb(177, 190, 213, 0.7);
+    color: #fff;
+    box-shadow:
+        0 0 25px rgb(177, 190, 213, 0.7),
+        0 0 50px rgb(177, 190, 213, 0.7),
+        0 0 200px rgb(177, 190, 213, 0.7),
+        0 0 400px rgb(177, 190, 213, 0.7);
 }
