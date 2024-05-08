@@ -130,6 +130,51 @@ section {
         height: 250px !important;
     }
 
+
+    .region_section>.lodging_inner {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 600px;
+        gap: 10px;
+    }
+
+
+
+
+    .lodging_inner>.lodging:nth-child(n) {
+        position: relative;
+        width: 80vw;
+        height: 150px;
+        margin-right: 1vw;
+        overflow: hidden;
+        flex-basis: 150px;
+
+    }
+
+    .lodging_inner>.lodging_img {
+        width: 50vw;
+        height: 100px;
+
+    }
+
+    .lodging_inner>.lodging img {
+        position: absolute;
+        width: 200px;
+        height: 150px;
+        inset: 1px;
+        color: transparent;
+    }
+
+    .lodging_value {
+        position: absolute;
+        height: 200px;
+        top: 0;
+        right: -205px;
+        z-index: 2;
+    }
+
 }
 
 @media screen and (720px > width) {
