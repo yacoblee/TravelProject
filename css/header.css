@@ -168,7 +168,7 @@ header .cta:hover {
     .logo {
         cursor: pointer;
         margin-right: auto;
-        height: 5vh;
+        height: 40px;
         border-radius: 5px;
         transition: color 0.3s ease;
     }
@@ -204,7 +204,6 @@ header .cta:hover {
 
 @media screen and (720px > width) {
 
-
     header li,
     header a,
     header button {
@@ -216,13 +215,12 @@ header .cta:hover {
         text-align: center;
         padding: 4px 4px;
         margin-left: 0px;
-
     }
 
     .logo {
         cursor: pointer;
         margin-right: auto;
-        height: 4vh;
+        height: 30px;
         border-radius: 5px;
         transition: color 0.3s ease;
     }
