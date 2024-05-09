@@ -197,6 +197,11 @@ section {
         left: -10vw;
     }
 
+    section>.lodgingbutton {
+        bottom: 0px;
+        justify-content: center;
+    }
+
     /* 추천숙소 컬럼 구조 변환 E */
 
 }
@@ -238,6 +243,15 @@ section {
         height: 600px;
         gap: 10px;
 
+    }
+
+    section>.regionbutton {
+        bottom: 75px;
+    }
+
+    section>.lodgingbutton {
+        bottom: 0px;
+        justify-content: center;
     }
 
     /* 추천숙소 컬럼 구조 변환 S */
@@ -302,7 +316,8 @@ section {
     .event_section .event_third article {
         font-size: .8em;
     }
-    .event_section h3{
+
+    .event_section h3 {
         font-size: 1.5em;
     }
 
@@ -771,20 +786,35 @@ article h3 {
 
 
 
+.regionbutton {
+    bottom: 160px;
+}
+
+.lodgingbutton {
+    bottom: 300px;
+}
 
 .regionbutton,
 .lodgingbutton {
     position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+}
+
+.regionleft {
+    position: absolute;
+    left: -20px;
+}
+
+.regionright {
+    position: absolute;
+    right: -5px;
 }
 
 .regionleft,
 .regionright,
 .lodgingleft,
 .lodgingright {
-    position: absolute;
     background-size: 30px 30px;
     background-position: center;
     width: 28px;

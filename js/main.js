@@ -1,15 +1,31 @@
 /* 인기지역 이미지 넘기는 기능 */
 document.addEventListener("DOMContentLoaded", function () {
     const regions = document.querySelectorAll(".region");
-    const button = document.querySelector(".regionbutton");
+    const rightButton = document.querySelector(".regionright");
+    const leftButton = document.querySelector(".regionleft");
 
     let currentIndex = 0;
-    const maxIndex = Math.ceil(regions.length / 5) - 1;
+    const maxIndex = Math.max(Math.ceil(regions.length / 5) - 1, 0); // 최소값을 0으로 설정하여 음수가 되지 않도록 보장합니다.
 
-    button.addEventListener("click", function () {
-        const nextIndex = currentIndex + 1;
-        const start = nextIndex * 5;
-        const end = start + 5;
+    updateButtonVisibility();
+
+    rightButton.addEventListener("click", function () {
+        if (currentIndex < maxIndex) {
+            currentIndex++;
+            slideRegions();
+        }
+    });
+
+    leftButton.addEventListener("click", function () {
+        if (currentIndex > 0) {
+            currentIndex--;
+            slideRegions();
+        }
+    });
+
+    function slideRegions() {
+        const start = currentIndex * 5;
+        const end = Math.min(start + 5, regions.length);
         for (let i = 0; i < regions.length; i++) {
             if (i >= start && i < end) {
                 regions[i].style.display = "block";
@@ -18,12 +34,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 regions[i].style.display = "none";
             }
         }
+        updateButtonVisibility();
+    }
 
-        currentIndex = nextIndex;
-        if (currentIndex >= maxIndex) {
-            button.style.display = "none";
-        }
-    });
+    function updateButtonVisibility() {
+        rightButton.style.display = currentIndex < maxIndex ? "block" : "none";
+        leftButton.style.display = currentIndex > 0 ? "block" : "none";
+    }
+
     regions.forEach(region => {
         region.style.animation = "myAnimation .5s ease-in .5s";
     });
@@ -32,12 +50,34 @@ document.addEventListener("DOMContentLoaded", function () {
 /* 숙소 4개씩 보이는 기능 추가*/
 document.addEventListener("DOMContentLoaded", function () {
     const lodgings = document.querySelectorAll(".lodging");
-    const button = document.querySelector(".lodgingbutton");
+    const leftButton = document.querySelector(".lodgingleft");
+    const rightButton = document.querySelector(".lodgingright");
 
     let currentIndex = 0;
     const maxIndex = Math.ceil(lodgings.length / 4) - 1;
 
-    button.addEventListener("click", function () {
+    leftButton.addEventListener("click", function () {
+        if (currentIndex > 0) {
+            currentIndex--;
+            const start = currentIndex * 4;
+            const end = Math.min(start + 4, lodgings.length);
+
+            lodgings.forEach((lodging, index) => {
+                if (index >= start && index < end) {
+                    lodging.style.display = "block";
+                } else {
+                    lodging.style.display = "none";
+                }
+            });
+
+            rightButton.style.display = "block";
+        }
+        if (currentIndex === 0) {
+            leftButton.style.display = "none";
+        }
+    });
+
+    rightButton.addEventListener("click", function () {
         const nextIndex = currentIndex + 1;
         const start = nextIndex * 4;
         const end = Math.min(start + 4, lodgings.length);
@@ -52,8 +92,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         currentIndex = nextIndex;
         if (currentIndex >= maxIndex) {
-            button.style.display = "none";
+            rightButton.style.display = "none";
         }
+        leftButton.style.display = "block";
     });
 
     lodgings.forEach(lodging => {
