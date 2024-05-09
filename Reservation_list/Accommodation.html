@@ -93,7 +93,7 @@
 
             <nav>
                 <div class="nav_2">
-                    <ul class="nav_3">
+                    <ul class="nav_3" id="map">
                         <li><a href="#">정보</a></li>
                         <li><a href="#map">위치</a></li>
                         <li><a href="#service">시설 및 서비스</a></li>
@@ -217,7 +217,7 @@
                     </div>
                 </section>
 
-                <section class="map" id="map">
+                <section class="map">
                     <h2>위치</h2>
                     <div>
                         <img src="../image/icon/map_pin_icon.svg">
@@ -229,7 +229,7 @@
                             style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                         <ul class="map_location_details1">
-                            <li class="map_location_details2">동대입구역 5번 출구 도보 5분</li>
+                            <li class="map_location_details2"  id="service">동대입구역 5번 출구 도보 5분</li>
                             <li class="map_location_details2">신라면세점 도보 3분</li>
                         </ul>
                     </div>
@@ -243,12 +243,12 @@
                         <p>한국의 전통미와 현대적 감각을 겸비하고 있는 세계 속의 명문호텔 서울신라호텔은</p>
                         <p>세계 최고의 럭셔리 어번 (Urban) 라이프스타일 호텔로고객들에게 최고급 서비스를 제공합니다.</p>
                         <p>한국을 대표하는 럭셔리 호텔로서 '일상이 최고의 순간이 되는 곳' 이라는 컨셉을 </p>
-                        <p>새롭게 선보이며 휴식은 물론 고급 식문화, 예술, 뷰티,웨딩, 엔터테인먼트 등 고객의</p>
+                        <p id="room">새롭게 선보이며 휴식은 물론 고급 식문화, 예술, 뷰티,웨딩, 엔터테인먼트 등 고객의</p>
                         <p>고품격 라이프스타일을 제안하는 공간으로 거듭나고 있습니다.</p>
                     </div>
                 </section>
 
-                <section class="service_area" id="service">
+                <section class="service_area">
                     <h2>시설 및 서비스</h2>
                     <div class="service_area_details">
                         <div>
@@ -307,7 +307,7 @@
                 </section>
             </article>
 
-            <section id="room" class="room">
+            <section class="room">
                 <h2>객실</h2>
                 <div class="room_type">
                     <h3 class="room_type_name">디럭스 더블</h3>
@@ -486,10 +486,10 @@
                     <span>534명의 리뷰</span>
                 </div>
                 <div class="right_area">
-                    <button class="review_btn">
+                    <a class="review_btn" href="#review">
                         <img src="../image/icon/arrows_down_up_icon.svg" alt="">
                         <span>최신순</span>
-                    </button>
+                    </a>
                 </div>
             </div>
             <div>

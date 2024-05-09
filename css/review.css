@@ -1,6 +1,26 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Nanum_Gothic_bold;
+    scroll-behavior: smooth;
+    text-decoration: none;
+}
+
+@font-face {
+    /* font-face 지시자 내 font-family 에 지정하는 폰트명은 사용자 임의로 지정 가능. */
+    font-family: Nanum_Gothic_bold;
+    src: url(../css/font/Nanum_Gothic/NanumGothic-Bold.ttf);
+
+    font-family: Nanum_Gothic_ExtraBold;
+    src: url(../css/font/Nanum_Gothic/NanumGothic-ExtraBold.ttf);
+
+    font-family: Nanum_Gothic;
+    src: url(../css/font/Nanum_Gothic/NanumGothic-Regular.ttf);
+
+
+    font-family: Jua-Regular;
+    src: url(../css/font/Jua/Jua-Regular.ttf);
+
 }
 
 main {
@@ -10,16 +30,25 @@ main {
 
 /* 리뷰정보 */
 .review_title {
-    display: flex;
+    /* display: flex; */
     margin-top: 50px;
     margin-bottom: 25px;
 }
 
-.hotel_star {
+.review_title .left_area {
+    display: flex;
+    float: left;
+}
+
+.review_title .left_area {
     align-content: center;
 }
 
-.hotel_star img,
+.review_title .right_area {
+    float: right;
+}
+
+.left_area img,
 .review_star img,
 .review_design img,
 .review_img_size img {
@@ -27,8 +56,22 @@ main {
     margin-bottom: -7px;
 }
 
-/* 리뷰상세 */
+.review_btn {
+    border: none;
+    background-color: white;
+}
 
+.review_btn>img {
+    width: 20px;
+}
+
+.review_btn>span {
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+/* 리뷰상세 */
 .review_design {
     width: 100%;
     height: auto;
@@ -41,7 +84,7 @@ main {
 }
 
 .review_username {
-    flex: 1;
+    width: 25%;
 
     display: -webkit-inline-box;
 }
@@ -51,7 +94,7 @@ main {
 }
 
 .review_content {
-    flex: 3;
+    width: 75%;
     align-content: center;
 }
 
