@@ -47,7 +47,7 @@ header {
 .logo {
     cursor: pointer;
     margin-right: auto;
-    height: 7vh;
+    height: 50px;
     border-radius: 5px;
     transition: color 0.3s ease;
 }
