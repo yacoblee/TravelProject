@@ -14,10 +14,10 @@
 
 <body class="login_bg">
     <div class="login_form">
+        <div class="login_title">
+            <h1><a href="../index.html" class="logo"><img src="../image/logo.png" class="logo" src="" alt="logo"></a></h1>
+        </div>
         <form action="./login.html">
-            <div class="login_title">
-                <h1><a href="../index.html" class="logo"><img src="../image/logo.png" class="logo" src="" alt="logo"></a></h1>
-            </div>
 
             <div class="login_info">
                 <div>
@@ -35,19 +35,19 @@
                     <button type="button" class="mypage_right_main_bottom" >중복확인</button>
                 </div>
                 <div>
-                    <label for="nickname">비밀번호</label>
+                    <label for="login_pw">비밀번호</label>
                 </div>
                 <div>
                     <input type="password" id="login_pw" name="login_pw" placeholder="비밀번호를 입력하세요." minlength="8" required>
                 </div>
                 <div>
-                    <label for="nickname">비밀번호 확인</label>
+                    <label for="login_pw_chk">비밀번호 확인</label>
                 </div>
                 <div>
                     <input type="password" id="login_pw_chk" name="login_pw_chk" placeholder="비밀번호를 입력하세요." minlength="8" required>
                 </div>
                 <div>
-                    <label for="nickname">연락처</label>
+                    <label for="phone_num">연락처</label>
                 </div>
                 <div>
                     <input type="num" id="phone_num" name="phone_num" placeholder="연락처를 입력하세요." minlength="10" maxlength="11" required>
@@ -75,7 +75,7 @@
                     </datalist>
                 </div>
                 <div class="address">
-                    <label for="">주소</label>
+                    <label for="post_num">주소</label>
                 </div>
                 <div>
                     <input type="text" class="add_input" name="post_num" id="post_num" placeholder="우편번호" readonly>
@@ -91,6 +91,7 @@
                 </div>
             </div>
             
+        </form>
             <div class="sign_btn">
                 <div>
                     <button type="submit" id="sign_up">sign up</button>
@@ -100,7 +101,6 @@
                     <a href="./id_find.html">&nbsp;&nbsp;ID 찾기</a> &#124; <a href="./pw_find.html">PW 찾기</a>
                 </div>
             </div>
-        </form>
     </div>
 </body>
 

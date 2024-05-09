@@ -41,27 +41,27 @@
         <a href="../customerService/sevice_index.html" class="cta">Customer Service</a>
     </header>
 
-    <section>
-        <form action="#">
-            <div class="mypage_main">
-                <div class="mypage_title">
-                    <h1>회원 정보 관리</h1>
+    <div class="like_list_section">
+        <div class="mypage_title">
+            <h1>회원 정보 관리</h1>
+        </div>
+        <div class="mypage_main">
+            <div class="mypage_body">
+                <div class="mypage_left_menu">
+                    <ul>
+                        <li>
+                            <a href="./myinfo_reserve.html">예약내역</a>
+                        </li>
+                        <li>
+                            <a href="./mylike_list.html">찜목록</a>
+                        </li>
+                        <li>
+                            <a href="#" class="list_check">내정보</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="mypage_body">
-                    <div class="mypage_left_menu">
-                        <ul>
-                            <li>
-                                <a href="./myinfo_reserve.html">예약내역</a>
-                            </li>
-                            <li>
-                                <a href="./mylike_list.html">찜목록</a>
-                            </li>
-                            <li>
-                                <a href="#">내정보</a>
-                            </li>
-                        </ul>
-                    </div>
-
+                
+                <form action="#">
                     <div class="mypage_right_main">
                         <h3 class="sum_title">회원정보</h3>
 
@@ -104,7 +104,7 @@
                             <label for="phone_num">연락처</label>
                         </div>
                         <div>
-                            <input type="number" id="phone_num" name="phone_num" placeholder="연락처를 입력하세요." minlength="10" maxlength="11" required>
+                            <input type="text" id="phone_num" name="phone_num" placeholder="연락처를 입력하세요." minlength="10" maxlength="11" required>
                             <button class="mypage_right_main_bottom">인증</button>
                         </div>
                         <div>
@@ -144,10 +144,10 @@
                             <button type="submit">수정</button>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
-        </form>
-    </section>
+        </div>
+    </div>
 
     <!-- <div class="empty_box">
     </div> -->
