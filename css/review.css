@@ -174,11 +174,40 @@ main {
 /* 탑버튼 */
 .top_btn {
     position: fixed;
-    bottom: 10%;
+    bottom: 22%;
     right: 10%;
 }
 
 .top_btn img {
     width: 30px;
     height: 30px;
+}
+
+@media screen and (width < 1670px) {
+    .top_btn {
+        display: none;
+
+    }
+}
+
+@media screen and (width < 1130px) {
+    .review_img div:nth-child(4) {
+        display: none;
+    }
+}
+
+@media screen and (width < 875px) {
+    .review_img div:nth-child(3) {
+        display: none;
+    }
+}
+
+@media screen and (width < 535px) {
+    .review_username {
+        display: none !important;
+    }
+
+    .review_content {
+        width: 100% !important;
+    }
 }
