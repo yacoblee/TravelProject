@@ -69,43 +69,8 @@
                             <label for="nickname">닉네임</label>
                         </div>
                         <div>
-                            <input type="text" id="nickname" name="nickname" placeholder="닉네임을 입력하세요." required>
+                            <input type="text" id="nickname" name="nickname" placeholder="닉네임을 입력하세요." minlength="2" maxlength="16" required>
                             <button class="mypage_right_main_bottom">중복확인</button>
-                        </div>
-                        <div class="mail">
-                            <label for="mail">e-Mail</label>
-                        </div>
-                        <div class="mail_add">
-                            <input type="text" id="mail" name="mail" placeholder="메일주소를 입력하세요." minlength="4" maxlength="30" required>
-                            <i class="fa-solid fa-at"></i>
-                            <!-- <input type="text" id="mail" name="mail" placeholder="메일주소를 입력하세요.">
-                            <select name="mail_add" id="mail_add">
-                                <option value="">직접입력</option>
-                                <option value="naver">naver.com</option>
-                                <option value="gmail">gmail.com</option>
-                                <option value="nate">nate.com</option>
-                                <option value="daum">daum.net</option>
-                            </select> -->
-                            <input type="text" list="mail_add" placeholder="메일주소를 입력하세요." minlength="6" maxlength="20" required>
-                            <datalist id="mail_add">
-                                <option value="naver.com"></option>
-                                <option value="gmail.com"></option>
-                                <option value="nate.com"></option>
-                                <option value="daum.net"></option>
-                            </datalist>
-                        </div>
-                        <div>
-                            <label for="user_nm">이름</label>
-                        </div>
-                        <div>
-                            <input type="text" id="user_nm" name="user_nm" placeholder="이름을 입력하세요." minlength="2" maxlength="10" required>
-                        </div>
-                        <div>
-                            <label for="phone_num">연락처</label>
-                        </div>
-                        <div>
-                            <input type="text" id="phone_num" name="phone_num" placeholder="연락처를 입력하세요." minlength="10" maxlength="11" required>
-                            <button class="mypage_right_main_bottom">인증</button>
                         </div>
                         <div>
                             <label for="login_pw">비밀번호</label>
@@ -118,6 +83,33 @@
                         </div>
                         <div>
                             <input type="text" id="login_pw_chk" name="login_pw_chk" placeholder="비밀번호를 입력하세요." minlength="8" maxlength="15" required>
+                        </div>
+                        <div>
+                            <label for="user_nm">이름</label>
+                        </div>
+                        <div>
+                            <input type="text" id="user_nm" name="user_nm" placeholder="이름을 입력하세요." minlength="2" maxlength="6" required>
+                        </div>
+                        <div>
+                            <label for="phone_num">연락처</label>
+                        </div>
+                        <div>
+                            <input type="text" id="phone_num" name="phone_num" placeholder="연락처를 입력하세요." minlength="10" maxlength="11" required>
+                            <button class="mypage_right_main_bottom">인증</button>
+                        </div>
+                        <div class="mail">
+                            <label for="mail">e-Mail</label>
+                        </div>
+                        <div class="mail_add">
+                            <input type="text" id="mail" name="mail" placeholder="메일주소를 입력하세요." minlength="6" maxlength="20" required>
+                            <i class="fa-solid fa-at"></i>
+                            <input type="text" list="mail_add" placeholder="메일주소를 입력하세요." minlength="6" maxlength="20" required>
+                            <datalist id="mail_add">
+                                <option value="naver.com"></option>
+                                <option value="gmail.com"></option>
+                                <option value="nate.com"></option>
+                                <option value="daum.net"></option>
+                            </datalist>
                         </div>
                         <div>
                             <label for="post_num">우편번호</label>
