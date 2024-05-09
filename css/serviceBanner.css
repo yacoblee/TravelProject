@@ -506,9 +506,10 @@ input[type="checkbox"]:checked+label+div {
 
 .notice_list>ul>li:hover{
     background-color:  rgb(164, 178, 192, 0.142);
-    transform: scale(105%);
 }
-
+.notice_list>ul>li:hover li:nth-of-type(2){
+    font-weight: 700;
+}
 .notice_page{
     padding: 2vh;
 }
