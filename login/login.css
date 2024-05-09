@@ -71,7 +71,8 @@
 .login_form {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
+    justify-content: center;
     align-content: center;
     align-items: center;
     height: 100%;
@@ -86,7 +87,7 @@
 }
 
 .login_form input {
-    width: 160px;
+    /* width: 160px; */
     margin: 10px;
     padding: 10px;
     border: 0.5px solid rgb(177, 190, 213);
@@ -201,13 +202,21 @@
 }
 
 .mypage_title {
-    height: 10vh;
-    align-content: center;
+    display: flex;
+    height: 5%;
+    align-items: center;
+    justify-content: center;
 }
 
 .mypage_body {
     flex-basis: 80%;
     display: flex;
+}
+
+.mypage_left_menu ul li .list_check{
+    background-color: rgb(177, 190, 213,.5);
+    text-shadow: 1px 1px 2px rgb(19, 19, 19);
+    transition: 0.3s;
 }
 
 .mypage_left_menu {
@@ -250,7 +259,7 @@
     display: grid;
     min-width: 800px;
     grid-template: repeat(10, 3fr) 4fr / 1fr 3fr;
-    padding: 2vw;
+    padding: 5px;
     align-items: center;
 }
 
@@ -357,7 +366,7 @@ input[class="add_dtl"] {
 
 
 
-/* 
+    /* 
     display: inline-flex;
     justify-content: center;
     align-items: center; */
@@ -382,14 +391,16 @@ input[class="add_dtl"] {
 /* 찜목록 */
 .mylike_list_body {
     display: grid;
-    gap: 20px;
+    gap: 30px;
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+    padding: 5px;
 }
 
 /* 숙소 명 */
 .mylike_bold {
     font-weight: 800;
     font-size: 1.2em;
+    margin: 10px;http://192.168.0.50:5502/Reservation_list/Accommodation.html
 }
 
 .font_red {
@@ -401,7 +412,7 @@ input[class="add_dtl"] {
     text-decoration: line-through;
 }
 
-.mylike_list_body>div>div>span {
+.mylike_list_body>a>div>div>span {
     margin-top: 10px;
 }
 
@@ -413,44 +424,53 @@ input[class="add_dtl"] {
 .mylike_img img {
     border-radius: 10px;
     width: 100%;
-    height: 100%;
+    /* height: 300px; */
+    /* height: 100%; */
+    /* width: 300px;
+    height: 220px; */
     object-fit: cover;
 }
 
-.mylike_img a {
-    width: 100%;
-    height: 220px;
-}
-
-.mylike_list_body>div {
+.mylike_list_body a {
+    /* width: 100%;
+    height: 220px; */
+    flex:1;
+    height: 350px;
+    display: block;
     display: flex;
     border: 1px solid silver;
     border-radius: 10px;
 }
 
-.mylike_list_body>div:hover {
+
+.mylike_list_body>a:hover {
     box-shadow: 2px 2px 6px black;
     transform: scale(110%);
 }
 
-.mylike_list_body>div>div {
+.mylike_list_body a>div {
     padding: 5px;
 }
 
 
-.mylike_list_body>div>div:nth-of-type(odd) {
+.mylike_list_body a div:nth-of-type(odd) {
     flex-basis: 60%;
     display: flex;
 }
 
-.mylike_list_body>div>div:nth-of-type(even) {
+.mylike_list_body a div:nth-of-type(even) {
     white-space: pre-line;
     display: flex;
     flex-direction: column;
     flex-basis: 40%;
     text-align: left;
+    color: black;
     font-size: 1em;
     justify-content: space-between;
+}
+
+.mylike_list_body a div:active {
+    color: blue;
 }
 
 /* =================================================== */
