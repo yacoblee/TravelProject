@@ -40,7 +40,7 @@
     <div class="side_bar_all">
         <nav class="left_side_bar">
             <ul>
-                <li><a href="#">1:1문의</a></li>
+                <li><a href="#" class="list_check">1:1문의</a></li>
                 <li><a href="./sevice_index.html">Q&A</a></li>
                 <li><a href="./seviceNotice.html">공지사항</a></li>
             </ul>
@@ -73,11 +73,11 @@
                 <div class="customer_form2">
                     
                     <div><label for="one_named">제목</label></div>
-                    <div><input type="text" id="one_named"style="width: 30vw; min-width: 300px"></div>
+                    <div><input type="text" id="one_named"style="width: 20vw; min-width: 300px" required></div>
                     
                     
                     <div><label for="one_type">유형</label></div>
-                    <div><select name="one_type" id="one_type"> 
+                    <div><select name="one_type" id="one_type" required> 
                         <option value="상담유형을 선택해주세요">상담유형을 선택해주세요.</option>
                         <option value="숙소관련문의">숙소 관련 문의</option>
                         <option value="결제관련문의">결제 관련 문의</option>
@@ -86,18 +86,17 @@
                     
                     
                     <div><label>상담방법</label></div>
-                    <div class="customer_form2_radio"><label><input type="radio" id="one_how" name="one_how" value="sendEmail"> 이메일 </label> 
+                    <div class="customer_form2_radio"><label><input type="radio" id="one_how" name="one_how" value="sendEmail" checked> 이메일 </label> 
                     <label><input type="radio" name="one_how" value="callphone"> 전화</label></div>
                     
                     
                     <div><label for="one_content">내용</label></div>
-                    <div><textarea name="one_content" id="one_content" cols="60" rows="10" placeholder=" 내용 입력" style="background-color:rgb(223, 223, 223 , 0.3);" required></textarea></div>
+                    <div><textarea name="one_content" id="one_content" cols="50" rows="10" placeholder=" 내용 입력" style="background-color:rgb(223, 223, 223 , 0.3);" required></textarea></div>
                     
                 </div>
-                <input type="radio"> 개인 정보 및 이용에 동의 합니다.
+                <label><input type="checkbox"> 개인 정보 및 이용에 동의 합니다.</label>
                 <button>전송</button>
                 <div class="empty_box">
-
                 </div>
             </form>
         </div>
