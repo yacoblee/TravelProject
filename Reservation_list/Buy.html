@@ -38,248 +38,240 @@
     <a href="../customerService/sevice_index.html" class="cta">Customer Service</a>
   </header>
 
+  <nav class="bor_ai">
+    <a class="buy_a1" href="./Accommodation.html">
+      <h1><svg class="feather feather-arrow-left" fill="none" height="30" stroke="currentColor" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <line x1="19" x2="5" y1="12" y2="12" />
+          <polyline points="12 19 5 12 12 5" />
+        </svg>
+        예약 확인 및 결제
+      </h1>
+    </a>
+  </nav>
+
   <main>
-    <div class="bor_ai">
-      <a class="buy_a1" href="./Accommodation.html">
-        <h1><svg class="feather feather-arrow-left" fill="none" height="30" stroke="currentColor" stroke-linecap="round"
-            stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-            <line x1="19" x2="5" y1="12" y2="12" />
-            <polyline points="12 19 5 12 12 5" />
-          </svg>
-          예약 확인 및 결제
-        </h1>
-      </a>
-    </div>
+    <section class="section_id">
+      <form>
 
+        <!-- <div class="desktop_left"> -->
+        <div class="buy_a1b">
+          <h2>예약자 정보</h2>
+          <div class="buy_id">
+            <label>
+              <div class="buy_id00">예약자 이름</div>
+              <input class="buy_id01" type="text" placeholder="예&#41; 홍길동" maxlength="12" required>
+            </label>
+          </div>
 
-    <form action="./succesbuy.html">
-      <section class="section_id">
+          <div class="buy_call">
+            <label>
+              <div class="buy_id00">휴대폰 번호</div>
+              <input class="buy_id01" type="tel" placeholder="010 - 1234 - 5678" maxlength="11" required>
+            </label>
+            <button>인증번호 전송</button>
+            <p>개인 정보 보호를 위해 안심번호로 숙소에 전달됩니다.</p>
+          </div>
 
-        <div class="desktop_left">
-          <div class="buy_a1b">
-            <h2>예약자 정보</h2>
-            <div class="buy_id">
-              <label>
-                <div class="buy_id00">예약자 이름</div>
-                <input class="buy_id01" type="text" placeholder="예&#41; 홍길동" required>
-              </label>
+          <div class="buy_label">
+            <label>
+              <input type="radio" name="visited" value="work_visit" checked>도보 방문
+            </label>
+            <label>
+              <input type="radio" name="visited" value="car_visit">차량 방문
+            </label>
+          </div>
+
+          <div class="buy_id_banner">
+            <a href="../Event/event_detail.html">쿠폰</a>
+            <!-- <div class="결제-페이지">
+            <h2>결제 정보</h2>
+            <form>
+              결제 관련 입력 필드들
+              <label for="쿠폰-선택">쿠폰 선택:</label>
+              <select id="쿠폰-선택" name="쿠폰-선택">
+                <option value="">쿠폰을 선택하세요</option>
+                <option value="10퍼센트할인">10% 할인 쿠폰</option>
+                <option value="무료배송">무료 배송 쿠폰</option>
+                다른 유효한 쿠폰들
+              </select>
+              <input type="submit" value="적용">
+            </form>
+          </div> -->
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <article class="article1">
+      <form action="./succesbuy.html">
+        <div class="buy_a1b">
+          <h2>결제 수단</h2>
+        </div>
+        <div class="payment">
+          <div class="payment_type">
+            <input id="payTypeBtnA" type="radio" name="pay" value="Credit" checked>
+            <label for="payTypeBtnA"><span class="payTypeAImg">카카오페이</span></label>
+          </div>
+
+          <div class="payment_type">
+            <input id="payTypeBtnB" type="radio" name="pay" value="Toss">
+            <label for="payTypeBtnB"><span class="payTypeBImg">Toss</span></label>
+          </div>
+
+          <div class="payment_type">
+            <input id="payTypeBtnC" type="radio" name="pay" value="Kakao">
+            <label for="payTypeBtnC"><span class="payTypeCImg">네이버페이</span></label>
+          </div>
+          <div class="payment_type">
+            <input id="payTypeBtnD" type="radio" name="pay" value="Naver">
+            <label for="payTypeBtnD"><span class="payTypeDImg">신용/체크카드</span></label>
+          </div>
+        </div>
+        <div style="margin-left: 30px;">
+          <label>
+            <input class="reused_check" type="checkbox" name="reused" value="reused" checked>
+            <span>이 결제 수단을 다음에도 사용</span>
+          </label>
+        </div>
+
+        <div class="payment_inner">
+          <div><span class="pay_in_back">혜택</span><span>카카오페이</span>
+            <div>호텔/펜션 - 7만원 이상, 10% 할인 (오전 0시, 일 800명)
+              <b>최대 할인금액 1만원</b>
+              모텔 - 2만원 이상, <b>2천원 할인</b>(오전 0시, 일 800명)
+            </div>
+          </div>
+          <div><span class="pay_in_back">혜택</span><span>토스페이</span>
+            <div>3만원 이상, 10% 최대 1만원 (오전 0시, 일 700명)
+              2만원 이상, <b>2천원 할인</b>(오후 4시, 일 300명)
+              + 첫결제 시, <b>5천원 캐시백</b>
+            </div>
+          </div>
+          <div><span class="pay_in_back">혜택</span><span>네이버페이</span>
+            <div>국내숙소 - 10만원 이상, 7% <b>쵀대 1만원 할인</b>
+              (오전 0시, 일 600명)
+            </div>
+          </div>
+          <div><span class="pay_in_back">혜택</span><span>신용/체크 카드</span>
+            <div>국내숙소 - 7만원 이상, <b>5천원 할인</b>
+              오전 0시 우리 (일 80명), 롯데 (일 220명)
+              삼성 (일 190명), 농협 (일 150명), 하나 (일 120명)
             </div>
 
-            <div class="buy_call">
-              <label>
-                <div class="buy_id00">휴대폰 번호</div>
-                <input class="buy_id01" type="tel" placeholder="010 - 1234 - 5678" required>
-              </label>
-              <button>인증번호 전송</button>
-              <p>개인 정보 보호를 위해 안심번호로 숙소에 전달됩니다.</p>
-            </div>
-
-            <div class="buy_label">
-              <label>
-                <input type="radio" name="visited" value="work_visit" checked>도보 방문
-              </label>
-              <label>
-                <input type="radio" name="visited" value="car_visit">차량 방문
-              </label>
-            </div>
-
-            <div class="buy_id_banner">
-              <a href="../Event/event_detail.html">쿠폰</a>
-              <!-- <div class="결제-페이지">
-                <h2>결제 정보</h2>
-                <form>
-                  결제 관련 입력 필드들
-                  <label for="쿠폰-선택">쿠폰 선택:</label>
-                  <select id="쿠폰-선택" name="쿠폰-선택">
-                    <option value="">쿠폰을 선택하세요</option>
-                    <option value="10퍼센트할인">10% 할인 쿠폰</option>
-                    <option value="무료배송">무료 배송 쿠폰</option>
-                    다른 유효한 쿠폰들
-                  </select>
-                  <input type="submit" value="적용">
-                </form>
-              </div> -->
+            <div>국내숙소 - 현대카드 M포인트 10% 사용, 0.5% 적립
+              <b>최대 5,000P 사용가능</b>
             </div>
           </div>
 
-          <section>
-            <div>
-              <div class="buy_a1b">
-                <h2>결제 수단</h2>
-              </div>
-              <div class="payment">
-                <div class="payment_type">
-                  <input id="payTypeBtnA" type="radio" name="pay" value="Credit" checked>
-                  <label for="payTypeBtnA"><span class="payTypeAImg">카카오페이</span></label>
-                </div>
+          <div>
+            <button type="button">
+              <span>모든 혜택 보기</span>
+            </button>
+          </div>
+        </div>
+    </article>
 
-                <div class="payment_type">
-                  <input id="payTypeBtnB" type="radio" name="pay" value="Toss">
-                  <label for="payTypeBtnB"><span class="payTypeBImg">Toss</span></label>
-                </div>
+    <article class="buy_inform">
+      <div>
+        <h2 style="margin: 30px 30px;">결제 정보</h2>
+      </div>
+      <div class="buy_inform_li">
+        <ul style="font-size: 12px;">
+          <li></li>
+          <li style="text-decoration: line-through;">628,000원</li>
+        </ul>
+      </div>
+      <div class="buy_inform_li">
+        <ul style="border-bottom: 1px solid lightgray; padding-bottom: 15px;">
+          <li>객실 가격(1박)</li>
+          <li>566,600원</li>
+        </ul>
+      </div>
+      <div class="buy_inform_li">
+        <ul>
+          <li style="font-size: 12px; font-weight: 600;">총 결제 금액</li>
+          <li style="font-size: 24px; font-weight: bold; color: red;">566,600원</li>
+        </ul>
+      </div>
 
-                <div class="payment_type">
-                  <input id="payTypeBtnC" type="radio" name="pay" value="Kakao">
-                  <label for="payTypeBtnC"><span class="payTypeCImg">네이버페이</span></label>
-                </div>
-                <div class="payment_type">
-                  <input id="payTypeBtnD" type="radio" name="pay" value="Naver">
-                  <label for="payTypeBtnD"><span class="payTypeDImg">신용/체크카드</span></label>
-                </div>
-              </div>
-              <div style="margin-left: 30px;">
-                <label>
-                  <input class="reused_check" type="checkbox" name="reused" value="reused" checked>
-                  <span>이 결제 수단을 다음에도 사용</span>
-                </label>
-              </div>
-
-              <div class="payment_inner">
-                <div><span class="pay_in_back">혜택</span><span>카카오페이</span>
-                  <div>호텔/펜션 - 7만원 이상, 10% 할인 (오전 0시, 일 800명)
-                    <b>최대 할인금액 1만원</b>
-                    모텔 - 2만원 이상, <b>2천원 할인</b>(오전 0시, 일 800명)
-                  </div>
-                </div>
-                <div><span class="pay_in_back">혜택</span><span>토스페이</span>
-                  <div>3만원 이상, 10% 최대 1만원 (오전 0시, 일 700명)
-                    2만원 이상, <b>2천원 할인</b>(오후 4시, 일 300명)
-                    + 첫결제 시, <b>5천원 캐시백</b>
-                  </div>
-                </div>
-                <div><span class="pay_in_back">혜택</span><span>네이버페이</span>
-                  <div>국내숙소 - 10만원 이상, 7% <b>쵀대 1만원 할인</b>
-                    (오전 0시, 일 600명)
-                  </div>
-                </div>
-                <div><span class="pay_in_back">혜택</span><span>신용/체크 카드</span>
-                  <div>국내숙소 - 7만원 이상, <b>5천원 할인</b>
-                    오전 0시 우리 (일 80명), 롯데 (일 220명)
-                    삼성 (일 190명), 농협 (일 150명), 하나 (일 120명)
-                  </div>
-
-                  <div>국내숙소 - 현대카드 M포인트 10% 사용, 0.5% 적립
-                    <b>최대 5,000P 사용가능</b>
-                  </div>
-                </div>
-
-                <div>
-                  <button type="button">
-                    <span>모든 혜택 보기</span>
-                  </button>
-                </div>
-
-              </div>
-            </div>
-          </section>
-
-          <div class="buy_gaps"></div>
-
-          <div class="buy_inform">
-            <div>
-              <h2 style="margin: 30px 30px;">결제 정보</h2>
-            </div>
-            <div class="buy_inform_li">
-              <ul style="font-size: 12px;">
-                <li></li>
-                <li style="text-decoration: line-through;">628,000원</li>
-              </ul>
-            </div>
-            <div class="buy_inform_li">
-              <ul style="border-bottom: 1px solid lightgray; padding-bottom: 15px;">
-                <li>객실 가격(1박)</li>
-                <li>566,600원</li>
-              </ul>
-            </div>
-            <div class="buy_inform_li">
-              <ul>
-                <li style="font-size: 12px; font-weight: 600;">총 결제 금액</li>
-                <li style="font-size: 24px; font-weight: bold; color: red;">566,600원</li>
-              </ul>
-            </div>
-
-            <div class="pay_agree">
-              <!-- 큰 화면일때는 리스트로 보이지만
+      <div class="pay_agree">
+        <!-- 큰 화면일때는 리스트로 보이지만
                 화면이 줄어들었을때는 박스리스트형식으로 보이게 -->
-              <div class="agree_box">
-                <input class="check_reqir" type="checkbox" name="payment_agree" value="marster_checkbox"> 약관
-                전체동의</input>
-                <div>
-                  <div class="check_reqir">
-                    <label>
-                      <input type="checkbox" name="payment_agree" value="cansel_refund" required>
-                      <span>숙소 이용규칙 및 취소/환불규정 동의 (필수)</span>
-                    </label>
-                  </div>
-                  <div class="check_reqir">
-                    <label>
-                      <input type="checkbox" name="payment_agree" value="per_infor1" required>
-                      <span>개인정보 수집 및 이용 동의 (필수)</span>
-                    </label>
-                  </div>
-                  <div class="check_reqir">
-                    <label>
-                      <input type="checkbox" name="payment_agree" value="per_infor3" required>
-                      <span>개인정보 제3자 제공 동의 (필수)</span>
-                    </label>
-                  </div>
-                  <div class="check_reqir">
-                    <label>
-                      <input type="checkbox" name="payment_agree" value="age_up14" required>
-                      <span>만 14세 이상 확인 (필수)</span>
-                    </label>
-                  </div>
-                </div>
-              </div>
+        <div class="agree_box">
+          <input class="check_reqir" type="checkbox" name="payment_agree" value="marster_checkbox"> 약관
+          전체동의</input>
+          <div>
+            <div class="check_reqir">
+              <label>
+                <input type="checkbox" name="payment_agree" value="cansel_refund" required>
+                <span>숙소 이용규칙 및 취소/환불규정 동의 (필수)</span>
+              </label>
             </div>
-            <div class="last_payment">
-              <button type="submit" id="payment_receipt">결제하기</button>
+            <div class="check_reqir">
+              <label>
+                <input type="checkbox" name="payment_agree" value="per_infor1" required>
+                <span>개인정보 수집 및 이용 동의 (필수)</span>
+              </label>
+            </div>
+            <div class="check_reqir">
+              <label>
+                <input type="checkbox" name="payment_agree" value="per_infor3" required>
+                <span>개인정보 제3자 제공 동의 (필수)</span>
+              </label>
+            </div>
+            <div class="check_reqir">
+              <label>
+                <input type="checkbox" name="payment_agree" value="age_up14" required>
+                <span>만 14세 이상 확인 (필수)</span>
+              </label>
             </div>
           </div>
         </div>
+      </div>
+      <div class="last_payment">
+        <button type="submit" id="payment_receipt">결제하기</button>
+      </div>
+      </form>
+    </article>
 
-        <div class="buy_gap"></div> <!-- 빈 공간 -->
+    <!-- </div> -->
 
-        <div class="desktop_right">
-
-          <div class="bor_bi">
-            <div class="buy_id0a1">
-              <h2 style="margin-top: 30px;">서울 신라호텔</h2>
-            </div>
-            <div class="lodging_img">
-              <img
-                src="https://www.yeogi.com/_next/image?url=https%3A%2F%2Fimage.goodchoice.kr%2Faffiliate%2F2022%2F02%2F10%2F6204d80840f57.jpg&w=1200&q=75"
-                alt="호텔 이미지">
-            </div>
-            <table>
-              <tbody>
-                <tr>
-                  <td class="td_a">객실</td>
-                  <td class="td_b">디럭스 더블</td>
-                </tr>
-                <tr>
-                  <td class="td_a">일정</td>
-                  <td class="td_b">06.08 (토) 15:00 ~
-                    <br>06.09 (일) 11:00 (1박)
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="map_lodging">
-            <iframe class="map_image"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202463.6480465151!2d126.8575943195893!3d37.54341170825401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2ed7f0d9e75%3A0x49ec999d2ee31371!2z7ISc7Jq47Iug65287Zi47YWU!5e0!3m2!1sko!2skr!4v1714920884708!5m2!1sko!2skr"
-              style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <ul class="map_location_details1">
-            <li class="map_location_details2">동대입구역 5번 출구 도보 5분</li>
-            <li class="map_location_details2">신라면세점 도보 3분</li>
-          </ul>
-
+    <aside class="desktop_right">
+      <div class="bor_bi">
+        <div class="buy_id0a1">
+          <h2 style="margin-top: 30px;">서울 신라호텔</h2>
         </div>
-      </section>
-
-    </form>
+        <div class="lodging_img">
+          <img
+            src="https://www.yeogi.com/_next/image?url=https%3A%2F%2Fimage.goodchoice.kr%2Faffiliate%2F2022%2F02%2F10%2F6204d80840f57.jpg&w=1200&q=75"
+            alt="호텔 이미지">
+        </div>
+        <table>
+          <tbody>
+            <tr>
+              <td class="td_a">객실</td>
+              <td class="td_b">디럭스 더블</td>
+            </tr>
+            <tr>
+              <td class="td_a">일정</td>
+              <td class="td_b">06.08 (토) 15:00 ~
+                <br>06.09 (일) 11:00 (1박)
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="map_lodging">
+        <iframe class="map_image"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d202463.6480465151!2d126.8575943195893!3d37.54341170825401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca2ed7f0d9e75%3A0x49ec999d2ee31371!2z7ISc7Jq47Iug65287Zi47YWU!5e0!3m2!1sko!2skr!4v1714920884708!5m2!1sko!2skr"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <ul class="map_location_details1">
+        <li class="map_location_details2">동대입구역 5번 출구 도보 5분</li>
+        <li class="map_location_details2">신라면세점 도보 3분</li>
+      </ul>
+    </aside>
   </main>
 
   <footer style="margin-top: 100px;">

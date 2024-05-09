@@ -165,7 +165,7 @@ h2 {
   height: 50px;
   line-height: 50px;
   text-align: center;
-
+  
   font-weight: bold;
   border: 1px solid ;
   border-radius: 10px;
@@ -175,15 +175,51 @@ h2 {
   box-shadow: 0 2px 2px lightblue;
 }
 
+/* ====================================================== */
+main {
+  display: grid;
+  grid-template-areas: 
+          ". section seciton aside ."
+          ". article1 article1 aside ."
+          ". article2 article2 aside .";
+}
+
+section {
+  grid-area: section;
+}
+
+.article1 {
+  grid-area: article1;
+}
+
+.buy_inform {
+  grid-area: article2;
+}
+
+aside {
+  grid-area: aside;
+}
+
+@media (width <= 780px) {
+  main {
+    display: grid;
+    grid-template-areas: 
+            "aside aside"
+            "section section"
+            "article1 article1"
+            "article2 article2";
+  }
+
+  aside {
+    margin-left: 0;
+  }
+}
 /* ========================================== */
 /* 이전 페이지 */
 
 .section_id {
-  max-width: 1200px;
-  margin: auto;
+  max-width: 100%;
   margin-top: 100px;
-  display: flex;
-  justify-content: space-between;
 }
 
 .bor_ai {
@@ -206,10 +242,6 @@ h2 {
 
 .bor_ai .buy_a1:hover h1 {
   color: skyblue;
-}
-
-.buy_a1b {
-  width: 45vw;
 }
 
 .buy_a1b h2 {
@@ -368,17 +400,15 @@ input[type="submit"]:hover {
 
 /* ==================================================== */
 /* 빈공간 */
-.buy_gap {
-  flex: 0 0 16px;
-}
-
-.buy_gaps {
-  flex-direction: column;
-  flex: 0 0 16px;
-}
 
 /* ==================================================== */
 /* 오른쪽 사진 글 */
+
+aside {
+  margin-top: 20%;
+  margin-left: 20px;
+}
+
 .desktop_right h2 {
   text-align: left;
   width: 320px;
@@ -556,34 +586,30 @@ input[id] {
 
 [id^=payType]+label:hover span {
   background-color: white;
-  box-shadow: 2px 3px rgb(135, 206, 250, .3);
+  filter: drop-shadow(8px 5px 8px rgba(135, 206, 250, .6));
   transition: .3s;
 }
 
 .payment_type .payTypeAImg {
   background: url(../image/kakaopay.png) no-repeat 0/cover;
-  width: 10vw;
   height: 7vh;
   text-indent: -9999em;
 }
 
 .payment_type .payTypeBImg {
   background: url(../image/toss.png) no-repeat 0/cover;
-  width: 10vw;
   height: 7vh;
   text-indent: -9999em;
 }
 
 .payment_type .payTypeCImg {
   background: url(../image/naver-pay.jpg) no-repeat 0/cover;
-  width: 10vw;
   height: 7vh;
   text-indent: -9999em;
 }
 
 .payment_type .payTypeDImg {
   background: url(../image/credit-card.svg) no-repeat 0/100% 80%;
-  width: 10vw;
   height: 7vh;
   text-indent: -9999em;
 }
@@ -665,8 +691,9 @@ input[id] {
 }
 
 .payment_inner button:hover {
-  box-shadow: 3px 3px rgb(135, 206, 250, .3);
-  border-radius: 3px;
+  filter: drop-shadow(10px 7px 10px rgb(135, 206, 250, .5));
+  /* box-shadow: 3px 3px rgb(135, 206, 250, .3); */
+  border-radius: 5px;
   transition: .4s;
 }
 

@@ -246,7 +246,7 @@ main .right_main_product .favorit_header h2 {
   border-bottom: 1px solid gray;
 }
 
-[type="radio"] {
+.check_box_align [type="checkbox"] {
   appearance: none;
   border: max(2px, 0.1em) solid gray;
   border-radius: 50%;
@@ -256,11 +256,11 @@ main .right_main_product .favorit_header h2 {
   vertical-align: text-bottom;
 }
 
-[type="radio"]:checked {
+.check_box_align [type="checkbox"]:checked {
   border: 0.4em solid blue;
 }
 
-[type="radio"]:hover {
+.check_box_align [type="checkbox"]:hover {
   box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
   cursor: pointer;
 }
@@ -287,7 +287,7 @@ main .right_main_product .favorit_header h2 {
   margin-block: 15px;
 }
 
-.facility_button {
+/* .facility_button {
   max-width: 100%;
   padding-bottom: 8px;
   padding-right: 6px;
@@ -317,28 +317,88 @@ main .right_main_product .favorit_header h2 {
 
 .facility_design:checked {
   background-color: blue;
+} */
+
+/* ======================================================= */
+
+.facility_flex {
+  display: flex;
+  gap: 5px;
 }
 
-.public_facility_out>button {
-  border: none;
-  color: blue;
-  background-color: white;
-} 
+.facility_button>label>input {
+  display: none;
+}
 
-.public_facility_out label {
-  border: none;
-  color: blue;
+.facility_button span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  border: 1.5px solid;
+  height: 32px;
+  flex-wrap: wrap;
+  padding: 0 16px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  --tw-border-opacity: 1;
+  color: black;
+  border-color: rgb(183 213 246 / var(--tw-border-opacity));
   background-color: white;
-} 
+}
+
+.facility_button span:hover {
+  background-color: rgb(128, 128, 128, .3);
+}
+
+.facility_button input[type="checkbox"]:checked + span {
+  background-color: rgb(135, 206, 235, .5);
+}
+
+
+/* input 체크 박스 숨기기 */
+.con-public-fac {
+  display: none;
+}
+
+.con-public-fac + span {
+  font-size: 13px;
+
+  color: blue;
+}
 
 .facility_button:nth-child(n+7) {
   display: none;
 }
 
-/* .public_facility_out:active .facility_button {
-  display: block;
-} */
+.con-public-fac:hover + span {
+  text-decoration: underline;
+}
 
+/* ======================================================================== */
+/* 검색버튼 */
+.submit-btn-ct {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+}
+
+.submit-btn-ct>input {
+  width: 30%;
+  height: 32px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: white;
+  --tw-border-opacity: 1;
+  color: black;
+  border-color: rgb(183 213 246 / var(--tw-border-opacity));
+  cursor: pointer;
+}
+
+.submit-btn-ct:active input {
+  background-color: rgb(135, 206, 235, .5);
+}
 /* ======================================================================== */
 /* 메인 리스트 */
 
@@ -375,7 +435,7 @@ main .right_main_product .favorit_header h2 {
 .product_a {
   display: inline-block;
   transform: translateX(25%);
-  /* vertical-align: top; */
+  vertical-align: top;
   /* z-index: 3; */
 }
 
@@ -386,11 +446,11 @@ main .right_main_product .favorit_header h2 {
   padding-left: 30px;
 }
 
-.btn_like {
+/* .btn_like {
   position: absolute;
   right: 10%;
   width: 10%;
-}
+} */
 
 .like_aaa {
   align-items: center;
@@ -405,8 +465,8 @@ main .right_main_product .favorit_header h2 {
   cursor: pointer;
   --tw-border-opacity: 1;
   border-color: rgb(183 213 246 / var(--tw-border-opacity));
-
 }
+
 
 .btn_like input {
   display: none;
@@ -472,9 +532,9 @@ main .right_main_product .favorit_header h2 {
 
 .product_infor div+div {
   font-size: 10px;
-  padding-left: 30px;
+  padding-left: 20%;
   margin-bottom: 80px;
-  text-align: end;
+  text-align: center;
 }
 
 .infor_sl img[src] {
@@ -635,7 +695,7 @@ main .right_main_product .favorit_header h2 {
 /* ================================================================ */
 .product_img>img:hover~.product_infor_hover {
   /* background: url(./hotel-1559199_1280.jpg) no-repeat 0/cover; */
-  left: 20vw;
+  left: 18vw;
   opacity: 1;
   
   width: 22vw;
@@ -674,20 +734,19 @@ main .right_main_product .favorit_header h2 {
   color: #000000;
 }
 
+.paging_main [href='#'] {
+  font-weight: bold;
+}
+
 .paging_main div a:active {
   font-weight: bold;
   color: purple;
 }
 
 /* ==================================================== */
+/* 상단으로 돌아가는 버튼 */
+/* .up-down-btn {
 
-.up-down-btn {
-  position: fixed;
-  right: 10%;
-  bottom: 30%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
   opacity: .5;
 }
 
@@ -707,7 +766,18 @@ main .right_main_product .favorit_header h2 {
 
 .up-down-btn a:hover {
   box-shadow: 4px 4px lightgray;
+} */
+
+/* .top_btn {
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
 }
+
+.top_btn img {
+  width: 30px;
+  height: 30px;
+} */
 
 /* =================================================== */
 /* footer 내역 */
