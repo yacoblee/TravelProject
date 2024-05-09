@@ -99,7 +99,7 @@
 
 .login_info {
     display: grid;
-    grid-template: repeat(9, .5fr) / 1fr 3fr;
+    grid-template: repeat(10, .5fr) / 1fr 3fr;
     align-items: center;
     border-top: 2px solid rgb(177, 190, 213);
     border-bottom: 2px solid rgb(177, 190, 213);
@@ -109,7 +109,7 @@
 }
 
 .login_info>.mail {
-    grid-area: 6/1/7/2;
+    grid-area: 7/1/8/2;
 }
 
 .mail_add {
@@ -195,7 +195,7 @@
 
 .mypage_main {
     display: flex;
-    width: 100vw;
+    /* width: 100vw; */
     flex-direction: column;
     text-align: center;
     
@@ -341,7 +341,7 @@
 }
 
 .mail {
-    grid-area: 3/1/4/2;
+    grid-area: 7/1/8/2;
 }
 
 input[class="add_input"] {
@@ -416,7 +416,7 @@ input[class="add_dtl"] {
 }
 
 .like_list_section {
-    width: 100vw;
+    /* width: 100vw; */
     display: flex;
     margin: auto;
     justify-items: center;
