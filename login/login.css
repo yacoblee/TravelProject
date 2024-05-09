@@ -135,8 +135,7 @@
     border: 1px solid rgb(177, 190, 213);
     border-radius: 5px;
     background-color: rgb(223, 223, 223, 0.7);
-    font-size: large;
-    font-family: Jua-Regular;
+    font-family: Nanum_Gothic_bold;
 }
 
 .login_info>div:nth-of-type(even) {
@@ -158,7 +157,7 @@
 }
 
 .login_title h1 {
-    height: 100%;
+    /* height: 100%; */
     align-content: center;
 }
 
@@ -172,9 +171,9 @@
     color: black;
 }
 
-.login_form .button_fix {
+/* .login_form .button_fix {
     flex: auto;
-}
+} */
 
 .button_fix>div>.find {
     width: 205px;
@@ -196,21 +195,25 @@
 
 .mypage_main {
     display: flex;
-    width: 80vw;
+    width: 100vw;
     flex-direction: column;
     text-align: center;
+    
 }
 
 .mypage_title {
     display: flex;
-    height: 5%;
+    /* width: 100vw; */
+    /* height: 5%; */
+    padding: 10px;
     align-items: center;
     justify-content: center;
 }
 
 .mypage_body {
-    flex-basis: 80%;
+    /* flex-basis: 80%; */
     display: flex;
+    justify-content: center;
 }
 
 .mypage_left_menu ul li .list_check{
@@ -220,7 +223,13 @@
 }
 
 .mypage_left_menu {
-    flex-basis: 20%;
+    width: 15vw;
+    min-width: 150px;
+    display: flex;
+    /* justify-content: center; */
+    /* position: fixed;
+    left: 100px;
+    top: 30vh; */
 }
 
 .mypage_left_menu ul {
@@ -239,6 +248,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 150px;
     color: black;
     background-color: rgb(164, 178, 192, 0.142);
     border: 0.5px solid rgba(216, 216, 216, 0.484);
@@ -255,7 +265,8 @@
 }
 
 .mypage_right_main {
-    flex: 1;
+    width: 60vw;
+    /* flex: 1; */
     display: grid;
     min-width: 800px;
     grid-template: repeat(10, 3fr) 4fr / 1fr 3fr;
@@ -270,7 +281,7 @@
     border-bottom: 1px solid lightgray;
 }
 
-.mypage_right_main>div:nth-of-type(-n + 2) {
+.mypage_right_main div:nth-of-type(-n + 2) {
     border-top: 2px solid rgba(85, 83, 83, 0.768);
 }
 
@@ -391,6 +402,7 @@ input[class="add_dtl"] {
 /* 찜목록 */
 .mylike_list_body {
     display: grid;
+    width: 60vw;
     gap: 30px;
     grid-template: repeat(3, 1fr) / repeat(2, 1fr);
     padding: 5px;
@@ -400,7 +412,16 @@ input[class="add_dtl"] {
 .mylike_bold {
     font-weight: 800;
     font-size: 1.2em;
-    margin: 10px;http://192.168.0.50:5502/Reservation_list/Accommodation.html
+    margin: 10px;
+}
+
+.like_list_section {
+    width: 100vw;
+    display: flex;
+    margin: auto;
+    justify-items: center;
+    flex-direction: column;
+    /* justify-content: center; */
 }
 
 .font_red {
@@ -543,7 +564,7 @@ input[class="add_dtl"] {
 .tabs section {
     display: none;
     animation: fadeIn 0.5s ease-in-out;
-    width: 70vw;
+    width: 60vw;
 }
 
 input#tab1:checked~.mypage_body>.reserve_container section:nth-child(1),
@@ -555,7 +576,7 @@ input#tab4:checked~.mypage_body>.reserve_container section:nth-child(4) {
 
 .reserve_container {
     position: relative;
-    width: 100%;
+    width: 60%;
     height: 700px;
     flex-direction: column;
     padding: 20px;
