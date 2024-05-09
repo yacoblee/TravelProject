@@ -120,13 +120,12 @@ body {
     .room_information_price>a {
         width: 100% !important;
     }
-}
 
-@media screen and (width < 965px) {
-    .review_username {
-        display: none !important;
+    .review_img div:nth-child(4) {
+        display: none;
     }
 }
+
 
 @media screen and (width < 955px) {
     .information1 {
@@ -142,15 +141,22 @@ body {
     }
 }
 
+@media screen and (width < 875px) {
+    .review_img div:nth-child(3) {
+        display: none;
+    }
+}
+
+
 @media screen and (width < 800px) {
     .name_details {
         margin-bottom: 10px !important;
     }
-
+    
     .top_review h2 {
         margin-top: 15px;
     }
-
+    
     .information2 {
         display: block !important;
     }
@@ -167,7 +173,7 @@ body {
         margin-bottom: 10px;
         margin-top: 30px !important;
     }
-
+    
     .room_type {
         margin-top: 5px !important;
     }
@@ -177,7 +183,7 @@ body {
     .check_in_date div {
         display: none;
     }
-
+    
     .check_out_date div {
         display: none;
     }
@@ -187,6 +193,11 @@ body {
     }
 }
 
+@media screen and (width < 535px) {
+    .review_username {
+        display: none !important;
+    }
+}
 /* main */
 section h2 {
     margin-top: 20px;
@@ -328,6 +339,7 @@ section h2 {
 
 .nav_3 {
     padding: 0;
+    margin: 25px 0;
 }
 
 .nav_3 li {
@@ -446,6 +458,7 @@ section h2 {
 
 .map_location_details1 {
     line-height: 40px;
+    margin: 8px 0;
 }
 
 .map_location_details2 {
@@ -665,6 +678,7 @@ section h2 {
 
 .review_btn>span {
     font-size: 15px;
+    color: black;
 }
 
 .review_design {
@@ -680,7 +694,7 @@ section h2 {
 }
 
 .review_username {
-    flex: 1;
+    width: 25%;;
 
     display: -webkit-inline-box;
 }
@@ -690,7 +704,7 @@ section h2 {
 }
 
 .review_content {
-    flex: 3;
+    width: 75%;
     align-content: center;
 }
 
