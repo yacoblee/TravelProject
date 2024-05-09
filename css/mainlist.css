@@ -414,6 +414,11 @@ main .right_main_product .favorit_header h2 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.121);
 }
 
+.main_product_list:active {
+  box-shadow: inset 0 0 10px 0 rgb(0, 0, 0, .5);
+  outline: 1px white;
+}
+
 .main_product_list .product_img img {
   width: 20vw;
   height: 24vh;
