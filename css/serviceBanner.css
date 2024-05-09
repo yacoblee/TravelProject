@@ -170,7 +170,7 @@
     text-decoration: none;
 
 }
-
+/* 
 .customer_bar a span{
     display: none;
 
@@ -178,7 +178,7 @@
 .customer_bar a:hover span{
     display: inline;
 }
-
+ */
 
 .customer_bar a::before{
     display: inline;
@@ -580,15 +580,13 @@ input[type="checkbox"]:checked+label+div {
 
 /*  */
 
-/* 미디어 쿼리 적용 */
-
 
 /* 미디어 쿼리 적용 */
 
 
 /* 모바일 세로 (해상도 ~ 479px)*/ 
 /* 모바일 가로 & 테블릿 세로 (해상도 480px ~ 767px)*/
-@media all and (max-width:767px) {
+@media (max-width:767px) {
 
     .side_bar_all{
         display: grid;
@@ -656,8 +654,16 @@ input[type="checkbox"]:checked+label+div {
     .notice_list , .sevice_content_box{
         padding: 2vw;
     }
-    .notice_content{
+    .notice_content,.customer_box{
         width: 95vw;
+    }
+    .question_all{
+        width: 80vw;
+    }
+    .customer_box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .notice_page{
         text-align: center;
@@ -699,6 +705,7 @@ input[type="checkbox"]:checked+label+div {
     }
     .left_side_bar{
         width: 15%;
+        min-width: 150px;
         
 
         position: fixed;
@@ -708,6 +715,7 @@ input[type="checkbox"]:checked+label+div {
 
     .right_side_bar_box{
         width: 15%;
+        min-width: 150px;
         position: fixed;
         right: 0;
         top: 30vh;
@@ -716,7 +724,6 @@ input[type="checkbox"]:checked+label+div {
     .left_side_bar li{
         width: 100%;
         height: 40px;
-        min-width: 120px;
         display: flex;
     }
     .sevice_home{
