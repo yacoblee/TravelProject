@@ -499,9 +499,14 @@ input[type="checkbox"]:checked+label+div {
 } 
 .notice_list a{
     flex: 1;
-
+    height: 6vh;
+    min-height: 40px;
     text-decoration: none;
     color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .notice_list>ul>li:hover{
