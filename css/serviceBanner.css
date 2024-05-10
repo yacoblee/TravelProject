@@ -497,7 +497,7 @@ input[type="checkbox"]:checked+label+div {
     justify-content: center;
     
 } 
-.notice_list a{
+.notice_list li a{
     flex: 1;
     height: 6vh;
     min-height: 40px;
