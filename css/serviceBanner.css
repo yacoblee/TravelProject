@@ -556,22 +556,24 @@ input[type="checkbox"]:checked+label+div {
 }
 
 .sevice_content_box ul {
-    min-width: 500px;
+    flex:1;
+    min-width: 380px;
     width: 40vw;
 
 }
+
 .sevice_content_box li:nth-of-type(1) {
     border-bottom: 0.5px solid silver;
 }
 .sevice_content_box p {
     margin: 1vh;
-
     text-align: initial;
     white-space: pre-line;
 }
 .content_title h2{
     margin: 2vh 0;
 }
+
 .content_title p{
     size: 12px;
     opacity: 0.7;
