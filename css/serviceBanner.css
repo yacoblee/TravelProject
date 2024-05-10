@@ -572,7 +572,7 @@ input[type="checkbox"]:checked+label+div {
 }
 
 .content_title p{
-    size: 12px;
+    font-size: 12px;
     opacity: 0.7;
 }
 
@@ -741,10 +741,6 @@ input[type="checkbox"]:checked+label+div {
         min-height: 70px;
     }
 
-    .customer_bar a{
-        transform: scale(90%);
-    }
-    
     .customer_bar h1, .notice_bar h1 , .onetoone_bar h1{
         text-align: center;
     }
