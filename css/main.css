@@ -185,7 +185,7 @@ section {
         z-index: 2;
     }
 
-    .lodgingbutton {
+    section>.lodgingbutton {
         position: relative;
         display: flex;
         bottom: 0;
@@ -194,7 +194,12 @@ section {
     }
 
     .lodgingbutton>.lodgingleft {
-        left: -10vw;
+        left: 40vw;
+    }
+
+    .lodgingbutton>.lodgingright {
+        position: absolute;
+        right: 40vw;
     }
 
     section>.lodgingbutton {
@@ -294,7 +299,7 @@ section {
         z-index: 2;
     }
 
-    .lodgingbutton {
+    section>.lodgingbutton {
         position: relative;
         display: flex;
         bottom: 0;
@@ -303,7 +308,12 @@ section {
     }
 
     .lodgingbutton>.lodgingleft {
-        left: -10vw;
+        left: 40vw;
+    }
+
+    .lodgingbutton>.lodgingright {
+        position: absolute;
+        right: 40vw;
     }
 
     /* 추천숙소 컬럼 구조 변환 E */
@@ -320,7 +330,6 @@ section {
     .event_section h3 {
         font-size: 1.5em;
     }
-
 }
 
 .mainimg {
@@ -801,12 +810,14 @@ article h3 {
     justify-content: space-between;
 }
 
-.regionleft {
+.regionleft,
+.lodgingleft {
     position: absolute;
     left: -20px;
 }
 
-.regionright {
+.regionright,
+.lodgingright {
     position: absolute;
     right: -5px;
 }
