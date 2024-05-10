@@ -17,33 +17,27 @@
             <div class="login_index">
                 <div></div>
                 <div></div>
-                <div>
-                    <label for="user_nm">이름</label>
-                </div>
-                <div>
-                    <input type="text" id="user_nm" name="user_nm" placeholder="이름을 입력하세요." minlength="2" maxlength="6" required>
-                </div>
-                <div>
-                    <label for="phone_num">연락처</label>
-                </div>
-                <div>
-                    <input type="num" id="phone_num" name="phone_num" placeholder="연락처를 입력하세요." minlength="10" maxlength="11" required>
-                </div>
+
+                <label for="user_nm">이름</label>
+                <input type="text" id="user_nm" name="user_nm" placeholder="이름을 입력하세요." minlength="2" maxlength="6" required>
+                <label for="phone_num">연락처</label>
+                <input type="text" id="phone_num" name="phone_num" placeholder="연락처를 입력하세요." minlength="10" maxlength="11" required>
+                
                 <div></div>
                 <div></div>
             </div>
 
-        </form>
-        <div class="button_fix">
-            <div>
-                <button type="submit" id="find" class="find">FIND</button>
+            <div class="button_fix">
+                <div>
+                    <button type="submit" id="find" class="find">FIND</button>
+                </div>
+                <button type="button" id="sign_in" class="login" onclick="location.href='./login.html'">sign in</button>
+                <button type="button" id="sign_up" class="sign" onclick="location.href='./sign_up.html'">sign up</button>
             </div>
-            <button type="button" id="sign_in" class="login" onclick="location.href='./login.html'">sign in</button>
-            <button type="button" id="sign_up" class="sign" onclick="location.href='./sign_up.html'">sign up</button>
-        </div>
-        <div class="id_pw_find">
-            <a href="#">&nbsp;&nbsp;ID 찾기</a> &#124; <a href="./pw_find.html">PW 찾기</a>
-        </div>
+            <div class="id_pw_find">
+                <a href="#">&nbsp;&nbsp;ID 찾기</a> &#124; <a href="./pw_find.html">PW 찾기</a>
+            </div>
+        </form>
     </div>
 </body>
 </html>
