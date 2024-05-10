@@ -368,7 +368,9 @@ input[type="checkbox"]:checked+label+div {
     align-items: center;
 }
 .onetoone label{
-    padding: 0 2px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .onetoone input[id="one_content"]{
